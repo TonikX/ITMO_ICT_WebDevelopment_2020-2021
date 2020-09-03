@@ -16,7 +16,9 @@
 3. [TCP vs UDP](https://habr.com/ru/company/oleg-bunin/blog/461829/)
 
 ## Лабораторная работа 1. Работа с сокетами. Реализация web-серверов.
+[Текст работы]()
 ### Полезные материалы:
+1. [Большой мануал про сокеты, http, wsgi](https://iximiuz.com/ru/posts/writing-python-web-server-part-1/)
 
 ## Лабораторная работа 2. Реализация простого сайта на django.
 
