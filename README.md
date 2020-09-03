@@ -4,6 +4,9 @@
 ## Лекция 1.1 - Концепции разработки веб сервисов.
 Презентация с лекции [тут](https://drive.google.com/file/d/1uZMyzGn_42krfuEdR-pLmcrb2LGqYNmx/view?usp=sharing)
 Допонительные материалы:
+1. [Иерархия компьютерных информационных систем для разработки сайта](https://habr.com/ru/post/513486/)
+2. [Топ-5 наиболее популярных CMS: какую выбрать?](https://habr.com/ru/post/151879/)
+3. []()
 
 ## Лекция 1.2 - Компоненты веб-серврного взаимодействия.
 Презентация с лекции [тут](https://drive.google.com/file/d/1Jp_7c5GcK8TeLii2yEDuSmjLyXIlGQs1/view?usp=sharing)
