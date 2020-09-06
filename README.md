@@ -19,7 +19,7 @@
 4. [Чем отличаются фронтенд- и бэкенд-разработка](https://techrocks.ru/2020/07/01/front-end-vs-back-end-development/)**(+)**
 5. [Что такое MVC: базовые концепции и пример приложения](https://skillbox.ru/media/code/chto_takoe_mvc_bazovye_kontseptsii_i_primer_prilozheniya/)**(++)**
 
-## Лекция 1.2 - Компоненты веб-серврного взаимодействия.
+## Лекция 1.2 - Компоненты клиент-серверного взаимодействия.
 Презентация лекции [тут](https://drive.google.com/file/d/1Jp_7c5GcK8TeLii2yEDuSmjLyXIlGQs1/view?usp=sharing).
 
 Дополнительные материалы:
