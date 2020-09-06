@@ -27,7 +27,7 @@
 2. [Адресация в сетях](https://support.microsoft.com/ru-ru/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics)**(+)**
 3. [TCP vs UDP](https://habr.com/ru/company/oleg-bunin/blog/461829/)**(++)**
 
-## Лабораторная работа 1. Работа с сокетами. Реализация web-серверов.
+## Лабораторная работа 1. Работа с сокетами.
 [Текст работы](https://drive.google.com/file/d/1p5FUB09uZlniENeAmPSuXjYvI-G7bCGy/view?usp=sharing)
 
 Срок сдачи: **25.09.2020** (включительно). Вес работы в баллах – 10. Выполнение пунктов 1-3 и 4 (однопользовательский чат без потоков) – 8. Выполнение пунктов 1-3 и 4 (многопользовательский чат с потоками) – 10. После срока сдачи максимальный бал 6.
