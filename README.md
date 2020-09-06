@@ -25,7 +25,7 @@
 Дополнительные материалы:
 1. [Сетевая модель OSI](https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D1%82%D0%B5%D0%B2%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_OSI)**(+)**
 2. [Адресация в сетях](https://support.microsoft.com/ru-ru/help/164015/understanding-tcp-ip-addressing-and-subnetting-basics)**(+)**
-3. [TCP vs UDP](https://habr.com/ru/company/oleg-bunin/blog/461829/)**(++)**
+3. [TCP vs UDP](https://habr.com/ru/company/oleg-bunin/blog/461829/)**(+++)**
 
 ## Лабораторная работа 1. Работа с сокетами.
 [Текст работы](https://drive.google.com/file/d/1p5FUB09uZlniENeAmPSuXjYvI-G7bCGy/view?usp=sharing)
