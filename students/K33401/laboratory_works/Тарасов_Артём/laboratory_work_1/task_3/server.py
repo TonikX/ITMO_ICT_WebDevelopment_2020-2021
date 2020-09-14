@@ -34,8 +34,9 @@ class Server:
                 break
 
     def target_cast(self, client, message):
-        message += "\n"
-        client.send(message.encode())
+        headers = bytes(f'HTTP/1.0 200 OK\nContent-Type: text/html\n\n{message}', 'utf-8')
+        # message += "\n"
+        client.send(headers)
 
 
 if __name__ == "__main__":
