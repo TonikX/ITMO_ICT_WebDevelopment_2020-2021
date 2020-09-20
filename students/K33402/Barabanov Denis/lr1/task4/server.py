@@ -21,7 +21,6 @@ def receive(conn):
             break
 
 def chat(conn, message):
-    #message += "\n"
     for user in conns:
         if user["conn"] != conn:
             user["conn"].send(message.encode())
