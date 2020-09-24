@@ -58,6 +58,7 @@ class Server:
         client.send(message.encode())
 
 
+
 if __name__ == "__main__":
     sock = socket.socket()
     clients = []
