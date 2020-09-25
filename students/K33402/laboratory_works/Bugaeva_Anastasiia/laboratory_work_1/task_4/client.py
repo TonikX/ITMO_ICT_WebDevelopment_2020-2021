@@ -4,6 +4,7 @@ import threading
 
 def send_message():
     try:
+        print('Chat started')
         while True:
             msg = input()
             sock.send(bytes(name + ": " + msg, 'utf-8'))
@@ -31,6 +32,6 @@ def receive_message():
 if __name__ == '__main__':
     sock = socket.socket()
     sock.connect(('localhost', 9090))
-    name = input('Enter your name:\n')
+    name = input('Enter your name: ')
     threading.Thread(target=send_message).start()
     threading.Thread(target=receive_message).start()
