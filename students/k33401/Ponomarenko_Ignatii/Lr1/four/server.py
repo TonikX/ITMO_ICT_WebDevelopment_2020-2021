@@ -3,22 +3,27 @@ import threading
 
 sock = socket.socket()
 sock.bind(('localhost', 9090))
-sock.listen(200)
+sock.listen(100)
+
+connections = []
 
 def conn_proccess(conn):
-	data = conn.recv(1024)
-	for c in connections:
-		if c != conn:
-			c.send(data)	
-
-	# print(data.decode("utf-8"))
-	# conn.send('Hello, client!'.encode("utf-8"))
+	while True:
+		try:
+			data = conn.recv(1024)
+			for c in connections:
+				if c != conn:
+					try:
+						c.send(data)
+					except:
+						if c in connections:
+							connections.remove(c)
+		except:
+			if conn in connections:
+				connections.remove(conn)
 
 while True:
-	try:
-		conn, addr = sock.accept()
-		connections.append(conn)
-		threading.Thread(target=conn_proccess, args=[conn])
-	except KeyboardInterrupt:
-		conn.close()
-		break
+	conn, addr = sock.accept()
+	connections.append(conn)
+	my_threard = threading.Thread(target=conn_proccess, args=[conn])
+	my_threard.start()
