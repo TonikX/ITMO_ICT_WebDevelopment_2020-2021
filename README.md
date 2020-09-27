@@ -56,7 +56,7 @@
 
 ## Практическая работа №2.2
 
-Необходимо выполнить все задлания с пометкой **"задача"** [практической работы №2](https://docs.google.com/document/d/1JAKDaQqrm6B8Z4RlVG_ql1v-bLSQw1obYbiUseCKcfY/edit?usp=sharing) практической работы. Полученную программу залить в папку этого репозитория **sutdents/группа/practical_works/фамилия_имя/simple_django_web_project**. Инструкция о загрузке работы ниже. Не забывайте о файле гитигнор.
+Необходимо выполнить все задлания с пометкой **"задача"** [практической работы №2](https://docs.google.com/document/d/1koLV9iGXJfL2yh88InKo4AVXxWqMIJOqmzT4XFYlWuU/edit?usp=sharing) практической работы. Полученную программу залить в папку этого репозитория **sutdents/группа/practical_works/фамилия_имя/simple_django_web_project**. Инструкция о загрузке работы ниже. Не забывайте о файле гитигнор.
 
 ## Практическая работа №2.3
 
