@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+students/K33422/Larionova Anastasia/lab 1/.idea/dictionaries/mac.xml
+*.xml
+*.iml
