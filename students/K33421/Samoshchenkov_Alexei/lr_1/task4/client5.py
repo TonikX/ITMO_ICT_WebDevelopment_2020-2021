@@ -2,15 +2,17 @@ import socket
 from threading import Thread
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect(('localhost', 12345))
+sock.connect(('localhost', 12367))
 
-
-print("Welcome to the chat, enter 'q' to quit")
+nick = input('Who are you?\n')
+print("Welcome to the chat!")
 
 
 def send_message():
     while True:
-        sock.send(input().encode('utf-8'))
+        text = input("")
+        message = (f'{nick}: {text}')
+        sock.send(message.encode('utf-8'))
 
 
 def receive_message():
@@ -22,4 +24,4 @@ def receive_message():
 send_thread = Thread(target=send_message)
 get_thread = Thread(target=receive_message)
 send_thread.start()
-get_thread.start() 
+get_thread.start()

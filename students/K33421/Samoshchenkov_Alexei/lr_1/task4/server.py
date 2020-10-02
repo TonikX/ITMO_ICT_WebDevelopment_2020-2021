@@ -2,7 +2,7 @@ import threading
 import socket
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(('localhost', 12345))
+server.bind(('localhost', 12367))
 server.listen()
 
 clients = []
