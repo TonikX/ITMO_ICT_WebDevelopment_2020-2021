@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owner</title>
+</head>
+<body>
+
+<div class="main">
+    {% for driver in drivers %}
+        {{ driver.first_name }}<br/>
+        {{ driver.last_name }}<br/>
+        <hr/>
+    {% endfor %}
+</div>
+
+</body>
+</html>
