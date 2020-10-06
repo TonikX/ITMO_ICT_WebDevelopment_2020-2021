@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+    {% for object in object_list %}
+        <a href="/car/{{ object.id }}/">{{ object.brand }} {{ object.model }}</a>
+        <br/><hr/>
+    {% endfor %}
+    <a href="/cars/create/">Add</a>
+</body>
+</html>

@@ -6,9 +6,9 @@
 </head>
 <body>
     {% for owner in owners %}
-        {{ owner.first_name }}<br/>
-        {{ owner.last_name }}<br/>
-        <hr/>
+        <a href="/owner/{{ owner.id }}/">{{ owner.first_name }} {{ owner.last_name }}</a>
+        <br/><hr/>
     {% endfor %}
+    <a href="/create_owner/">ADD new owner</a>
 </body>
 </html>
