@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car owners list</title>
+</head>
+
+<body>
+  <span>
+      <p><a href="http://127.0.0.1:8000/">Go home</a></p>
+      <h1>Car owners</h1>
+      <a href="http://127.0.0.1:8000/car_owners/create/">Add new one</a>
+  </span>
+  <ul>
+    {% for car_owner in dataset %}
+    <li><strong>Name:</strong> {{ car_owner.first_name }} {{ car_owner.last_name }}
+      <p><strong>Birthday date:</strong> {{ car_owner.date_of_birth }}</p>
+    </li>
+
+    {% endfor %}
+    {% for owner_info in info %}
+    <li><strong>Name:</strong> {{ owner_info.first_name }} {{ owner_info.last_name }}
+        <p><strong>Birthday date:</strong> {{ owner_info.date_of_birth }}</p>
+        <p><strong>Passport number:</strong> {{ owner_info.passport_number }}</p>
+        <p><strong>Home address:</strong> {{ owner_info.home_address }}</p>
+        <p><strong>Nationality:</strong> {{ owner_info.nationality }}</p>
+    </li>
+
+    {% endfor %}
+  </ul>
+</body>
+
+</html>

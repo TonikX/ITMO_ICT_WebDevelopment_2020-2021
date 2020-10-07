@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars list</title>
+</head>
+
+<body>
+  <span>
+      <p><a href="http://127.0.0.1:8000/">Go home</a></p>
+      <h1>Cars</h1>
+      <a href="http://127.0.0.1:8000/car/create/">Add new one</a>
+  </span>
+  <ul>
+    {% for car in object_list %}
+    <li><strong>Brand:</strong> {{ car.brand }}  |  <a href="/car/{{ car.id }}/update/">Edit</a> | <a href="/car/{{ car.id }}/delete/">Delete</a> |<a href="/car/{{ car.id }}/">Detail</a>
+        <p><strong>Model:</strong> {{ car.model }}</p>
+        <p><strong>Color:</strong> {{ car.color }}</p>
+        <p><strong>Number:</strong> {{ car.number }}</p>
+    </li>
+    {% empty %}
+    <li>No cars yet.</li>
+    {% endfor %}
+  </ul>
+</body>
+
+</html>
