@@ -28,8 +28,8 @@ class DriverLicence(models.Model):
     driver = models.ForeignKey(Person, on_delete=models.CASCADE, null=True)
     
 class Ownership(models.Model):
-    start = models.DateField()
-    end = models.DateField()
-    car = models.ForeignKey(Car, on_delete=models.CASCADE, null=True)
-    driver = models.ForeignKey(Person, on_delete=models.CASCADE, null=True)
+    start = models.DateField(default="1970-01-01")
+    end = models.DateField(default="1970-01-01")
+    car = models.ForeignKey(Car, on_delete=models.CASCADE)
+    driver = models.ForeignKey(Person, on_delete=models.CASCADE)
     
