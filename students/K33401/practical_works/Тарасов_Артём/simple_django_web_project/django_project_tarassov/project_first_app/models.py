@@ -1,8 +1,17 @@
 from django.db import models
 from datetime import date
+from django.contrib.auth.models import AbstractUser
+from django.conf import settings
+
+
+class User(AbstractUser):
+    passport = models.IntegerField(default=0000)
+    address = models.CharField(max_length=100)
+    nationality = models.CharField(max_length=100)
 
 
 class Driver(models.Model):
+    optional_information = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     date_of_birthday = models.DateField(default=date(2000, 1, 1))
