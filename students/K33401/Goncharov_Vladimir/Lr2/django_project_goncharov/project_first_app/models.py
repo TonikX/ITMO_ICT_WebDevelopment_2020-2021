@@ -14,8 +14,8 @@ class Driver(models.Model):
 
 
 class Car(models.Model):
-    id_number = models.CharField(primary_key=True, max_length=9)
-    session = models.ManyToManyField(Driver, through='Ownership')
+    id_number = models.CharField(max_length=9)
+    owner = models.ManyToManyField(Driver, through='Ownership')
     model = models.CharField(max_length=30)
     label = models.CharField(max_length=30)
     color = models.CharField(max_length=30)
