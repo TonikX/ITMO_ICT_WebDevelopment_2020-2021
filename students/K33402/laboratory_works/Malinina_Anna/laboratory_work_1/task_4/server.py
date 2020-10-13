@@ -33,7 +33,7 @@ def chat(conn, addr):
 if __name__ == '__main__':
     sock = socket.socket()
     sock.bind(('', 9090))
-    sock.listen(1)
+    sock.listen(10)
     clients = set()
     clients_lock = threading.Lock()
     threading.Thread(target=monitor_connection).start()
