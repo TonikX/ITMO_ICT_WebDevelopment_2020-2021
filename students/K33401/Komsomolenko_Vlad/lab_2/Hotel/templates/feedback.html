@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+</head>
+<body>
+{% for feedback in feedbacks %}
+    {% if feedback.reserve.hotel.id == hotel %}
+        <a href="/feed/{{ feedback.id }}/">{{ feedback.reserve.user }}</a>
+
+        <br/><hr/>
+    {% endif %}
+{% endfor %}
+<a href="/add_feed/{{ hotel }}">Add feedback</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room</title>
+</head>
+<body>
+    <h1>{{ room.id }}</h1>
+    {{ room.hotel.name }}<br/>
+    {{ room.type }}<br/>
+    {{ room.cost }}<br/>
+    {{ room.capacity }}<br/>
+    {{ room.conveniences }}<br/>
+    <a href="/add_reserve/{{ room.hotel_id }}/">Reserve!</a>
+</body>
+</html>

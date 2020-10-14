@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel</title>
+</head>
+<body>
+{% for reserve in reserves %}
+    {% if reserve.type != 'completed' %}
+        <a href="edit/{{ reserve.id }}/">{{ reserve.user.last_name }} {{ reserve.hotel }} {{ reserve.type }}</a>
+        <br/><hr/>
+    {% endif %}
+{% endfor %}
+<a href="/panel_compl/">Показать выполненные брони</a>
+</body>
+</html>
