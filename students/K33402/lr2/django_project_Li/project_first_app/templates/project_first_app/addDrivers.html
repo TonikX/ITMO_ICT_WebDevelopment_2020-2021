@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addDrivers</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Добавить водителя</h1>
+    <form method="post">
+        {% csrf_token %}
+        <br>
+        {{ form.optional_information }}<br><br>
+        {{ form.first_name }}<br>
+        {{ form.last_name }}<br>
+        {{ form.date_of_birthday }}<br>
+        <button type="submit" class="bth bth-success">Добавить</button>
+        <span>{{ form.error }}</span>
+    </form>
+</div>
+</body>
+</html>

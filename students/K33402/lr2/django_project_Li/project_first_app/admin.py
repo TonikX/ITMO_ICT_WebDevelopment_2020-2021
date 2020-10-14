@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Driver, DriverDocument, Possession, Car
-# Register your models here.
 
+# Register your models here.
 
 
 admin.site.register(Driver)
