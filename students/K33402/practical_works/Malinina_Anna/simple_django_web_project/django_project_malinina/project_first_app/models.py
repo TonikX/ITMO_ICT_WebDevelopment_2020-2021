@@ -8,11 +8,18 @@ class Car(models.Model):
     color = models.CharField(max_length=50)
     license_plate = models.CharField(max_length=10)
 
+    def __str__(self):
+        return "{} {}".format(self.brand, self.model)
+
 
 class CarOwner(models.Model):
     name = models.CharField(max_length=20)
     surname = models.CharField(max_length=50)
     birthday = models.DateField()
+    cars = models.ManyToManyField(Car, through='Ownership')
+
+    def __str__(self):
+        return "{} {}".format(self.name, self.surname)
 
 
 class Ownership(models.Model):

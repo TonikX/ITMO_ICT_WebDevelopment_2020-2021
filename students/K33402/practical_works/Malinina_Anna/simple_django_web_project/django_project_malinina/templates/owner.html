@@ -5,8 +5,22 @@
     <title>Owner</title>
 </head>
 <body>
-    Фамилия: {{owner.surname }} <br>
-    Имя: {{ owner.name }} <br>
-    Дата рождения: {{ owner.birthday }}
+<ul>
+    <li><strong>Owner:</strong> {{ owner.surname }} {{ owner.name }}, actions:
+        <a href="/owner/{{ owner.id }}/update/">Edit</a> | <a href="/owner/{{ owner.id }}/">Detail</a>
+        <p><strong>Birthday:</strong> {{ owner.birthday }}</p>
+        <p><strong>Cars:</strong></p>
+        {% for car in owner.cars.all %}
+            <strong>Car:</strong> {{ car.brand }} {{ car.model }}, actions: <a href="/car/{{ car.id }}/update/">Edit</a>
+            | <a href="/car/{{ car.id }}/">Detail</a>
+            <br>
+        {% empty %}
+            <li>No cars yet.</li>
+        {% endfor %}
+    <p><a href="/owners/">Get back</a></p>
+    </li>
+</ul>
+<br>
+
 </body>
 </html>
