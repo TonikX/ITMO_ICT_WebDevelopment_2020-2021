@@ -130,3 +130,7 @@ dmypy.json
 students/K33422/Larionova Anastasia/lab 1/.idea/dictionaries/mac.xml
 *.xml
 *.iml
+students/K33422/practical_works/Larionova Anastasia/django_proj_Larionova/django_proj_Larionova/__init__.py
+students/K33422/practical_works/Larionova Anastasia/django_proj_Larionova/project_first_app/__init__.py
+students/K33422/practical_works/Larionova Anastasia/django_proj_Larionova/project_first_app/migrations/__init__.py
+students/K33422/practical_works/Larionova Anastasia/django_proj_Larionova/project_first_app/tests.py
