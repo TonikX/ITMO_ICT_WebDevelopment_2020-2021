@@ -101,6 +101,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'project_first_app.Driver'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
