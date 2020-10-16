@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car</title>
+
 </head>
 <body>
     <form method="post">{% csrf_token %}
-        <p>Are you sure you want to delete publisher "{{ object }}"?</p>
-        <input type="submit" value="Confirm">
-    </form>
-    <br>
-    <br>
-    <a href="/cars/">Get back</a>
+	{{ form.as_p }}
+	<input type="submit" value="Save">
+  </form>
 </body>
 </html>

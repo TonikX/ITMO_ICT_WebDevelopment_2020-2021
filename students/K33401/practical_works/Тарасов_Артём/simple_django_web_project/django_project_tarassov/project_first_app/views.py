@@ -1,54 +1,57 @@
-from django.http import Http404
-from django.shortcuts import render
-from project_first_app.models import Driver
-from django.views.generic.list import ListView
-from .models import Car
-from .forms import DriverForm
-from django.views.generic.detail import DetailView
-from django.views.generic.edit import UpdateView
-from django.views.generic.edit import CreateView
-from django.views.generic.edit import DeleteView
+from django.shortcuts import render, get_object_or_404, redirect
+from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
+from project_first_app.form import DriverForm
+from .models import Driver, Car
 
 
-class CarDetailView(DetailView):
-    model = Car
-    template_name = 'car_detail.html'
+# Create your views here.
 
+def all_drivers_detail(request):
+    context = {"drivers": Driver.objects.all(), "all": True}
 
-def detail(request):
-    context = {"drivers": Driver.objects.all()}
     return render(request, 'drivers.html', context)
 
 
-class CarsList(ListView):
-    model = Car
-    template_name = 'car_list_view.html'
+def driver_detail(request, driver_id):
+    context = get_object_or_404(Driver, pk=driver_id)
+
+    return render(request, 'drivers.html', {"driver": context, "one": True})
 
 
-def create_driver_view(request):
-    context = {}
+def create_driver(request):
     form = DriverForm(request.POST or None)
     if form.is_valid():
         form.save()
-    context['form'] = form
-    return render(request, "create_driver_view.html", context)
+        return redirect('/drivers')
+    return render(request, "drivers.html", {"form": form, "new": True})
 
 
-class CarUpdateView(UpdateView):
+class AllCars(ListView):
     model = Car
-    fields = ['id_number', 'session', 'model', 'label', 'color']
+    template_name = "cars.html"
+
+
+class OneCar(DetailView):
+    model = Car
+    template_name = "cars.html"
+
+
+class CarDelete(DeleteView):
+    model = Car
+    template_name = 'car_confirm_delete.html'
     success_url = '/cars/'
-    template_name = 'car_form.html'
 
 
 class CarCreate(CreateView):
     model = Car
-    template_name = 'car_create_view.html'
-    fields = ['id_number', 'session', 'model', 'label', 'color']
+    template_name = 'car_create_update.html'
+    fields = ['id_number', 'brand', 'car_model', 'color', 'official_number']
     success_url = '/cars/'
 
 
-class CarDeleteView(DeleteView):
+class CarUpdate(UpdateView):
     model = Car
-    template_name = 'car_confirm_delete.html'
+    fields = ['id_number','brand', 'car_model', 'color', 'official_number']
     success_url = '/cars/'
+    template_name = 'car_create_update.html'
+

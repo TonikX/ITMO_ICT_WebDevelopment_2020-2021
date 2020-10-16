@@ -1,48 +1,40 @@
-from django.db import models
 from datetime import date
+
 from django.contrib.auth.models import AbstractUser
-from django.conf import settings
+from django.db import models
 
 
-class User(AbstractUser):
-    passport = models.IntegerField(default=0000)
-    address = models.CharField(max_length=100)
-    nationality = models.CharField(max_length=100)
-
-
-class Driver(models.Model):
-    optional_information = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    date_of_birthday = models.DateField(default=date(2000, 1, 1))
+class Driver(AbstractUser):
+    date_of_birth = models.DateField(null=True)
+    passport = models.CharField(max_length=10, blank=False, null=False, unique=True)
+    address = models.CharField(max_length=200, blank=False, null=False)
+    nationality = models.CharField(max_length=30, blank=True, null=True)
 
 
 class Car(models.Model):
     id_number = models.IntegerField(primary_key=True)
-    session = models.ManyToManyField(Driver, through='Possession')
-    model = models.CharField(max_length=30)
-    label = models.CharField(max_length=30)
+    brand = models.CharField(max_length=100)
+    car_model = models.CharField(max_length=100)
     color = models.CharField(max_length=30)
+    official_number = models.CharField(max_length=30)
+    owners = models.ManyToManyField(Driver, through='Owning')
 
-    def __str__(self):
-        return "{} {} {}".format(self.id_number, self.model, self.label)
 
-
-class Possession(models.Model):
-    driver = models.ForeignKey(Driver, on_delete=models.CASCADE)
+class Owning(models.Model):
+    owner = models.ForeignKey(Driver, on_delete=models.CASCADE)
     car = models.ForeignKey(Car, on_delete=models.CASCADE)
-    date_start = models.DateField(default=date(2000, 1, 1))
-    date_send = models.DateField(default=date(2000, 1, 1))
+    begin_date = models.DateField(default=date(2000, 1, 1))
+    end_date = models.DateField(default=date(2001, 1, 1))
 
 
-class DriverDocument(models.Model):
-    TYPE_EX = (
-        ('t1', 'type1'),
-        ('t2', 'type2'),
-        ('t2', 'type2'),
+class DrivingLicence(models.Model):
+    LICENCE_TYPES = (
+        ('A', 'Motorcycles'),
+        ('B', 'Cars'),
+        ('D', 'Buses'),
     )
-    id = models.IntegerField(primary_key=True)
-    driver_document = models.ForeignKey(Driver, on_delete=models.CASCADE)
-    type = models.CharField(max_length=2,
-                            choices=TYPE_EX)
-    class_dog = models.CharField(max_length=30)
+    number = models.IntegerField(primary_key=True)
+    owner = models.ForeignKey(Driver, on_delete=models.CASCADE)
+    date_of_issue = models.DateField(default=date(1990, 1, 1))
+    type = models.CharField(max_length=3, choices=LICENCE_TYPES)
+
