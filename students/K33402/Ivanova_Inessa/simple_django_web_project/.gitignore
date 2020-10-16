@@ -1,3 +1,4 @@
 /myvenv/*
-*.DS_Store
-/project_first_app/*.DS_Store
+.DS_Store
+/project_first_app/.DS_Store
+.gitignore

@@ -1,9 +1,15 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
-from datetime import date
+from django.contrib.auth.models import AbstractUser
+
+class User(AbstractUser):
+     passport = models.IntegerField(default=0000)
+     address = models.CharField(max_length=100)
+     nationality = models.CharField(max_length=100)
 
 class Person(models.Model):
+    optional = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
     name = models.TextField()
     surname = models.TextField()
     birthday = models.DateField()

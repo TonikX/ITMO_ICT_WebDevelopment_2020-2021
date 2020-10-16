@@ -1,27 +1,36 @@
 import socket
-import threading
-import sys
+ import threading
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect(("127.0.0.1", 14907))
 
-def recieve():
-    while True:
-        data = sock.recv(1024)
-        if data:
-            print(data.decode())
+ def send_message():
+     try:
+         while True:
+             msg = input()
+             sock.send(bytes(name + ": " + msg, 'utf-8'))
+             if msg == 'bye':
+                 sock.close()
+                 break
+     except Exception:
+         pass
+     finally:
+         print('End chatting')
 
-def send():
-    while True:
-        message = input()
-        if message == "exit":
-            sock.close()
-            sys.exit()
-        else:
-            sock.send(message.encode())
 
-recieving = threading.Thread(target=recieve)
-sending = threading.Thread(target=send)
+ def receive_message():
+     try:
+         while True:
+             data = sock.recv(1024).decode('utf-8')
+             if not data:
+                 break
+             print(data)
+         sock.close()
+     except Exception:
+         pass
 
-recieving.start()
-sending.start() 
+
+ if __name__ == '__main__':
+     sock = socket.socket()
+     sock.connect(('localhost', 9090))
+     name = input('Enter your name\n')
+     threading.Thread(target=send_message).start()
+     threading.Thread(target=receive_message).start()

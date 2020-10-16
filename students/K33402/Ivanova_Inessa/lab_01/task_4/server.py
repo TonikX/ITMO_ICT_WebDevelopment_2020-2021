@@ -1,42 +1,39 @@
 import socket
-import threading
-import sys
+ import threading
 
-sock = socket.socket()
-sock.bind(("127.0.0.1", 14907))
-sock.listen(10)
-spisok = []
 
-def recieve():
-    while True:
-        for connection in spisok:
-            try:
-                data = connection.recv(1024)
-                if data:
-                    print(connection, ':', data.decode())
-            except socket.error as e:
-                if e.errno == 10053:
-                    print("Пользователй:", len(spisok))
-                else:
-                    raise
+ def monitor_connection():
+     while True:
+         conn, addr = sock.accept()
+         with clients_lock:
+             clients.add(conn)
+         print('connected ' + str(addr))
+         threading.Thread(target=chat, args=[conn, addr]).start()
 
-def send():
-    while True:
-        global spisok
-        message = input()
-        if message:
-            for connection in spisok:
-                connection.send(message.encode())
 
-def accept():
-    while True:
-        global spisok
-        spisok.append(sock.accept()[0])
-        print("Пользователей:", len(spisok))
+ def chat(conn, addr):
+     print('start chatting ' + str(addr))
+     while True:
+         try:
+             data = conn.recv(1024)
+             if not data:
+                 break
+             with clients_lock:
+                 for cl in clients:
+                     if cl == conn:
+                         continue
+                     cl.sendall(data)
+         except Exception as e:
+             clients.remove(conn)
+             break
+     print('end chatting' + str(addr))
+     conn.close()
 
-recieving = threading.Thread(target=recieve)
-sending = threading.Thread(target=send)
-accepting = threading.Thread(target=accept)
-recieving.start()
-sending.start()
-accepting.start() 
+
+ if __name__ == '__main__':
+     sock = socket.socket()
+     sock.bind(('', 9090))
+     sock.listen(1)
+     clients = set()
+     clients_lock = threading.Lock()
+     threading.Thread(target=monitor_connection).start()
