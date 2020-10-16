@@ -21,10 +21,10 @@ from project_first_app.views import *
 urlpatterns = [
     path('drivers/', views.all_drivers_detail),
     path('driver/<int:driver_id>/', views.driver_detail),
-    path('create_driver', views.create_driver),
+    path('create_driver/', views.create_driver),
     path('cars/', AllCars.as_view()),
-    path('car/<int:pk>', OneCar.as_view()),
+    path('car/<int:pk>/', OneCar.as_view()),
     path('car/<int:pk>/update', CarUpdate.as_view()),
-    path('car/create', CarCreate.as_view()),
+    path('car/create/', CarCreate.as_view()),
     path('car/<int:pk>/delete/', CarDelete.as_view()),
 ]

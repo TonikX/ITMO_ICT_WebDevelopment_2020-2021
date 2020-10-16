@@ -28,13 +28,13 @@ class Owning(models.Model):
 
 
 class DrivingLicence(models.Model):
-    LICENCE_TYPES = (
-        ('A', 'Motorcycles'),
-        ('B', 'Cars'),
-        ('D', 'Buses'),
+    TYPE_EX = (
+        ('t1', 'type1'),
+        ('t2', 'type2'),
+        ('t2', 'type2'),
     )
     number = models.IntegerField(primary_key=True)
     owner = models.ForeignKey(Driver, on_delete=models.CASCADE)
     date_of_issue = models.DateField(default=date(1990, 1, 1))
-    type = models.CharField(max_length=3, choices=LICENCE_TYPES)
+    type = models.CharField(max_length=3, choices=TYPE_EX)
 

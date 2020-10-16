@@ -12,5 +12,6 @@ class DriverForm(forms.ModelForm):
             "date_of_birth",
             "passport",
             "address",
-            "nationality"
+            "nationality",
+            'username'
         ]

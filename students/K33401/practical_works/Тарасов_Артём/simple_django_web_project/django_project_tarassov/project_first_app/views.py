@@ -4,8 +4,6 @@ from project_first_app.form import DriverForm
 from .models import Driver, Car
 
 
-# Create your views here.
-
 def all_drivers_detail(request):
     context = {"drivers": Driver.objects.all(), "all": True}
 
@@ -51,7 +49,6 @@ class CarCreate(CreateView):
 
 class CarUpdate(UpdateView):
     model = Car
-    fields = ['id_number','brand', 'car_model', 'color', 'official_number']
+    fields = ['id_number', 'brand', 'car_model', 'color', 'official_number']
     success_url = '/cars/'
     template_name = 'car_create_update.html'
-
