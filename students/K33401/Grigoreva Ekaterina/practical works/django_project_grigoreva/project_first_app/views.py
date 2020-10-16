@@ -51,7 +51,7 @@ class CarCreate(CreateView):
 
 class CarUpdate(UpdateView):
     model = Car
-    fields = ['id_number','brand', 'car_model', 'color', 'official_number']
+    fields = ['id_number', 'brand', 'car_model', 'color', 'official_number']
     success_url = '/cars/'
     template_name = 'car_create_update.html'
 

@@ -3,10 +3,11 @@ from project_first_app.models import Driver
 
 
 class DriverForm(forms.ModelForm):
-
     class Meta:
         model = Driver
         fields = [
+            "username",
+            # "password",
             "first_name",
             "last_name",
             "date_of_birth",
