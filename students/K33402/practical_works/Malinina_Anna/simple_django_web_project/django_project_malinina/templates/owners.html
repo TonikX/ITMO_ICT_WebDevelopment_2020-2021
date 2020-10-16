@@ -9,9 +9,7 @@
     <span><h1>Owners</h1><a href="/owner/create/">Add new one</a></span>
     <ul>
         {% for owner in dataset %}
-            <li><strong>Owner:</strong> {{ owner.surname }} {{ owner.name }}, actions:
-                <a href="/owner/{{ owner.id }}/update/">Edit</a>
-                | <a href="/owner/{{ owner.id }}/">Detail</a>
+            <li><strong>Owner:</strong> {{ owner.surname }} {{ owner.name }} <a href="/owner/{{ owner.id }}/">Detail</a>
             </li><br>
         {% empty %}
             <li>No owners yet.</li>

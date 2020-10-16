@@ -1,6 +1,14 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+from django_project_malinina import settings
+
+
+class User(AbstractUser):
+    passport = models.CharField(max_length=10)
+    address = models.CharField(max_length=100)
+    nationality = models.CharField(max_length=30)
+
 
 class Car(models.Model):
     brand = models.CharField(max_length=50)
@@ -13,6 +21,7 @@ class Car(models.Model):
 
 
 class CarOwner(models.Model):
+    user_info = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     name = models.CharField(max_length=20)
     surname = models.CharField(max_length=50)
     birthday = models.DateField()

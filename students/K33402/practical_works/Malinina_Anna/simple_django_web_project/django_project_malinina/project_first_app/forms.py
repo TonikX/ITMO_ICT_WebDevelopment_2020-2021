@@ -10,5 +10,6 @@ class CarOwnerForm(forms.ModelForm):
         fields = [
             "name",
             "surname",
-            "birthday"
+            "birthday",
+            "user_info"
         ]

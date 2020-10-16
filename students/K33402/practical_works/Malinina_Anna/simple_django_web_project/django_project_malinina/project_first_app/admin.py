@@ -3,6 +3,7 @@ from .models import *
 # Register your models here.
 
 
+admin.site.register(User)
 admin.site.register(CarOwner)
 admin.site.register(Car)
 admin.site.register(DriverLicense)
