@@ -4,6 +4,12 @@ from django.conf import settings
 
 # Create your models here.
 
+from django.contrib.auth.models import AbstractUser
+
+class User(AbstractUser):
+    passport = models.IntegerField(default=0000)
+    address = models.CharField(max_length=100)
+    nationality = models.CharField(max_length=100)
 
 
 class Driver(models.Model):
@@ -13,7 +19,6 @@ class Driver(models.Model):
     date_of_birthday = models.DateField(default=date(2000, 1, 1))
     def __str__(self):
         return "{} {}".format(self.first_name, self.last_name)
-
 
 class Car(models.Model):
     id_number = models.IntegerField(primary_key=True)

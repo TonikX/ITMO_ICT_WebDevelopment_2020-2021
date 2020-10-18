@@ -10,6 +10,7 @@
         {% if driver %}
             {% for el in driver %}
                 <div class="alert alert-warning mt-2">
+                    <h3>{{ el.optional_information }}</h3>
                     <h3>{{ el.first_name }} {{ el.last_name }}</h3>
                     <p>{{ el.date_of_birthday }}</p>
                 </div>
