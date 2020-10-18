@@ -1,39 +1,53 @@
 import socket
- import threading
+
+from threading import Thread
+import time
+
+users = []
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+sock.bind(('127.0.0.1', 53331))
+sock.listen(10)
+sock.setblocking(False)
 
 
- def monitor_connection():
-     while True:
-         conn, addr = sock.accept()
-         with clients_lock:
-             clients.add(conn)
-         print('connected ' + str(addr))
-         threading.Thread(target=chat, args=[conn, addr]).start()
+def coming_users():
+    while True:
+        sock.setblocking(True)
+        clientsoc, addr = sock.accept()
+        sock.setblocking(False)
+        if clientsoc not in users:
+            users.append((clientsoc, addr))
+            print('User connected:', addr)
 
 
- def chat(conn, addr):
-     print('start chatting ' + str(addr))
-     while True:
-         try:
-             data = conn.recv(1024)
-             if not data:
-                 break
-             with clients_lock:
-                 for cl in clients:
-                     if cl == conn:
-                         continue
-                     cl.sendall(data)
-         except Exception as e:
-             clients.remove(conn)
-             break
-     print('end chatting' + str(addr))
-     conn.close()
+def message():
+    while True:
+        text = None
+        try:
+            for user in users:
+                text = user[0].recv(1024).decode('utf-8')
+                print('Received text: ' + text)
+                if text == "quit":
+                    user[0].close()
+                    print('User have closed chat: ', user[1])
+                    text = f'User {user[1]} have closed chat'
+                for send_user in users:
+                    if send_user[0] == user[0]:
+                        continue
+                    data = f'User {user[1]}: ' + text
+                    send_user[0].sendall(data.encode('utf8'))
+        except socket.error:
+            print('waiting...')
+            time.sleep(1)
+        except KeyboardInterrupt:
+            for user in users:
+                user[0].close()
+            break
 
 
- if __name__ == '__main__':
-     sock = socket.socket()
-     sock.bind(('', 9090))
-     sock.listen(1)
-     clients = set()
-     clients_lock = threading.Lock()
-     threading.Thread(target=monitor_connection).start()
+user_thread = Thread(target=coming_users)
+message_thread = Thread(target=message)
+
+user_thread.start()
+message_thread.start()
+

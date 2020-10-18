@@ -1,13 +1,15 @@
 import socket
 
-conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-conn.bind(("127.0.0.1", 14902))
-conn.listen(1)
 
+conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+conn.bind(("127.0.0.1", 14915))
+conn.listen(10)
+clientsocket, addr = conn.accept()
 while True:
-    conn, addr = sock.accept()
-    data = conn.recv(1024)
+    data = clientsocket.recv(1024)
     if not data:
         break
-    conn.sendall(b'HTTP/1.0 200 OK\r\nContent-Type: text/html\r\n\r\n' + open('index.html', 'rb').read())
-    conn.close()
+    with open('index.html', 'r') as file:
+        html = file.read()
+        clientsocket.sendall((f'HTTP/1.0 200 OK\nContent-Type: text/html\n\n{html}').encode())
+conn.close()
