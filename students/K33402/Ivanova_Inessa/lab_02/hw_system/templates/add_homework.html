@@ -1,0 +1,12 @@
+{% extends  'teacher.html' %}
+
+{% block main %}
+<hr>
+<form method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Save">
+</form>
+<hr>
+<a href="/profile/">Back</a>
+{% endblock %}

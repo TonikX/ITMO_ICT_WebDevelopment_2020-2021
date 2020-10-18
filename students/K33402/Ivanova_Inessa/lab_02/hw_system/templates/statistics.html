@@ -1,0 +1,27 @@
+{% extends  'student.html' %}
+
+{% block main %}
+<div class="container">
+	<table class="table table-hover">
+		<tr>
+			<th>{{ student.group_number }}</th>
+			{% for grade in grades %}
+			<th>{{ grade.homework.subject }}</th>
+			{% endfor %}
+		</tr>
+		{% for student in groupmates %}
+		<tr><th>{{ student.name }}</th>
+			{% for grade in grades %}
+			{% if grade.student|stringformat:"s" == student|stringformat:"s"%}
+			<td>{{ grade.grade }} </td>
+			{% else %}
+			<td> - </td>
+			{% endif %}
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+<hr>
+<a href="/to_do/">Back</a>
+{% endblock %}

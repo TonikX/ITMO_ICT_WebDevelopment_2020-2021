@@ -1,0 +1,14 @@
+{% extends  'student.html' %}
+
+{% block main %}
+<div style="margin: 10px 10px 10px 10px">
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Save">
+	</form>
+</div>
+<hr>
+<a href="/pupil_task/">Back</a>
+
+{% endblock %}

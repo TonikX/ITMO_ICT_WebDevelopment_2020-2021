@@ -1,0 +1,16 @@
+{% extends  'student.html' %}
+
+{% block main %}
+<div style="margin: 10px 10px 10px 10px">
+	<hr>
+	<h4>{{ homework }}</h4>
+	<ul><li>
+		<p>From: {{ homework.teacher }}</p>
+        <p>Deadline: {{ homework.deadline }}</p>
+        <p>Description:</strong> {{ homework.description }}</p>
+            <a href="add_assignment/">Add assignment</a>
+        </li></ul>
+        <a href="/to_do/">Back</a>
+    </div>
+
+{% endblock %}

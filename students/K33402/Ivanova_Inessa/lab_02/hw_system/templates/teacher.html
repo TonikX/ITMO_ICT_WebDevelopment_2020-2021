@@ -1,0 +1,22 @@
+<html  lang="en">
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"  crossorigin="anonymous">
+<title>Teacher Profile</title>
+</head>
+
+<body>
+<div style="margin: 10px 10px 10px 10px">
+	<p class="col-lg-2 float-right"><a href="/logout/">Log out</a></p>
+	<h3 class="col-lg-2">Teacher Profile</h3>
+    <p class="col-lg-3">{{ user.name }} {{ user.subject }}</p>
+	<div>
+		<a class="col-lg-2" href="/homework/add/">Add homework</a>
+	</div>
+	<div>
+        <a class="col-lg-2" href="/homeworks/">My homeworks</a>
+	</div>
+</div>
+{% block main %}
+{% endblock %}
+</body>
+</html>
