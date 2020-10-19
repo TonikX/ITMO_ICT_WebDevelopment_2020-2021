@@ -1,0 +1,41 @@
+<!doctype  html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Табло автогонок</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% load auth_extras %}
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            {% block sidebar %}
+                <ul class="sidebar-nav">
+                    <p align="left">{{ user.first_name }} {{ user.last_name }}</p>
+                    <li><a href="{% url 'race-list' %}">Список автогонок</a></li>
+                    {% if user.is_authenticated %}
+                        {% if request.user|has_group:"racer" %}
+                            <li><a href="{% url 'registration-list' %}">Мои регистрации</a></li>
+                            <li><a href="{% url 'racer-update' user.racer.pk %}">Изменить данные</a></li>
+                        {% else %}
+                            <li><a href="{% url 'racer-create' %}">Зарегистрировать гонщика</a></li>
+                        {% endif %}
+                        <li><a href="{% url 'logout' %}">Выйти</a></li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}">Войти</a></li>
+                    {% endif %}
+                </ul>
+            {% endblock %}
+        </div>
+        <div class="col-sm-10" style="margin-top: 10px">
+            {% block title %}<h3 class="text-center">Табло автогонок</h3>{% endblock %}
+            {% block main %}{% endblock %}
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

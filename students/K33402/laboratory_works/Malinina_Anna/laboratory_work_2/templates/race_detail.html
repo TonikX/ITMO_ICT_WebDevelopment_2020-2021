@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% block title %}
+    <h3 class="text-center">{{ race.name }}</h3>
+{% endblock %}
+{% block main %}
+    {% if race.sorted_racers_set.count != 0 %}
+        <div class="row with_border justify-content-center" align="center">
+            <div class="col-md-1"><b>Место</b></div>
+            <div class="col-md-2"><b>ФИО</b></div>
+            <div class="col-md-2"><b>Название команды</b></div>
+            <div class="col-md-3"><b>Время финиша</b></div>
+        </div>
+    {% endif %}
+    {% for race_racer in race.sorted_racers_set %}
+        <div class="row with_border justify-content-center" align="center">
+            <div class="col-md-1">{{ forloop.counter }}</div>
+            <div class="col-md-2"><a
+                    href="{{ race_racer.racer.get_absolute_url }}">{{ race_racer.racer.user_info.first_name }} {{ race_racer.racer.user_info.last_name }}</a>
+            </div>
+            <div class="col-md-2">{{ race_racer.racer.team }}</div>
+            <div class="col-md-3">{{ race_racer.finish_time }}</div>
+        </div>
+    {% empty %}
+        <p align="center">Гонщики не найдены</p>
+    {% endfor %}
+    <h5>Комментарии:</h5><br>
+    {% for comment in race.comment_set.all %}
+        <div class="row" style="margin-left: 10px">
+            <div class="col-md-1">
+                {{ comment.commentator.first_name }}
+            </div>
+            <div class="col-md-3    ">
+                {{ comment.datetime }}
+            </div>
+            <div class="col-md-1">
+                rating: {{ comment.rating }}
+            </div>
+            <div class="col-md-5">
+                Тип: {{ comment.get_type_display }}
+            </div>
+        </div>
+        <div class="row with_border" style="margin-bottom: 15px; margin-left: 10px">
+            <div class="col-md-7" style="padding: 5px;">
+                {{ comment.text }}
+            </div>
+        </div>
+    {% empty %}
+        <p align="center">Комментарии не найдены</p>
+    {% endfor %}
+    {% if user.is_authenticated %}
+        <br>
+        <div class="row">
+            <div class="col-md-5">
+                <h5>Оставить комментарий:</h5>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ next }}">
+
+                    {{ form|crispy }}
+
+                    <input type="submit" class="btn btn-primary btn-block" value="Отправить">
+                </form>
+            </div>
+        </div>
+    {% else %}
+        <br> <a href="{% url 'login' %}">Войдите, чтобы оставить комментарий</a>
+    {% endif %}
+{% endblock %}

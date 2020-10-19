@@ -1,0 +1,31 @@
+{% extends  'base.html' %}
+{% load auth_extras %}
+{% load models_extra %}
+
+{% block main %}
+    {% if object_list.count != 0 %}
+        <div class="row with_border justify-content-center" align="center">
+            <div class="col-md-3"><b>Название</b></div>
+            <div class="col-md-3"><b>Дата и время проведения</b></div>
+            <div class="col-md-3"><b>Действия</b></div>
+        </div>
+    {% endif %}
+    {% for item in object_list %}
+        <div class="row with_border justify-content-center" align="center">
+            <div class="col-md-3">{{ item.name }}</div>
+            <div class="col-md-3">{{ item.datetime }}</div>
+            <div class="col-md-3">
+                {% if user.is_authenticated and request.user|has_group:"racer" %}
+                    {% if  user|has_registered:item.id%}
+                        <a href="{% url 'race-list' %}?delete_id={{ item.id }}">Отменить регистрацию</a>
+                    {% else %}
+                        <a href="{% url 'race-list' %}?register_id={{ item.id }}">Зарегистрироваться</a>
+                    {% endif %}
+                {% endif %}
+                <a href="{% url 'race-detail' item.pk %}">    Подробнее</a>
+            </div>
+        </div>
+    {% empty %}
+        <p align="center">Автогонки не найдены</p>
+    {% endfor %}
+{% endblock %}
