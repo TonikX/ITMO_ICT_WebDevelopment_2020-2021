@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tours</title>
+</head>
+<body bgcolor="#FCECFA">
+<div class="main">
+     {% for tour in tours %}
+      ID: {{tour.id}} <br><a
+            href="/tours/{{ tour.id }}/reserve">Book now!</a></br>
+     <strong>Name: </strong>{{tour.name}} <br>
+     <strong>Description: </strong>{{tour.description}} <br>
+     <strong>Tour agency: </strong>{{tour.tour_agency}} <br>
+     <strong>Starts on </strong>{{tour.start_date}} <br>
+     <strong>Ends on </strong>{{tour.end_date}} <br>
+     <strong>Country: </strong>{{tour.country}} <br>
+     <strong>Payment method: </strong>{{tour.payment}} <br><br>
+     {% endfor %}
+</div>
+</body>
+</html>
