@@ -1,0 +1,30 @@
+{% extends 'wrapper.html' %}
+
+{% block content %}
+
+<table class="table table-hover" id="myTable" width="100%">
+  <thead>
+   <tr>
+    <th scope="col">Ученик</th>
+    <th scope="col">Предмет</th>
+    <th scope="col">Задание</th>
+    <th scope="col">Оценка</th>
+   </tr>
+  </thead>
+
+  <tbody>
+
+  {% for object in object_list %}
+
+      <tr>
+          <td>{{ object.student_subm.first_name }} {{ object.student_subm.last_name }}</td>
+          <td>{{ object.task_subm.subject }}</td>
+          <td ><a href="/tasks_list/{{object.task_subm.id}}">{{ object.task_subm }}</a></td>
+          <td>{{ object.grade_subm }}</td>
+      </tr>
+
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

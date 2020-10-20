@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owners</title>
+</head>
+<body>
+<div class="main">
+
+    <span><h1>Owners:</h1><a href="/add_car_owner/">Create new owner</a></span>
+
+    <p></p>
+
+    {% for data in dataset %}
+
+        {{ data.first_name }}
+        {{ data.last_name }}<br/>
+        {{ data.birth_date }}<br/>
+        {{ data.passport }}<br/>
+        {{ data.address }}<br/>
+        {{ data.nationality }}<br/>
+        <hr/>
+
+    {% endfor %}
+
+
+</div>
+</body>
+</html>
