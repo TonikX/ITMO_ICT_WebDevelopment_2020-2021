@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="main">
+     {% for vehicle in vehicles %}
+      ID: {{vehicle.id}} <br><a
+            href="/vehicle/{{ vehicle.id }}/">Details</a> </br>
+      Brand: {{vehicle.brand}} <br>
+      Model: {{vehicle.model}} <br>
+      Color: {{vehicle.color}} <br>
+      Registration number: {{vehicle.reg_number}}<br><br>
+     {% endfor %}
+</div>
+<a href="/add_vehicle/">Create a new vehicle</a>
+</body>
+</html>
