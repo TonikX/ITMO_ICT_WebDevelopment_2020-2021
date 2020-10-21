@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Личный кабинет</title>
+</head>
+<body>
+<strong>Ник: </strong>{{ user.username }} <br>
+<strong>Электронная почта: </strong>{{ user.email }} <br>
+<strong>Имя: </strong>{{ user.first_name }} <br>
+<strong>Фамилия: </strong>{{ user.last_name }} <br>
+<strong>Паспорт: </strong>{{ user.passport }} <br><br>
+
+<a href="/lcreservations">Мои брони</a><br>
+</body>
+</html>
