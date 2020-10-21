@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicles</title>
+    <style>
+        .main_block{
+            text-align: center;
+            margin: 0 auto auto;
+        }
+        ul li{
+            display: inline;
+        }
+        a {
+            text-decoration: none;
+            color: grey;
+        }
+        a:hover{
+          color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="main_block">
+    <h1><a href="create/">Добавить</a></h1>
+    <hr>
+    {% for vehicle in object_list %}
+    <h1>Vehicle {{ vehicle.pk }}</h1>
+        <p>Manufacturer {{ vehicle.manufacturer }}</p>
+     <p>Model: {{ vehicle.model }}</p>
+     <p>Color: {{ vehicle.color }}</p>
+     <p>Plate: {{ vehicle.plate }}</p>
+        <ul>
+        <li><a href="{{ vehicle.pk }}/edit/" style="margin-right: 30px;">Изменить</a></li>
+        <li><a href="{{ vehicle.pk }}/delete/" style="margin-right: 30px;">Удалить</a></li>
+        </ul>
+        <hr>
+    {% endfor %}
+</div>
+
+</body>
+</html>
