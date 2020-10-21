@@ -28,7 +28,7 @@ while True:
         if len(data) != 3:
             conn.send(f'Неправильно введены параметры'.encode())
         if not data[2] and data[0] and data[1]:
-            conn.send(f'Гиппотенуза: {(data[0] ** 2 + data[1]) ** 0.5}'.encode())
+            conn.send(f'Гиппотенуза: {(data[0] ** 2 + data[1] ** 2) ** 0.5}'.encode())
         elif (data[0] and not data[1]) or (data[1] and not data[0]):
             conn.send(f'Катет: {(data[2] ** 2 - max(data[0], data[1]) ** 2) ** 0.5}'.encode())
         else:
