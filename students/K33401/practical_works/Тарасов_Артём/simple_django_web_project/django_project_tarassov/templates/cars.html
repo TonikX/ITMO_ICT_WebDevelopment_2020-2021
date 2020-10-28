@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+
+    <style>
+        table {
+            border-spacing: 20px 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Official number</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for object in object_list %}
+            <tr>
+                <th>{{ object.brand }}</th>
+                <th>{{ object.car_model }}</th>
+                <th>{{ object.color }}</th>
+                <th>{{ object.official_number }}</th>
+            </tr>
+        {% endfor %}
+        {% if not object_list %}
+            <tr>
+                <th>{{ object.brand }}</th>
+                <th>{{ object.car_model }}</th>
+                <th>{{ object.color }}</th>
+                <th>{{ object.official_number }}</th>
+            </tr>
+        {% endif %}
+        </tbody>
+    </table>
+
+</body>
+</html>

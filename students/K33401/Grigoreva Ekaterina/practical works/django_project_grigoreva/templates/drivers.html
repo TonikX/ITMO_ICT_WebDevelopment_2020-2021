@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drivers</title>
+
+    <style>
+        table {
+            border-spacing: 20px 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    {% if new %}
+        <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+    {% else %}
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Date of birth</th>
+            <th>Passport</th>
+            <th>Address</th>
+            <th>Nationality</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if all %}
+            {% for driver in drivers %}
+                <tr>
+                    <th>{{ driver.first_name }}</th>
+                    <th>{{ driver.last_name }}</th>
+                    <th>{{ driver.date_of_birth }}</th>
+                    <th>{{ driver.passport }}</th>
+                    <th>{{ driver.address }}</th>
+                    <th>{{ driver.nationality }}</th>
+                </tr>
+            {% endfor %}
+        {% endif %}
+        {% if one %}
+            <tr>
+                <th>{{ driver.first_name }}</th>
+                <th>{{ driver.last_name }}</th>
+                <th>{{ driver.date_of_birth }}</th>
+                <th>{{ driver.passport }}</th>
+                <th>{{ driver.address }}</th>
+                <th>{{ driver.nationality }}</th>
+            </tr>
+        {% endif %}
+        </tbody>
+    </table>
+    {% endif %}
+
+<a href="../create_driver">New</a>
+</body>
+</html>
