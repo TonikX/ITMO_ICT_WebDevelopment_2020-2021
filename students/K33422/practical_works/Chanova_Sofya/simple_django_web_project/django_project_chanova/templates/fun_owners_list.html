@@ -1,0 +1,26 @@
+<div class="main">
+
+    <h1>список владельцев</h1>
+
+    {% for owner in owners %}
+
+    {{ owner.username }}<br/>
+    {{ owner.first_name }}<br/>
+    {{ owner.last_name }}<br/>
+    {{ owner.birth_date }}<br/>
+    {{ owner.passport }}<br/>
+    {{ owner.address }}<br/>
+    {{ owner.nationality }}<br/>
+
+    <a href="/owner/{{ owner.id }}/">показать</a>
+
+    <hr/>
+
+    {% endfor %}
+
+    <a href="/add_owner/">добавить владельца</a> |
+    <a href="../">домой</a>
+
+
+</div>
+

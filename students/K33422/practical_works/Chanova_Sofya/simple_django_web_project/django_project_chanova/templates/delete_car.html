@@ -1,0 +1,15 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>удалить машину</title>
+</head>
+
+<body>
+  <form method="post">{% csrf_token %}
+    <p>точно удалить "{{ object }}"?</p>
+    <input type="submit" value="точно">
+  </form>
+  <br>
+  <br>
+  <a href="/cars_list/">к списку</a>
+</body>
