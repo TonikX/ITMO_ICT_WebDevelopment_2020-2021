@@ -1,0 +1,26 @@
+<ul>
+    <h1>список машин</h1>
+
+    {% for car in cars %}
+
+    {{ car.brand }} <br/>
+    {{ car.model }} <br/>
+    {{ car.color }} <br/>
+    {{ car.plate_number }} <br/>
+
+    <a href="/car/{{ car.id }}/">показать</a> |
+    <a href="/car/{{ car.id }}/update">обновить</a> |
+    <a href="/car/{{ car.id }}/delete">удалить</a>
+
+
+
+    <hr/>
+
+    {% empty %}
+    <li>объекты отсутсвуют</li>
+    {% endfor %}
+
+</ul>
+
+    <a href="/add_car/">добавить</a> |
+    <a href="../">домой</a>

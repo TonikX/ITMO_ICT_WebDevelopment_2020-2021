@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owner</title>
+</head>
+<body>
+<ul>
+    <li><strong>Owner:</strong> {{ owner.surname }} {{ owner.name }}
+        <p><strong>Birthday:</strong> {{ owner.birthday }}</p>
+        <p><strong>Passport:</strong> {{ owner.user_info.passport }}</p>
+        <p><strong>Address:</strong> {{ owner.user_info.address }}</p>
+        <p><strong>Nationality:</strong> {{ owner.user_info.nationality }}</p>
+        <p><strong>Cars:</strong></p>
+        {% for car in owner.cars.all %}
+            <strong>Car:</strong> {{ car.brand }} {{ car.model }}, actions: <a href="/car/{{ car.id }}/update/">Edit</a>
+            | <a href="/car/{{ car.id }}/">Detail</a>
+            <br>
+        {% empty %}
+            <li>No cars yet.</li>
+        {% endfor %}
+    <p><a href="/owners/">Get back</a></p>
+    </li>
+</ul>
+<br>
+
+</body>
+</html>

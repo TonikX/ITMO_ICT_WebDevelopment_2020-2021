@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% block title %}
+    <h3 class="text-center">Гонщик</h3>
+{% endblock %}
+{% block main %}
+    <ul>
+    <p><strong>Имя:</strong> {{ racer.user_info.first_name }} {{ racer.user_info.last_name }}</p>
+        <p><strong>Команда:</strong> {{ racer.team }}</p>
+        <p><strong>Описание:</strong> {{ racer.description }}</p>
+        <p><strong>Автомобиль:</strong> {{ racer.car_description }}</p>
+        <p><strong>Опыт (лет):</strong> {{ racer.experience_year }}</p>
+        <p><strong>Класс:</strong> {{ racer.get_racer_class_display }} ({{ racer.racer_class }})</p>
+        <p><strong>Участие в гонках:</strong></p>
+        {% for race_racer in racer.raceracer_set.all%}
+            <ul><li><p><a href="{{ race_racer.race.get_absolute_url }}">{{ race_racer.race.name }}</a></p></li></ul>
+        {% empty %}
+            <ul><li>Не участвовал</li></ul>
+        {% endfor %}
+
+</ul>
+{% endblock %}
