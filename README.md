@@ -101,7 +101,8 @@ https://www.youtube.com/playlist?list=PLF-NY6ldwAWqP4S95brtPHZ5fTCxilgei - го�
 - подробно о формате json
 - сериализация
 
-[Запись](https://youtu.be/PI-FPq3zhpc)
+[Запись лекции в аудитории](https://youtu.be/PI-FPq3zhpc)
+[Видео по сериализации от Давида](https://www.youtube.com/watch?v=sxdPf3z6Uw8&feature=youtu.be)
 
 Лекция 2
 
