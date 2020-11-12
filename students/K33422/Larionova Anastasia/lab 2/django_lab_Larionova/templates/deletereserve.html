@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body bgcolor="#FCECFA">
+  <form method="post">{% csrf_token %}
+     <p>Do you want to delete your booking "{{object}}"?</p>
+     <input type="submit" value="Delete"> <br><br>
+</form>
+<a href="/myreserves/">Back to my bookings</a>
+</body>
+</html>

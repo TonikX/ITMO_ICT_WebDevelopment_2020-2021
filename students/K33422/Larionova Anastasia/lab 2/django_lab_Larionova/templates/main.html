@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tour agency</title>
+
+</head>
+<body bgcolor="#FCECFA">
+
+    {% if user.is_authenticated %}
+        <p><h1>Logged in as {{ user.username }}</h1></p>
+    {% else %}
+    <p>Not logged in</p>
+    {% endif %}
+
+<a href="/register/" style ="
+background: skyblue;
+padding: 10px 20px;
+color: white;"
+>Sign up</a>
+<a href="/accounts/login/" style ="
+background: skyblue;
+padding: 10px 20px;
+color: white;"
+>Login</a><br><br><br>
+
+<a href="/tours/" style ="
+background: skyblue;
+padding: 10px 20px;
+color: white;"
+>Available tours</a>
+<a href="/reviews/" style ="
+background: skyblue;
+padding: 10px 20px;
+color: white;"
+>All reviews</a><br><br><br>
+
+<a href="/review/" style ="
+background: skyblue;
+padding: 10px 20px;
+color: white;"
+>Give feedback</a>
+<a href="/soldtours/" style ="
+background: skyblue;
+padding: 10px 20px;
+color: white;"
+>Sold tours</a><br><br><br>
