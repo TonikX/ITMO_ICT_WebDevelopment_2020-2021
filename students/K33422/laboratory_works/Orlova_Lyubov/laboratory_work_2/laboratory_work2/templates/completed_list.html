@@ -12,8 +12,8 @@
         {% if submission.student_subm == user %}
 
         <p class="h5"><mark><em>{{ submission.task_subm }}</em></mark>
-            <a class="btn btn-outline-primary btn-sm" href="/completed_tasks/{{ submission.task_subm.id }}/update/" role="button">Изменить</a>
-            <a class="btn btn-outline-danger btn-sm" href="/completed_tasks/{{ submission.task_subm.id }}/delete/" role="button">Удалить</a></p>
+            <a class="btn btn-outline-primary btn-sm" href="/completed_tasks/{{ submission.id }}/update/" role="button">Изменить</a>
+            <a class="btn btn-outline-danger btn-sm" href="/completed_tasks/{{ submission.id }}/delete/" role="button">Удалить</a></p>
         <p><strong>Выполнение:</strong> {{ submission.submission}}</p>
 
             <p align="right"><a class="btn btn-primary btn-sm" href="/tasks_list/{{ submission.task_subm.id }}" role="button">Перейти к заданию :)</a></p>

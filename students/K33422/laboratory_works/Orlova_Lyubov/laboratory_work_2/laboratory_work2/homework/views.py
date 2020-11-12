@@ -36,7 +36,7 @@ def loginPage(request):
     else:
         if request.method == 'POST':
             username = request.POST.get('username')
-            password =request.POST.get('password')
+            password = request.POST.get('password')
 
             user = authenticate(request, username=username, password=password)
 
@@ -80,32 +80,16 @@ class TasksList(ListView):
 
 
 class TaskDescription(DetailView):
-
     model = Task
     template_name = "task_view.html"
 
 
 class CompletedTask(ListView):
-
     model = Submission
     template_name = 'completed_list.html'
-    queryset = model.objects.all()
 
     def get_queryset(self):
-
-        realization = self.request.GET.get('realization')
-
-        if realization:
-            try:
-                realization = int(realization)
-                queryset = self.queryset.filter(realization=realization)
-
-            except ValueError:
-                queryset = self.model.objects.none()
-
-            return queryset
-
-        return self.queryset
+        return Submission.objects.all()
 
 
 class AddSubmission(CreateView):
@@ -123,23 +107,14 @@ class AddSubmission(CreateView):
 
 
 class SubmissionUpdate(UpdateView):
-    form_class = AddSubmissionForm
     model = Submission
+    fields = ['submission']
     template_name = 'update_submission.html'
-    success_url = '/completed_tasks/'
-
-    def get_initial(self):
-        initial = super(SubmissionUpdate, self).get_initial()
-        initial = initial.copy()
-        initial['student_subm'] = self.request.user.id
-        initial['task_subm'] = get_object_or_404(Task, pk=self.kwargs['pk'])
-        return initial
 
 
 class SubmissionDelete(DeleteView):
 
     model = Submission
-    success_url = '/completed_tasks/'
     template_name = 'delete_submission.html'
 
 
@@ -147,20 +122,6 @@ class GradesTable(ListView):
 
     model = Submission
     template_name = 'grades_list.html'
-    queryset = model.objects.all()
 
     def get_queryset(self):
-
-        submission = self.request.GET.get('submission')
-
-        if submission:
-            try:
-                submission = int(submission)
-                queryset = self.queryset.filter(submission=submission)
-
-            except ValueError:
-                queryset = self.model.objects.none()
-
-            return queryset
-
-        return self.queryset
+        return Submission.objects.all()

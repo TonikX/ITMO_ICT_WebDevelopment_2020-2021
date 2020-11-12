@@ -12,7 +12,7 @@ urlpatterns = [
     path('completed_tasks/', views.CompletedTask.as_view()),
 
     path('completed_tasks/<int:pk>/add/', views.AddSubmission.as_view(success_url="/completed_tasks/")),
-    path('completed_tasks/<int:pk>/update/', views.SubmissionUpdate.as_view()),
-    path('completed_tasks/<int:pk>/delete/', views.SubmissionDelete.as_view()),
+    path('completed_tasks/<int:pk>/update/', views.SubmissionUpdate.as_view(success_url="/completed_tasks/")),
+    path('completed_tasks/<int:pk>/delete/', views.SubmissionDelete.as_view(success_url="/completed_tasks/")),
     path('grades/', views.GradesTable.as_view()),
 ]
