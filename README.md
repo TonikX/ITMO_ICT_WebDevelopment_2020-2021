@@ -149,7 +149,7 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 2.2.	Использовать вариант из дисциплины «Адаптивный веб-дизайн».<br>
 2.3.	Выбрать вариант из вариантов по курсу «Основы баз данных» (https://drive.google.com/file/d/174gPjJ7AOHfzteYcobPY0x7sFBTkN1Xx/view?usp=sharing).<br>
 2.4.	Выбрать бонусный вариант от Давида или Максима Валерьевича Хлопотова (см. пункт Бонусные варинты [тут](
-https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=sharing).
+https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=sharing).<br>
 По любому из способов функционал нужно согласовать с преподавателем на консультации.<br>
 3.	Реализовать модель базы данных средствами DjangoORM (согласовать с преподавателем на консультации).<br>
 4.	Реализовать логику работу API средствами Django REST Framework (используя методы сериализации).<br>
