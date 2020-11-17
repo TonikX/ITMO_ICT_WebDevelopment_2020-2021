@@ -1,21 +1,6 @@
 from rest_framework import serializers
 from .models import *
 
-class WarriorSerializer(serializers.ModelSerializer):
-    
-    class Meta:
-        model = Warrior
-        fields = "__all__"
-        
-        
-class ProfessionCreateSerializer(serializers.Serializer):
-    title = serializers.CharField(max_length=120)
-    description = serializers.CharField()
-    
-    def create(self, validated_data):
-        return Profession(**validated_data)
-        
-        
 class ProfessionSerializer(serializers.ModelSerializer):
     
     class Meta:
@@ -27,11 +12,29 @@ class SkillSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Skill
-        fields = "__all__"
+        fields = ["title"]
         
         
-class SkillCreateSerializer(serializers.Serializer):
-    title = serializers.CharField(max_length=120)
+class WarriorAndProfessionSerializer(serializers.ModelSerializer):
+    profession = ProfessionSerializer()
+
+    class Meta:
+        model = Warrior
+        fields = ["id", "name", "race", "level", "profession"]
+
+
+class WarriorAndSkillSerializer(serializers.ModelSerializer):
+    skill = serializers.SlugRelatedField(read_only=True, many=True, slug_field='title')
+
+    class Meta:
+        model = Warrior
+        fields = fields = ["id", "name", "race", "level", "skill"]
+        
+class WarriorSerializer(serializers.ModelSerializer):
+    profession = ProfessionSerializer()
+    skill = SkillSerializer(many=True)
     
-    def create(self, validated_data):
-        return Skill(**validated_data)
+    class Meta:
+        model = Warrior
+        fields = fields = ["id", "name", "race", "level", "profession", "skill"]
+        

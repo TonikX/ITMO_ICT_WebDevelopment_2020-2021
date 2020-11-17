@@ -12,9 +12,15 @@ class Warrior(models.Model):
     skill = models.ManyToManyField('Skill', verbose_name='Умения', through='SkillOfWarrior', related_name='warrior_skills')
     profession = models.ForeignKey('Profession', on_delete=models.CASCADE, verbose_name='Профессия', blank=True, null=True)
     
+    def __str__(self):
+        return self.name
+    
 class Profession(models.Model):
     title = models.CharField(max_length=120, verbose_name='Название')
     description = models.TextField(verbose_name='Описание')
+    
+    def __str__(self):
+        return self.title
     
 class Skill(models.Model):
     title = models.CharField(max_length=120, verbose_name='Наименование')
@@ -26,3 +32,6 @@ class SkillOfWarrior(models.Model):
     skill = models.ForeignKey('Skill', verbose_name='Умение', on_delete=models.CASCADE)
     warrior = models.ForeignKey('Warrior', verbose_name='Воин', on_delete=models.CASCADE)
     level = models.IntegerField(verbose_name='Уровень освоения')
+    
+    def __str__(self):
+        return "{} {}".format(self.warrior, self.skill)
