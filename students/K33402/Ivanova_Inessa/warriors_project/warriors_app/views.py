@@ -53,7 +53,7 @@ class WarriorAPIView(generics.RetrieveAPIView):
     queryset = Warrior.objects.all()
     
 
-class WarriorAPIDelete(generics.DestroyAPIView):
+class WarriorAPIDelete(generics.RetrieveDestroyAPIView):
     serializer_class = WarriorSerializer
     queryset = Warrior.objects.all()
     
@@ -61,5 +61,6 @@ class WarriorAPIDelete(generics.DestroyAPIView):
 class WarriorAPIUpdate(generics.RetrieveUpdateAPIView):
     serializer_class = WarriorSerializer
     queryset = Warrior.objects.all()
+    
 
         
