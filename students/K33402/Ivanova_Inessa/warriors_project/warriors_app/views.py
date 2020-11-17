@@ -5,18 +5,6 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import generics
 
-
-class SkillSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Skill
-        fields = "__all__"
-     
-     
-class WarriorSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Warrior
-        fields = "__all__"
-     
      
 class SkillAPIView(APIView):
     
@@ -59,7 +47,7 @@ class WarriorAPIDelete(generics.RetrieveDestroyAPIView):
     
     
 class WarriorAPIUpdate(generics.RetrieveUpdateAPIView):
-    serializer_class = WarriorSerializer
+    serializer_class = WarriorUpdateSerializer
     queryset = Warrior.objects.all()
     
 

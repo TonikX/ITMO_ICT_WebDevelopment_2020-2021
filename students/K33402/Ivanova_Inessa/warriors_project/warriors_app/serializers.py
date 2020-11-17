@@ -14,7 +14,7 @@ class SkillSerializer(serializers.ModelSerializer):
         model = Skill
         fields = ["title"]
         
-        
+ 
 class WarriorAndProfessionSerializer(serializers.ModelSerializer):
     profession = ProfessionSerializer()
 
@@ -28,21 +28,21 @@ class WarriorAndSkillSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Warrior
-        fields = fields = ["id", "name", "race", "level", "skill"]
+        fields = ["id", "name", "race", "level", "skill"]
         
         
 class WarriorSerializer(serializers.ModelSerializer):
-     
-    def update(self, instance, validated_data):
-        instance.race = validated_data.get('race', instance.race)
-        instance.name = validated_data.get('name', instance.name)
-        instance.skill = validated_data.get('skill', instance.skill)
-        instance.profession = validated_data.get('profession', instance.author_id)
-        instance.save()
-        return instance
-        
+    profession = ProfessionSerializer()
+    skill = SkillSerializer(many=True)
+    
     class Meta:
         model = Warrior
-        fields = fields = ["id", "name", "race", "level", "profession", "skill"]
-        depth = 1
+        fields = ["id", "name", "race", "level", "profession", "skill"]
+        
+        
+class WarriorUpdateSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Warrior
+        fields = "__all__"
         
