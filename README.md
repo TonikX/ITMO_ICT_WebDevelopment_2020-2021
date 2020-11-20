@@ -179,7 +179,7 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 Содержание:
 
 - Отличие многостраничного приложения от SPA [ссылка](https://drive.google.com/file/d/1aUwwy7xKJ32J9rXumK-xcI_ttWm1vcSx/view?usp=sharing)
-- Angular vs. Vue vs. React [ссылка]()
+- Angular vs. Vue vs. React [ссылка](https://drive.google.com/file/d/1bNEVcfHRo0T9n1IDYwnn0YIPEGUIO51a/view?usp=sharing)
 - Компонентный подход + как работает роутинг на фронтенде [ссылка]()
 
 [Запись лекции в аудитории]()<br>
