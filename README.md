@@ -117,15 +117,10 @@
 - JWT + Использование JWT в Django
 - Djoser ([DRF + Djoser часть 1. Регистрация, авторизация по токенам, получение и изменение данных пользователя](https://youtu.be/NT-cI6rJl5Q))
 
-Полезные материалы:
+Дополнительный контент для тех, кто хочет лучше изучить DRF и работать с ним в будущем::
 
-[простой курс](https://www.youtube.com/playlist?list=PLF-NY6ldwAWqP9PqPU3LA7mX2KJVyLhC_) - плейлист уроков по джанго для тех, кто хочет **быстро** изучить, как работает работает джанго рест фреймворк в связке с vue.js.
-
-П.С. В 4 уроке изменился путь для получения токена авторизации (см. официальную докумекнтацию Djoser https://djoser.readthedocs.io/en/latest/getting_started.html)
-
-Для тех, кто хочет лучше изучить DRF и работать с ним в будущем:
-1) https://www.youtube.com/playlist?list=PLF-NY6ldwAWqSxUpnTBObEP21cFQxNJ7C
-2) https://youtu.be/2rCjdYY-8R4?list=PLF-NY6ldwAWpktIw6ailetqjXibKlOLY_
+1) [простой курс](https://www.youtube.com/playlist?list=PLF-NY6ldwAWqP9PqPU3LA7mX2KJVyLhC_) - плейлист уроков по джанго для тех, кто хочет **быстро** изучить, как работает работает джанго рест фреймворк в связке с vue.js. (П.С. В 4 уроке изменился путь для получения токена авторизации (см. официальную докумекнтацию Djoser https://djoser.readthedocs.io/en/latest/getting_started.html))
+1) [более подробный курс, чем у пункье 1](https://www.youtube.com/playlist?list=PLF-NY6ldwAWqSxUpnTBObEP21cFQxNJ7C)
 
 ### Практическая работа №3.1
 
