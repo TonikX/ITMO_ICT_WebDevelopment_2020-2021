@@ -143,7 +143,7 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 
 Порядок выполнения работы:<br>
 1.	Выполнить [практическую работу 3.1](https://docs.google.com/document/d/1PkpwxCUYQ2_Pi8Fpcgno6te3oCQHZfkh03Zxt6DhHSw/edit)<br><br>
-2.	Выбрать вариант или предложить свой, есть 3 способа:<br>
+2.	Выбрать вариант или предложить свой, есть 4 способа:<br>
 2.1.	Предложить свой вариант.<br>
 2.2.	Использовать вариант из дисциплины «Адаптивный веб-дизайн».<br>
 2.3.	Выбрать вариант из вариантов по курсу «Основы баз данных» (https://drive.google.com/file/d/174gPjJ7AOHfzteYcobPY0x7sFBTkN1Xx/view?usp=sharing).<br>
