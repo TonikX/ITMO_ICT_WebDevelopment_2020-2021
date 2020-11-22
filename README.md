@@ -153,15 +153,15 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 По любому из способов функционал нужно согласовать с преподавателем на консультации.<br><br>
 3.	Реализовать модель базы данных средствами DjangoORM (согласовать с преподавателем на консультации).<br>
 Полезные материалы:<br>
-- [Создание модели данных в Django ORM](https://www.youtube.com/watch?v=LZyk9p0tKXc)<br>
+  - [Создание модели данных в Django ORM](https://www.youtube.com/watch?v=LZyk9p0tKXc)<br>
 4.	Реализовать логику работу API средствами Django REST Framework (используя методы сериализации).<br>
 Полезные материалы:<br>
-- [DJANGO API VIEWS, GENERICS, FILTER](https://youtu.be/AHnBL9x6-rs)<br>
-- [JSON. Сериализация данных. Пишем свой сериализатор. Разбираем Django REST Framework Serializers](https://youtu.be/sxdPf3z6Uw8)<br>
-- [Работа с Django ORM](https://youtu.be/HhrPbmHbDPU)<br>
+  - [DJANGO API VIEWS, GENERICS, FILTER](https://youtu.be/AHnBL9x6-rs)<br>
+  - [JSON. Сериализация данных. Пишем свой сериализатор. Разбираем Django REST Framework Serializers](https://youtu.be/sxdPf3z6Uw8)<br>
+  - [Работа с Django ORM](https://youtu.be/HhrPbmHbDPU)<br>
 5.	Подключить регистрацию / авторизацию по токенам / вывод информации о текущем пользователе средствами Djoser.<br>
 Полезные материалы:<br>
-- Djoser ([DRF + Djoser часть 1. Регистрация, авторизация по токенам, получение и изменение данных пользователя](https://youtu.be/NT-cI6rJl5Q))<br>
+  - Djoser ([DRF + Djoser часть 1. Регистрация, авторизация по токенам, получение и изменение данных пользователя](https://youtu.be/NT-cI6rJl5Q))<br>
 6.	Выполнить практическую работу 3.2 по оформлению документации (в процессе разработки)<br>
 7.	Реализовать документацию, описывающую работу всех используемых endpoint-ов из пункта 3 и 4 средствами Read the Docs или MkDocs.<br>
 
