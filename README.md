@@ -142,7 +142,7 @@
 https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=sharing). Напоминаю, что Вы имеете возможность написать мне в Вк и мы утвердим Вам личный вариант.<br>
 
 Порядок выполнения работы:<br>
-1.	Выполнить практическую работу 3.1 (https://docs.google.com/document/d/1PkpwxCUYQ2_Pi8Fpcgno6te3oCQHZfkh03Zxt6DhHSw/edit)<br><br>
+1.	Выполнить [практическую работу 3.1](https://docs.google.com/document/d/1PkpwxCUYQ2_Pi8Fpcgno6te3oCQHZfkh03Zxt6DhHSw/edit)<br><br>
 2.	Выбрать вариант или предложить свой, есть 3 способа:<br>
 2.1.	Предложить свой вариант.<br>
 2.2.	Использовать вариант из дисциплины «Адаптивный веб-дизайн».<br>
@@ -153,7 +153,7 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 3.	Реализовать модель базы данных средствами DjangoORM (согласовать с преподавателем на консультации).<br>
 При необходимости, студент может согласовать модель базы данных с преподавателем и только потом приступить к описанию модели средствами Django ORM<br>
 Полезные материалы:<br>
-    - [Создание модели данных в Django ORM](Видео)(https://www.youtube.com/watch?v=LZyk9p0tKXc)<br><br>
+    - [Создание модели данных в Django ORM](https://www.youtube.com/watch?v=LZyk9p0tKXc)(Видео)<br><br>
 4.	Реализовать логику работу API средствами Django REST Framework (используя методы сериализации).<br>
 Полезные материалы:<br>
     - Пункты 4, 5, 6 в [Практической работе 3.1](https://github.com/TonikX/ITMO_ICT_WebDevelopment_2020-2021)<br>
