@@ -151,12 +151,12 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=sharing).<br>
 По любому из способов функционал нужно согласовать с преподавателем на консультации.<br><br>
 3.	Реализовать модель базы данных средствами DjangoORM (согласовать с преподавателем на консультации).<br>
-При необходимости, студент может согласовать модель базы данных с преподавателем и только потом приступить к описанию модели средствами Django ORM
+При необходимости, студент может согласовать модель базы данных с преподавателем и только потом приступить к описанию модели средствами Django ORM<br>
 Полезные материалы:<br>
     - [Создание модели данных в Django ORM](Видео)(https://www.youtube.com/watch?v=LZyk9p0tKXc)<br><br>
 4.	Реализовать логику работу API средствами Django REST Framework (используя методы сериализации).<br>
 Полезные материалы:<br>
-    - Пункты 4, 5, 6 в [Практической работе 3.1](https://github.com/TonikX/ITMO_ICT_WebDevelopment_2020-2021)
+    - Пункты 4, 5, 6 в [Практической работе 3.1](https://github.com/TonikX/ITMO_ICT_WebDevelopment_2020-2021)<br>
     - [DJANGO API VIEWS, GENERICS, FILTER](https://youtu.be/AHnBL9x6-rs)(Видео)<br>
     - [JSON. Сериализация данных. Пишем свой сериализатор. Разбираем Django REST Framework Serializers](https://youtu.be/sxdPf3z6Uw8)(Видео)<br>
     - [Работа с Django ORM](https://youtu.be/HhrPbmHbDPU)(Видео)<br><br>
