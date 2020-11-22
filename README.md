@@ -103,17 +103,17 @@
 - rest и альтернативы (GrapgQL…)
 - django rest framework
 - подробно о формате json
-- сериализация
+- сериализация ([Видео по сериализации от Давида](https://www.youtube.com/watch?v=sxdPf3z6Uw8&feature=youtu.be))
 
 [Запись лекции в аудитории](https://youtu.be/PI-FPq3zhpc)<br>
-[Видео по сериализации от Давида](https://www.youtube.com/watch?v=sxdPf3z6Uw8&feature=youtu.be)
+
 
 Лекция 2
 
 - документирование апи
 - Виды авторизации (сессии, токены)
 - JWT + Использование JWT в Django
-- Djoser 
+- Djoser ([DRF + Djoser часть 1. Регистрация, авторизация по токенам, получение и изменение данных пользователя](https://youtu.be/NT-cI6rJl5Q))
 
 Полезные материалы:
 
