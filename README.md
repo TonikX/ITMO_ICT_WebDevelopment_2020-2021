@@ -134,13 +134,12 @@
 
 Цель работы: овладеть навыками написания документации к API.
 
-
 ### Лабораторная часть
 
 Срок сдачи **04.12.2020**
 
 Реализация серверной части приложения средствами django и djangorestframework в соответствии с заланием из [текста работы](
-https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=sharing). Напоминаю, что Вы имеете возможность написать мне в Вк и мы утвердим Вам личный вариант.
+https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=sharing). Напоминаю, что Вы имеете возможность написать мне в Вк и мы утвердим Вам личный вариант.<br>
 
 Порядок выполнения работы:<br>
 1.	Выполнить практическую работу 3.1 (https://docs.google.com/document/d/1PkpwxCUYQ2_Pi8Fpcgno6te3oCQHZfkh03Zxt6DhHSw/edit)<br><br>
@@ -152,16 +151,18 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=sharing).<br>
 По любому из способов функционал нужно согласовать с преподавателем на консультации.<br><br>
 3.	Реализовать модель базы данных средствами DjangoORM (согласовать с преподавателем на консультации).<br>
+При необходимости, студент может согласовать модель базы данных с преподавателем и только потом приступить к описанию модели средствами Django ORM
 Полезные материалы:<br>
-    - [Создание модели данных в Django ORM](https://www.youtube.com/watch?v=LZyk9p0tKXc)<br><br>
+    - [Создание модели данных в Django ORM](Видео)(https://www.youtube.com/watch?v=LZyk9p0tKXc)<br><br>
 4.	Реализовать логику работу API средствами Django REST Framework (используя методы сериализации).<br>
 Полезные материалы:<br>
-    - [DJANGO API VIEWS, GENERICS, FILTER](https://youtu.be/AHnBL9x6-rs)<br>
-    - [JSON. Сериализация данных. Пишем свой сериализатор. Разбираем Django REST Framework Serializers](https://youtu.be/sxdPf3z6Uw8)<br>
-    - [Работа с Django ORM](https://youtu.be/HhrPbmHbDPU)<br><br>
+    - Пункты 4, 5, 6 в [Практической работе 3.1](https://github.com/TonikX/ITMO_ICT_WebDevelopment_2020-2021)
+    - [DJANGO API VIEWS, GENERICS, FILTER](https://youtu.be/AHnBL9x6-rs)(Видео)<br>
+    - [JSON. Сериализация данных. Пишем свой сериализатор. Разбираем Django REST Framework Serializers](https://youtu.be/sxdPf3z6Uw8)(Видео)<br>
+    - [Работа с Django ORM](https://youtu.be/HhrPbmHbDPU)(Видео)<br><br>
 5.	Подключить регистрацию / авторизацию по токенам / вывод информации о текущем пользователе средствами Djoser.<br>
 Полезные материалы:<br>
-    - Djoser ([DRF + Djoser часть 1. Регистрация, авторизация по токенам, получение и изменение данных пользователя](https://youtu.be/NT-cI6rJl5Q))<br><br>
+    - Djoser ([DRF + Djoser часть 1. Регистрация, авторизация по токенам, получение и изменение данных пользователя](https://youtu.be/NT-cI6rJl5Q))(Видео)<br><br>
 6.	Выполнить практическую работу 3.2 по оформлению документации (в процессе разработки)<br><br>
 7.	Реализовать документацию, описывающую работу всех используемых endpoint-ов из пункта 3 и 4 средствами Read the Docs или MkDocs.<br><br>
 
