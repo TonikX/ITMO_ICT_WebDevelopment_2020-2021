@@ -63,7 +63,7 @@
 
 Для удобства навигации по практическим работам необходимо открыть меню оглавления (см. скриншоты ниже)<br><br>
 ![Image alt](https://github.com/TonikX/ITMO_ICT_WebDevelopment_2020-2021/raw/master/static/images/folders_1.png "Открытие оглавления")<br><br>
-![Image alt](https://github.com/ITMO_ICT_WebDevelopment_2020-2021/raw/master/static/images/folders_2.png)<br>
+![Image alt](https://github.com/TonikX/ITMO_ICT_WebDevelopment_2020-2021/raw/master/static/images/folders_2.png)<br>
 
 ## Практическая работа №2.2
 
