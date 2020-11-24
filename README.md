@@ -106,13 +106,10 @@
 
 Содержание:
 
-- rest и альтернативы (GrapgQL…)
-- django rest framework
-- подробно о формате json
+- rest и альтернативы (GrapрQL…) [Время 00:00 - 00:35](https://youtu.be/PI-FPq3zhpc)<br>
+- django rest framework [Время 00:35 - 02:20](https://youtu.be/PI-FPq3zhpc)<br>
+- подробно о формате json [Время 02:20 - 03:15](https://youtu.be/PI-FPq3zhpc)<br>
 - сериализация ([Видео по сериализации от Давида](https://www.youtube.com/watch?v=sxdPf3z6Uw8&feature=youtu.be))
-
-[Запись лекции в аудитории](https://youtu.be/PI-FPq3zhpc)<br>
-
 
 Лекция 2
 
