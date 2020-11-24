@@ -106,10 +106,10 @@
 
 Содержание:
 
-- REST и альтернативы. [Время 00:00 - 00:35](https://youtu.be/PI-FPq3zhpc)<br>
-- Django rest framework. [Время 00:35 - 02:20](https://youtu.be/PI-FPq3zhpc)<br>
-- Подробно о формате json. [Время 02:20 - 03:15](https://youtu.be/PI-FPq3zhpc)<br>
-- Сериализация. [Видео по сериализации от Давида](https://www.youtube.com/watch?v=sxdPf3z6Uw8&feature=youtu.be)<br>
+- REST и альтернативы. ([Лекция 06.11.2020 / Время 00:00 - 00:35](https://youtu.be/PI-FPq3zhpc))<br>
+- Django rest framework. ([Лекция 06.11.2020 / Время 00:35 - 02:20](https://youtu.be/PI-FPq3zhpc))<br>
+- Подробно о формате json. ([Лекция 06.11.2020 / Время 02:20 - 03:15](https://youtu.be/PI-FPq3zhpc))<br>
+- Сериализация. ([Видео по сериализации от Давида](https://www.youtube.com/watch?v=sxdPf3z6Uw8&feature=youtu.be))<br>
 
 Лекция 2
 
