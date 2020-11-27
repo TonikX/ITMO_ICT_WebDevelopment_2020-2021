@@ -1,29 +1,10 @@
 <body>
 
-	<p>
-	{% for hotel in hotels %}
-		<p>{{hotel}}</p>
-		{% if user.is_authenticated %}
-			<form method="POST" action="/booking">
-
-				{% csrf_token %}
-				{% for field in booking_form.visible_fields %}
-						{{ field.label_tag }}{{field}}
-				{% endfor %}
-				<input type="hidden" name="guest" id="id_guest" value="{{user.id}}"/>
-				<input type="hidden" name="hotel" id="id_hotel" value="{{hotel.id}}"/>
-				<input type="submit" value="Зарезервировать."/>
-			</form>
-		{% endif %}
-	{% endfor %}
-	</p>
-
 	{% if user.is_authenticated %}
 		{% for booking in bookings %}
 		<p>
-		{{booking.hotel}}, {{booking.room}}, {{booking.start}}, {{booking.end}}
+		<a href="/all-hotels/{{booking.hotel.id}}"> {{booking.hotel}} </a>, {{booking.room}}, {{booking.start}}, {{booking.end}}
 		<a href="/booking_save/{{booking.id}}">Редактирование.</a>
-		<a href="/booking/review/{{booking.id}}">Оставить отзыв о резервировании.</a>
 		<form method="POST" action="/booking_delete/{{booking.id}}">
 			{% csrf_token %}
 			<input type="submit" value="Удалить."/>
@@ -35,6 +16,7 @@
 		{% endfor %}
 
 		<p>
+		<a href="/all-hotels">Список отелей.</a>
 		<a href="/logout">Выйти из аккаунта.</a>
 		</p>
 

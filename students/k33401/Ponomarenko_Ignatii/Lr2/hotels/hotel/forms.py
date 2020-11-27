@@ -28,8 +28,8 @@ class ReviewForm(forms.ModelForm):
 	class Meta:
 		model = Review
 		fields = [
-			"booking",
+			"hotel",
 			"text",
 			"rating",
 		]
-		widgets = {'booking': forms.HiddenInput()}
+		widgets = {'hotel': forms.HiddenInput()}

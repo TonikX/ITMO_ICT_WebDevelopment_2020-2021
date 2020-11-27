@@ -41,9 +41,9 @@ for i in range(1, 11):
 	RATING_TYPE.append((i, i))
 
 class Review(models.Model):
-	booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
+	hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
 	text = models.CharField(max_length=1000, null=True)
 	rating = models.IntegerField(null=True, choices=RATING_TYPE)
 
 	def __str__(self):
-		return f'{self.booking}: {self.rating} балла'
+		return f'{self.hotel}: {self.text}'

@@ -30,6 +30,19 @@ def guest_registration(request):
         form = GuestForm()
     return render(request, 'hotel/registration.html', {'form': form})
 
+class HotelsView(ListView):
+    model = Hotel
+
+class HotelView(TemplateView):
+	template_name = "hotel/hotel_details.html"
+	def get_context_data(self, **kwargs):
+		context = super(HotelView, self).get_context_data(**kwargs)
+		context['hotel'] = Hotel.objects.get(id=context['pk'])
+		context['booking_form'] = BookingForm
+		context['reviews'] = Review.objects.filter(hotel__id=context['pk'])
+		context['review_form'] = ReviewForm
+		return context
+
 class BookingView(ListView):
     model = Booking
 
@@ -78,11 +91,11 @@ def logout_view(request):
 class ReviewView(CreateView):
     model = Review
     fields = [
-        "booking",
+        "hotel",
         "text",
         "rating",
     ]
-    success_url = "/booking"
+    success_url = "/all-hotels"
 
     def get_context_data(self, **kwargs):
         context = super(ReviewView, self).get_context_data(**kwargs)
