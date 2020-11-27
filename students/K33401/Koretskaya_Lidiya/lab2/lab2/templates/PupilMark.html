@@ -1,0 +1,28 @@
+{% extends  'Pupil.html' %}
+
+{% block main %}
+    <div class="container">
+        <a href="/pupil_task/">Back</a>
+        <table class="table table-hover">
+            <tr>
+                <th>{{ pupil.class_name }}</th>
+                {% for check in checks %}
+                    <th>{{ check.task.subject }}</th>
+                {% endfor %}
+            </tr>
+            {% for pupil in classmates %}
+                <tr><th>{{ pupil.first_name }} {{ pupil.last_name }}</th>
+                {% for check in checks %}
+                    {% if check.pupil|stringformat:"s" == pupil|stringformat:"s"%}
+                        <td >{{ check.mark }} </td>
+                    {% else %}
+                        <td> - </td>
+                    {% endif %}
+                {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+{% endblock %}

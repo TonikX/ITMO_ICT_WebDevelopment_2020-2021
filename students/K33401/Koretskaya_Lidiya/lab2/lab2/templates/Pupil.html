@@ -1,0 +1,27 @@
+<!doctype  html>
+<html  lang="en">
+<head>
+<link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"  crossorigin="anonymous">
+<title>Pupil desk</title>
+</head>
+<body>
+    <div class="row" style="background: #007bfe; color: white">
+        <p style="margin-left: 50px; margin-top: 10px;">Pupil desk</p>
+        <p style="margin-left: 15px; margin-top: 10px;">{{ user.first_name }} {{ user.last_name }}</p>
+        <p style="margin-left: auto; margin-top: 10px; margin-right: 30px;"><a href="/logout/" style="color: white">Log out</a></p>
+    </div>
+    <div class="row">
+        <a style="margin-left: 50px; margin-top: 10px;" href="/pupil_task/">Homework</a>
+        <a style="margin-left: 50px; margin-top: 10px;" href="/marks">Marks </a>
+    </div>
+
+  <div  class="container">
+      <div  class="row justify-content-center" style="padding-top: 50px">
+          {% block main %}
+              {% lorem random %}
+          {% endblock %}
+
+      </div>
+  </div>
+</body>
+</html>
