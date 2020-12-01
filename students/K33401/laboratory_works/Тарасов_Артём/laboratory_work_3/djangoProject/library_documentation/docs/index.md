@@ -1,5 +1,12 @@
 # LibraryManage
 Создавайте свою базу данных для библиотек с удобным API
+### Get started
+```systemctl start postgresql```
+
+```python manage.py runserver 8005```
+
+```mkdocs serve```
+
 ## Available endpoints
 
 ###Authentication request
