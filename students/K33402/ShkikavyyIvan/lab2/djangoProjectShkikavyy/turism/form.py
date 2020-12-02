@@ -12,11 +12,12 @@ class RegistrationForm(UserCreationForm):
 class CreateCommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ('commentator', 'begin_date', 'end_date', 'rating', 'text')
+        fields = ('commentator','tour', 'begin_date', 'end_date', 'rating', 'text')
 
     def __init__(self, *args, **kwargs):
         super(CreateCommentForm, self).__init__(*args, **kwargs)
         self.fields['commentator'].disabled = True
+        self.fields['tour'].disabled = True
 
 
 class CreateReservationForm(forms.ModelForm):

@@ -8,7 +8,7 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('reservedtour/', views.reservedtourlist),
     path('commentlist/', views.commentlist),
-    path('createcomment/', CreateComment.as_view(), name='comment'),
+    path('tours/<int:pk>/createcomment', CreateComment.as_view(), name='comment'),
     path('tours/', views.tourlist),
     path('tours/<int:pk>/reservation', CreateReservation.as_view(), name='reservation'),
     path('lcreservations/', listreservations.as_view(), name='reservations'),

@@ -16,6 +16,15 @@
         <strong>Заканчивается: </strong>{{ tour.end_date }} <br>
         <strong>Страна: </strong>{{ tour.country }} <br>
         <strong>Метод оплаты: </strong>{{ tour.pay }} <br><br>
+        <a href="/tours/{{ tour.id }}/createcomment">Оставить комментарии</a></br>
+
+            {% for comment in tour.comments %}
+             <strong>Ник: </strong>{{comment.commentator}} <br>
+             <strong>Воспользовался услугой от: </strong>{{comment.begin_date}} <br>
+             <strong>До: </strong>{{comment.end_date}} <br>
+             <strong>Оценка: </strong>{{comment.rating}} <br>
+             <strong>Комментарий: </strong>{{comment.text}} <br><br>
+            {% endfor %}
     {% endfor %}
 </div>
 </body>

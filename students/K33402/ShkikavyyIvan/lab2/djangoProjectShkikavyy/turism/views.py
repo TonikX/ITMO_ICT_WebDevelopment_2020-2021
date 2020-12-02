@@ -72,10 +72,14 @@ class listreservations(ListView):
 
 def commentlist(request):
     visual = {"comments": Comment.objects.all()}
-    return render(request, 'comments.html', visual)
+    return render(request, 'tour.html', visual)
 
 def tourlist(request):
     visual = {"tours": Tour.objects.all()}
+    for i in range(len(visual['tours'])):
+        tour = visual['tours'][i]
+        comments = Comment.objects.filter(tour=tour)
+        visual['tours'][i].comments = comments
     return render(request, 'tour.html', visual)
 
 class CreateComment(CreateView):
@@ -83,9 +87,10 @@ class CreateComment(CreateView):
     model = Comment
     template_name = 'comment.html'
     context_object_name = 'comment'
-    success_url = '/commentlist'
+    success_url = '/tours'
     def get_initial(self):
         initial = super(CreateComment, self).get_initial()
         initial = initial.copy()
         initial['commentator'] = self.request.user.pk
+        initial['tour'] = get_object_or_404(Tour, pk=self.kwargs['pk'])
         return initial

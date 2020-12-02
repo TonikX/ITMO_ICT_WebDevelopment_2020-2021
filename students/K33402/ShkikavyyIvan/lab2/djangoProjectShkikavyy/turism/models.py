@@ -20,19 +20,23 @@ class Tour(models.Model):
     description = models.CharField(max_length=500)
     pay = models.CharField(max_length=25, choices=PAYMENT)
 
+    def __str__(self):
+        return self.name
+
 
 class Comment(models.Model):
     RATING = [(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'), (6, '6'), (7, '7'), (8, '8'), (9, '9'), (10, '10'), ]
     begin_date = models.DateField()
     end_date = models.DateField()
-    commentator = models.ForeignKey(User, on_delete=models.CASCADE)
+    commentator = models.ForeignKey("User", on_delete=models.CASCADE)
+    tour = models.ForeignKey("Tour", on_delete=models.CASCADE)
     text = models.CharField(max_length=500)
     rating = models.IntegerField(choices=RATING)
 
 
 class Reservation(models.Model):
-    username = models.ForeignKey(User, on_delete=models.CASCADE)
-    nameoftour = models.ForeignKey(Tour, on_delete=models.CASCADE)
+    username = models.ForeignKey("User", on_delete=models.CASCADE)
+    nameoftour = models.ForeignKey("Tour", on_delete=models.CASCADE)
     begin_date = models.DateField(blank=True, null=True)
     end_date = models.DateField(blank=True, null=True)
     status = models.BooleanField(blank=True, null=True)
