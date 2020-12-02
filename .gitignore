@@ -124,8 +124,3 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
-
-# Pyre type checker
-.pyre/
-*.xml
-students/K33402/ShkikavyyIvan/lab2/djangoProjectShkikavyy/.idea/djangoProjectShkikavyy.iml

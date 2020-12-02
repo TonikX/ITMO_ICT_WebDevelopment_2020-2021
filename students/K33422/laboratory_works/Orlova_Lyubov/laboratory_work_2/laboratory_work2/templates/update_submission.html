@@ -1,0 +1,15 @@
+{% extends 'wrapper.html' %}
+
+{% block content %}
+
+  <h1>Изменить выполнение задания:</h1>
+  <form method="post">{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Сохранить">
+  </form>
+
+<a href="/completed_tasks/">Вернуться к списку выполненных заданий</a>
+
+{% endblock %}
+
+
