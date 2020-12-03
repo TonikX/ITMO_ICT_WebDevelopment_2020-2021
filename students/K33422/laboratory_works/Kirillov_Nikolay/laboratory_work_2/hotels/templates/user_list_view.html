@@ -1,0 +1,24 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User list</title>
+</head>
+
+<body>
+<ul>
+    {% for User in object_list %}
+        <li>
+            <a>Username: {{ User.username }} </a>
+            <p>Name: {{ User.first_name }} {{ User.last_name }}</p>
+            <p>Email: {{ User.email }}</p>
+            <p>Superuser: {{ User.is_superuser }}</p>
+        </li>
+    {% empty %}
+        <li>No users yet.</li>
+    {% endfor %}
+</ul>
+</body>
+
+</html>

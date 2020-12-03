@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room</title>
+</head>
+<h1>{{ room.number }}</h1>
+{#reserved by {{ room.owner.get }}<br>#}
+{#user {{ request.user }}<br>#}
+{% if room.is_reserved %}
+    {% ifequal room.owner.get request.user %}
+        <a href="http://127.0.0.1:8000/room/{{ room.id }}/delete">[Delete a reservation]</a>
+        <font color="red">Reserved</font>
+    {% else %}
+        <font color="red">Reserved</font>
+    {% endifequal %}
+    {#    <p><strong>owner</strong>: {{ room.owner.get }}</p>#}
+{% else %}
+    <p>
+        <font color="green">Free</font>
+        <a href="http://127.0.0.1:8000/room/{{ room.id }}/reservation">[Make a reservation]</a>
+    </p>
+{% endif %}
+<h3>{{ room.hotel }}</h3>
+<p><strong>Status:</strong> {{ room.status }}</p>
+<body>
+
+<p><strong>Type:</strong> {{ room.room_type }}</p>
+<p><strong>Capacity:</strong> {{ room.capacity }}</p>
+<p><strong>price</strong>: {{ room.price }}</p>
+
+<div>
+    <strong>Reviews:</strong><br><br>
+    {% for review in reviews %}
+        User - {{ review.user }}<br>
+        Stay from {{ review.start_date }} to {{ review.end_date }}<br>
+        {{ review.text }}<br>
+        Rating - {{ review.rating_list }}<br>
+        Created - {{ review.created }}<br><br>
+    {% endfor %}
+</div>
+{% if user.is_active %}
+    <form action="" method="post" id="review">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" form="review">send</button>
+    </form>
+{% else %}
+    <h4>You need to be logged in to leave a review</h4>
+{% endif %}
+
+<a href="/room/list">Get back</a>
+</body>
+
+</html>
