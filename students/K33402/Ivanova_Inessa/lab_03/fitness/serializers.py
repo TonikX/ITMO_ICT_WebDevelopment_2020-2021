@@ -2,46 +2,57 @@ from rest_framework import serializers
 from .models import *
 
 
-class Lessons(serializers.ModelSerializer):
+class BookingSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Lesson
+        model = Booking
+        fields = ["session", "client"]
+        
+        
+class ClientSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Client
+        fields = ["name", "birthday", "bookings"]
+        depth = 2
+
+        
+class LessonTypeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = LessonType
         fields = ["name", "description"]
         
         
-class Coaches(serializers.ModelSerializer):
+class CoachSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Coach
         fields = ["name", "description"]
 
 
-class Sessions(serializers.ModelSerializer):
-    lesson = serializers.SlugRelatedField(read_only='True', slug_field='name')
+class SessionSerializer(serializers.ModelSerializer):
+    lesson_type = serializers.SlugRelatedField(read_only='True', slug_field='name')
     
     class Meta:
-        model = Session
-        fields = ["weekday", "time", "lesson"]
+        model = LessonSession
+        fields = ["weekday", "time", "lesson_type"]
         
         
 class SessionByWeekday(serializers.ModelSerializer):
     coach = serializers.SlugRelatedField(read_only='True', slug_field='name')
-    lesson = Lessons()
+    lesson_type = LessonTypeSerializer()
     
     class Meta:
-        model = Session
-        fields = ["time", "coach", "lesson"]
+        model = LessonSession
+        fields = ["time", "coach", "lesson_type"]
+        
 
-
-class ClientSerializer(serializers.ModelSerializer):
+"""class ProfileSerializer(serializers.ModelSerializer):
+    client = ClientSerializer()
+    booking = BookingSerializer(many=True)
 
     class Meta:
         model = Client
-        fields = "__all__"
+        fields = "__all__" """
         
-        
-class BookingSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Booking
-        fields = "__all__"

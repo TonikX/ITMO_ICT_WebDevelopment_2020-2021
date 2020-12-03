@@ -3,10 +3,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import AbstractUser
 
-class User(AbstractUser):
-     passport = models.IntegerField(default=0000)
-     address = models.CharField(max_length=100)
-     nationality = models.CharField(max_length=100)
+
 
 class Person(models.Model):
     optional = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
@@ -19,7 +16,6 @@ class Car(models.Model):
     model = models.TextField()
     color = models.TextField()
     number = models.CharField(max_length=8)
-    owner = models.ManyToManyField(Person, through='Ownership', null=True)
 
 class DriverLicence(models.Model):
     CATEGORIES = (

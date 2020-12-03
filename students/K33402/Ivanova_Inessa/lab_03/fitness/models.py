@@ -3,6 +3,7 @@ from django.conf import settings
 from django.contrib.auth.models import AbstractUser
 import datetime
 from django.utils import timezone
+from django.contrib.postgres.fields import ArrayField
 
 weekdays = [
     ('Mon', 'Monday'),
@@ -26,6 +27,7 @@ class Client(models.Model):
     name = models.CharField(max_length=100)
     birthday = models.DateField()
     tel = models.CharField(max_length=12)
+    bookings = models.ManyToManyField('LessonSession', through='Booking')
     
     def __str__(self):
         return '{}'.format(self.name)
@@ -39,7 +41,7 @@ class Coach(models.Model):
         return '{}'.format(self.name)
            
            
-class Lesson(models.Model):
+class LessonType(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     
@@ -47,23 +49,21 @@ class Lesson(models.Model):
         return '{}'.format(self.name)
     
     
-class Session(models.Model):
-    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
+class LessonSession(models.Model):
+    lesson_type = models.ForeignKey(LessonType, on_delete=models.CASCADE)
     weekday = models.CharField(max_length=3, choices=weekdays)
     time = models.TimeField()
     coach = models.ForeignKey(Coach, on_delete=models.CASCADE)
     
     def __str__(self):
-        return '{} {} {}'.format(self.weekday, self.lesson, self.time)
+        return '{} {}'.format(self.weekday, self.lesson_type, self.time)
     
     
 class Booking(models.Model):
-    session = models.ForeignKey(Session, on_delete=models.CASCADE)
+    session = models.ForeignKey(LessonSession, on_delete=models.CASCADE)
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
-    date = models.DateField()
-    
     def __str__(self):
-        return '{} {} {}'.format(self.client.username, self.session.lesson.name, self.date)
+        return '{} {}'.format(self.client.username, self.session.lesson_type.name)
     
 
     

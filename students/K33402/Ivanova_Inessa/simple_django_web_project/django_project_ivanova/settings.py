@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'project_first_app',
-    'lab_02'
 ]
 
 MIDDLEWARE = [
@@ -121,4 +120,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-AUTH_USER_MODEL = 'lab_02.User'
