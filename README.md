@@ -193,11 +193,9 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 
 Содержание:
 
-- Отличие многостраничного приложения от SPA [ссылка](https://drive.google.com/file/d/1aUwwy7xKJ32J9rXumK-xcI_ttWm1vcSx/view?usp=sharing)
-- Angular vs. Vue vs. React [ссылка](https://drive.google.com/file/d/1bNEVcfHRo0T9n1IDYwnn0YIPEGUIO51a/view?usp=sharing)
-- Компонентный подход + как работает роутинг на фронтенде [ссылка]()
-
-[Запись лекции в аудитории]()<br>
+- Отличие многостраничного приложения от SPA [Презентация с лекции(.ppt)](https://drive.google.com/file/d/1aUwwy7xKJ32J9rXumK-xcI_ttWm1vcSx/view?usp=sharing) | [Лекция 20.11.2020 / Время 00:00 - 00:16](https://youtu.be/QaU3K0NJ8Xk) (Видео)<br>
+- Angular vs. Vue vs. React [Презентация с лекции(.ppt)](https://drive.google.com/file/d/1bNEVcfHRo0T9n1IDYwnn0YIPEGUIO51a/view?usp=sharing) | [Лекция 20.11.2020 / Время 00:16 - 00:58](https://youtu.be/QaU3K0NJ8Xk) (Видео)<br>
+- Компонентный подход + как работает роутинг на фронтенде [Лекция 20.11.2020 / Время 00:58 - 01:45](https://youtu.be/QaU3K0NJ8Xk) (Видео)<br>
 
 # Лабораторная работа 5. Контейниризация и оркестрация.
 
