@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'library',
     'djoser',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
+    'drf_yasg',
 ]
 
 # AUTH_USER_MODEL = 'djoser.User'
