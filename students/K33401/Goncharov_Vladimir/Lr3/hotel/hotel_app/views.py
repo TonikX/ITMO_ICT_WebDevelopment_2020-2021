@@ -1,3 +1,29 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
 
-# Create your views here.
+from hotel_app.models import *
+from hotel_app.serializers import RoomSerializer, StaffSerializer, GuestSerializer, CleaningSerializer
+
+
+class RoomAPIView(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
+    serializer_class = RoomSerializer
+    queryset = Room.objects.all()
+
+
+class StaffAPIView(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
+    serializer_class = StaffSerializer
+    queryset = Staff.objects.all()
+
+
+class GuestAPIView(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
+    serializer_class = GuestSerializer
+    queryset = Guest.objects.all()
+
+
+class CleaningAPIView(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
+    serializer_class = CleaningSerializer
+    queryset = Cleaning.objects.all()
