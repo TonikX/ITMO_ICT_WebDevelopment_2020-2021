@@ -1,0 +1,22 @@
+site_name: Peer System
+
+nav:
+  - Home: index.md
+  - Auth:
+     - "auth/users/[GET][POST]": auth/users.md
+     - "auth/users/me[GET]": auth/usersMe.md
+     - "auth/token/login[POST]": auth/tokenLogin.md
+     - "auth/token/logout[POST]": auth/tokenLogout.md
+  - Api:
+     - 'api/tasks/[GET][POST]': api/tasks.md
+     - 'api/task/<int:pk>[GET][POST][PUT]': api/task.md
+     - 'api/task/<int:pk>executors/[GET][POST]': api/taskExecutors.md
+     - 'api/task/<int:pk>inspectors/[GET][POST]': api/taskInspectors.md
+     - 'api/my_execution_tasks/[GET]': api/myExecutionTasks.md
+     - 'api/my_inspection_tasks/[GET]': api/myInspectionTasks.md
+     - 'api/students_classes/[GET][POST]': api/studentsClasses.md
+     - 'api/students[GET][POST]': api/students.md
+  - Models: models.md
+
+theme:
+ name: material

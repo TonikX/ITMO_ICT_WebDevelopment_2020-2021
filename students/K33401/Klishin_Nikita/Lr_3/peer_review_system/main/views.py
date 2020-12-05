@@ -32,6 +32,7 @@ class TaskDetialView(generics.RetrieveAPIView):
 	queryset = Task.objects.all()
 	serializer_class = TaskSerializer
 
+
 class TaskExecutorsListView(APIView):
 
 	def get(self, request, pk, format=None):
@@ -39,6 +40,17 @@ class TaskExecutorsListView(APIView):
 		executors = currentTask.executors.all()
 
 		serializer = UserSerializer(executors, many=True)
+
+		return Response(serializer.data)
+
+
+class TaskInspectorsListView(APIView):
+
+	def get(self, request, pk, format=None):
+		currentTask = Task.objects.get(pk=pk)
+		inspectors = currentTask.inspections.all()
+
+		serializer = UserSerializer(inspectors, many=True)
 
 		return Response(serializer.data)
 

@@ -41,7 +41,7 @@ class TaskExecutor(models.Model):
 	def __str__(self) -> str:
 		return self.task.title + " -> " + self.executor.email
 
-
+#TODO исправить TaskInspector
 class TaskInspection(models.Model):
 	task = models.ForeignKey(Task, on_delete=models.CASCADE)
 	inspector = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
