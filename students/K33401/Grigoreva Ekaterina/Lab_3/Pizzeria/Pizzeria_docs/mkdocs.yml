@@ -1,0 +1,7 @@
+site_name: Pizzeria
+nav:
+    - Home: 'index.md'
+    - Pizzeria: 'pizzeria.md'
+    - Registration: 'registration.md'
+theme: material
+
