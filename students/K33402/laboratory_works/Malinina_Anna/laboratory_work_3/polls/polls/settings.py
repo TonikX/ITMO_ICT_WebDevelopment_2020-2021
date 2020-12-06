@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'polls_app',
     'djoser',
     'rest_framework.authtoken',
+    'drf_yasg'
 ]
 
 MIDDLEWARE = [
