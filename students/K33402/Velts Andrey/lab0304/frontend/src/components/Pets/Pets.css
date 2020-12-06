@@ -1,0 +1,58 @@
+.Pets {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 3.5rem 0;
+}
+
+.Pets h1,
+.Pets h3 {
+  padding: 0 3rem;
+}
+
+.Pets__section {
+  padding: 2rem 0;
+}
+
+.Pets__content {
+  display: flex;
+  margin-top: 1rem;
+  padding: 0 3rem;
+  margin-right: 3rem;
+  flex-wrap: wrap;
+}
+
+.Pets__description {
+  font-weight: 300;
+  font-size: 1.125rem;
+  max-width: 510px;
+  margin: 0;
+}
+
+.Pets__card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.Pets__card-image {
+  width: 210px;
+  height: 275px;
+}
+
+.Pets__card-name {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 21px;
+  margin-top: 0.5rem;
+}
+
+.Pets__card-description {
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 17px;
+  margin-top: 0.25rem;
+  color: var(--text_secondary);
+}
