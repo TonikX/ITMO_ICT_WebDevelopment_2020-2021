@@ -9,12 +9,12 @@ class UserViewSet(viewsets.ModelViewSet):
 
     def get_serializer_class(self):
         if hasattr(self, 'action') and self.action == 'create':
-            return UserCreateSerializer
+            return AppUserCreateSerializer
         if hasattr(self, 'action') and self.action == 'retrieve':
             return UserDetailsSerializer
         if hasattr(self, 'action') and self.action == 'update':
-            return UserUpdateSerializer
-        return UserSerializer
+            return AppUserUpdateSerializer
+        return AppUserSerializer
 
 
 class PollViewSet(viewsets.ModelViewSet):

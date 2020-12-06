@@ -3,7 +3,7 @@ from rest_framework import serializers
 from polls_app.models import *
 
 
-class UserSerializer(serializers.ModelSerializer):
+class AppUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ["id",
@@ -28,7 +28,7 @@ class QuestionSerializer(serializers.ModelSerializer):
 
 
 class PollDetailsSerializer(serializers.ModelSerializer):
-    creator = UserSerializer()
+    creator = AppUserSerializer()
     question_set = QuestionSerializer(many=True)
 
     class Meta:
@@ -90,7 +90,7 @@ class PollCreateSerializer(serializers.ModelSerializer):
         return instance
 
 
-class UserCreateSerializer(serializers.ModelSerializer):
+class AppUserCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         exclude = ['answers']
@@ -101,7 +101,7 @@ class UserCreateSerializer(serializers.ModelSerializer):
         return user
 
 
-class UserUpdateSerializer(serializers.ModelSerializer):
+class AppUserUpdateSerializer(serializers.ModelSerializer):
     answers_ids = serializers.PrimaryKeyRelatedField(many=True, read_only=False, queryset=Answer.objects.all(),
                                                      source='answers')
 
