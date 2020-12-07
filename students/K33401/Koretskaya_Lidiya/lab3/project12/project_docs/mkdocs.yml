@@ -22,9 +22,9 @@ nav:
      - "pair delete/update/retrieve": pair/edit.md
 
   - Mark:
-     - "pair list": pair/list.md
-     - "pair create": pair/create.md
-     - "pair delete/update/retrieve": pair/edit.md
+     - "mark list": mark/list.md
+     - "mark create": mark/create.md
+     - "mark delete/update/retrieve": mark/edit.md
 
   - Subject To Teacher:
      - "subject to teacher list": subteach/list.md
