@@ -1,32 +1,32 @@
-site_name: My Docs
+site_name: College
 nav:
- - Home: index.md
- - Teacher:
+  - Info: index.md
+  - Teacher:
      - "teacher list": teacher/list.md
      - "teacher create": teacher/create.md
      - "teacher delete/update/retrieve": teacher/edit.md
 
- - Student:
+  - Student:
      - "student list": student/list.md
      - "student create": student/create.md
      - "student delete/update/retrieve": student/edit.md
 
- - Subject:
+  - Subject:
      - "subject list": subject/list.md
      - "subject create": subject/create.md
      - "subject delete/update/retrieve": subject/edit.md
 
- - Pair:
+  - Pair:
      - "pair list": pair/list.md
      - "pair create": pair/create.md
      - "pair delete/update/retrieve": pair/edit.md
 
- - Mark:
+  - Mark:
      - "pair list": pair/list.md
      - "pair create": pair/create.md
      - "pair delete/update/retrieve": pair/edit.md
 
- - Subject To Teacher:
+  - Subject To Teacher:
      - "subject to teacher list": subteach/list.md
      - "subject to teacher create": subteach/create.md
      - "subject to teacher delete/update/retrieve": subteach/edit.md
