@@ -1,0 +1,17 @@
+site_name: Колледж
+nav:
+  - Home: index.md
+  - Teacher:
+    - "Измеение и удаление учителя": teacher/updel.md
+    - "Добавление нового учителя": teacher/create.md
+  - Student:
+    - "Список студентов": student/view.md
+    - "Добавление нового студента": student/create.md
+    - "Измеение и удаление студента": student/updel.md
+  - Schedule:
+    - "Cписок всех расписаний": schedule/view.md
+    - "Добавление новых пар в расписание": schedule/addpairs.md
+
+
+theme:
+ name: material
