@@ -1,0 +1,10 @@
+site_name: Описание сервиса "Войны"
+nav:
+ - Home: index.md
+ - Warriors:
+     - "warriors list": warriors/list.md
+     - "update warrior info": warriors/update.md
+     - "warriors' skills details": warriors/skill_details.md
+     - "warriors' profession details": warriors/profession_details.md
+theme:
+ name: material
