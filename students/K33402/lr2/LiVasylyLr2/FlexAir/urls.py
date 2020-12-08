@@ -5,6 +5,7 @@ from .views import *
 urlpatterns = [
     path('', HomeListView.as_view(), name='home'),
     path('detailFuture/<int:pk>', HomeDetailViewFuture.as_view(), name='detailFuture_page'),
+    path('delete_comment/<int:id>', delete_comment, name='delete_comment'),
     path('lastflight', LastFlightView.as_view(), name='flight_page'),
     path('detailPast/<int:pk>', HomeDetailViewPast.as_view(), name='detailPast_page'),
     path('login', MyprojectLoginView.as_view(), name='login_page'),

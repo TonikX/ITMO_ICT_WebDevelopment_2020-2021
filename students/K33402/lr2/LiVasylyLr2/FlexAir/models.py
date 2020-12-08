@@ -13,6 +13,8 @@ class Airlines(models.Model):
         return "{}".format(self.name)
 
 
+
+
 class Flight(models.Model):
     company = models.ForeignKey(Airlines, on_delete=models.CASCADE)
     num_flight = models.IntegerField()
@@ -37,12 +39,11 @@ class Place(models.Model):
     num_flight = models.ForeignKey(Flight, on_delete=models.CASCADE, verbose_name='Рейс', blank=True,
                                    related_name='numberFlight')
     passenger = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пассажир', blank=True,
-                                     null=True)
+                                  null=True)
 
     def save(self, *args, **kwargs):
-        if Place.objects.count() >= self.num_flight.NumberOfPackages :
+        if self.num_flight.numberFlight.all().count() >= self.num_flight.NumberOfPackages:
             return
-
         super(Place, self).save(*args, **kwargs)
 
     def __str__(self):

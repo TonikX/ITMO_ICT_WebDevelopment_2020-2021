@@ -11,11 +11,11 @@
         <p class="card-text">Дата вылета: {{ flight.departure_date }} </p>
         <p class="card-text">Дата прилета: {{ flight.Arrival_date }} </p>
         <p class="card-text">{{flight.departure}} -> {{flight.Arrival}}</p>
-<!--        {% for i in flight.count %}-->
-<!--        <a class="btn btn-primary mb-2 pl" href="#" role="button">{{ i }}</a>-->
-<!--        {% endfor %}-->
+        <!--        {% for i in flight.count %}-->
+        <!--        <a class="btn btn-primary mb-2 pl" href="#" role="button">{{ i }}</a>-->
+        <!--        {% endfor %}-->
         <p>мест на борту {{flight.count}} </p>
-<!--        <p>свободно {{flight.num_flight }} &lt;!&ndash; - колличество резераций(комментариев)&ndash;&gt; </p>-->
+        <!--        <p>свободно {{flight.num_flight }} &lt;!&ndash; - колличество резераций(комментариев)&ndash;&gt; </p>-->
     </div>
 </div>
 
@@ -25,14 +25,15 @@
 
 <hr>
 <div class="row mb-5">
-     {% if request.user.is_authenticated %}
+    {% if request.user.is_authenticated %}
     <div class="col-5">
         <form action="" id="add_form" method="post">
             {% csrf_token %}
-         <!--{{form.as_p}}-->
+            <!--{{form.as_p}}-->
         </form>
         <button form="add_form" type="submit" class="btn btn-primary">Зарезервировать</button>
-         <form action="" id="del_form" method="post">
+
+        <form action="" id="del_form" method="post">
             {% csrf_token %}
         </form>
     </div>
@@ -42,9 +43,18 @@
             <ul>
                 {% for item in flight.numberFlight.all %}
 
-                <div class="media">
+                <div class="media mt-2">
                     <div class="media-body">
-                        <h5 class="mt-0">{{item.passenger}}</h5>
+                        <div class="card" style="width: 18rem;">
+                            <div class="row card-body">
+                                <h5 class="col-sm card-title mt-2">{{item.passenger}}</h5>
+                                {% if request.user.is_authenticated %}
+                                {% if request.user == item.passenger %}
+                                <a class='col-sm btn btn-primary' href="{% url 'delete_comment' item.id  %}">удалить</a>
+                                {% endif %}
+                                {% endif %}
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -53,7 +63,6 @@
         </div>
     </div>
 </div>
-
 
 
 {% endblock %}

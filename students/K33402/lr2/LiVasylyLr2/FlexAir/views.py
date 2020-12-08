@@ -1,15 +1,14 @@
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
-from django.urls import reverse_lazy
+from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LoginView, LogoutView
 from django.views.generic.edit import FormMixin
 from django.contrib import messages
 from .forms import *
 from .models import *
-from django.contrib.auth.mixins import LoginRequiredMixin
-from datetime import date
+
 
 
 class CustomSuccessMessageMixin:
@@ -29,8 +28,6 @@ class HomeListView(ListView):
     model = Flight
     template_name = 'index.html'
     context_object_name = 'flights'
-
-
 
 
 class HomeDetailViewFuture(CustomSuccessMessageMixin, FormMixin, DetailView):
@@ -56,6 +53,13 @@ class HomeDetailViewFuture(CustomSuccessMessageMixin, FormMixin, DetailView):
         self.object.passenger = self.request.user
         self.object.save()
         return super().form_valid(form)
+
+
+def delete_comment(request, id):
+    selected_comment = get_object_or_404(Place, id=id)
+    if request.user == selected_comment.passenger:
+        selected_comment.delete()
+    return redirect('')
 
 
 class HomeDetailViewPast(CustomSuccessMessageMixin, FormMixin, DetailView):
