@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room</title>
+</head>
+
+<body>
+    <header>
+        {% if user.is_authenticated %}
+        <h3><a href="/logout">Выйти</a></h3>
+        {% else %}
+        <h3><a href="/login">Войти</a></h3>
+        <h3><a href="/registration">Регистрация</a></h3>
+        {% endif %}
+    </header>
+
+    <h1>{{ hotel.name }}</h1>
+    <h4>{{ hotel.adress }}</h4>
+    <h2>Room number:{{ room.room_number }}</h2>
+    <p>Capacity:{{ room.capacity }}</p>
+    <p>Price per Day:{{ room.price }}</p>
+    <p>Rating:{{ room.rating }}</p>
+
+    <br>
+    <hr>
+    {% if user.is_authenticated %}
+    <a href="/book/{{ room.id }}">Забронировать</a>
+    <a href="/review/{{ room.id }}">Оставить отзыв</a>
+    {% else %}
+    <p>Войдите что бы забронировать или написать отзыв</p>
+    {% endif %}
+
+    <hr>
+    <h2>Отзывы</h2>
+    {% for review in reviews %}
+    <h3>{{ review.rating }} | {{ review.client_id.last_name }} {{ review.client_id.first_name }}</h3>
+    <p>{{ review.description }}</p>
+    <hr>
+    {% endfor %}
+</body>
+
+</html>

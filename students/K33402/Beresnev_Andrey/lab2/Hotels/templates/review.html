@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резервирование</title>
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+    <h3><a href="/logout">Выйти</a></h3>
+    {% else %}
+    <h3><a href="/login">Войти</a></h3>
+    <h3><a href="/registration">Регистрация</a></h3>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+
+    <h2>Отзыв о комнате {{ room.room_number }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Confirm">
+    </form>
+    {% else %}
+    Войдите или зарегистрируйтесь что бы написать отзыв.
+    {% endif %}
+</body>
+
+</html>
