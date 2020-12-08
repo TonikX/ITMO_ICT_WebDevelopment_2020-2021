@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="card mt-4">
+    <div class="card-header">
+        <h5 class="card-title"> Авиакомпания: {{flight.company}} </h5>
+    </div>
+    <div class="card-body">
+        <p class="card-text">Дата вылета: {{ flight.departure_date }} </p>
+        <p class="card-text">Дата прилета: {{ flight.Arrival_date }} </p>
+        <p class="card-text">{{flight.departure}} -> {{flight.Arrival}}</p>
+<!--        {% for i in flight.count %}-->
+<!--        <a class="btn btn-primary mb-2 pl" href="#" role="button">{{ i }}</a>-->
+<!--        {% endfor %}-->
+    </div>
+</div>
+
+
+<hr>
+<p>Комментариев {{ flight.Flight.all.count }}</p>
+
+{% if messages %}
+<div class="alert alert-success">
+    {% for m in messages %}
+        {{ m }}
+    {% endfor %}
+</div>
+{% endif %}
+
+<hr>
+<div class="row mb-5">
+     {% if request.user.is_authenticated %}
+    <div class="col-5">
+        <form action="" id="add_form" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+        </form>
+        <button form="add_form" type="submit" class="btn btn-primary">Добавить</button>
+    </div>
+    {% endif %}
+    <div class="col">
+        <div style="overflow: auto; width:100%; height:400px;">
+            <ul>
+                {% for item in flight.Flight.all %}
+
+                <div class="media">
+                    <div class="media-body">
+                        <h5 class="mt-0">{{ item.author }} - {{ item.create_date }} - рейтинг: {{item.Rating}}</h5>
+                      <p style="  word-break: break-all;"> {{ item.text }}</p>
+                    </div>
+                </div>
+
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
