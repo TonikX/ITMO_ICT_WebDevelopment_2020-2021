@@ -10,7 +10,6 @@ from .forms import *
 from .models import *
 
 
-
 class CustomSuccessMessageMixin:
     @property
     def success_msg(self):
@@ -59,7 +58,7 @@ def delete_comment(request, id):
     selected_comment = get_object_or_404(Place, id=id)
     if request.user == selected_comment.passenger:
         selected_comment.delete()
-    return redirect('')
+    return redirect('home')
 
 
 class HomeDetailViewPast(CustomSuccessMessageMixin, FormMixin, DetailView):
@@ -101,7 +100,6 @@ class MyprojectLoginView(LoginView):
 
     def get_success_url(self):
         return self.success_url
-
 
 class MyprojectLogOutView(LogoutView):
     next_page = reverse_lazy('home')

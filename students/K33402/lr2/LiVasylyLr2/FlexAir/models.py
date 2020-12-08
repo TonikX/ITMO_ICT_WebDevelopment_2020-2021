@@ -5,15 +5,11 @@ from django.contrib.auth.models import User
 from datetime import date
 from django import template
 
-
 class Airlines(models.Model):
     name = models.CharField(max_length=30)
 
     def __str__(self):
         return "{}".format(self.name)
-
-
-
 
 class Flight(models.Model):
     company = models.ForeignKey(Airlines, on_delete=models.CASCADE)

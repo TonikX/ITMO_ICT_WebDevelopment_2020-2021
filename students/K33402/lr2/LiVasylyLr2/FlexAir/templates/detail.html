@@ -14,7 +14,7 @@
         <!--        {% for i in flight.count %}-->
         <!--        <a class="btn btn-primary mb-2 pl" href="#" role="button">{{ i }}</a>-->
         <!--        {% endfor %}-->
-        <p>мест на борту {{flight.count}} </p>
+        <p>мест на борту {{flight.NumberOfPackages}} </p>
         <!--        <p>свободно {{flight.num_flight }} &lt;!&ndash; - колличество резераций(комментариев)&ndash;&gt; </p>-->
     </div>
 </div>
@@ -31,8 +31,11 @@
             {% csrf_token %}
             <!--{{form.as_p}}-->
         </form>
+        {% if flight.numberFlight.all.count < flight.NumberOfPackages %}
         <button form="add_form" type="submit" class="btn btn-primary">Зарезервировать</button>
-
+        {% else %}
+        <h1>Мест нет</h1>
+        {% endif %}
         <form action="" id="del_form" method="post">
             {% csrf_token %}
         </form>

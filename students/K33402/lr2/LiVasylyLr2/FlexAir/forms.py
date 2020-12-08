@@ -1,6 +1,5 @@
 from django import forms
 from django.forms import Textarea
-
 from .models import *
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
