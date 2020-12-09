@@ -1,0 +1,6 @@
+site_name: Cat Rental
+nav:
+  - Home: index.md
+  - API: api.md
+  - AUTH: auth.md
+theme: material
