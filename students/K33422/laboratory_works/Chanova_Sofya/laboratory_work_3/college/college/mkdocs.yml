@@ -1,0 +1,17 @@
+site_name: College Organization System
+nav:
+ - Home: index.md
+ - Users:
+     - "Students": users/student.md
+     - "Teachers": users/teacher.md
+     - "Dispatchers": users/dispatcher.md
+ - Api:
+     - "api/schedule": api/schedule.md
+     - "api/groups": api/groups.md
+     - "api/subjects": api/subjects.md
+     - "api/rooms": api/rooms.md
+     - "api/grades": api/grades.md
+     - "api/teachings": api/teachings.md
+
+theme:
+  name: minty
