@@ -1,0 +1,7 @@
+site_name: Описание сервиса Фитнес Клуба
+nav:
+ - Home: index.md
+ - Endpoints: endpoints.md
+
+theme:
+ name: material

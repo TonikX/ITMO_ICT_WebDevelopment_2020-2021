@@ -1,0 +1,13 @@
+{% extends  'index.html' %}
+
+{% block main %}
+<h4>Log in to your account</h4>
+<form method="post">
+	{% csrf_token %}
+	<input type="hidden" name="next" value="{{ next }}">
+	{{ form.as_p }}
+	<button type="submit">Log in</button>
+</form>
+</div>
+</div>
+{% endblock %}

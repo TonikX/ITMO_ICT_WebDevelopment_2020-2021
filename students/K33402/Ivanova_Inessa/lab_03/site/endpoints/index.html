@@ -1,0 +1,879 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>Endpoints - Описание сервиса Фитнес Клуба</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#base-endpoints" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Описание сервиса Фитнес Клуба" class="md-header-nav__button md-logo" aria-label="Описание сервиса Фитнес Клуба">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Описание сервиса Фитнес Клуба
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Endpoints
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Описание сервиса Фитнес Клуба" class="md-nav__button md-logo" aria-label="Описание сервиса Фитнес Клуба">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Описание сервиса Фитнес Клуба
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Endpoints
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Endpoints
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-types-view" class="md-nav__link">
+    Lesson Types View
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson Types View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coaches-view" class="md-nav__link">
+    Coaches View
+  </a>
+  
+    <nav class="md-nav" aria-label="Coaches View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses_1" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timetable-view" class="md-nav__link">
+    Timetable View
+  </a>
+  
+    <nav class="md-nav" aria-label="Timetable View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses_2" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timetable-for-a-day-view" class="md-nav__link">
+    Timetable for a Day View
+  </a>
+  
+    <nav class="md-nav" aria-label="Timetable for a Day View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses_3" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-profile-view" class="md-nav__link">
+    Client Profile View
+  </a>
+  
+    <nav class="md-nav" aria-label="Client Profile View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses_4" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-booking" class="md-nav__link">
+    Create Booking
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Booking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses_5" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-booking" class="md-nav__link">
+    Delete Booking
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete Booking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses_6" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-types-view" class="md-nav__link">
+    Lesson Types View
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson Types View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coaches-view" class="md-nav__link">
+    Coaches View
+  </a>
+  
+    <nav class="md-nav" aria-label="Coaches View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses_1" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timetable-view" class="md-nav__link">
+    Timetable View
+  </a>
+  
+    <nav class="md-nav" aria-label="Timetable View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses_2" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timetable-for-a-day-view" class="md-nav__link">
+    Timetable for a Day View
+  </a>
+  
+    <nav class="md-nav" aria-label="Timetable for a Day View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses_3" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-profile-view" class="md-nav__link">
+    Client Profile View
+  </a>
+  
+    <nav class="md-nav" aria-label="Client Profile View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses_4" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-booking" class="md-nav__link">
+    Create Booking
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Booking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses_5" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-booking" class="md-nav__link">
+    Delete Booking
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete Booking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-responses_6" class="md-nav__link">
+    Success Responses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="base-endpoints">Base endpoints</h1>
+<h2 id="lesson-types-view">Lesson Types View</h2>
+<p>Выводит информацию обо всех урока</p>
+<p><strong>URL</strong> : <code>/lessons/</code></p>
+<p><strong>Method</strong> : <code>GET</code></p>
+<p><strong>Auth required</strong> : NO</p>
+<p><strong>Permissions required</strong> : None</p>
+<p><strong>Data constraints</strong> : <code>{}</code></p>
+<h3 id="success-responses">Success Responses</h3>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>[{}]</code></p>
+<pre><code class="language-json">[
+    {
+        &quot;name&quot;: &quot;BUMS+ABS&quot;,
+        &quot;description&quot;: &quot;Урок направленный на изолированную проработку ягодичных мышц и мышц брюшного пресса и нижней части спины.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Body sculpt&quot;,
+        &quot;description&quot;: &quot;Урок направленный на развитие всех мышечных групп, на развитие силовой выносливости и на создание мышечного рельефа. Во время тренировки используются различные виды силового оборудования: отягощения разных весов, амортизаторы, выбор которых зависит от уровня вашей подготовленности.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Upper body&quot;,
+        &quot;description&quot;: &quot;Урок направленный на развитие и проработку мышц плечевого пояса, рук, груди, мышц спины и мышц брюшного пресса с использованием дополнительного оборудования.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Lower Body&quot;,
+        &quot;description&quot;: &quot;Урок направленный на проработку мышц ног, ягодиц и мышц брюшного пресса с использованием дополнительного оборудования.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;ABS+Flex&quot;,
+        &quot;description&quot;: &quot;Урок направленный на изолированную проработку мышц брюшного пресса и нижней части спины, урок заканчивается растяжкой.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Pump&quot;,
+        &quot;description&quot;: &quot;Особый вид силовой тренировки, на которой прорабатываются и приводятся в тонус все основные мышцы. Тренировка проходит с особым драйвом и приносит гораздо больше результатов и удовольствия, чем монотонное поднятие тяжестей. Оно подходит как для мужчин так и для женщин, имеющих физическую подготовку. Занятие ведется с использованием специального оборудования – мини-штанг весом от 10 до 30 кг.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Flex&quot;,
+        &quot;description&quot;: &quot;Урок направлен на развитие гибкости и подвижности суставов. Расслабляющая музыка и плавный темп движений способствует снятию эмоционального напряжения.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Yoga&quot;,
+        &quot;description&quot;: &quot;Урок включает в себя комплекс упражнений, направленных на гармонизацию души и тела, сочетает различные духовные, психологические и физические практики, пришедшие к нам из Индии.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Pilates&quot;,
+        &quot;description&quot;: &quot;Урок направлен на тренировку мышц стабилизаторов, восстановление и сохранение подвижности позвоночника, улучшение мышечного баланса, развитие гибкости и контроля над собственным телом. Используются базовые упражнения и их модификации.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Step 1&quot;,
+        &quot;description&quot;: &quot;Групповой аэробный класс на степ-платформе, состоящий из разучивания базовых шагов степ-аэробики и соединения их в несложные комбинации, выполняемых под ритмичную музыку. Занятия на данном классе направлены на развитие координационных способностей, укрепление сердечно-сосудистой и дыхательной системы, увеличение общего порога выносливости.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Step 2&quot;,
+        &quot;description&quot;: &quot;Групповой аэробный класс с использованием сложной хореографии на степ-платформе. Включает в себя сложные комбинации и вариации шагов степ-аэробики с добавлением прыжков, танцевальных элементов и частой сменой направления движения.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Functional training&quot;,
+        &quot;description&quot;: &quot;Урок с использованием малого оборудования и веса собственного тела. Во время тренировки используются многосуставные движения в разных плоскостях. Тренировка направлена на укрепление крупных и мелких мышечных групп, развитие общей выносливости.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Bosu&quot;,
+        &quot;description&quot;: &quot;Урок с использованием полусферы. Комплексная тренировка на развитие координации, баланса и укрепления основных крупных и мелких мышечных групп.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Zumba&quot;,
+        &quot;description&quot;: &quot;Лицензионная танцевальная фитнес-программа на основе латиноамериканских ритмов, танцев и аэробики.&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Latina dance&quot;,
+        &quot;description&quot;: &quot;Урок направлен на развитие координации, гибкости, пластичности и выносливости. Во время занятия разучивается танцевальная комбинации одного из латиноамериканских танцев: Samba, Cha-Cha-Cha, Rumba, Jive, Bachata и другие.&quot;
+    }
+]
+</code></pre>
+<h2 id="coaches-view">Coaches View</h2>
+<p>Выводит информацию обо всех тренерах</p>
+<p><strong>URL</strong> : <code>/coaches/</code></p>
+<p><strong>Method</strong> : <code>GET</code></p>
+<p><strong>Auth required</strong> : NO</p>
+<p><strong>Permissions required</strong> : None</p>
+<p><strong>Data constraints</strong> : <code>{}</code></p>
+<h3 id="success-responses_1">Success Responses</h3>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>[{}]</code></p>
+<pre><code class="language-json">[
+    {
+        &quot;name&quot;: &quot;Беляев Кирилл&quot;,
+        &quot;description&quot;: &quot;Координатор групповых программ: силовые и интервальные классы, стретчинг&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Царевский Владимир&quot;,
+        &quot;description&quot;: &quot;Преподаватель класса йоги&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Никулин Артем&quot;,
+        &quot;description&quot;: &quot;Подготовка к соревнованиям по бодибилдингу и пауэрлифтингу&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Гусейнова Елена&quot;,
+        &quot;description&quot;: &quot;Групповые программы: классические и степ-аэробика, силовые и интервальные классы&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Вермиенко Виктория&quot;,
+        &quot;description&quot;: &quot;Групповые программы: классические и степ-аэробика, силовые и интервальные классы&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Кузнецова Олеся&quot;,
+        &quot;description&quot;: &quot;Групповые программы: классические и степ-аэробика, силовые и интервальные классы&quot;
+    }
+]
+</code></pre>
+<h2 id="timetable-view">Timetable View</h2>
+<p>Выводит полное расписание</p>
+<p><strong>URL</strong> : <code>/timetable/</code></p>
+<p><strong>Method</strong> : <code>GET</code></p>
+<p><strong>Auth required</strong> : NO</p>
+<p><strong>Permissions required</strong> : None</p>
+<p><strong>Data constraints</strong> : <code>{}</code></p>
+<h3 id="success-responses_2">Success Responses</h3>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>[{}]</code></p>
+<pre><code class="language-json">[
+    {
+        &quot;weekday&quot;: &quot;Mon&quot;,
+        &quot;time&quot;: &quot;10:00:00&quot;,
+        &quot;lesson_type&quot;: &quot;BUMS+ABS&quot;
+    },
+    ...
+    {
+        &quot;weekday&quot;: &quot;Tue&quot;,
+        &quot;time&quot;: &quot;11:00:00&quot;,
+        &quot;lesson_type&quot;: &quot;Pilates&quot;
+    },
+    ...
+    {
+        &quot;weekday&quot;: &quot;Wen&quot;,
+        &quot;time&quot;: &quot;19:00:00&quot;,
+        &quot;lesson_type&quot;: &quot;Bosu&quot;
+    },
+    ...
+    {
+        &quot;weekday&quot;: &quot;Thu&quot;,
+        &quot;time&quot;: &quot;20:00:00&quot;,
+        &quot;lesson_type&quot;: &quot;Step 2&quot;
+    },
+    ...
+    {
+        &quot;weekday&quot;: &quot;Fri&quot;,
+        &quot;time&quot;: &quot;19:00:00&quot;,
+        &quot;lesson_type&quot;: &quot;BUMS+ABS&quot;
+    },
+    ...
+    {
+        &quot;weekday&quot;: &quot;Sat&quot;,
+        &quot;time&quot;: &quot;18:00:00&quot;,
+        &quot;lesson_type&quot;: &quot;Latina dance&quot;
+    },
+    ...
+    {
+        &quot;weekday&quot;: &quot;Sun&quot;,
+        &quot;time&quot;: &quot;18:00:00&quot;,
+        &quot;lesson_type&quot;: &quot;Pilates&quot;
+    }
+]
+</code></pre>
+<h2 id="timetable-for-a-day-view">Timetable for a Day View</h2>
+<p>Выводит полное расписание на определенный день недели
+Mon - Monday, Tue - Tuesday'), Wen - Wensday, Thu - Thursday, Fri - Friday, Sat - Saturday, Sun - Sunday</p>
+<p><strong>URL</strong> : <code>/timetable/&lt;Day&gt;</code></p>
+<p><strong>Method</strong> : <code>GET</code></p>
+<p><strong>Auth required</strong> : NO</p>
+<p><strong>Permissions required</strong> : None</p>
+<p><strong>Data constraints</strong> : <code>{}</code></p>
+<h3 id="success-responses_3">Success Responses</h3>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>[{}]</code></p>
+<pre><code class="language-json">[
+    {
+        &quot;time&quot;: &quot;10:00:00&quot;,
+        &quot;coach&quot;: &quot;Вермиенко Виктория&quot;,
+        &quot;lesson_type&quot;: {
+            &quot;name&quot;: &quot;Pilates&quot;,
+            &quot;description&quot;: &quot;Урок направлен на тренировку мышц стабилизаторов, восстановление и сохранение подвижности позвоночника, улучшение мышечного баланса, развитие гибкости и контроля над собственным телом. Используются базовые упражнения и их модификации.&quot;
+        }
+    },
+    {
+        &quot;time&quot;: &quot;11:00:00&quot;,
+        &quot;coach&quot;: &quot;Вермиенко Виктория&quot;,
+        &quot;lesson_type&quot;: {
+            &quot;name&quot;: &quot;BUMS+ABS&quot;,
+            &quot;description&quot;: &quot;Урок направленный на изолированную проработку ягодичных мышц и мышц брюшного пресса и нижней части спины.&quot;
+        }
+    },
+    {
+        &quot;time&quot;: &quot;16:00:00&quot;,
+        &quot;coach&quot;: &quot;Царевский Владимир&quot;,
+        &quot;lesson_type&quot;: {
+            &quot;name&quot;: &quot;Yoga&quot;,
+            &quot;description&quot;: &quot;Урок включает в себя комплекс упражнений, направленных на гармонизацию души и тела, сочетает различные духовные, психологические и физические практики, пришедшие к нам из Индии.&quot;
+        }
+    },
+    {
+        &quot;time&quot;: &quot;18:00:00&quot;,
+        &quot;coach&quot;: &quot;Беляев Кирилл&quot;,
+        &quot;lesson_type&quot;: {
+            &quot;name&quot;: &quot;Upper body&quot;,
+            &quot;description&quot;: &quot;Урок направленный на развитие и проработку мышц плечевого пояса, рук, груди, мышц спины и мышц брюшного пресса с использованием дополнительного оборудования.&quot;
+        }
+    },
+    {
+        &quot;time&quot;: &quot;19:00:00&quot;,
+        &quot;coach&quot;: &quot;Беляев Кирилл&quot;,
+        &quot;lesson_type&quot;: {
+            &quot;name&quot;: &quot;BUMS+ABS&quot;,
+            &quot;description&quot;: &quot;Урок направленный на изолированную проработку ягодичных мышц и мышц брюшного пресса и нижней части спины.&quot;
+        }
+    },
+    {
+        &quot;time&quot;: &quot;20:00:00&quot;,
+        &quot;coach&quot;: &quot;Беляев Кирилл&quot;,
+        &quot;lesson_type&quot;: {
+            &quot;name&quot;: &quot;Functional training&quot;,
+            &quot;description&quot;: &quot;Урок с использованием малого оборудования и веса собственного тела. Во время тренировки используются многосуставные движения в разных плоскостях. Тренировка направлена на укрепление крупных и мелких мышечных групп, развитие общей выносливости.&quot;
+        }
+    }
+]
+</code></pre>
+<h2 id="client-profile-view">Client Profile View</h2>
+<p>Выводит информацию о пользователе</p>
+<p><strong>URL</strong> : <code>/profile/</code></p>
+<p><strong>Method</strong> : <code>GET</code></p>
+<p><strong>Auth required</strong> : YES</p>
+<p><strong>Permissions required</strong> : None</p>
+<p><strong>Data constraints</strong> : <code>{}</code></p>
+<h3 id="success-responses_4">Success Responses</h3>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>[{}]</code></p>
+<pre><code class="language-json">[
+    {
+        &quot;name&quot;: &quot;Иванова Инесса&quot;,
+        &quot;birthday&quot;: &quot;2000-04-19&quot;,
+        &quot;bookings&quot;: [
+            {
+                &quot;id&quot;: 3,
+                &quot;weekday&quot;: &quot;Mon&quot;,
+                &quot;time&quot;: &quot;18:00:00&quot;,
+                &quot;lesson_type&quot;: {
+                    &quot;id&quot;: 12,
+                    &quot;name&quot;: &quot;Functional training&quot;,
+                    &quot;description&quot;: &quot;Урок с использованием малого оборудования и веса собственного тела. Во время тренировки используются многосуставные движения в разных плоскостях. Тренировка направлена на укрепление крупных и мелких мышечных групп, развитие общей выносливости.&quot;
+                },
+                &quot;coach&quot;: {
+                    &quot;id&quot;: 6,
+                    &quot;name&quot;: &quot;Кузнецова Олеся&quot;,
+                    &quot;description&quot;: &quot;Групповые программы: классические и степ-аэробика, силовые и интервальные классы&quot;
+                }
+            }
+        ]
+    }
+]
+</code></pre>
+<h2 id="create-booking">Create Booking</h2>
+<p>Записывает пользователя на занятие</p>
+<p><strong>URL</strong> : <code>/book/&lt;id&gt;/</code></p>
+<p><strong>Method</strong> : <code>POST</code></p>
+<p><strong>Auth required</strong> : YES</p>
+<p><strong>Permissions required</strong> : None</p>
+<p><strong>Data constraints</strong> : <code>{}</code></p>
+<h3 id="success-responses_5">Success Responses</h3>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<pre><code class="language-json">&quot;Вы успешно записались на занятие&quot;
+</code></pre>
+<h2 id="delete-booking">Delete Booking</h2>
+<p>Удаляет запись на занятие</p>
+<p><strong>URL</strong> : <code>/book/&lt;id&gt;/delete</code></p>
+<p><strong>Method</strong> : <code>POST</code></p>
+<p><strong>Auth required</strong> : YES</p>
+<p><strong>Permissions required</strong> : None</p>
+<p><strong>Data constraints</strong> : <code>{}</code></p>
+<h3 id="success-responses_6">Success Responses</h3>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<pre><code class="language-json">&quot;Вы успешно отписались от занятия&quot;
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href=".." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

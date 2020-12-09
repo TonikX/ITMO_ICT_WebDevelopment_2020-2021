@@ -1,0 +1,14 @@
+{% extends  'teacher.html' %}
+
+{% block main %}
+<hr>
+<div style="margin: 10px 10px 10px 10px">
+	<form method="post">{% csrf_token %}
+		<p>Do you want to delete homework "{{ object }}"?</p>
+		<input type="submit" value="Confirm">
+	</form>
+</div>
+<hr>
+<a href="/homeworks/">Back</a>
+
+{% endblock %}

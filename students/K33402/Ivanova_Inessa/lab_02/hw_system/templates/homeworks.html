@@ -1,0 +1,15 @@
+{% extends  'teacher.html' %}
+{% block main %}
+<hr>
+<ul>
+{% for homework in object_list %}
+<p>
+	<a href="/homework/{{ homework.id }}/" class="col-lg-2">{{ homework }}</a>
+	<a href="/homework/{{ homework.id }}/delete/" class="col-lg-2">Delete</a>
+</p>
+{% empty %}
+<li>No tasks yet.</li>
+{% endfor %}
+</ul>
+<hr>
+{% endblock %}
