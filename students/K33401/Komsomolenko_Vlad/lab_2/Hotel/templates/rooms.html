@@ -5,8 +5,10 @@
     <title>Rooms</title>
 </head>
 <body>
+<h1>Комнаты</h1>
 {% for room in rooms %}
     {% if room.hotel.id == hotel %}
+        <a>Тип комнаты - цена</a>
         <a href="/room/{{ room.id }}/">{{ room.type }} {{ room.cost }}</a>
 
         <br/><hr/>

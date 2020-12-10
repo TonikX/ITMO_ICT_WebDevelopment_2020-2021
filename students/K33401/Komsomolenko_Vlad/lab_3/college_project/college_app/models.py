@@ -44,9 +44,9 @@ class DisciplineOfTeacher(models.Model):
 
 
 class Mark(models.Model):
-   teacher = models.ForeignKey('Teacher', verbose_name='Учитель', on_delete=models.CASCADE)
-   mark = models.IntegerField(verbose_name='Оценка')
-   def str(self):
+    teacher = models.ForeignKey('Teacher', verbose_name='Учитель', on_delete=models.CASCADE)
+    mark = models.IntegerField(verbose_name='Оценка')
+    def str(self):
        return self.mark
 
 class MarkOfStudent(models.Model):

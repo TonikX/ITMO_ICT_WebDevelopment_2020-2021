@@ -8,13 +8,13 @@ conn.listen(10)
 while True:
 	try:
 		clientsocket, address = conn.accept()
-		data = clientsocket.recv(16384)
-		udata = data.decode("utf-8")
-		print(udata)
-		clientsocket.send(b"Hello, client.")
-		html = open('index.html', 'r')
-		text = html.read()
-		clientsocket.send('HTTP/1.0 200 OK\nContent-Type: text/html\n\n{}'.format(text).encode())
+		data = clientsocket.recv(1024)
+		if not data:
+			break
+		#clientsocket.send(b"Hello, client.")
+		with open('index.html', 'r') as html:
+			text = html.read()
+			clientsocket.sendall((f'HTTP/1.0 200 OK\nContent-Type: text/html\n\n{text}').encode())
 		conn.close()
 	except socket.error:
 		print('waiting clients')
@@ -22,4 +22,3 @@ while True:
 	except KeyboardInterrupt:
 		conn.close()
 		break
-

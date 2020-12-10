@@ -5,11 +5,17 @@
     <title>Room</title>
 </head>
 <body>
+    <a>ID комнаты</a>
     <h1>{{ room.id }}</h1>
+<a>Название отеля</a>
     {{ room.hotel.name }}<br/>
+<a>Тип номера</a>
     {{ room.type }}<br/>
+<a>Цена</a>
     {{ room.cost }}<br/>
+<a>Вместимость</a>
     {{ room.capacity }}<br/>
+<a></a>
     {{ room.conveniences }}<br/>
     <a href="/add_reserve/{{ room.hotel_id }}/">Reserve!</a>
 </body>

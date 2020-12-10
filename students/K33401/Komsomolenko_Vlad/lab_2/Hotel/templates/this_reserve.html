@@ -5,11 +5,12 @@
     <title>This reserve</title>
 </head>
 <body>
-    <h1>{{ reserve.id }}</h1>
-    {{ reserve.hotel.name }}<br/>
-    {{ reserve.type }}<br/>
-    {{ reserve.start_date }}<br/>
-    {{ reserve.end_date }}<br/>
+
+    <h1>ID брони - {{ reserve.id }}</h1>
+    Отель - {{ reserve.hotel.name }}<br/>
+    Тип номера - {{ reserve.type }}<br/>
+    Дата начала - {{ reserve.start_date }}<br/>
+    Дата конца - {{ reserve.end_date }}<br/>
     <a href="/my_reserves/reserve/{{ reserve.id }}/update/">Редактировать бронь</a>
     <a href="/my_reserves/reserve/{{ reserve.id }}/delete/">Удалить бронь</a>
     <a href="/my_reserves/">Вернуться к броням</a>

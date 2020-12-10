@@ -5,9 +5,10 @@
     <title>Feedback</title>
 </head>
 <body>
+<h1>Отзывы</h1>
 {% for feedback in feedbacks %}
     {% if feedback.reserve.hotel.id == hotel %}
-        <a href="/feed/{{ feedback.id }}/">{{ feedback.reserve.user }}</a>
+        <a href="/feed/{{ feedback.id }}/">Имя пользователя - {{ feedback.reserve.user }}</a>
 
         <br/><hr/>
     {% endif %}

@@ -7,6 +7,7 @@
 <body>
 {% for reserve in reserves %}
     {% if reserve.type == 'completed' %}
+        <h5>Фамилия - отель - тип</h5>
         <a href="edit/{{ reserve.id }}/">{{ reserve.user.last_name }} {{ reserve.hotel }} {{ reserve.type }}</a>
         <br/><hr/>
     {% endif %}

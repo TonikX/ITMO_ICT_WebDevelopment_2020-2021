@@ -19,14 +19,16 @@ class MarkSerializer(serializers.ModelSerializer):
      model = Mark
      fields = "__all__"
 
-class ScheduleSerializer(serializers.ModelSerializer):
-  class Meta:
-     model = Schedule
-     fields = "__all__"
-
 class PairSerializer(serializers.ModelSerializer):
   class Meta:
      model = Pair
+     fields = "__all__"
+
+class ScheduleSerializer(serializers.ModelSerializer):
+  pair = PairSerializer(many=True)
+
+  class Meta:
+     model = Schedule
      fields = "__all__"
 
 class TeacherSerializer(serializers.ModelSerializer):
