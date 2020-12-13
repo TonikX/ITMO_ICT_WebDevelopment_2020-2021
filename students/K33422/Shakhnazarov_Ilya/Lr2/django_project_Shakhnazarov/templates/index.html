@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+</head>
+<body>
+    <h1>Главная страница</h1>
+    <ul>
+        <li>
+            <a href="{% url 'conferences' %}">Конференции</a>
+        </li>
+        <li>
+            {% if user.is_active %}
+            <a href="{% url 'account_logout' %}">Log out</a>
+            {% else %}
+            <a href="{% url 'account_login' %}">Log in</a>
+            {% endif %}
+        </li>
+    </ul>
+</body>
+</html>

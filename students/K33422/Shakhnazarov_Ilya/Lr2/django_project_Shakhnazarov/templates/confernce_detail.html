@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о конференции</title>
+</head>
+<body>
+    <h1>Информация о конференции</h1>
+    <ul>
+        <li>
+            <a href="{% url 'index' %}">На главную</a>
+        </li>
+        <li>
+            <a href="/conferences/{{ conferences }}">Конференции</a>
+        </li>
+        <li>
+            {% if user.is_active %}
+            <a href="{% url 'account_logout' %}">Log out</a>
+            {% else %}
+            <a href="{% url 'account_login' %}">Log in</a>
+            {% endif %}
+        </li>
+    </ul>
+
+    <h3>{{ conference }}</h3>
+
+    <p>Тема: {{ conference.topic }}</p>
+    <br>
+    <p>Место: {{ conference.location }}</p>
+    <br>
+    <p>Начало: {{ conference.start_date }}</p>
+    <br>
+    <p>Конец: {{ conference.end_date }}</p>
+    <br>
+    <p>Описание: {{ conference.description }}</p>
+    <br>
+    <p>Информация о месте: {{ conference.location_desc }}</p>
+    <br>
+    <p>Условия: {{ conference.terms }}</p>
+    <br>
+
+    <h3>Комментарии:</h3>
+
+    {% for comment in comments %}
+    <p><b>Тип комментария: </b>{{ comment.comment_type }}</p>
+    <p><b>Текст комментария: </b>{{ comment.comment_text }}</p>
+    <p><b>Автор: </b>{{ comment.comment_author }}</p>
+    </p>
+    <br>
+        {% endfor %} {% if user.is_authenticated %}
+        <div>
+            <h3>Добавить новый комментарий:</h3>
+            <form action="/conferences/{{conference.id}}/" method="post">
+                {% csrf_token %} {{ form.as_p }}
+                <input type="submit" value="Добавить комментарий"/>
+            </form>
+        </div>
+        {% else %} Авторизируйтесь, чтобы добавить комментарий
+        <a href="{% url 'account_login' %}">Войти</a>
+        {% endif %}
+</body>
+</html>
