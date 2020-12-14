@@ -10,6 +10,8 @@ class User(AbstractUser):
     email = models.EmailField()
     date_of_birth = models.DateField(blank=True, null=True)
 
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'email']
+
     def __str__(self):
         return "{} {} {} {}".format(self.username, self.name, self.email, self.date_of_birth)
 
@@ -28,7 +30,7 @@ class Creation(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=1000)
     creator = models.ForeignKey("Author", null=True, blank=True, on_delete=models.CASCADE)
-    type = models.CharField(max_length=25,choices=TYPE)
+    type = models.CharField(max_length=25, choices=TYPE)
 
     def __str__(self):
         return "{} {}".format(self.name, self.description)

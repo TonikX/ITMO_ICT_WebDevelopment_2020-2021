@@ -23,7 +23,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/arthubdocs/docs/review" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -70,7 +70,10 @@
       <workItem from="1607423822416" duration="3649000" />
       <workItem from="1607431469523" duration="5955000" />
       <workItem from="1607454306950" duration="11053000" />
-      <workItem from="1607468806517" duration="626000" />
+      <workItem from="1607468806517" duration="747000" />
+      <workItem from="1607550807000" duration="206000" />
+      <workItem from="1607587682100" duration="3567000" />
+      <workItem from="1607982456209" duration="2634000" />
     </task>
     <servers />
   </component>

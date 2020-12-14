@@ -3,23 +3,22 @@ nav:
   - Home: index.md
   - Models: models.md
   - Author:
-      - "authorinfo": author/authorinfo.md
-      - "create": author/create.md
-      - "delete": author/delete.md
-      - "update": author/update.md
-      - "list": author/list.md
+      - authorinfo: author/authorinfo.md
+      - create: author/create.md
+      - delete: author/delete.md
+      - update: author/update.md
+      - list: author/list.md
   - Creation:
-  - "creationinfo": creation/creationinfo.md
-  - "create": creation/create.md
-  - "delete": creation/delete.md
-  - "update": creation/update.md
-  - "list": creation/list.md
+      - creationinfo: creation/creationinfo.md
+      - create: creation/create.md
+      - delete: creation/delete.md
+      - update: creation/update.md
+      - list: creation/list.md
   - Review:
-      - "reviewinfo": review/reviewinfo.md
-      - "create": review/create.md
-      - "delete": review/delete.md
-      - "update": review/update.md
-      - "list": review/list.md
-
+      - reviewinfo: review/reviewinfo.md
+      - create: review/create.md
+      - delete: review/delete.md
+      - update: review/update.md
+      - list: review/list.md
 theme:
   name: material
