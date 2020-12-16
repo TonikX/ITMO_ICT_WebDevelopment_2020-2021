@@ -200,7 +200,7 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 ## Практическая работа №4.2
 
 Цель работы: получить представление о работе Vue.js.
-(https://docs.google.com/document/d/1ZURAlewVuJFSX4YjjB-BvVsVwfF5IbXFH8zj2g8CgPY/edit?usp=sharing).
+[Текст "Практической работы №4.1](https://docs.google.com/document/d/1ZURAlewVuJFSX4YjjB-BvVsVwfF5IbXFH8zj2g8CgPY/edit?usp=sharing).
 
 # Лабораторная работа 5. Контейниризация и оркестрация.
 
