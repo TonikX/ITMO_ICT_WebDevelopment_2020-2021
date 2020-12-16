@@ -197,6 +197,11 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 - Angular vs. Vue vs. React [Презентация с лекции(.ppt)](https://drive.google.com/file/d/1bNEVcfHRo0T9n1IDYwnn0YIPEGUIO51a/view?usp=sharing) | [Лекция 20.11.2020 / Время 00:16 - 00:58](https://youtu.be/oihJcLNoewo) (Видео)<br>
 - Компонентный подход + как работает роутинг на фронтенде [Лекция 20.11.2020 / Время 00:58 - 01:45](https://youtu.be/oihJcLNoewo) (Видео)<br>
 
+## Практическая работа №4.2
+
+Цель работы: получить представление о работе Vue.js.
+(https://docs.google.com/document/d/1ZURAlewVuJFSX4YjjB-BvVsVwfF5IbXFH8zj2g8CgPY/edit?usp=sharing).
+
 # Лабораторная работа 5. Контейниризация и оркестрация.
 
 Перенесена на следующий семестр
