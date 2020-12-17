@@ -230,6 +230,7 @@ https://drive.google.com/file/d/1q9KcLhl2uKuK92aFbpKiOZ1WUwbASTqL/view?usp=shari
 6.	Реализовать клиентские интерфейсы и настроить взаимодействие с серверной частью.
 Полезные материалы:<br>
     - Пункты 4.2, 4.3, 4.5 в [Практической работе 4.2](https://github.com/TonikX/ITMO_ICT_WebDevelopment_2020-2021)<br>
+    - Уроки 6, 7  и 10-13 из данного плейтиста (DjangoSchool) [ссылка](https://www.youtube.com/playlist?list=PLF-NY6ldwAWqP9PqPU3LA7mX2KJVyLhC_)
 8.	Подключить vuetify.
 Полезные материалы:<br>
     - Пункт 3.1 в [Практической работе 4.2](https://github.com/TonikX/ITMO_ICT_WebDevelopment_2020-2021)<br>
