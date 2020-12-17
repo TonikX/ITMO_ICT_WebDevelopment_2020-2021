@@ -216,7 +216,7 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 
 Срок сдачи **20.01.2020**
 
-Реализация серверной части приложения средствами django и djangorestframework в соответствии с заданием из [текста работы](
+Реализация клиентской части приложения средствами vue.js, в соответствии с [текстом работы](
 https://drive.google.com/file/d/1q9KcLhl2uKuK92aFbpKiOZ1WUwbASTqL/view?usp=sharing).<br>
 
 Порядок выполнения работы:<br>
