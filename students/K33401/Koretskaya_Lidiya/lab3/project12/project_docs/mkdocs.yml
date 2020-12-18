@@ -1,0 +1,34 @@
+site_name: College
+nav:
+  - Info: index.md
+  - Teacher:
+     - "teacher list": teacher/list.md
+     - "teacher create": teacher/create.md
+     - "teacher delete/update/retrieve": teacher/edit.md
+
+  - Student:
+     - "student list": student/list.md
+     - "student create": student/create.md
+     - "student delete/update/retrieve": student/edit.md
+
+  - Subject:
+     - "subject list": subject/list.md
+     - "subject create": subject/create.md
+     - "subject delete/update/retrieve": subject/edit.md
+
+  - Pair:
+     - "pair list": pair/list.md
+     - "pair create": pair/create.md
+     - "pair delete/update/retrieve": pair/edit.md
+
+  - Mark:
+     - "mark list": mark/list.md
+     - "mark create": mark/create.md
+     - "mark delete/update/retrieve": mark/edit.md
+
+  - Subject To Teacher:
+     - "subject to teacher list": subteach/list.md
+     - "subject to teacher create": subteach/create.md
+     - "subject to teacher delete/update/retrieve": subteach/edit.md
+theme:
+ name: material

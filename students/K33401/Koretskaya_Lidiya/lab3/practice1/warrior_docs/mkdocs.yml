@@ -1,0 +1,14 @@
+site_name: Warriors
+nav:
+ - Home: index.md
+ - Warriors:
+     - "warrior and profession": warriors/prof.md
+     - "warrior and skill": warriors/skill.md
+     - "warrior delete/update/retrieve": warriors/edit.md
+
+ - Skills:
+     - "skills list": skills/skill.md
+     - "skill create": skills/create.md
+
+theme:
+ name: material
