@@ -1,0 +1,11 @@
+site_name: Приют домашних животных "Ангел"
+nav:
+  - Описание: index.md
+  - Api:
+      - "Авторизация": api_login.md
+      - "Регистрация": api_signup.md
+      - "Изменение учетных данных": api_user.md
+  - Frontend: frontend.md
+
+theme:
+  name: material
