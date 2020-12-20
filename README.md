@@ -210,7 +210,7 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 ## Практическая работа №4.3
 
 Цель работы: получить практические навыки настройки CORS (Cross-origin resource sharing).
-[Будет выложена 19.12.2020].
+[Текст "Практической работы №4.3](https://docs.google.com/document/d/1diaE5abmxSYEpLCwAp-or9c_h11-wR8ZSGQl3_b0nsc/edit?usp=sharing).
 
 ## Лабораторная часть
 
