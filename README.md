@@ -214,7 +214,7 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 
 ## Лабораторная часть
 
-Срок сдачи **20.01.2020**
+Срок сдачи **20.01.2021**
 
 Реализация клиентской части приложения средствами vue.js, в соответствии с [текстом работы](
 https://drive.google.com/file/d/1q9KcLhl2uKuK92aFbpKiOZ1WUwbASTqL/view?usp=sharing).<br>
