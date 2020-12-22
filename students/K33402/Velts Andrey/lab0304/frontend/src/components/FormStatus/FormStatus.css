@@ -1,0 +1,38 @@
+.FormStatus {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 0.75rem 0px;
+  background: var(--field_background);
+  color: var(--text_primary);
+}
+
+.FormStatus--error {
+  color: var(--red);
+}
+
+.FormStatus__header {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-top: -2px;
+}
+
+.FormStatus__header:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+.FormStatus__content {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.FormStatus__content-before {
+  display: inherit;
+  font-size: 24px;
+  font-weight: 500;
+  margin-right: 6px;
+}

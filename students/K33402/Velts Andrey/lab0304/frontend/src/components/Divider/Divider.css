@@ -1,0 +1,67 @@
+.Divider {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
+  border-top: 1px solid var(--gray);
+}
+
+.Divider-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  clear: both;
+  width: 100%;
+  min-width: 100%;
+}
+
+.Divider-horizontal.Divider-size-medium {
+  margin: 1.5rem 0;
+}
+
+.Divider-horizontal.Divider-size-small {
+  margin: 1rem 0;
+}
+
+.Divider-dashed {
+  background: 0 0;
+  border-color: var(--gray);
+  border-style: dashed;
+  border-width: 1px 0 0;
+}
+
+.Divider-horizontal.Divider-with-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0;
+  color: var(--text_primary);
+  font-weight: 500;
+  font-size: 16px;
+  white-space: nowrap;
+  text-align: center;
+  border-top: 0;
+}
+
+.Divider-vertical {
+  position: relative;
+  top: -0.06em;
+  display: inline-block;
+  height: 0.9em;
+  margin: 0 8px;
+  vertical-align: middle;
+  border-top: 0;
+  border-left: 1px solid var(--gray);
+}
+
+.Divider-inner-text {
+  display: inline-block;
+  padding: 0 1em;
+}

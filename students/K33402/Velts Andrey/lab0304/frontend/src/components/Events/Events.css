@@ -1,0 +1,197 @@
+.Events {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  padding: 3.5rem 0;
+}
+
+.Events h1,
+.Events h3 {
+  padding: 0 3rem;
+}
+
+.Events__months {
+  padding: 1.5rem 3rem;
+}
+
+.Events__months .Events__month {
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  color: var(--text_secondary);
+  margin-right: 1rem;
+}
+
+.Events__date {
+  display: flex;
+  overflow: hidden;
+}
+
+.Events__months .Events__month-selected {
+  color: var(--text_primary);
+  font-size: 20px;
+}
+
+.Events__days .Tabs-tab {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin: 0 1rem 2rem 0;
+  padding: 0;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  color: var(--text_primary);
+  background-color: var(--gray);
+  border-color: var(--selected);
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  transition: border 0.1s linear;
+}
+
+.Events__days .Tabs-nav {
+  padding-left: 3rem;
+}
+
+.Events__days .Tabs-tab-active {
+  background-color: inherit;
+  border: 2px solid var(--accent);
+}
+
+.Timetable {
+  padding: 1rem 3rem;
+}
+
+.Timetable__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: 0;
+}
+
+.Timetable__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-align: start;
+  max-width: 100%;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.Timetable__item-empty {
+  align-items: center;
+}
+
+.Timetable__item-timestamp {
+  font-weight: 600;
+  color: var(--text_secondary);
+  margin-right: 1rem;
+  padding: 1rem 0;
+}
+
+.Timetable__item-empty .Timetable__item-timestamp {
+  padding: 0;
+}
+
+.Timetable__item-content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  color: var(--text_primary);
+  align-items: center;
+}
+
+.Timetable__item-tail {
+  height: 1px;
+  background-image: linear-gradient(
+    90deg,
+    var(--divider),
+    var(--divider) 75%,
+    transparent 75%,
+    transparent 100%
+  );
+  background-size: 14px 1px;
+  border: none;
+}
+
+.Timetable__event {
+  display: flex;
+  color: var(--text_secondary);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+}
+
+.Timetable__event-title {
+  color: var(--text_primary);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.Timetable__event-physical {
+  background-color: var(--events-physical);
+}
+
+.Timetable__event-meeting {
+  background-color: var(--events-meeting);
+}
+
+.Timetable__event-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  margin-right: 1.75rem;
+  font-size: 28px;
+  color: var(--white);
+}
+
+.Timetable__event-physical .Timetable__event-icon {
+  background: var(--events-physical-icon);
+}
+
+.Timetable__event-meeting .Timetable__event-icon {
+  background: var(--events-meeting-icon);
+}
+
+.Timetable__event-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Timetable__event-meta {
+  display: inline-flex;
+  align-items: center;
+}
+
+.Timetable__event-meta .Avatar {
+  margin-right: 0.75rem;
+}
+
+.Timetable__event-speaker {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.Timetable__event-time {
+  display: flex;
+  align-items: center;
+}
+
+.Timetable__event-time-text {
+  margin-left: 0.5rem;
+}

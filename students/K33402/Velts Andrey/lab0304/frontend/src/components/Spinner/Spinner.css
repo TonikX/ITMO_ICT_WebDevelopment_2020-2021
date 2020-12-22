@@ -1,0 +1,22 @@
+.Spinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 24px;
+}
+
+.Spinner-large {
+  font-size: 48px;
+}
+
+.Spinner__self {
+  animation: rotator var(--duration) linear infinite;
+  transform-origin: center;
+}
+
+.Spinner__self svg {
+  transform: scale(1);
+}

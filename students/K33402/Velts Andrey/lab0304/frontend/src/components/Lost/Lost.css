@@ -1,0 +1,74 @@
+.Lost {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 3.5rem 0;
+  margin-right: 12rem;
+}
+
+.Lost h1,
+.Lost h3 {
+  padding: 0 3rem;
+}
+
+.Lost__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Lost__content {
+  display: flex;
+  margin-top: 1.5rem;
+  padding: 0 3rem;
+  margin-right: 3rem;
+  flex-wrap: wrap;
+}
+
+.Lost__item {
+  display: flex;
+  flex: 0 0 468px;
+  width: 468px;
+  flex-direction: column;
+}
+
+.Lost__card {
+  display: flex;
+  background-color: var(--accent);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-right: 2.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.Lost__item:nth-child(2n) .Lost__card {
+  background-color: var(--button_primary_bg_right);
+}
+
+.Lost__card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  color: var(--white);
+  font-weight: 300;
+}
+
+.Lost__card-content span {
+  margin-top: 0.75rem;
+}
+
+.Lost__info-name {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 21px;
+  margin-top: 0.5rem;
+}
+
+.Lost__info-description {
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 17px;
+  margin-top: 0.25rem;
+  color: var(--text_secondary);
+}
