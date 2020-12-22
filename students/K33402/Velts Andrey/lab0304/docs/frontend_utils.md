@@ -1,3 +1,10 @@
+# Вспомогательные функции
+
+#### Для работы с названием классов CSS
+
+Хранится в frontend/utils/classNames.ts
+
+```
 export interface ObjectClassNames {
   [index: string]: boolean;
 }
@@ -42,3 +49,27 @@ export default function classNames(...classnames: ClassName[]) {
 
   return result.join(" ");
 }
+
+```
+
+#### Для работы с датой в unix
+
+Хранится в frontend/utils/parseUnix.ts
+
+```
+import { fromUnixTime } from "date-fns";
+
+/**
+ * Parsing a unix timestamp to date.
+ *
+ * @param date - Date in unix timestamp
+ * @returns The Date object
+ *
+ */
+const parseUnix = (date: string): Date => {
+  return fromUnixTime(parseInt(date));
+};
+
+export default parseUnix;
+
+```

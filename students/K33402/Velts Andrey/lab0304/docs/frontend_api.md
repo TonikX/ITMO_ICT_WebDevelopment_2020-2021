@@ -1,6 +1,10 @@
-import { axios } from "core";
-import { SignupUserProps, PasswordChangeProps } from "types/store";
+# Запросы к серверу
 
+#### Аутентификация/регистрация пользователей
+
+Хранится в frontend/api/user.ts
+
+```
 /**
  * Request to the server to log out
  *
@@ -43,23 +47,4 @@ export const postUserSignup = async (user: SignupUserProps) => {
   return data;
 };
 
-export const postUserPasswordChange = async (
-  token: string,
-  password: PasswordChangeProps
-) => {
-  let { data } = await axios.post("/auth/password/change/", password, {
-    headers: {
-      Authorization: `Token ${token}`,
-    },
-  });
-  return data;
-};
-
-export const getUserAuthState = async (token: string) => {
-  let { data } = await axios.get("/user/", {
-    headers: {
-      Authorization: `Token ${token}`,
-    },
-  });
-  return data;
-};
+```
