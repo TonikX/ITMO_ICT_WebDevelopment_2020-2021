@@ -5,7 +5,10 @@ nav:
       - "Авторизация": api_login.md
       - "Регистрация": api_signup.md
       - "Изменение учетных данных": api_user.md
-  - Frontend: frontend.md
+  - Frontend:
+      - "Основное": frontend.md
+      - "Запросы к серверу": frontend_api.md
+      - "Вспомогательные функции": frontend_utils.md
 
 theme:
   name: material
