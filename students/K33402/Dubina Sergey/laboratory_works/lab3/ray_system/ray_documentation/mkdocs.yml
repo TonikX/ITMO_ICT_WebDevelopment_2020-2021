@@ -1,0 +1,8 @@
+site_name: Описание сервиса "Ray System"
+nav:
+ - Home: index.md
+ - Auth: auth.md
+ - Api: api.md
+
+theme:
+ name: material
