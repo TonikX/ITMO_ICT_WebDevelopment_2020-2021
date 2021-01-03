@@ -16,6 +16,7 @@ class WarriorCreateAPIView(generics.CreateAPIView):
     serializer_class = WarriorSerializer
     queryset = Warrior.objects.all()
 
+
 # def put(self, request, pk=None):
 #     warrior = get_object_or_404(Warrior, pk=pk)
 #     serializer = WarriorSerializer(warrior, data=request.data)
@@ -37,13 +38,9 @@ class WarriorListAPIView(generics.ListAPIView):
     queryset = Warrior.objects.all()
 
 
-
-
 class ProfessionCreateAPIView(generics.CreateAPIView):
     serializer_class = ProfessionSerializer
     queryset = Profession.objects.all()
-
-
 
 
 class SkillsCreateView(APIView):
