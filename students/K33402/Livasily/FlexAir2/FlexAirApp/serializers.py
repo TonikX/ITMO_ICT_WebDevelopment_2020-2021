@@ -10,11 +10,16 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class AirlineSerializer(serializers.ModelSerializer):
-    owner = UserSerializer()
+    owner = serializers.CharField()
 
     class Meta:
         model = Airline
-        fields = ["name"]
+        fields = "__all__"
+
+    def create(self, validated_data):
+        airline = Airline(**validated_data)
+        airline.save()
+        return Airline(**validated_data)
 
 
 class AirportCreateSerializer(serializers.ModelSerializer):
@@ -78,7 +83,7 @@ class RouteSerializer(serializers.ModelSerializer):
 
 class ArrivalSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Route
+        model = Arrival
         fields = "__all__"
 
 
@@ -114,6 +119,12 @@ class PlaneSerializer(serializers.ModelSerializer):
 class BoardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Board
+        fields = "__all__"
+
+
+class FlightAttendantSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FlightAttendant
         fields = "__all__"
 
 

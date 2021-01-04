@@ -7,6 +7,7 @@ urlpatterns = [
     path('users/info/<int:pk>', UserInfoAPIView.as_view()),
     path('users/create/', UserCreateAPIView.as_view()),
     path('Airlane/', AirlineListAPIView.as_view()),
+    path('Airlane/create/', AirlineCreateAPIView.as_view()),
     path('Airport/list/', AirportsListAPIView.as_view()),
     path('Airport/create/', AirportCreateAPIView.as_view()),
     path('City/list/', CityListAPIView.as_view()),
@@ -27,5 +28,6 @@ urlpatterns = [
     path('FlightAttendant/create/', FlightAttendantCreateAPIView.as_view()),
     path('Pilot/create/', PilotCreateAPIView.as_view()),
     path('Pilot/list/', PilotListAPIView.as_view()),
-
 ]
+
+#Описать эндпоинты

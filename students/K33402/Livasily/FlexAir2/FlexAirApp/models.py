@@ -21,6 +21,8 @@ class Airline(models.Model):  # Авиакомпания
         return self.name
 
 
+
+
 class City(models.Model):
     name = models.CharField(max_length=40, primary_key=True)
 

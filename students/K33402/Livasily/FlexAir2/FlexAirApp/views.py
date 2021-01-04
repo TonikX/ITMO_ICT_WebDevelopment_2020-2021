@@ -24,10 +24,17 @@ class UserCreateAPIView(generics.CreateAPIView):
     queryset = User.objects.all()
 
 
-
 class AirlineListAPIView(generics.ListAPIView):
     serializer_class = AirlineSerializer
     queryset = Airline.objects.all()
+
+
+class AirlineCreateAPIView(generics.CreateAPIView):
+    serializer_class = AirlineSerializer
+    queryset = Airline.objects.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 
 class AirportsListAPIView(generics.ListAPIView):
@@ -111,23 +118,23 @@ class BoardCreateAPIView(generics.CreateAPIView):
 
 
 class FlightAttendantCreateAPIView(generics.CreateAPIView):
-    serializer_class = BoardSerializer
-    queryset = Board.objects.all()
+    serializer_class = FlightAttendantSerializer
+    queryset = FlightAttendant.objects.all()
 
 
 class FlightAttendantListAPIView(generics.ListAPIView):
-    serializer_class = BoardSerializer
-    queryset = Board.objects.all()
+    serializer_class = FlightAttendantSerializer
+    queryset = FlightAttendant.objects.all()
 
 
 class PilotListAPIView(generics.ListAPIView):
     serializer_class = PilotSerializer
-    queryset = Board.objects.all()
+    queryset = Pilot.objects.all()
 
 
 class PilotCreateAPIView(generics.CreateAPIView):
     serializer_class = PilotSerializer
-    queryset = Board.objects.all()
+    queryset = Pilot.objects.all()
 
 
 
