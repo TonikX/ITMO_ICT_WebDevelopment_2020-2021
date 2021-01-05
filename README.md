@@ -189,13 +189,16 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 
 # Лабораторная работа 4. Реализация клиентской части средствами Vue.js.
 
-Лекция 1
-
-Содержание:
+### Лекция 4.1 (Основы создания клиентских web-приложений)
 
 - Отличие многостраничного приложения от SPA [Презентация с лекции(.ppt)](https://drive.google.com/file/d/1aUwwy7xKJ32J9rXumK-xcI_ttWm1vcSx/view?usp=sharing) | [Лекция 20.11.2020 / Время 00:00 - 00:16](https://youtu.be/oihJcLNoewo) (Видео)<br>
 - Angular vs. Vue vs. React [Презентация с лекции(.ppt)](https://drive.google.com/file/d/1bNEVcfHRo0T9n1IDYwnn0YIPEGUIO51a/view?usp=sharing) | [Лекция 20.11.2020 / Время 00:16 - 00:58](https://youtu.be/oihJcLNoewo) (Видео)<br>
 - Компонентный подход + как работает роутинг на фронтенде [Лекция 20.11.2020 / Время 00:58 - 01:45](https://youtu.be/oihJcLNoewo) (Видео)<br>
+
+### Лекция 4.2 (Основы работы с JS)
+1. Типы данных (number, infinity, NaN, undefinded, bigint, string, bool, null, object) + Переменные (var, let, const) + Функции (анонимнные, lambda) + Циклы (foreach, for, while) + Работа с массивами (filter, sort, map, forEach) [Лекция 04.12.2020 / Время 00:00 - 00:44](https://youtu.be/Lc0gO-kf38M) (Видео)<br>
+2. Работа с событиями (load, DOMContentLoaded, click, change, submit, reset), работа с DOM-деревом (кнопки, формы),
+работа с DOM-хранилищами (localStorage, sessionStorage) [Лекция 04.12.2020 / Время 00:44 - 02:04](https://youtu.be/Lc0gO-kf38M) (Видео)<br>
 
 ## Практическая работа №4.1
 
