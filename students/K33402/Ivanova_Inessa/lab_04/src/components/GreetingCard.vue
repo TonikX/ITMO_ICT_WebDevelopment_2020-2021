@@ -1,7 +1,6 @@
-
 <template>
   <section>
-  <h1>Привет<span :username="username" v-if="username">, {{ username }}</span>!</h1>
+  <h1>Привет<span v-if="username">, {{ username }}</span>!</h1>
   </section>
 </template>
 

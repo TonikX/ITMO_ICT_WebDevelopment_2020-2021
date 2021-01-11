@@ -1,6 +1,6 @@
 <template>
   <section>
-    <greeting-card />
+    <greeting-card :username="username" />
 
     <h2>Это простой проект на Vue.</h2>
 
