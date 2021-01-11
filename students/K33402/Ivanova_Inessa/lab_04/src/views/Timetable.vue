@@ -28,7 +28,7 @@
               <option>Воскресенье</option>
             </select>
           </label>
-          <timetable-by-weekday :weekday="selectedWeekday" />
+          <timetable-by-weekday :selectedWeekday="selectedWeekday" />
         </div>
       </div>
     </div>
@@ -52,6 +52,9 @@ export default {
       content: 'width=device-width, initial-scale=1'
     }]
   },
+  data: () => ({
+    selectedWeekday: 'Mon'
+  }),
   components: {
     TimetableByWeekday,
     Header,
