@@ -200,6 +200,9 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
 2. Работа с событиями (load, DOMContentLoaded, click, change, submit, reset), работа с DOM-деревом (кнопки, формы),
 работа с DOM-хранилищами (localStorage, sessionStorage) [Лекция 04.12.2020 / Время 00:44 - 02:04](https://youtu.be/Lc0gO-kf38M) (Видео)<br>
 
+### Лекция 4.2 (Основы работы с Vue.js)
+https://youtu.be/ckzWDhn8ScQ
+
 ## Практическая работа №4.1
 
 Цель работы: Ознакомится с базорвыми конструкциями JavaScript.
