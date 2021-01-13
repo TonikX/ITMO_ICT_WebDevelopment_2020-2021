@@ -25,9 +25,9 @@ export class Login extends Component {
     render() {
 
         const {username, password } = this.state
-        if(this.props.isAuthenticated){
-            return <Redirect to='/' />
-        }
+        // if(this.props.isAuthenticated){
+        //     return <Redirect to='/' />
+        // }
         return(
             <div className={"col-md-6 m-auto"}>
                 <div className={"card card-body mt-5"}>

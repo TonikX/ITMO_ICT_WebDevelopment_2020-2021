@@ -1,5 +1,11 @@
 #node
-node_moduels
+node_modules/
 
 
-FlexAir3
+test
+
+venv
+
+warriors_project
+
+.idea

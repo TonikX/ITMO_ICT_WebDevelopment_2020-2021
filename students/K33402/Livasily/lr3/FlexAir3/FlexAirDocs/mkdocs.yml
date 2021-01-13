@@ -1,0 +1,13 @@
+site_name: front_funcs
+nav:
+ - Home: index.md
+ - Funcs: models.md
+ - airlines :
+    - List of airlines: airlines/list.md
+    - Creating a airline: airlines/create.md
+    - delete a airline: airlines/delete.md
+ - auth :
+    - List of Auth: auth/list.md
+    - login a Auth: auth/login.md
+    - logoutUser a Auth: auth/logoutUser.md
+    - register a Auth: auth/register.md

@@ -10,7 +10,6 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class AirlineSerializer(serializers.ModelSerializer):
-    owner = serializers.CharField()
 
     class Meta:
         model = Airline

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'knox',
     'accounts',
     'djoser',
+    'drf_yasg'
 ]
 
 # AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',)

@@ -1,8 +1,12 @@
 import axios from "axios";
 import {tokenConfig} from "./auth";
-import {GET_AIRLINES, DELETE_AIRLINES} from "./types";
-import {ADD_AIRLANES} from "../../../../../FlexAirApp/FlexAir2/frontend/src/actions/types";
+import {GET_AIRLINES, DELETE_AIRLINES, ADD_AIRLANES} from "./types";
 
+
+/**
+ * Создает новый аэропорт
+ * @returns {function(*, *=): void}
+ */
 export const getAirlines = () => (dispatch, getState) =>{
     axios.get('/api/airlines/',tokenConfig(getState))
         .then(res => {

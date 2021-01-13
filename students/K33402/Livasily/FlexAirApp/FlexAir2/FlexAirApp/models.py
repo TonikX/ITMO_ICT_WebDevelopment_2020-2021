@@ -13,7 +13,7 @@ class User(AbstractUser):
 
 
 class Airline(models.Model):  # Авиакомпания
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name="airlines")
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30)
 

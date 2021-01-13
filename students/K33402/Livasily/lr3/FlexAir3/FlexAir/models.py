@@ -3,15 +3,6 @@ from django.contrib.auth.models import User, AbstractUser
 
 
 # Create your models here.
-class Profile(AbstractUser):
-    username = models.CharField(max_length=20, blank=True, null=True, unique=True)
-    passport = models.CharField(max_length=100, blank=True, null=True)
-    salary = models.IntegerField(default=0)
-    REQUIRED_FIELDS = ['first_name', 'last_name', 'passport', 'password']
-
-    def __str__(self):
-        return self.username
-
 
 
 
@@ -24,7 +15,7 @@ class Airline(models.Model):  # Авиакомпания
 
 
 class City(models.Model):
-    name = models.CharField(max_length=40, primary_key=True)
+    name = models.CharField(max_length=40)
 
     def __str__(self):
         return self.name

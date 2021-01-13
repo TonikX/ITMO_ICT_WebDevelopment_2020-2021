@@ -37,6 +37,7 @@ class AirlineCreateAPIView(generics.CreateAPIView):
         serializer.save(owner=self.request.user)
 
 
+
 class AirportsListAPIView(generics.ListAPIView):
     serializer_class = AiraportNestedSerializer
     queryset = Airport.objects.all()

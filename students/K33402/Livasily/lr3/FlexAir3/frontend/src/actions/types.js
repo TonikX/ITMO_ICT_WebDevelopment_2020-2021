@@ -13,4 +13,5 @@ export const DELETE_AIRLANES = "DELETE_AIRLANES"
 export const GET_CITYS  = "GET_CITYS"
 export const DELETE_CITYS = "DELETE_CITYS"
 export const ADD_CITY = "ADD_CITY"
+export const UPDATE_CITY = "UPDATE_CITY"
 

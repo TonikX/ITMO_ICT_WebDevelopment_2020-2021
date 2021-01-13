@@ -5,7 +5,7 @@ import {USER_LOADING, USER_LOADED, AUTH_ERROR, LOGIN_SUCCESS, LOGOUT_SUCCESS, RE
 
 //CHEK TOKEN &LOAD USER
 export const loadUser = () => (dispatch, getState) =>{
-    dispatch({type: USER_LOADED})
+    dispatch({type: USER_LOADING})
 
     axios.get('/api/auth/user',  tokenConfig(getState)).then(res => {
         dispatch({
