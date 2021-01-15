@@ -1,15 +1,14 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
-class User(models.Model):
-    username = models.CharField(max_length=100)
-    name = models.CharField(max_length=200)
-    email = models.EmailField()
+class User(AbstractUser):
     date_of_birth = models.DateField(blank=True, null=True)
     answers = models.ManyToManyField('Answer', blank=True)
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'date_of_birth']
 
     def __str__(self):
-        return "{} {} {} {}".format(self.username, self.name, self.email, self.date_of_birth)
+        return "{} {} {} {} {}".format(self.username, self.first_name, self.last_name, self.email, self.date_of_birth)
 
 
 class Question(models.Model):

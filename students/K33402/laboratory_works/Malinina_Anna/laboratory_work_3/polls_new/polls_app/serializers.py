@@ -3,16 +3,6 @@ from rest_framework import serializers
 from polls_app.models import *
 
 
-class AppUserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ["id",
-                  "username",
-                  "name",
-                  "email",
-                  "date_of_birth"]
-
-
 class AnswerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Answer
@@ -28,7 +18,7 @@ class QuestionSerializer(serializers.ModelSerializer):
 
 
 class PollDetailsSerializer(serializers.ModelSerializer):
-    creator = AppUserSerializer()
+    creator = serializers.PrimaryKeyRelatedField(read_only=True, default=serializers.CurrentUserDefault())
     question_set = QuestionSerializer(many=True)
 
     class Meta:
@@ -46,16 +36,18 @@ class PollSerializer(serializers.ModelSerializer):
 
 class PollCreateSerializer(serializers.ModelSerializer):
     question_set = QuestionSerializer(many=True)
+    creator = serializers.HiddenField(
+        default=serializers.CurrentUserDefault()
+    )
 
     class Meta:
         model = Poll
         fields = "__all__"
 
     def create(self, validated_data):
-        user = validated_data['creator']
 
         poll = Poll(title=validated_data['title'], description=validated_data['description'],
-                    voting_time=validated_data['voting_time'], theme=validated_data['theme'], creator=user)
+                    voting_time=validated_data['voting_time'], theme=validated_data['theme'])
         poll.save()
         for question in validated_data['question_set']:
             question_instance = Question.objects.create(description=question['description'], poll=poll)
@@ -88,32 +80,3 @@ class PollCreateSerializer(serializers.ModelSerializer):
                 answer.save()
 
         return instance
-
-
-class AppUserCreateSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        exclude = ['answers']
-
-    def create(self, validated_data):
-        user = User(**validated_data)
-        user.save()
-        return user
-
-
-class AppUserUpdateSerializer(serializers.ModelSerializer):
-    answers_ids = serializers.PrimaryKeyRelatedField(many=True, read_only=False, queryset=Answer.objects.all(),
-                                                     source='answers')
-
-    class Meta:
-        model = User
-        exclude = ['answers']
-
-
-class UserDetailsSerializer(serializers.ModelSerializer):
-    poll_set = PollSerializer(many=True)
-    answers = AnswerSerializer(many=True)
-
-    class Meta:
-        model = User
-        fields = "__all__"
