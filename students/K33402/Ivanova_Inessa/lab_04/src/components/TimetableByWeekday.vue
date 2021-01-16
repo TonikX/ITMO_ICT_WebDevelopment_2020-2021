@@ -7,7 +7,7 @@
       <th>{{ elem.time }}></th>
       <td>{{ elem.lesson_type.name }}</td>
       <td class>{{ elem.lesson_type.description }}</td>
-      <td><button class="red-button">Записаться</button></td>
+      <td><button class="red-button" value="elem.id">Записаться</button></td>
     </tr>
   </table>
   </section>
@@ -24,25 +24,10 @@ export default {
   }),
   methods: {
     async getTimetable (selectedWeekday) {
-      // eslint-disable-next-line no-unused-vars
-      let weekdayCode = ''
-      const options = [
-        { text: 'Понедельник', value: 'Mon' },
-        { text: 'Вторник', value: 'Tue' },
-        { text: 'Среда', value: 'Wen' },
-        { text: 'Четверг', value: 'Thu' },
-        { text: 'Пятница', value: 'Fri' },
-        { text: 'Суббота', value: 'Sat' },
-        { text: 'Воскресенье', value: 'Sun' }
-      ]
-      for (const option in options) {
-        if (option.text === selectedWeekday) {
-          weekdayCode = option.value
-        }
-      }
+      console.log(selectedWeekday)
       try {
         const response = await this.axios
-          .get('http://127.0.0.1:8000/timetable/weekdayCode')
+          .get(`http://127.0.0.1:8000/timetable/${selectedWeekday}`)
         if (response.status !== 200) {
           throw new Error(response.error)
         }
@@ -53,8 +38,8 @@ export default {
     }
   },
 
-  created () {
-    this.getTimetable()
+  created (selectedWeekday) {
+    this.getTimetable(selectedWeekday)
   }
 }
 </script>

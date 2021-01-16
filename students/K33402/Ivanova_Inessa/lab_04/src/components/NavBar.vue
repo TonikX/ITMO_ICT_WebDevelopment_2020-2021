@@ -2,8 +2,8 @@
   <div class="row">
     <div class="row navigation">
       <div class="row navigation-row">
-        <router-link to="/main" class="nav">Главная</router-link>
-        <router-link to="/price" class="nav">Цены на абонементы</router-link>
+        <router-link to="/" class="nav">Главная</router-link>
+        <router-link to="/prices" class="nav">Цены на абонементы</router-link>
         <router-link to="/timetable" class="nav">Расписание</router-link>
         <router-link to="/classes" class="nav">Групповые программы</router-link>
         <router-link to="/coaches" class="nav">Тренерский состав</router-link>

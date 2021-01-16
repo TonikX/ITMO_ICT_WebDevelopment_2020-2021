@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="col">
-          <button value="Личный кабинет" class="red-button">Личный кабинет</button>
+          <button class="red-button" @click="logIn">Личный кабинет</button>
       </div>
     </div>
   </div>
@@ -30,7 +30,17 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  methods: {
+    logIn () {
+      if (sessionStorage.getItem('auth_token')) {
+        this.$router.push('home')
+      } else {
+        this.$router.push('login')
+      }
+      console.log(sessionStorage.getItem('auth_token'))
+    }
+  }
 }
 </script>
 

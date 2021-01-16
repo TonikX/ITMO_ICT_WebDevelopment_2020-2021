@@ -17,17 +17,15 @@
       <hr class="red-line">
       <div class="row">
         <div>
-          <label>
-            <select class="weekday" v-model="selectedWeekday">
-              <option>Понедельник</option>
-              <option>Вторник</option>
-              <option>Среда</option>
-              <option>Четверг</option>
-              <option>Пятница</option>
-              <option>Суббота</option>
-              <option>Воскресенье</option>
-            </select>
-          </label>
+          <select v-model="selectedWeekday" class="weekday">
+            <option value="Mon">Понедельник</option>
+            <option value="Tue">Вторник</option>
+            <option value="Wed">Среда</option>
+            <option value="Thu">Четверг</option>
+            <option value="Fri">Пятница</option>
+            <option value="Sat">Суббота</option>
+            <option value="Sun">Воскресенье</option>
+          </select>
           <timetable-by-weekday :selectedWeekday="selectedWeekday" />
         </div>
       </div>
@@ -52,9 +50,11 @@ export default {
       content: 'width=device-width, initial-scale=1'
     }]
   },
-  data: () => ({
-    selectedWeekday: 'Mon'
-  }),
+  data: function () {
+    return {
+      selectedWeekday: 'Mon'
+    }
+  },
   components: {
     TimetableByWeekday,
     Header,

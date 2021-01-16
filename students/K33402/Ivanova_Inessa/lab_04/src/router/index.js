@@ -8,6 +8,9 @@ import MainPage from '@/views/MainPage.vue'
 import Classes from '@/views/Classes.vue'
 import Prices from '@/views/Prices.vue'
 import Timetable from '@/views/Timetable.vue'
+import Coaches from '@/views/Coaches.vue'
+import Login from '@/views/Login.vue'
+import Home from '@/views/Home.vue'
 
 Vue.use(VueRouter)
 
@@ -37,6 +40,21 @@ const routes = [
     path: '/timetable',
     name: 'Timetable',
     component: Timetable
+  },
+  {
+    path: '/coaches',
+    name: 'Coaches',
+    component: Coaches
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: Home
   }
 ]
 
