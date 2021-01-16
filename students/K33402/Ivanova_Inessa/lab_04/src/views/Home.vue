@@ -82,6 +82,8 @@ export default {
       })
     },
     logOut () {
+      sessionStorage.removeItem('auth_token')
+      this.$router.push('login')
     }
   }
 }

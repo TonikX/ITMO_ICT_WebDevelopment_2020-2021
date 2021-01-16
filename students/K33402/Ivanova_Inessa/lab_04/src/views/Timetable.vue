@@ -17,16 +17,16 @@
       <hr class="red-line">
       <div class="row">
         <div>
-          <select v-model="selectedWeekday" class="weekday">
+          <select v-model="selectedWeekday" class="weekday" @change="forceRerender">
             <option value="Mon">Понедельник</option>
             <option value="Tue">Вторник</option>
-            <option value="Wed">Среда</option>
+            <option value="Wen">Среда</option>
             <option value="Thu">Четверг</option>
             <option value="Fri">Пятница</option>
             <option value="Sat">Суббота</option>
             <option value="Sun">Воскресенье</option>
           </select>
-          <timetable-by-weekday :selectedWeekday="selectedWeekday" />
+          <timetable-by-weekday :selectedWeekday="selectedWeekday" :key="componentKey" />
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@ import Footer from '@/components/Footer'
 import TimetableByWeekday from '@/components/TimetableByWeekday'
 
 export default {
-  name: 'Classes',
+  name: 'Timetable',
 
   metaInfo: {
     title: 'Расписание',
@@ -52,7 +52,8 @@ export default {
   },
   data: function () {
     return {
-      selectedWeekday: 'Mon'
+      selectedWeekday: 'Mon',
+      componentKey: 0
     }
   },
   components: {
@@ -60,6 +61,11 @@ export default {
     Header,
     NavBar,
     Footer
+  },
+  methods: {
+    forceRerender () {
+      this.componentKey += 1
+    }
   }
 }
 </script>

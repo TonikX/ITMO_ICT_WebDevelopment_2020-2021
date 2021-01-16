@@ -4,16 +4,18 @@
   v-for="elem in timetable"
   :key="elem.id">
     <tr>
-      <th>{{ elem.time }}></th>
+      <th>{{ elem.time.slice(0,5) }}</th>
       <td>{{ elem.lesson_type.name }}</td>
       <td class>{{ elem.lesson_type.description }}</td>
-      <td><button class="red-button" value="elem.id">Записаться</button></td>
+      <td><button class="red-button" @click="addBooking(elem.id)">Записаться</button></td>
     </tr>
   </table>
   </section>
 </template>
 
 <script>
+import $ from 'jquery'
+
 export default {
   name: 'TimetableByWeekday',
   props: {
@@ -23,17 +25,34 @@ export default {
     timetable: []
   }),
   methods: {
-    async getTimetable (selectedWeekday) {
-      console.log(selectedWeekday)
+    async getTimetable () {
+      console.log(this.selectedWeekday)
       try {
         const response = await this.axios
-          .get(`http://127.0.0.1:8000/timetable/${selectedWeekday}`)
+          .get(`http://127.0.0.1:8000/timetable/${this.selectedWeekday}`)
         if (response.status !== 200) {
           throw new Error(response.error)
         }
         this.timetable = response.data
       } catch (e) {
         console.error('AN API ERROR', e)
+      }
+    },
+    addBooking (id) {
+      if (sessionStorage.getItem('auth_token')) {
+        console.log(id)
+        id = Number(id)
+        $.ajax({
+          url: `http://127.0.0.1:8000/book/${id}`,
+          type: 'POST',
+          success: (response) => {
+            alert(response)
+            location.reload()
+          }
+        })
+      } else {
+        alert('Чтобы записаться, войдите в аккаунт')
+        this.$router.push('login')
       }
     }
   },
