@@ -1,20 +1,20 @@
 <template>
   <div class="home">
     <Login v-if="auth"/>
-    <Books v-if="!auth"/>
+    <ChooseInterface v-if="!auth"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Books from '@/components/Books'
 import Login from '@/components/Login'
+import ChooseInterface from '@/components/ChooseInterface'
 
 export default {
   name: 'home',
   components: {
-    Login,
-    Books
+    ChooseInterface,
+    Login
   },
   methods: {
     auth (login) {

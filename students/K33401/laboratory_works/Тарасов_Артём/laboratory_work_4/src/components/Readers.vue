@@ -1,36 +1,30 @@
 <template>
   <div>
-    <button @click="getBooks">Получить книги</button>
+    <button @click="getReaders">Получить читателей</button>
     <v-simple-table class="v-data-table">
       <template v-slot:default class="theme--light">
         <thead>
         <tr>
           <th class="text-center">
-            Название
+            Full name
           </th>
           <th class="text-center">
-            Автор
-          </th>
-          <th class="text-center">
-            Тип произведения
+            Phone
           </th>
         </tr>
         </thead>
         <tbody>
-        <tr v-for="book in books" v-bind:key="book.id">
+        <tr v-for="reader in readers" v-bind:key="reader.id">
           <td>
-            <router-link :to="{name:'OneBook', params:{id: book.id}}">{{ book.name }}</router-link>
+            <router-link :to="{name:'OneReader', params:{id: reader.id}}">{{ reader.full_name }}</router-link>
           </td>
+          <td>{{ reader.phone }}</td>
           <td>
-            {{ book.author }}
-          </td>
-          <td>{{ book.section }}</td>
-          <td>
-            <v-btn color="#ff0000" @click="deleteBook(book.id)">Удалить</v-btn>
+            <v-btn color="#ff0000" @click="deleteBook(reader.id)">Удалить</v-btn>
           </td>
         </tr>
         </tbody>
-        <v-btn @click="createBook">Добавить книгу</v-btn>
+        <v-btn @click="createBook">Добавить читателя</v-btn>
       </template>
     </v-simple-table>
   </div>
@@ -39,27 +33,29 @@
 <script>
 import $ from 'jquery'
 
+const baseUrlApi = 'http://127.0.0.1:8005/api/readers/'
+
 export default {
-  name: 'Books',
+  name: 'Readers',
   created () {
     $.ajaxSetup({
       headers: { Authorization: 'Token ' + sessionStorage.getItem('auth_token') }
     })
-    this.getBooks()
+    this.getReaders()
   },
   data () {
     return {
-      books: ''
+      readers: ''
     }
   },
   methods: {
-    getBooks () {
+    getReaders () {
       $.ajax({
-        url: 'http://127.0.0.1:8005/api/books/',
+        url: baseUrlApi,
         type: 'GET',
         success: (response) => {
           console.log(response)
-          this.books = response
+          this.readers = response
         },
         error: (response) => {
           alert('Пользователь не авторизован')
@@ -68,11 +64,11 @@ export default {
       })
     },
     createBook () {
-      this.$router.push({ name: 'OneBook' })
+      this.$router.push({ name: 'OneReader' })
     },
     deleteBook (id) {
       $.ajax({
-        url: 'http://127.0.0.1:8005/api/books/' + id + '/',
+        url: baseUrlApi + id + '/',
         type: 'DELETE',
         success: (response) => {
           alert('Готово')

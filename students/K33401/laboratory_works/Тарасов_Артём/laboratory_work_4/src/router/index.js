@@ -5,6 +5,9 @@ import Login from '@/components/Login.vue'
 import CreateBook from '@/components/CreateBook.vue'
 import OneBook from '@/components/OneBook.vue'
 import Books from '@/components/Books'
+import ChooseInterface from '@/components/ChooseInterface'
+import Readers from '@/components/Readers'
+import OneReader from '@/components/OneReader'
 
 Vue.use(VueRouter)
 
@@ -33,6 +36,21 @@ const routes = [
     path: '/books',
     name: 'Books',
     component: Books
+  },
+  {
+    path: '/chooseInterface',
+    name: 'ChooseInterface',
+    component: ChooseInterface
+  },
+  {
+    path: '/readers',
+    name: 'Readers',
+    component: Readers
+  },
+  {
+    path: '/oneReader',
+    name: 'OneReader',
+    component: OneReader
   }
 ]
 

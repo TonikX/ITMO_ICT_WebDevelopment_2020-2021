@@ -35,7 +35,7 @@ export default {
         success: (response) => {
           console.log(response.auth_token)
           sessionStorage.setItem('auth_token', response.auth_token)
-          this.$router.push({ name: 'Books' })
+          this.$router.push({ name: 'ChooseInterface' })
         },
         error: (response) => {
           if (response.status === 400) {
