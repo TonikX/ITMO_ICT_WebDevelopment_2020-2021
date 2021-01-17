@@ -15,7 +15,7 @@
     </div>
     <div class="block-content">
       <v-card width="700" color="#fff8f2">
-        <div class="label">Создание произведения</div>
+        <div class="label">Произведение</div>
         <form>
           <v-text-field class="input" v-model="name" type="text" label="Имя"></v-text-field>
           <v-container fluid>
@@ -26,7 +26,7 @@
             <v-col class="sign-block">
               <v-select class="select-line" v-model="type" :items="typeTips" label="Тип произведения" dense solo></v-select>
               <v-select class="select-line" v-model="creator" :items="authors" item-text="name" item-value="id" label="Автор" dense solo></v-select>
-              <v-btn class="select-line" color="primary" @click="newCreation">Создать</v-btn>
+              <v-btn class="select-line" color="primary" @click="newCreation">Сохранить</v-btn>
             </v-col>
           </div>
         </form>
@@ -51,6 +51,9 @@ export default {
     }
   },
   created () {
+    if (this.$route.params.creationId !== undefined) {
+      this.loadCreation()
+    }
     $.ajaxSetup({
       headers: { Authorization: 'Token ' + sessionStorage.getItem('auth_token') }
     })
@@ -70,19 +73,54 @@ export default {
       })
     },
     newCreation () {
+      if (this.$route.params.creationId !== undefined) {
+        $.ajax({
+          url: 'http://127.0.0.1:8000/api/creations/' + this.$route.params.creationId + '/update/',
+          type: 'PATCH',
+          data: {
+            name: this.name,
+            description: this.description,
+            creator: this.creator,
+            type: this.type
+          },
+          success: (response) => {
+            alert('Информация о произведении обновлена')
+            this.$router.push({ name: 'Home' })
+          },
+          error: (response) => {
+            alert(response)
+          }
+        })
+      } else {
+        $.ajax({
+          url: 'http://127.0.0.1:8000/api/creations/create/',
+          type: 'POST',
+          data: {
+            name: this.name,
+            description: this.description,
+            creator: this.creator,
+            type: this.type
+          },
+          success: (response) => {
+            alert('Создано произведение')
+            console.log(response)
+            this.$router.push({ name: 'Home' })
+          },
+          error: (response) => {
+            alert(response)
+          }
+        })
+      }
+    },
+    loadCreation () {
       $.ajax({
-        url: 'http://127.0.0.1:8000/api/creations/create/',
-        type: 'POST',
-        data: {
-          name: this.name,
-          description: this.description,
-          creator: this.creator,
-          type: this.type
-        },
+        url: 'http://127.0.0.1:8000/api/creations/' + this.$route.params.creationId + '/',
+        type: 'GET',
         success: (response) => {
-          alert('Создано произведение')
-          console.log(response)
-          this.$router.push({ name: 'Home' })
+          this.name = response.name
+          this.description = response.description
+          this.creator = response.creator
+          this.type = response.type
         },
         error: (response) => {
           alert(response)

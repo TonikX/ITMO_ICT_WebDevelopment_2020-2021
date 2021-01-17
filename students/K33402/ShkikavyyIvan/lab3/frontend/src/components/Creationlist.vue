@@ -28,6 +28,10 @@
           <td>
             <v-btn v-if="!isRedactor" v-on:click="goReview(creation.id)">Оставить отзыв</v-btn>
             <v-btn color="error" v-else @click="deleteCreation(creation.id)">Удалить произведение</v-btn>
+            <v-btn color="primary" v-if="isRedactor" class="button"
+                       @click="$router.push({ name: 'NewCreation', params: { creationId: creation.id }})">
+                  Редактировать
+                </v-btn>
           </td>
         </tr>
         </tbody>

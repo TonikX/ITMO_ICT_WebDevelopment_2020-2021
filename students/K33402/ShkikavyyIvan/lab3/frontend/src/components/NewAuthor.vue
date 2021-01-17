@@ -15,7 +15,7 @@
     </div>
     <div class="block-content">
       <v-card width="600" color="#fff8f2">
-        <div class="label">Создание автора</div>
+        <div class="label">Автор</div>
         <form>
           <v-text-field class="input" v-model="name" type="text" label="Имя"></v-text-field>
           <v-container fluid>
@@ -41,23 +41,57 @@ export default {
     }
   },
   created () {
+    if (this.$route.params.authorId !== undefined) {
+      this.loadAuthor()
+    }
     $.ajaxSetup({
       headers: { Authorization: 'Token ' + sessionStorage.getItem('auth_token') }
     })
   },
   methods: {
     newAuthor () {
+      if (this.$route.params.authorId !== undefined) {
+        $.ajax({
+          url: 'http://127.0.0.1:8000/api/authors/' + this.$route.params.authorId + '/update/',
+          type: 'PATCH',
+          data: {
+            name: this.name,
+            description: this.description
+          },
+          success: (response) => {
+            alert('Информация об авторе обновлена')
+            this.$router.push({ name: 'Home' })
+          },
+          error: (response) => {
+            alert(response)
+          }
+        })
+      } else {
+        $.ajax({
+          url: 'http://127.0.0.1:8000/api/authors/create/',
+          type: 'POST',
+          data: {
+            name: this.name,
+            description: this.description
+          },
+          success: (response) => {
+            alert('Создан автор')
+            console.log(response)
+            this.$router.push({ name: 'Home' })
+          },
+          error: (response) => {
+            alert(response)
+          }
+        })
+      }
+    },
+    loadAuthor () {
       $.ajax({
-        url: 'http://127.0.0.1:8000/api/authors/create/',
-        type: 'POST',
-        data: {
-          name: this.name,
-          description: this.description
-        },
+        url: 'http://127.0.0.1:8000/api/authors/' + this.$route.params.authorId + '/',
+        type: 'GET',
         success: (response) => {
-          alert('Создан автор')
-          console.log(response)
-          this.$router.push({ name: 'Home' })
+          this.name = response.name
+          this.description = response.description
         },
         error: (response) => {
           alert(response)

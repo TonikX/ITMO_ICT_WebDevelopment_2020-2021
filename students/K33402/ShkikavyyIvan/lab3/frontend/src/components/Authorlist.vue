@@ -30,6 +30,7 @@
             <td>
               <router-link :to="{name:'Author', params:{id: author.id}}">{{ author.name }}</router-link>
               <v-btn v-if="isRedactor" color="error" icon @click="deleteAuthor(author.id)"><v-icon>mdi-delete</v-icon></v-btn>
+              <v-btn v-if="isRedactor" color="error" icon @click="$router.push({ name: 'NewAuthor', params: { authorId: author.id }})"><v-icon>mdi-autorenew</v-icon></v-btn>
             </td>
           </tr>
           </tbody>
