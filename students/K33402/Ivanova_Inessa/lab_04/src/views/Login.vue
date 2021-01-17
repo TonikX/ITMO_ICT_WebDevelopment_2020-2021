@@ -42,6 +42,9 @@ export default {
     password: ''
   }),
   methods: {
+    /**
+     * Функция получает токен с заданными логином и паролем
+     */
     setLogin () {
       $.ajax({
         url: 'http://127.0.0.1:8000/auth/token/login/',

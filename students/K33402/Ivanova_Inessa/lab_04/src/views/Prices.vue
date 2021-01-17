@@ -3,7 +3,7 @@
     <Header />
     <NavBar />
     <div class="pricelist">
-      <h1 align="center">Цены на абонементы</h1>
+      <h1>Цены на абонементы</h1>
       <div class="row1">
 
         <figure>
@@ -74,7 +74,7 @@
         Месяц с тренером - 13000 р</p>
     </div>
     <div class="sale">
-      <h1 align="center">Акции и скидки</h1>
+      <h1>Акции и скидки</h1>
       <div class="sale-row">
 
         <figure>
@@ -158,5 +158,8 @@ export default {
   }
   strong {
     font-size: 25px;
+  }
+  h1 {
+    text-align: center;
   }
 </style>

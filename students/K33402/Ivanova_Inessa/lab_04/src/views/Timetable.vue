@@ -50,12 +50,10 @@ export default {
       content: 'width=device-width, initial-scale=1'
     }]
   },
-  data: function () {
-    return {
-      selectedWeekday: 'Mon',
-      componentKey: 0
-    }
-  },
+  data: () => ({
+    selectedWeekday: 'Mon',
+    componentKey: 0
+  }),
   components: {
     TimetableByWeekday,
     Header,
@@ -63,6 +61,9 @@ export default {
     Footer
   },
   methods: {
+    /**
+     * Функция для обновления компоненты
+     */
     forceRerender () {
       this.componentKey += 1
     }

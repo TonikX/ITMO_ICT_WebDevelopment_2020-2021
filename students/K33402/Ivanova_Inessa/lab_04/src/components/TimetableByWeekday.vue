@@ -25,6 +25,10 @@ export default {
     timetable: []
   }),
   methods: {
+    /**
+     * Функция для получения расписания на день недели
+     * @returns {Promise<void>}
+     */
     async getTimetable () {
       console.log(this.selectedWeekday)
       try {
@@ -38,6 +42,10 @@ export default {
         console.error('AN API ERROR', e)
       }
     },
+    /**
+     * Функция для создания записи
+     * @param id
+     */
     addBooking (id) {
       if (sessionStorage.getItem('auth_token')) {
         console.log(id)

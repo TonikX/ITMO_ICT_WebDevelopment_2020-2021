@@ -37,6 +37,10 @@ export default {
     classes: []
   }),
   methods: {
+    /**
+     * Функция получает список типов уроков с описаниями
+     * @returns {Promise<void>}
+     */
     async getClasses () {
       try {
         const response = await this.axios

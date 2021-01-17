@@ -44,7 +44,11 @@ export default {
     coaches: []
   }),
   methods: {
-    async getClasses () {
+    /**
+     * Функция получает список всех тренеров
+     * @returns {Promise<void>}
+     */
+    async getCoaches () {
       try {
         const response = await this.axios
           .get('http://127.0.0.1:8000/coaches/')
@@ -59,7 +63,7 @@ export default {
   },
 
   created () {
-    this.getClasses()
+    this.getCoaches()
   }
 }
 </script>
