@@ -20,11 +20,21 @@ nav:
       - update: review/update.md
       - list: review/list.md
   - Frontend:
-      - apieditprofile: frontend/apieditprofile.md
-      - apilogin: frontend/apilogin.md
-      - apisignin: frontend/apisignin.md
-      - frontend_edit_api: frontend/frontend_edit_api.md
-      - frontend_login_api: frontend/frontend_login_api.md
-      - frontend_signup_api: frontend/frontend_signup_api.md
+    - Home:
+       - Author:
+          author: frontend/home/Author/frontend_author_api.md
+       - Authorlist:
+           authorlist: frontend/home/Authorlist/frontend_authorlist_api.md
+       - Creation:
+           creation: frontend/home/Creation/frontend_creation_api.md
+       - LK:
+          edit: frontend/home/LK/frontend_edit_api.md
+          lk: frontend/home/LK/frontend_LK_api.md
+       - Review:
+           review: frontend/home/Review/frontend_review_api.md
+       - creationlist: frontend/home/frontend_creationlist_api.md
+    - Login: frontend/login/frontend_login_api.md
+    - Signin: frontend/signin/frontend_signup_api.md
+
 theme:
   name: material
