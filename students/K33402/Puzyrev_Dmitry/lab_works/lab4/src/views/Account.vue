@@ -54,6 +54,11 @@ export default {
     }
   },
   methods: {
+    /**
+     * Добавление пункта в вишлист из поля ввода - берем значение из поля ввода
+     * и добавляем в качестве пункта вишлиста (сначала в приложение, потом сразу
+     * запрос в БД)
+     */
     addItem() {
       if (this.newItemTitle) {
         this.user.items.push({
@@ -86,6 +91,11 @@ export default {
           })
       }
     },
+
+    /**
+     * Удаление пункта из вишлиста
+     * @param {string} id
+     */
     removeItem(id) {
       for (let i = 0; i < this.user.items.length; i++) {
         if (this.user.items[i].id === id) {
@@ -108,8 +118,12 @@ export default {
       }
     }
   },
+
+  /**
+   * После создания страницы пробуем достать UserId из session storage,
+   * по которому в свою очередь скачиваем остальную информацию уже из БД
+   */
   mounted() {
-    
     const myStorage = window.localStorage;
     this.user.id = myStorage.getItem('userId');
 

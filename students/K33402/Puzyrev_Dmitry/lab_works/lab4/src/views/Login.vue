@@ -29,6 +29,9 @@ export default {
       pass: ''
     }
   },methods: {
+    /**
+     * Авторизация пользователя по логину и паролю
+     */
     loginUser() {
       if (this.email && this.pass) {
         fetch('/api/login', {
@@ -44,9 +47,6 @@ export default {
                 const answer = data['data']['loginUser'];
                 const myStorage = window.localStorage;
                 myStorage.setItem('userId', answer['_id']);
-                // myStorage.setItem('name', answer['name']);
-                // myStorage.setItem('email', answer['email']);
-                // myStorage.setItem('items', answer['items'] ? answer['items'] : []);
                 this.$router.push({ name: 'Account' })
               }
             })
@@ -54,21 +54,8 @@ export default {
               console.log(error);
               alert('Error occured!');
             })
-
-
       }
     },
   }
-  // mounted() {
-  //   if (this.$route.params.option === 'signup') {
-  //     this.title = 'Sign Up';
-  //   } else {
-  //     this.title = 'Login';
-  //   }
-  // }
 }
 </script>
-
-<style lang="scss" scoped>
-  
-</style>

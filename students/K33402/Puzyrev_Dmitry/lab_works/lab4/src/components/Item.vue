@@ -27,12 +27,26 @@ export default {
     context: String
   },
   methods: {
+    /**
+     * Удаление пункта вишлиста
+     * @param {string} id
+     */
     removeItem(id) {
       this.$emit('removeItem', id);
     },
+
+    /**
+     * Резервирование пункта вишлиста
+     * @param {string} id
+     */
     reserveItem(id) {
       this.$emit('reserveItem', id);
     },
+
+    /**
+     * Отмена резерва пункта вишлиста
+     * @param {string} id
+     */
     unreserveItem(id) {
       this.$emit('unreserveItem', id);
     },

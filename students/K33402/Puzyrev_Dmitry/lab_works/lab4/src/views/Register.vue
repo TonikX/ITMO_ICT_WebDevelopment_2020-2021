@@ -35,6 +35,9 @@ export default {
     }
   },
   methods: {
+    /**
+     * Регистрация пользователя
+     */
     registerUser() {
       if (this.name && this.email && this.pass) {
         fetch('/api/register', {
@@ -49,9 +52,6 @@ export default {
                 const answer = data['data']['createUser'];
                 const myStorage = window.localStorage;
                 myStorage.setItem('userId', answer['_id']);
-                // myStorage.setItem('name', answer['name']);
-                // myStorage.setItem('email', answer['email']);
-                // myStorage.setItem('items', []);
                 this.$router.push({ name: 'Account' })
               }
             })
@@ -64,16 +64,5 @@ export default {
       }
     },
   }
-  // mounted() {
-  //   if (this.$route.params.option === 'signup') {
-  //     this.title = 'Sign Up';
-  //   } else {
-  //     this.title = 'Login';
-  //   }
-  // }
 }
 </script>
-
-<style lang="scss" scoped>
-  
-</style>

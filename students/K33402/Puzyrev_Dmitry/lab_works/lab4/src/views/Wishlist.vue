@@ -37,12 +37,28 @@ export default {
     }
   },
   methods: {
+    /**
+     * Резервирование пункта вишлиста
+     * @param {string} id
+     */
     reserveItem(id) {
       this.updateItem(id, 'RESERVED');
     },
+
+    /**
+     * Отмена резерва пункта вишлиста
+     * @param {string} id
+     */
     unreserveItem(id) {
       this.updateItem(id, 'WAITING');
     },
+
+    /**
+     * Обновление пункта вишлиста - используется функциями reserveItem(id) и
+     * unserserveItem(id) для резервации и отмены
+     * @param {string} id
+     * @param {string} newStatus
+     */
     updateItem(id, newStatus) {
       for (let i = 0; i < this.user.items.length; i++) {
         if (this.user.items[i].id === id) {
@@ -62,8 +78,13 @@ export default {
       }
     }
   },
+
+  /**
+   * Получение UserId из URL и загрузка из БД остальных данных
+   */
   mounted() {
     const userId = this.$route.params.userId;
+
     if (!userId) {
       this.$router.push({name: "Hello"});
     } else {
@@ -99,7 +120,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  
-</style>
