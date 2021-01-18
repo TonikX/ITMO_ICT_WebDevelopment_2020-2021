@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Туры</title>
+</head>
+<body>
+<div class="main">
+    {% for tour in tours %}
+        ID: {{ tour.id }} <br><a href="/tours/{{ tour.id }}/reservation">Book now!</a></br>
+        <strong>Название: </strong>{{ tour.name }} <br>
+        <strong>Описание: </strong>{{ tour.description }} <br>
+        <strong>Турагентство: </strong>{{ tour.tour_agency }} <br>
+        <strong>Начинается: </strong>{{ tour.begin_date }} <br>
+        <strong>Заканчивается: </strong>{{ tour.end_date }} <br>
+        <strong>Страна: </strong>{{ tour.country }} <br>
+        <strong>Метод оплаты: </strong>{{ tour.pay }} <br><br>
+        <a href="/tours/{{ tour.id }}/createcomment">Оставить комментарии</a></br>
+
+            {% for comment in tour.comments %}
+             <strong>Ник: </strong>{{comment.commentator}} <br>
+             <strong>Воспользовался услугой от: </strong>{{comment.begin_date}} <br>
+             <strong>До: </strong>{{comment.end_date}} <br>
+             <strong>Оценка: </strong>{{comment.rating}} <br>
+             <strong>Комментарий: </strong>{{comment.text}} <br><br>
+            {% endfor %}
+    {% endfor %}
+</div>
+</body>
+</html>
