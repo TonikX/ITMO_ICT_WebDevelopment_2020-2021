@@ -45,12 +45,12 @@ class TeacherCreateView(CreateAPIView):
 class SubjectListView(ListAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
-    permission_classes = [IsDeputy]
+    permission_classes = [AllowAny]
 
 class SubjectAllView(RetrieveUpdateDestroyAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsDeputy]
 
 class SubjectCreateView(CreateAPIView):
     queryset = Subject.objects.all()
@@ -93,11 +93,11 @@ class SubjectToTeacherListView(ListAPIView):
     permission_classes = [AllowAny]
 
 class SubjectToTeacherAllView(RetrieveUpdateDestroyAPIView):
-    queryset = Pair.objects.all()
+    queryset = SubjectToTeacher.objects.all()
     serializer_class = SubjectToTeacherSerializer
     permission_classes = [IsDeputy]
 
 class SubjectToTeacherCreateView(CreateAPIView):
-    queryset = Pair.objects.all()
+    queryset = SubjectToTeacher.objects.all()
     serializer_class = SubjectToTeacherSerializer
     permission_classes = [IsDeputy]
