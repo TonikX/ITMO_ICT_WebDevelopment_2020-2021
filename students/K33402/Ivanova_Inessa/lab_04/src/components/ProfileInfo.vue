@@ -46,9 +46,6 @@ export default {
     weight: ''
   }),
   created () {
-    $('#tel').val(this.profileInfo.tel)
-    $('#height').val(this.profileInfo.height)
-    $('#weight').val(this.profileInfo.weight)
   }
 }
 </script>
