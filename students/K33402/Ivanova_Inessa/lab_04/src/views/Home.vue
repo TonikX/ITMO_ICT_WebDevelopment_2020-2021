@@ -34,7 +34,7 @@
     </div>
     <div v-for="booking in bookingList" v-bind:key="booking.id" class="list">
       <p><strong>{{ booking.lesson_type.name }}</strong><br>
-        {{ booking.time.slice(0,5) }} {{ booking.weekday }}<br>
+        {{ booking.time.slice(0,5) }} {{ weekdays[booking.weekday] }}<br>
         {{ booking.coach.name }}<br>
         <button type="button" @click="deleteBooking(booking.id)">Удалить</button></p>
     </div>
@@ -68,7 +68,16 @@ export default {
   data: () => ({
     profileInfo: [],
     bookingList: [],
-    isModalVisible: false
+    isModalVisible: false,
+    weekdays: {
+      Mon: 'Понедельник',
+      Tue: 'Вторник',
+      Wed: 'Среда',
+      Thu: 'Четверг',
+      Fri: 'Пятница',
+      Sat: 'Суббота',
+      Sun: 'Воскресенье'
+    }
   }),
   created () {
     $.ajaxSetup({
