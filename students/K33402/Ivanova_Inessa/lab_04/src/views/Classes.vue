@@ -38,8 +38,7 @@ export default {
   }),
   methods: {
     /**
-     * Функция получает список типов уроков с описаниями
-     * @returns {Promise<void>}
+     * Функция получает список типов уроков с описаниями в переменную this.classes
      */
     async getClasses () {
       try {

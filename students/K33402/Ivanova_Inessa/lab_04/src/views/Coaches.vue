@@ -45,8 +45,7 @@ export default {
   }),
   methods: {
     /**
-     * Функция получает список всех тренеров
-     * @returns {Promise<void>}
+     * Функция получает список всех тренеров в переменную this.coaches
      */
     async getCoaches () {
       try {

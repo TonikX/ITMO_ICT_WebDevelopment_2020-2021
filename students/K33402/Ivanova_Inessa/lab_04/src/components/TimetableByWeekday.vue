@@ -26,14 +26,14 @@ export default {
   }),
   methods: {
     /**
-     * Функция для получения расписания на день недели
+     * Функция для получения расписания на день недели в переменную this.timetable
+     * @param {String} selectedWeekday
      * @returns {Promise<void>}
      */
-    async getTimetable () {
-      console.log(this.selectedWeekday)
+    async getTimetable (selectedWeekday) {
       try {
         const response = await this.axios
-          .get(`http://127.0.0.1:8000/timetable/${this.selectedWeekday}`)
+          .get(`http://127.0.0.1:8000/timetable/${selectedWeekday}`)
         if (response.status !== 200) {
           throw new Error(response.error)
         }
@@ -43,12 +43,11 @@ export default {
       }
     },
     /**
-     * Функция для создания записи
+     * Функция для создания записи на занятие
      * @param id
      */
     addBooking (id) {
       if (sessionStorage.getItem('auth_token')) {
-        console.log(id)
         id = Number(id)
         $.ajax({
           url: `http://127.0.0.1:8000/book/${id}`,
@@ -65,8 +64,8 @@ export default {
     }
   },
 
-  created (selectedWeekday) {
-    this.getTimetable(selectedWeekday)
+  created () {
+    this.getTimetable(this.selectedWeekday)
   }
 }
 </script>

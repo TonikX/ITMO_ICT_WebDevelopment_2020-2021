@@ -33,9 +33,6 @@ export default {
           location.reload()
         }
       })
-    },
-    close () {
-      this.$emit('close')
     }
   },
   props: {
@@ -49,7 +46,6 @@ export default {
     weight: ''
   }),
   created () {
-    console.log(this.profileInfo)
     $('#tel').val(this.profileInfo.tel)
     $('#height').val(this.profileInfo.height)
     $('#weight').val(this.profileInfo.weight)
@@ -58,5 +54,4 @@ export default {
 </script>
 
 <style>
-
 </style>

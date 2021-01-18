@@ -32,13 +32,16 @@
 export default {
   name: 'Header',
   methods: {
+    /**
+     * Функция перенаправляет пользователя в личный кабинет, если есть токен,
+     * если нету, на страницу входа.
+     */
     logIn () {
       if (sessionStorage.getItem('auth_token')) {
         this.$router.push('home')
       } else {
         this.$router.push('login')
       }
-      console.log(sessionStorage.getItem('auth_token'))
     }
   }
 }
