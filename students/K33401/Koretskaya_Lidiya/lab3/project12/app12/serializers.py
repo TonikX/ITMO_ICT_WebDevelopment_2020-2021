@@ -14,7 +14,7 @@ class SubjectSerializer(serializers.ModelSerializer):
 class SubjectPartedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subject
-        fields = ["name"]
+        fields = ["id", "name"]
 
 class TeacherSerializer(serializers.ModelSerializer):
     subjects = SubjectPartedSerializer(many=True, read_only=True)
@@ -40,7 +40,7 @@ class PairSerializer(serializers.ModelSerializer):
 class PairPartedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pair
-        fields = ["pair_number", "subject", "teacher", "room"]
+        fields = ["id", "pair_number", "subject", "teacher", "room"]
 
 class SubjectToTeacherSerializer(serializers.ModelSerializer):
     class Meta:
