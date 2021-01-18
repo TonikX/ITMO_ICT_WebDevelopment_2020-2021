@@ -44,17 +44,15 @@ export default {
     },
     /**
      * Функция для создания записи на занятие
-     * @param id
+     * @param a
      */
-    addBooking (id) {
+    addBooking (a) {
       if (sessionStorage.getItem('auth_token')) {
-        id = Number(id)
         $.ajax({
-          url: `http://127.0.0.1:8000/book/${id}`,
+          url: `http://127.0.0.1:8000/book/${a}`,
           type: 'POST',
           success: (response) => {
             alert(response)
-            location.reload()
           }
         })
       } else {

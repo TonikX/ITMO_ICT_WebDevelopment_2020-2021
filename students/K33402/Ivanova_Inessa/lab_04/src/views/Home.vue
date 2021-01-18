@@ -72,7 +72,7 @@ export default {
     weekdays: {
       Mon: 'Понедельник',
       Tue: 'Вторник',
-      Wed: 'Среда',
+      Wen: 'Среда',
       Thu: 'Четверг',
       Fri: 'Пятница',
       Sat: 'Суббота',
@@ -121,11 +121,11 @@ export default {
     },
     /**
      * Функция удаляет запись на занятие
-     * @param {number} id
+     * @param {number} a
      */
-    deleteBooking (id) {
+    deleteBooking (a) {
       $.ajax({
-        url: `http://127.0.0.1:8000/book/${id}/delete`,
+        url: `http://127.0.0.1:8000/book/${a}/delete`,
         type: 'DELETE',
         success: (response) => {
           alert(response)
