@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel list</title>
+    <title>Last month guests</title>
+    <h1>Last month guests</h1>
 </head>
 
 <body>
@@ -23,26 +24,6 @@
 
     {% endfor %}
 </ul>
-{#<ul>#}
-{#    {% regroup room by hotel as hotel_list %}#}
-{#    <ul>#}
-{#        {% for hotel in hotel_list %}#}
-{#            <li>{{ hotel.grouper }}#}
-{#                <ul>#}
-{#                    {% for item in hotel.list %}#}
-{#                        <li>#}
-{#                            {{ item.number }}#}
-{#                            {% if item.owner.get %}#}
-{#                                <br>owner: {{ item.owner.get }}#}
-{#                            {% endif %}#}
-{#                        </li>#}
-{#                    {% endfor %}#}
-{#                </ul>#}
-{#            </li>#}
-{#        {% endfor %}#}
-{##}
-{#    </ul>#}
-{#</ul>#}
 </body>
 
 </html>

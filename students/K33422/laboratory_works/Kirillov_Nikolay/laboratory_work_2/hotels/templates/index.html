@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
-    <a href="http://127.0.0.1:8000/admin">Admin</a><br>
+    <title>Main</title>
+    <h1>Main page</h1>
+    <a href="http://127.0.0.1:8000/admin">Admin panel</a><br>
 </head>
 <body>
-user: {{ request.user }} <br>
+<br>
+Username: {{ request.user }} <br>
 <a href="http://127.0.0.1:8000/accounts/signup/">SignUp</a><br>
 <a href="http://127.0.0.1:8000/accounts/login/">LogIn</a><br>
 <a href="http://127.0.0.1:8000/accounts/logout/">SignOut</a><br>

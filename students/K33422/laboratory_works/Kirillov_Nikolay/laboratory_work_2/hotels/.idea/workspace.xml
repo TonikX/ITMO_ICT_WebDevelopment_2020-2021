@@ -28,6 +28,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -35,7 +36,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -91,6 +92,14 @@
       <workItem from="1606908317401" duration="12116000" />
       <workItem from="1607007155736" duration="615000" />
       <workItem from="1607007911748" duration="5823000" />
+      <workItem from="1607017314435" duration="1224000" />
+      <workItem from="1607077502115" duration="217000" />
+      <workItem from="1609251976590" duration="110000" />
+      <workItem from="1609252120698" duration="1298000" />
+      <workItem from="1610026318086" duration="173000" />
+      <workItem from="1610026536669" duration="131000" />
+      <workItem from="1610281837653" duration="3784000" />
+      <workItem from="1610986108914" duration="2526000" />
     </task>
     <servers />
   </component>
