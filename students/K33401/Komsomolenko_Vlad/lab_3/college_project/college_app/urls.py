@@ -19,10 +19,11 @@ urlpatterns = [
     path('pairs/', PairAPIView.as_view()),
     path('pair/create/', PairCreateAPIView.as_view()),
     path('schedules/', ScheduleAPIView.as_view()),
+    path('schedule/updel/<int:pk>', ScheduleUpdateDeleteView.as_view()),
     path('schedule/create/', ScheduleCreateAPIView.as_view()),
     path('schedule/addpairs/', PairScheduleView.as_view()),
     path('marks/', MarkAPIView.as_view()),
     path('mark/create/', MarkCreateAPIView.as_view()),
-    path('mark/updel/<int:pk>', StudentMarkUpdateDeleteView.as_view()),
-    path('mark/updel/<int:pk>', StudentMarkUpdateDeleteView.as_view()),
+    path('mark/updel/<int:pk>', MarkUpdateDeleteView.as_view()),
+    path('stmark/updel/<int:pk>', StudentMarkUpdateDeleteView.as_view()),
 ]

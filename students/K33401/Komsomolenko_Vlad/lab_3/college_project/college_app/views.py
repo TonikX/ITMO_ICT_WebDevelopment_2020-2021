@@ -95,9 +95,19 @@ class StudentMarkUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
    queryset = MarkOfStudent.objects.all()
    permission_classes = [IsAuthenticated]
 
+class MarkUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
+   serializer_class = MarkSerializer
+   queryset = Mark.objects.all()
+   permission_classes = [IsAuthenticated]
+
 class StudentUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
    serializer_class = StudentSerializer
    queryset = Student.objects.all()
+   permission_classes = [IsAuthenticated]
+
+class ScheduleUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
+   serializer_class = ScheduleSerializer
+   queryset = Schedule.objects.all()
    permission_classes = [IsAuthenticated]
 
 class TeacherUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):

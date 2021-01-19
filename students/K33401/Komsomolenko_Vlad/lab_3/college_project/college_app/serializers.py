@@ -25,8 +25,6 @@ class PairSerializer(serializers.ModelSerializer):
      fields = "__all__"
 
 class ScheduleSerializer(serializers.ModelSerializer):
-  pair = PairSerializer(many=True)
-
   class Meta:
      model = Schedule
      fields = "__all__"
