@@ -1,30 +1,30 @@
 <template>
   <div>
-    <button @click="getReaders">Получить читателей</button>
+    <button @click="getObjects">Получить экземпляры</button>
     <v-simple-table class="v-data-table">
       <template v-slot:default class="theme--light">
         <thead>
         <tr>
           <th class="text-center">
-            Full name
+            id
           </th>
           <th class="text-center">
-            Phone
+            status
           </th>
         </tr>
         </thead>
         <tbody>
-        <tr v-for="reader in readers" v-bind:key="reader.id">
+        <tr v-for="object in objects" v-bind:key="object.id">
           <td>
-            <router-link :to="{name:'OneReader', params:{id: reader.id}}">{{ reader.full_name }}</router-link>
+            <router-link :to="{name:'OneInstanceOfBook', params:{id: object.id}}">{{ object.id }}</router-link>
           </td>
-          <td>{{ reader.phone }}</td>
+          <td>{{ object.status }}</td>
           <td>
-            <v-btn color="#ff0000" @click="deleteReader(reader.id)">Удалить</v-btn>
+            <v-btn color="#ff0000" @click="deleteObject(object.id)">Удалить</v-btn>
           </td>
         </tr>
         </tbody>
-        <v-btn @click="createReader">Добавить читателя</v-btn>
+        <v-btn @click="createObject">Добавить экземпляр</v-btn>
       </template>
     </v-simple-table>
   </div>
@@ -33,32 +33,31 @@
 <script>
 import $ from 'jquery'
 
-const baseUrlApi = 'http://127.0.0.1:8005/api/readers/'
-
+const baseUrlApi = 'http://127.0.0.1:8005/api/instancesOfBook/'
 export default {
-  name: 'Readers',
+  name: 'InstancesOfBook',
   created () {
     $.ajaxSetup({
       headers: { Authorization: 'Token ' + sessionStorage.getItem('auth_token') }
     })
-    this.getReaders()
+    this.getObjects()
   },
   data () {
     return {
-      readers: ''
+      objects: ''
     }
   },
   methods: {
     /**
      * Function for getting all data
      */
-    getReaders () {
+    getObjects () {
       $.ajax({
         url: baseUrlApi,
         type: 'GET',
         success: (response) => {
           console.log(response)
-          this.readers = response
+          this.objects = response
         },
         error: (response) => {
           alert('Пользователь не авторизован')
@@ -69,21 +68,22 @@ export default {
     /**
      * Function for route to another component
      */
-    createReader () {
-      this.$router.push({ name: 'OneReader' })
+    createObject () {
+      this.$router.push({ name: 'OneInstanceOfBook' })
     },
+
     /**
      * Function for delete data object
      * @param {number} id
      */
-    deleteReader (id) {
+    deleteObject (id) {
       $.ajax({
         url: baseUrlApi + id + '/',
         type: 'DELETE',
         success: (response) => {
           alert('Готово')
           console.log(response)
-          this.getReaders()
+          this.getObjects()
         },
         error: (response) => {
           alert('Пользователь не авторизован')

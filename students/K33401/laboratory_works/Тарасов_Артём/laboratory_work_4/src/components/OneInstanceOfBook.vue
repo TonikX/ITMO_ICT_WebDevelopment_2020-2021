@@ -4,10 +4,8 @@
       <form>
         <v-text-field name="input" label="Id" v-model="id" type="text"></v-text-field>
         <v-text-field name="input" label="Owner" v-model="owner" type="text"></v-text-field>
-        <v-text-field name="input" label="Author" v-model="author" type="text"></v-text-field>
-        <v-text-field name="input" label="Name" v-model="name" type="text"></v-text-field>
-        <v-text-field name="input" label="Section" v-model="section" type="text"></v-text-field>
-        <v-text-field name="input" label="Pressmark" v-model="pressmark" type="text"></v-text-field>
+        <v-text-field name="input" label="status" v-model="status" type="text"></v-text-field>
+        <v-text-field name="input" label="id_book" v-model="id_book" type="text"></v-text-field>
         <v-btn class="select-line" color="#FFFF00" @click="putObj(respObj.id)">Обновить</v-btn>
       </form>
     </div>
@@ -15,10 +13,8 @@
       <form>
         <v-text-field name="input" label="Id" v-model="id" type="text"></v-text-field>
         <v-text-field name="input" label="Owner" v-model="owner" type="text"></v-text-field>
-        <v-text-field name="input" label="Author" v-model="author" type="text"></v-text-field>
-        <v-text-field name="input" label="Name" v-model="name" type="text"></v-text-field>
-        <v-text-field name="input" label="Section" v-model="section" type="text"></v-text-field>
-        <v-text-field name="input" label="Pressmark" v-model="pressmark" type="text"></v-text-field>
+        <v-text-field name="input" label="status" v-model="status" type="text"></v-text-field>
+        <v-text-field name="input" label="id_book" v-model="id_book" type="text"></v-text-field>
         <v-btn class="select-line" color="#48ff3d" @click="postObj">Создать</v-btn>
       </form>
     </div>
@@ -28,11 +24,11 @@
 <script>
 import $ from 'jquery'
 
-const baseUrlApi = 'http://127.0.0.1:8005/api/books/'
-const backComp = 'Books'
+const baseUrlApi = 'http://127.0.0.1:8005/api/instancesOfBook/'
+const backComp = 'InstancesOfBook'
 
 export default {
-  name: 'OneBook',
+  name: 'OneInstanceOfBook',
   created () {
     $.ajaxSetup({
       headers: { Authorization: 'Token ' + sessionStorage.getItem('auth_token') }
@@ -41,14 +37,13 @@ export default {
       this.getObj()
     }
   },
+
   data () {
     return {
       id: '',
       owner: '',
-      author: '',
-      name: '',
-      section: '',
-      pressmark: '',
+      status: '',
+      id_book: '',
       respObj: ''
     }
   },
@@ -65,13 +60,12 @@ export default {
           this.respObj = response
           this.id = this.respObj.id
           this.owner = this.respObj.owner
-          this.author = this.respObj.author
-          this.name = this.respObj.name
-          this.section = this.respObj.section
-          this.pressmark = this.respObj.pressmark
+          this.id_book = this.respObj.id_book
+          this.status = this.respObj.status
         },
         error: (response) => {
           alert(response.responseText + '\n' + response.statusText)
+          console.log(response)
         }
       })
     },
@@ -83,13 +77,12 @@ export default {
       $.ajax({
         url: baseUrlApi + id + '/',
         type: 'PUT',
+
         data: {
           id: this.id,
           owner: this.owner,
-          author: this.author,
-          name: this.name,
-          section: this.section,
-          pressmark: this.pressmark
+          id_book: this.id_book,
+          status: this.status
         },
         success: (response) => {
           console.log(response)
@@ -108,13 +101,12 @@ export default {
       $.ajax({
         url: baseUrlApi,
         type: 'POST',
+
         data: {
           id: this.id,
           owner: this.owner,
-          author: this.author,
-          name: this.name,
-          section: this.section,
-          pressmark: this.pressmark
+          id_book: this.id_book,
+          status: this.status
         },
         success: (response) => {
           this.$router.push({ name: backComp })
@@ -122,6 +114,7 @@ export default {
         },
         error: (response) => {
           alert(response.responseText + '\n' + response.statusText)
+          console.log(response)
         }
       })
     }

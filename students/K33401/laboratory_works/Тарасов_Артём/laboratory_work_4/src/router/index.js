@@ -2,12 +2,15 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import Login from '@/components/Login.vue'
-import CreateBook from '@/components/CreateBook.vue'
 import OneBook from '@/components/OneBook.vue'
 import Books from '@/components/Books'
 import ChooseInterface from '@/components/ChooseInterface'
 import Readers from '@/components/Readers'
 import OneReader from '@/components/OneReader'
+import InstancesOfBook from '@/components/InstancesOfBook'
+import OneInstanceOfBook from '@/components/OneInstanceOfBook'
+import IssuingAInstances from '@/components/IssuingAInstances'
+import OneIssuingAInstances from '@/components/OneIssuingAInstances'
 
 Vue.use(VueRouter)
 
@@ -21,11 +24,6 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login
-  },
-  {
-    path: '/createBook',
-    name: 'CreateBook',
-    component: CreateBook
   },
   {
     path: '/oneBook',
@@ -51,6 +49,26 @@ const routes = [
     path: '/oneReader',
     name: 'OneReader',
     component: OneReader
+  },
+  {
+    path: '/instancesOfBook',
+    name: 'InstancesOfBook',
+    component: InstancesOfBook
+  },
+  {
+    path: '/oneInstanceOfBook',
+    name: 'OneInstanceOfBook',
+    component: OneInstanceOfBook
+  },
+  {
+    path: '/issuingAInstances',
+    name: 'IssuingAInstances',
+    component: IssuingAInstances
+  },
+  {
+    path: '/oneIssuingAInstances',
+    name: 'OneIssuingAInstances',
+    component: OneIssuingAInstances
   }
 ]
 

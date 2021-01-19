@@ -10,23 +10,23 @@
         <v-text-field name="input" label="Address" v-model="address" type="text"></v-text-field>
         <v-text-field name="input" label="Phone" v-model="phone" type="text"></v-text-field>
         <v-text-field name="input" label="Degree" v-model="degree" type="text"></v-text-field>
-        <v-text-field name="input" label="Graduate_degree" v-model="graduate_degree" type="text"></v-text-field>
+        <v-text-field name="input" label="Graduate degree"  v-model="graduate_degree" type="text"></v-text-field>
         <v-btn class="select-line" color="#FFFF00" @click="putObj(respObj.id)">Обновить</v-btn>
       </form>
     </div>
     <div v-if="!respObj">
-      <form>
-        <v-text-field name="input" label="Id" v-model="id" type="text"></v-text-field>
-        <v-text-field name="input" label="Owner" v-model="owner" type="text"></v-text-field>
-        <v-text-field name="input" label="Full Name" v-model="full_name" type="text"></v-text-field>
-        <v-text-field name="input" label="Passport Number" v-model="passport_number" type="text"></v-text-field>
-        <v-text-field name="input" label="Birthday" v-model="birthday" type="text"></v-text-field>
-        <v-text-field name="input" label="Address" v-model="address" type="text"></v-text-field>
-        <v-text-field name="input" label="Phone" v-model="phone" type="text"></v-text-field>
-        <v-text-field name="input" label="Degree" v-model="degree" type="text"></v-text-field>
-        <v-text-field name="input" label="Graduate_degree" v-model="graduate_degree" type="text"></v-text-field>
-        <v-btn class="select-line" color="#48ff3d" @click="postObj">Создать</v-btn>
-      </form>
+        <form>
+          <v-text-field name="input" label="Id" v-model="id" type="text"></v-text-field>
+          <v-text-field name="input" label="Owner" v-model="owner" type="text"></v-text-field>
+          <v-text-field name="input" label="Full Name" v-model="full_name" type="text"></v-text-field>
+          <v-text-field name="input" label="Passport Number" v-model="passport_number" type="text"></v-text-field>
+          <v-text-field name="input" label="Birthday" v-model="birthday" type="text"></v-text-field>
+          <v-text-field name="input" label="Address" v-model="address" type="text"></v-text-field>
+          <v-text-field name="input" label="Phone" v-model="phone" type="text"></v-text-field>
+          <v-text-field name="input" label="Degree" v-model="degree" type="text"></v-text-field>
+          <v-text-field name="input" label="Graduate degree"  v-model="graduate_degree" type="text"></v-text-field>
+          <v-btn class="select-line" color="#48ff3d" @click="postObj">Создать</v-btn>
+        </form>
     </div>
   </div>
 </template>
@@ -63,6 +63,9 @@ export default {
     }
   },
   methods: {
+    /**
+     * Function for getting data object
+     */
     getObj () {
       $.ajax({
         url: baseUrlApi + this.$route.params.id + '/',
@@ -81,10 +84,14 @@ export default {
           this.graduate_degree = this.respObj.graduate_degree
         },
         error: (response) => {
-          console.log(response)
+          alert(response.responseText + '\n' + response.statusText)
         }
       })
     },
+    /**
+     * Function for change data object
+     * @param {number} id
+     */
     putObj (id) {
       $.ajax({
         url: baseUrlApi + id + '/',
@@ -106,11 +113,14 @@ export default {
           this.$router.push({ name: backComp })
         },
         error: (response) => {
-          alert(response)
+          alert(response.responseText + '\n' + response.statusText)
           console.log(response)
         }
       })
     },
+    /**
+     * Function for create data object
+     */
     postObj () {
       $.ajax({
         url: baseUrlApi,
@@ -132,7 +142,7 @@ export default {
           console.log(response)
         },
         error: (response) => {
-          alert(response)
+          alert(response.responseText + '\n' + response.statusText)
         }
       })
     }

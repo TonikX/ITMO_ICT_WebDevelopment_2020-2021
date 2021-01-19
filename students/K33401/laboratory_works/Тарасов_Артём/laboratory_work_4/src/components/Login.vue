@@ -24,6 +24,9 @@ export default {
     })
   },
   methods: {
+    /**
+     * Function for auth user
+     */
     setLogin () {
       $.ajax({
         url: 'http://127.0.0.1:8005/auth/token/login/',
