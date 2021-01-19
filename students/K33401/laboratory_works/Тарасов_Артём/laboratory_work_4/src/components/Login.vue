@@ -1,8 +1,10 @@
 <template>
   <div>
     <input v-model="login" type="text" placeholder="Логин"/>
-    <input v-model="password" type="password" placeholder="Пароль"/>
-    <button @click="setLogin">Войти</button>
+    <input v-model="password" type="password" placeholder="Пароль"/> <br/>
+    <button @click="setLogin">Войти</button> <br/>
+    <button @click="createUser">Зарегистрироваться</button> <br/>
+
   </div>
 </template>
 
@@ -45,6 +47,22 @@ export default {
             alert('Неверный логин или пароль')
           }
           console.log(response)
+        }
+      })
+    },
+    createUser () {
+      $.ajax({
+        url: 'http://127.0.0.1:8005/auth/users/',
+        type: 'POST',
+        data: {
+          username: this.login,
+          password: this.password
+        },
+        success: (response) => {
+          alert('Регистрация прошла успешно')
+        },
+        error: (response) => {
+          alert(response.responseText + '\n' + response.statusText)
         }
       })
     }
