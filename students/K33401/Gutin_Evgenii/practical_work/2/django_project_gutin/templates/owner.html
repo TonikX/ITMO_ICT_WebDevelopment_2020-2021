@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owner</title>
+    <style>
+        .main_block{
+            text-align: center;
+            margin: 0 auto auto;
+        }
+    </style>
+</head>
+<body>
+<div class="main_block">
+    {% for owner in owners %}
+    <h1>Owner {{ owner.pk }}</h1>
+     <p>First name: {{ owner.first_name }}</p>
+     <p>Last name: {{ owner.last_name }}</p>
+     <p>Date of birth: {{ owner.date_of_birth }}</p>
+        <p>Passport: {{ owner.passport }}</p>
+     <p>Nationality: {{ owner.nationality }}</p>
+        <p>Address: {{ owner.address }}</p>
+        <hr>
+    {% endfor %}
+</div>
+
+</body>
+</html>

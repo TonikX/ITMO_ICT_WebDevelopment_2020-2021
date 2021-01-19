@@ -127,6 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
 .DS_Store
 students/K33421/Грицай Арина/laboratory_work_2/practice/djangoProject_Gritsai/bin/activate
 students/K33421/Грицай Арина/laboratory_work_2/practice/djangoProject_Gritsai/.idea/djangoProject_Gritsai.iml
@@ -148,3 +149,12 @@ students/K33421/Грицай Арина/laboratory_work_2/practice/djangoProject
 students/K33421/Грицай Арина/laboratory_work_2/practice/djangoProject_Gritsai/bin/sqlformat
 students/K33421/Грицай Арина/laboratory_work_2/practice/djangoProject_Gritsai/pyvenv.cfg
 students/K33421/Грицай Арина/laboratory_work_1/.idea/laboratory_work_1.iml
+
+
+
+# MacOS
+**/.DS_Store
+
+students/K33422/Larionova Anastasia/lab 1/.idea/dictionaries/mac.xml
+
+
