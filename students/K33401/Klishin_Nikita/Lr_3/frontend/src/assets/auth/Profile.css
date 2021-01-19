@@ -1,0 +1,77 @@
+h3 {
+	margin: 0 0;
+	padding: 0 0;
+	font-size: 25px;
+}
+
+h4 {
+	margin: 0 0;
+	padding: 0 0;
+	font-size: 18px;
+}
+
+.container {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.sub-container {
+	background-color: #191919;
+	opacity: 0.9;
+	border-radius: 7px;
+	transition: 0.25s;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.sub-container-compressed {
+	width: 57%;
+	margin-left: 14px;
+}
+
+.row-main {
+	margin-top: 14px;
+}
+
+#tabs-list {
+	display: flex;
+	margin-bottom: 7px;
+}
+
+#tabs-list :hover {
+	background-color:  #2ecc71;
+}
+
+#tabs-list .active {
+	background-color:  #2ecc71;
+} 
+
+.tab-item {
+	padding: 5px 0;
+	width: 50%;
+	text-decoration: none;
+	color: whitesmoke;
+
+	opacity: 0.8;
+	background-color: #757575;
+	transition: 0.25s;
+}
+
+#tab-item-execute {
+	border-top-left-radius: 7px;
+	/* border-bottom-left-radius: 7px; */
+}
+
+#tab-item-inspect {
+	border-top-right-radius: 7px;
+	/* border-bottom-right-radius: 7px; */
+}
+
+.tasks-list-item {
+	background-color: #015C65;
+	padding: 7px 0px;
+}
+
+
+
+
