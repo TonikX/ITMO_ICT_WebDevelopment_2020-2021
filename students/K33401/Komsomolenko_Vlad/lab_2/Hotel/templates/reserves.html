@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserves</title>
+</head>
+<body>
+<h1>Брони</h1>
+{% for reserve in reserves %}
+    {% if reserve.user.id == userr.id %}
+        <a href="reserve/{{ reserve.id }}/">Отель - {{ reserve.hotel }}, тип - {{ reserve.type }}</a>
+        <br/><hr/>
+    {% endif %}
+{% endfor %}
+<a href="/mainn/">Все отели</a>
+</body>
+</html>
