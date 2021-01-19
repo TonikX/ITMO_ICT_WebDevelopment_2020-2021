@@ -1,0 +1,30 @@
+site_name: Newspapers distribution report
+nav:
+ - Home: index.md
+ - Users:
+     - "view users": users/view_users.md
+     - "new user": users/new_user.md
+     - "edit user": users/edit_user.md
+ - Distribution reports:
+     - "view reports": distribution_report/view_reports.md
+     - "new report": distribution_report/new_report.md
+     - "edit report": distribution_report/edit_report.md
+ - Newspapers:
+     - "view newspapers": newspapers/view_newspapers.md
+     - "new newspaper": newspapers/new_newspaper.md
+     - "edit newspaper": newspapers/edit_newspaper.md
+ - Newspapers Party:
+     - "view newspapers parties": newspapers_party/view_parties.md
+     - "new newspapers party": newspapers_party/new_party.md
+     - "edit newspapers party": newspapers_party/edit_party.md
+ - Post Office:
+     - "view post offices": post_office/view_post_offices.md
+     - "new post office": post_office/new_post_office.md
+     - "edit post office": post_office/edit_post_office.md
+ - Printery:
+     - "view printeries": printery/view_printeries.md
+     - "new printery": printery/new_printery.md
+     - "edit printery": printery/edit_printery.md
+
+theme:
+ name: windmill
