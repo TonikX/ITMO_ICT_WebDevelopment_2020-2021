@@ -17,6 +17,15 @@ nav:
      - 'api/students_classes/[GET][POST]': api/studentsClasses.md
      - 'api/students[GET][POST]': api/students.md
   - Models: models.md
+  - Frontend:
+     - 'Login': frontend/login.md
+     - 'Register': frontend/register.md
+     - 'Profile': frontend/profile.md
+     - 'Add task': frontend/add_task.md
+     - 'Criterions': frontend/criterions.md
+     - 'Groups': frontend/groups.md
+     - 'Task': frontend/task.md
+      
 
 theme:
  name: material
