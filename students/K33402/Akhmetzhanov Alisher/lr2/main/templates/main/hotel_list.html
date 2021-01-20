@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-12">
+            <h2>Список отелей</h2>
+            <ul style="list-style: none;">
+                {% for hotel in object_list %}
+                <li
+                    style="height: 45px; line-height: 45px; background-color: #E0E0E0; margin-top: 7px; padding-left: 25px">
+                    <a href="/hotel/{{ hotel.pk }}" style="text-decoration: none">
+                        <div style="display: flex; justify-content: space-between;">
+                            <div style="font-size: 21px;">{{ hotel.title }}</div>
+                            <div style="margin-right: 27px;">{{ hotel.address }}</div>
+                        </div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
