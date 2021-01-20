@@ -5,6 +5,9 @@ app_name = "college_app"
 
 
 urlpatterns = [
+    path('profile/<str:username>', UserProfileAPIView.as_view()),
+    path('profile/<str:username>/edit', EditUserAPIView.as_view()),
+
     path('students/', StudentsListAPIView.as_view()),
     path('teachers/', TeachersListAPIView.as_view()),
     path('staff/', StaffListAPIView.as_view()),
@@ -16,7 +19,7 @@ urlpatterns = [
 
     path('groups/', StudentGroupsListAPIView.as_view()),
     path('groups/add/', StudentGroupCreateAPIView.as_view()),
-    path('groups/<int:group_number>/', StudentGroupPageAPIView.as_view()),
+    path('groups/<int:pk>/', StudentGroupPageAPIView.as_view()),
 
     path('subjects/', SubjectsListAPIView.as_view()),
     path('subjects/add/', SubjectCreateAPIView.as_view()),
@@ -24,7 +27,7 @@ urlpatterns = [
 
     path('rooms/', RoomsListAPIView.as_view()),
     path('rooms/add/', RoomCreateAPIView.as_view()),
-    path('rooms/<int:room_number>/', RoomPageAPIView.as_view()),
+    path('rooms/<int:pk>/', RoomPageAPIView.as_view()),
 
     path('grades/', SemesterGradesListAPIView.as_view()),
     path('grades/add/', SemesterGradeCreateAPIView.as_view()),
