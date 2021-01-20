@@ -1,0 +1,97 @@
+.container-wrapped {
+text-align: center;
+color: whitesmoke;
+font-size: 18px;
+padding-top: 7px;
+padding-bottom: 14px;
+/* background-color: #929292; */
+
+/* border: 2px solid #2ecc71; */
+border-radius: 7px;
+outline: none;
+
+margin-top: 14px;
+}
+
+.sub-container { 
+background-color: #191919;
+opacity: 0.9;
+border-radius: 7px;
+transition: 0.25s;
+padding-top: 7px;
+padding-bottom: 10px;
+margin-bottom: 7px;
+text-align: center;
+}
+
+/* Боковая панель */
+.container-side {
+background-color: #191919;
+opacity: 0.9;
+border-radius: 14px;
+padding-top: 14px;
+padding-bottom: 14px;
+}
+
+.edit-button {
+padding-top: 14px;
+padding-bottom: 14px;
+background: none;
+}
+
+.container-side :hover {
+background-color: #474747;
+cursor: pointer;
+}
+
+label {
+margin-top: 7px;
+margin-bottom: 18px;
+}
+
+#solutionTextarea {
+margin-bottom: 9px;
+background-color: #929292;
+opacity: 0.9;
+}
+
+#container-edit input, label {
+display: block;
+margin-bottom: 10px;
+}
+
+#container-edit label {
+width: 40%;
+}
+
+#container-edit input {
+background-color: #929292;
+}
+
+.input-set {
+display: flex;
+}
+
+.list-wrapper {
+display: flex;
+flex-direction: column;
+}
+
+.list-item {
+margin: 7px 0px;
+}
+
+#solutions-list {
+padding: 7px 0px;
+text-align: center;
+}
+
+#score-field {
+max-width: 100px;
+margin: 0 auto;
+background-color: #929292;
+}
+
+.row-solutions {
+margin: 0 auto;
+}

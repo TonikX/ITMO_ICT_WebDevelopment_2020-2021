@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car detail</title>
+</head>
+
+<body style="margin: 0;">
+    <div class="navbar" style="height: 30px; background-color: cornflowerblue;">
+        <h2 style="margin: 0 10px;">Cars DB</h2>
+    </div>
+    <div class="container" style="margin: 10px 140px; display: flex; justify-content: space-between;">
+        <div class="car_info">
+            <section>
+                <h2>
+                    Автомобиль:
+                </h2>
+                <ul style="list-style: none;">
+                    <li style="margin: 10px 25px;">
+                        Марка: {{ object.brand }}
+                    </li>
+                    <li style="margin: 10px 25px;">
+                        Модель: {{ object.car_model }}
+                    </li>
+                    <li style="margin: 10px 25px;">
+                        Номер: {{ object.number }}
+                    </li>
+                </ul>
+            </section>
+            {% comment %} <hr>
+            <section>
+                <div>
+                    <h2>Владельцы:</h2>
+                </div>
+                <ul style="list-style: none;">
+                    {% for owner in owners %}
+                        <!-- Display Objects -->
+                        <li>
+                            <a href="../owner/1" style="text-decoration: none;">
+                                {{ owner.name }}
+                                {{ owner.surname }}
+                            </a>
+                        </li>
+
+                        <hr />
+                        <!-- If objet_list is empty  -->
+                        {% empty %}
+                        <li>
+                            <h4>
+                                No owners!
+                            </h4>
+                        </li>
+                        {% endfor %}
+                </ul>
+            </section> {% endcomment %}
+        </div>
+
+        <div class="car_actions" style="max-width: 140px;">
+            <ul style="list-style: none;">
+                <li>
+                    <a href="/cars/create" style="text-decoration: none;">
+                        <h3>
+                            Создать
+                        </h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ object.pk }}/update/" style="text-decoration: none;">
+                        <h3>
+                            Обновить
+                        </h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ object.pk }}/remove/" style="text-decoration: none;">
+                        <h3>
+                            Удалить
+                        </h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/cars" style="text-decoration: none;">
+                        <h3>
+                            Вернуться к списку
+                        </h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
