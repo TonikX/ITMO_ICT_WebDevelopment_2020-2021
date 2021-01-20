@@ -3,18 +3,18 @@
     <div v-if="respObj">
       <form>
         <v-text-field name="input" label="Owner" v-model="owner" type="text"></v-text-field>
-        <v-text-field name="input" label="status" v-model="return_date" type="text"></v-text-field>
-        <v-text-field name="input" label="id_book" v-model="instance" type="text"></v-text-field>
-        <v-text-field name="input" label="id_book" v-model="reader" type="text"></v-text-field>
+        <v-text-field name="input" label="return_date" v-model="return_date" type="text"></v-text-field>
+        <v-text-field name="input" label="id_instance" v-model="instance" type="text"></v-text-field>
+        <v-text-field name="input" label="id_reader" v-model="reader" type="text"></v-text-field>
         <v-btn class="select-line" color="#FFFF00" @click="putObj(respObj.id)">Обновить</v-btn>
       </form>
     </div>
     <div v-if="!respObj">
       <form>
         <v-text-field name="input" label="Owner" v-model="owner" type="text"></v-text-field>
-        <v-text-field name="input" label="status" v-model="return_date" type="text"></v-text-field>
-        <v-text-field name="input" label="id_book" v-model="instance" type="text"></v-text-field>
-        <v-text-field name="input" label="id_book" v-model="reader" type="text"></v-text-field>
+        <v-text-field name="input" label="return_date" v-model="return_date" type="text"></v-text-field>
+        <v-text-field name="input" label="id_instance" v-model="instance" type="text"></v-text-field>
+        <v-text-field name="input" label="id_reader" v-model="reader" type="text"></v-text-field>
         <v-btn class="select-line" color="#48ff3d" @click="postObj">Создать</v-btn>
       </form>
     </div>
