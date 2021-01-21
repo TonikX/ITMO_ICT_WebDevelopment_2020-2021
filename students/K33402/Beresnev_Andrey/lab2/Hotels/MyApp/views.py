@@ -69,7 +69,7 @@ def book_view(request, room_id):
             post = form.save(commit=False)
             for reservation in ReservedRooms.objects.all():
                 if room == reservation.room_id:
-                    if (reservation.start_date <= post.start_date and reservation.end_date >= post.end_date) or (reservation.end_date <= post.start_date and post.end_date >= reservation.end_date) or (form.start_date <= reservation.start_date and form.end_date >= reservation.start_date):
+                    if not ((post.start_date < reservation.start_date and post.end_date <= reservation.start_date) or (post.start_date >= reservation.end_date and post.end_date > reservation.end_date)):
                         raise Http404("Room already reserved on this time")
             post.hotel_id = room.hotel_id
             post.room_id = room
