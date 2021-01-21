@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regatio</title>
+</head>
+<body>
+<div class="main">
+     {% for car in cars %}
+      ID: {{car.id}} <br><a
+            href="/car/{{ car.id }}/">Details</a> </br>
+     Label: {{car.label}} <br>
+     Model: {{car.model}} <br>
+     Color: {{car.color}} <br><br>
+     {% endfor %}
+</div>
+<a href="/createcar/">Create a new car</a>
+</body>
+</html>
