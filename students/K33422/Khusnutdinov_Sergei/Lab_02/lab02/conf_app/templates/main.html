@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conferences list</title>
+
+</head>
+<body bgcolor="#666666">
+
+    {% if user.is_authenticated %}
+        <p><h1>Logged in as {{ user.username }}</h1></p>
+    {% else %}
+    <p>Not logged in</p>
+    {% endif %}
+
+<a href="/register/" style ="
+background: orange;
+padding: 10px 20px;
+color: white;"
+>Register</a>
+
+<a href="/accounts/login/" style ="
+background: orange;
+padding: 10px 20px;
+color: white;"
+>Login</a><br><br><br>
+
+<a href="/confs/" style ="
+background: orange;
+padding: 10px 20px;
+color: white;"
+>Available conferences</a>
+
+<a href="/reviews/" style ="
+background: orange;
+padding: 10px 20px;
+color: white;"
+>All reviews</a><br><br><br>
+
+<a href="/review/" style ="
+background: orange;
+padding: 10px 20px;
+color: white;"
+>Feedback</a>
+
+<a href="/reservedconfs/" style ="
+background: orange;
+padding: 10px 20px;
+color: white;"
+>Participants</a><br><br><br>

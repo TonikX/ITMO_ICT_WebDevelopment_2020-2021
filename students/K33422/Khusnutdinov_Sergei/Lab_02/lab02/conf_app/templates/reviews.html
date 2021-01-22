@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All reviews</title>
+</head>
+<body bgcolor="#999999">
+<div class="main">
+     {% for review in reviews %}
+     <p style="padding: 20px; border: 5px solid white;">
+     <strong>Username: </strong>{{review.username}} <br>
+     <strong>Started: </strong>{{review.start_date}} <br>
+     <strong>Ended: </strong>{{review.end_date}} <br>
+     <strong>Rate: </strong>{{review.rate}} <br>
+     <strong>Comment: </strong>{{review.comment}} <br><br>
+ 	</p>
+     {% endfor %}
+</div>
+<a href="/">Main page</a>
+</body>
+</html>
