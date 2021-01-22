@@ -1,0 +1,11 @@
+site_name: Описание сервиса "Войны"
+nav:
+ - Home: index.md
+ - Endpoints:
+     - "api": endpoints/api.md
+     - "endpoint 1": endpoints/endp1.md
+     - "endpoint 2": endpoints/endp2.md
+     - "endpoint 3": endpoints/endp3.md
+
+theme:
+ name: material
