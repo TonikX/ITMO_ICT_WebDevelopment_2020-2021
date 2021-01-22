@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        {% if user.is_authenticated %}
+        <h3><a href="/logout">Выйти</a></h3>
+        {% else %}
+        <h3><a href="/login">Войти</a></h3>
+        <h3><a href="/registration">Регистрация</a></h3>
+        {% endif %}
+    </header>
+
+    {% for hotel in object_list %}
+    <li>
+        <h2>
+            <a href="hotels/{{ hotel.id }}">{{ hotel.name }}</a>
+        </h2>
+    </li>
+    <p style="padding-left: 4%;">{{ hotel.adress }}</p>
+    <hr>
+    {% endfor %}
+</body>
+
+</html>
