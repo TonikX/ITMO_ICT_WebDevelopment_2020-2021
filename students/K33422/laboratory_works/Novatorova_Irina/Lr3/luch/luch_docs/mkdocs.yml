@@ -1,0 +1,34 @@
+site_name: Документация системы отдела маркетинга рекламного агенства "Луч"
+nav:
+ - Home: index.md
+ - Users:
+     - "list of registered users": user/list.md
+     - "user id nfo": user/info.md
+ - Applications:
+     - "list of applications (for clients)": application/list.md
+     - "application id info": application/info.md
+     - "new application": application/new.md
+     - "list of applications (staff)": application/staff_list.md
+- Clients:
+    - "list of clients": client/list.md
+    - "client id info": client/info.md
+    - "new client": client/new.md
+- Processes:
+     - "manufactory list": process/man_list.md
+     - "manufactory id info": process/man_info.md
+     - "payment order list": process/payment.md
+-Materials:
+    - "list of materials": material/list.md
+    - "material id info": material/info.md
+    - "new material": material/new.md
+- Services:
+    - "list of services": service/list.md
+    - "service id info": service/info.md
+    - "new service": service/new.md
+- Workers:
+    - "list of workers": worker/list.md
+    - "worker id info": worker/info.md
+    - "new worker": worker/new.md
+theme:
+ name: material
+
