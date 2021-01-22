@@ -1,3 +1,4 @@
+from django.contrib.auth.models import AnonymousUser
 from rest_framework import serializers
 
 from polls_app.models import *
@@ -20,6 +21,26 @@ class QuestionSerializer(serializers.ModelSerializer):
 class PollDetailsSerializer(serializers.ModelSerializer):
     creator = serializers.PrimaryKeyRelatedField(read_only=True, default=serializers.CurrentUserDefault())
     question_set = QuestionSerializer(many=True)
+    is_my = serializers.SerializerMethodField('get_is_my')
+    is_voted = serializers.SerializerMethodField('get_is_voted')
+
+    def get_is_my(self, poll):
+        request = self.context.get('request', None)
+        if request:
+            return request.user.id == poll.creator.pk
+        return False
+
+    def get_is_voted(self, poll):
+        request = self.context.get('request', None)
+        if request:
+            for question in poll.question_set.all():
+                for answer in question.answer_set.all():
+                    try:
+                        if UserToAnswer.objects.filter(user=request.user.id, answer=answer).__len__() != 0:
+                            return True
+                    except UserToAnswer.DoesNotExist:
+                        pass
+        return False
 
     class Meta:
         model = Poll
@@ -28,10 +49,14 @@ class PollDetailsSerializer(serializers.ModelSerializer):
 
 class PollSerializer(serializers.ModelSerializer):
     question_set = QuestionSerializer(many=True)
+    creator_id = serializers.IntegerField(
+        default=serializers.CurrentUserDefault()
+    )
+    creator = serializers.CharField(source='creator.username', read_only=True)
 
     class Meta:
         model = Poll
-        exclude = ['creator']
+        fields = "__all__"
 
 
 class PollCreateSerializer(serializers.ModelSerializer):
@@ -47,7 +72,8 @@ class PollCreateSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
 
         poll = Poll(title=validated_data['title'], description=validated_data['description'],
-                    voting_time=validated_data['voting_time'], theme=validated_data['theme'])
+                    voting_time=validated_data['voting_time'], theme=validated_data['theme'],
+                    creator=validated_data['creator'])
         poll.save()
         for question in validated_data['question_set']:
             question_instance = Question.objects.create(description=question['description'], poll=poll)
@@ -80,3 +106,21 @@ class PollCreateSerializer(serializers.ModelSerializer):
                 answer.save()
 
         return instance
+
+
+class UserToAnswerSerializer(serializers.ModelSerializer):
+    user = serializers.HiddenField(
+        default=serializers.CurrentUserDefault()
+    )
+
+    def create(self, validated_data):
+        received_user = validated_data['user']
+        if isinstance(received_user, AnonymousUser):
+            received_user = None
+        user_to_answer = UserToAnswer(user=received_user, answer=validated_data['answer'])
+        user_to_answer.save()
+        return user_to_answer
+
+    class Meta:
+        model = UserToAnswer
+        fields = "__all__"

@@ -3,12 +3,12 @@ from django.db import models
 
 
 class User(AbstractUser):
-    date_of_birth = models.DateField(blank=True, null=True)
-    answers = models.ManyToManyField('Answer', blank=True)
-    REQUIRED_FIELDS = ['first_name', 'last_name', 'date_of_birth']
+    email = models.EmailField()
+    answers = models.ManyToManyField('Answer', blank=True, through='UserToAnswer')
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'email']
 
     def __str__(self):
-        return "{} {} {} {} {}".format(self.username, self.first_name, self.last_name, self.email, self.date_of_birth)
+        return "{} {} {} {}".format(self.username, self.first_name, self.last_name, self.email)
 
 
 class Question(models.Model):
@@ -37,3 +37,11 @@ class Poll(models.Model):
 
     def __str__(self):
         return "{} {} {}".format(self.title, self.description, self.create_date)
+
+
+class UserToAnswer(models.Model):
+    user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
+    answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return "User: {}\nAnswer: {}".format(self.user, self.answer)
