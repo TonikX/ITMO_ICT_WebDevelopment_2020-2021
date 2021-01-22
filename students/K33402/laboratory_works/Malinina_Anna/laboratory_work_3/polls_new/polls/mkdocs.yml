@@ -1,0 +1,10 @@
+site_name: Описание сервиса "Опросы"
+nav:
+ - Home: index.md
+ - User:
+     - "description": user/description.md
+ - Poll:
+     - "description": poll/description.md
+
+theme:
+ name: material
