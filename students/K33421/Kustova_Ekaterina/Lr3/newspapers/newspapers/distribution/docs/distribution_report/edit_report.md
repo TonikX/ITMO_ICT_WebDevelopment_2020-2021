@@ -14,10 +14,10 @@
 **JSON** :
 ```json
 {
-    "id": id,
-    "report_number": report_number,
-    "print_amount": print_amount,
-    "party_number": party_number,
-    "office_number": office_number
+    "id": "id",
+    "report_number": "report_number",
+    "print_amount": "print_amount",
+    "party_number": "party_number",
+    "office_number": "office_number"
 }
 ```
