@@ -1,16 +1,16 @@
 import socket
-import time
 
-s = socket.socket()
-s.connect(('localhost', 9090))
-s.send('Hello, server'.encode("UTF-8"))
+host = "127.0.0.1"
+port = 9091
 
-s = input().encode()
-conn.send(s)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((host, port))
 
-data = s.recv(1024)
+print("\nПоиск площади ттрапеции\n")
+data = input("Введите a, b, h (в метрах) разделенные пробелом: ")
+s.send(data.encode("utf-8"))
+
+response = s.recv(16384)
+print("Result: " + response.decode("utf-8") + " m")
+
 s.close()
-
-print(data.decode("UTF-8"))
-
-
