@@ -57,6 +57,7 @@
 
 ```python
 class UserChangeInfoAPIView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = User.objects.all()
     serializer_class = UserSerializer
 ```

@@ -53,6 +53,7 @@
 
 ```python
 class CellChangeInfoAPIView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Cell.objects.all()
     serializer_class = CellSerializer
 ```
@@ -85,6 +86,7 @@ class CellRelatedSerializer(serializers.ModelSerializer):
 
 ```python
 class CellAddAPIView(generics.CreateAPIView):
+    permission_classes = [permissions.IsAuthenticated]
     serializer_class = CellSerializer
     queryset = Cell.objects.all()
 ```

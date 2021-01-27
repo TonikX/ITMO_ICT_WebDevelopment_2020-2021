@@ -116,6 +116,7 @@ class ServiceNestedSerializer(serializers.ModelSerializer):
 
 ```python
 class ServiceChangeInfoAPIView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
 ```
@@ -145,6 +146,7 @@ class ServiceSerializer(serializers.ModelSerializer):
 
 ```python
 class ServiceAddAPIView(generics.CreateAPIView):
+    permission_classes = [permissions.IsAuthenticated]
     serializer_class = ServiceSerializer
     queryset = Service.objects.all()
 ```

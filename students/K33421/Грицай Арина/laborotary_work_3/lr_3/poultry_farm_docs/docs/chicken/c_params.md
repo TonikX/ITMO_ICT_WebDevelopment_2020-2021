@@ -90,6 +90,7 @@ class ChickenNestedSerializer(serializers.ModelSerializer):
 
 ```python
 class ChickenChangeInfoAPIView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Chicken.objects.all()
     serializer_class = ChickenRelatedSerializer
 ```
@@ -122,6 +123,7 @@ class ChickenRelatedSerializer(serializers.ModelSerializer):
 
 ```python
 class ChickenAddAPIView(generics.CreateAPIView):
+    permission_classes = [permissions.IsAuthenticated]
     serializer_class = ChickenSerializer
     queryset = Chicken.objects.all()
 ```

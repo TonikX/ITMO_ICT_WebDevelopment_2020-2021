@@ -49,6 +49,7 @@
 
 ```python
 class BreedChangeInfoAPIView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Breed.objects.all()
     serializer_class = BreedSerializer
 ```
@@ -78,6 +79,7 @@ class BreedSerializer(serializers.ModelSerializer):
 
 ```python
 class BreedAddAPIView(generics.CreateAPIView):
+    permission_classes = [permissions.IsAuthenticated]
     serializer_class = BreedSerializer
     queryset = Breed.objects.all()
 ```
