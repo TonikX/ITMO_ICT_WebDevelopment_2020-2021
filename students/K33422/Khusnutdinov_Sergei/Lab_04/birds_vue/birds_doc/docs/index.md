@@ -30,3 +30,5 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
    Working with cells: cell/cell.md
  - Service:
    List of services: service/service.md
+ - Vue:
+   Chikens, Breeds, Cells, Log in or register
