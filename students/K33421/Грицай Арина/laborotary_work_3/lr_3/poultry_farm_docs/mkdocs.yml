@@ -1,0 +1,15 @@
+site_name: My Docs
+nav:
+  - Home: index.md
+  - User:
+    - List of users and particular user's info: user/u_params.md
+  - Chicken:
+    - List of chickens, particular chicken's info, add a chicken: chicken/c_params.md
+  - Breed:
+    - List of breeds, particular breed's info, add a breed: breed/b_params.md
+  - Cell:
+    - List of cells, particular cell's info, add a cell: cell/cell_params.md
+  - Service:
+    - List of services, particular service's info, add a service: service/s_params.md
+theme:
+name: material
