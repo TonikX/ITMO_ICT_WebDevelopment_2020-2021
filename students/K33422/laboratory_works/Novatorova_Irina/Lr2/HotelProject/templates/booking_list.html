@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Бронирования</title>
+    <style>
+    body {
+            background-image: url(http://www.fonstola.ru/pic/201202/1600x900/fonstola.ru-74779.jpg);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <h1>Ваши бронирования</h1>
+
+    {% for booking in booking_list %}
+
+    Отель: {{ booking.room.hotel }} <br/>
+    Номер: {{ booking.room.room_num }} <br/>
+    Дата заезда: {{booking.begin_date}} <br/>
+    Дата выезда: {{ booking.end_date}} <br/>
+    Подтверждение бронирования: <strong>{{ booking.is_reserved|yesno:"Да,Нет"  }}</strong> <br/>
+
+
+    <a href="delete/{{ booking.id }}/">Удалить бронь</a>
+    <a href="/">На главную</a><br>
+
+    <hr/>
+
+    {% empty %}
+    <li>Актуальных бронирований нет</li>
+    {% endfor %}
+
+</ul>
+<a href="/">На главную</a><br>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <style>
+    body {
+            background-image: url(http://www.fonstola.ru/pic/201202/1600x900/fonstola.ru-74779.jpg);
+        }
+    </style>
+</head>
+<body>
+    <h1>Регистрация</h1>
+    <br>
+    <form method="post" action="{% url "registration" %}">
+        <div class="form-group">
+        {% csrf_token %}
+        {{ form.as_p }}
+        </div>
+
+        <button class="btn btn-secondary">Зарегистрироваться</button>
+    </form>
+</body>

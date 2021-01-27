@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Доступные номера</title>
+    <style>
+    body {
+            background-image: url(http://www.fonstola.ru/pic/201202/1600x900/fonstola.ru-74779.jpg);
+        }
+    </style>
+</head>
+    <h1>Забронировать комнату</h1>
+    {% if user.is_active %}
+    <form method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button class="btn btn-secondary">Забронировать</button>
+    {% else %}
+        <h4>Для того, чтобы сделать бронирование, необходимо авторизоваться</h4>
+        <a href="/accounts/signup/">Регистрация</a><br>
+        <a href="/accounts/login/">Войти</a><br>
+    {% endif %}
+<br>
+<br>
+<a href="/">На главную</a><br>
+</form>
+

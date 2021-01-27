@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Наши гости за прошедший месяц</title>
+    <style>
+    body {
+            background-image: url(http://www.fonstola.ru/pic/201202/1600x900/fonstola.ru-74779.jpg);
+        }
+    </style>
+</head>
+<body>
+
+ <h1>Наши гости за прошедший месяц</h1>
+
+ <br>
+
+ {% for guest in guests_list %}
+
+ <table class="table">
+      <tr>
+      <th>Гость</th>
+      <th>Отель</th>
+      <th>Комната</th>
+      </tr>
+
+     <tr>
+         <td>{{ guest.user }}</td>
+         <td>{{ guest.room.hotel }}</td>
+         <td>{{ guest.room.room_num }}</td>
+     </tr>
+
+
+
+</table>
+
+    <hr/>
+
+    {% empty %}
+    <li>no bookings yet</li>
+    {% endfor %}
+<a href="/reviews">Просмотр отзывов</a><br>
+<a href="/">На главную</a><br>
+</body>
+</html>
