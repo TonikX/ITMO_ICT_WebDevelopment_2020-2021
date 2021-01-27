@@ -16,7 +16,7 @@
             v-model="signInForm.password"
             type="password"
           />
-          <v-btn type="submit" color="primary" dark>Войти</v-btn>
+          <v-btn type="submit" color="black" dark>Войти</v-btn>
 
           <p class="mt-5">Ещё нет аккаунта? <router-link to="/signup">Зарегистрироваться</router-link></p>
         </v-col>
@@ -28,30 +28,23 @@
 <script>
 export default {
   name: 'SignIn',
-
   data: () => ({
     signInForm: {
       password: '',
       username: ''
     }
   }),
-
   methods: {
     async signIn () {
       try {
         const response = await this.axios
           .post('http://127.0.0.1:8000/auth/token/login/', this.signInForm)
-
         console.log('SIGN IN RESPONSE', response)
-
         // if (response.status === 200) {
         //   throw new Error(response.status)
         // }
-
         this.$refs.signInForm.reset()
-
         localStorage.setItem('token', response.data.auth_token)
-
         this.$router.push('/settings')
       } catch (e) {
         console.error('AN API ERROR', e)

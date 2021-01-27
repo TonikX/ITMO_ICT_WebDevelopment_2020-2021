@@ -32,7 +32,7 @@
             v-model="signUpForm.password"
             type="password"
           />
-          <v-btn type="submit" color="primary" dark>Зарегистрироваться</v-btn>
+          <v-btn type="submit" color="black" dark>Зарегистрироваться</v-btn>
 
           <p class="mt-5">Уже зарегистрированы? <router-link to="/signin">Войти</router-link></p>
         </v-col>

@@ -12,6 +12,11 @@ nav:
    - Working with cells: cell.md
  - Service:
    - List of services: service.md
+ - Vue:
+   - Chikens: chicken_vue.md
+   - Breeds: breed_vue.md
+   - Cells: cell_vue.md
+   - Log in or register: user_vue.md
 
 theme:
  name: 'material'

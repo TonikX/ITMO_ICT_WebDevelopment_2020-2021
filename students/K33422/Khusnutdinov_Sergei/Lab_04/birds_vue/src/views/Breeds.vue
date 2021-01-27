@@ -21,7 +21,7 @@
         >
           <template v-slot:activator="{ on, attrs }">
             <v-btn
-              color="primary"
+              color="black"
               dark
               class="mb-2"
               v-bind="attrs"
@@ -101,14 +101,14 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn
-                color="blue darken-1"
+                color="black"
                 text
                 @click="close"
               >
                 Cancel
               </v-btn>
               <v-btn
-                color="blue darken-4"
+                color="black"
                 text
                 @click="save"
               >
@@ -184,13 +184,11 @@ export default {
       diet: ''
     }
   }),
-
   computed: {
     formTitle () {
       return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
     }
   },
-
   watch: {
     dialog (val) {
       val || this.close()
@@ -199,17 +197,14 @@ export default {
       val || this.closeDelete()
     }
   },
-
   created () {
     this.breedsList()
   },
-
   methods: {
     async breedsList () {
       try {
         const response = await this.axios
           .get('http://127.0.0.1:8000/birds/breeds/list')
-
         if (response.status !== 200) {
           throw new Error(response.status)
         }
@@ -227,13 +222,11 @@ export default {
       this.editedItem = Object.assign({}, item)
       this.dialog = true
     },
-
     deleteItem (item) {
       this.editedIndex = this.breeds.indexOf(item)
       this.editedItem = Object.assign({}, item)
       this.dialogDelete = true
     },
-
     deleteItemConfirm () {
       if (this.editedIndex > -1) {
         this.breeds.splice(this.editedIndex, 1)
@@ -250,7 +243,6 @@ export default {
       }
       this.close()
     },
-
     close () {
       this.dialog = false
       this.$nextTick(() => {
@@ -258,7 +250,6 @@ export default {
         this.editedIndex = -1
       })
     },
-
     closeDelete () {
       this.dialogDelete = false
       this.$nextTick(() => {
@@ -266,8 +257,8 @@ export default {
         this.editedIndex = -1
       })
     },
-
     save () {
+      console.log('Entered save')
       if (this.editedIndex > -1) {
         Object.assign(this.breeds[this.editedIndex], this.editedItem)
         axios.put('http://127.0.0.1:8000/birds/breeds/info/' + JSON.stringify(this.editedItem.id), {
@@ -277,21 +268,13 @@ export default {
           avg_weight: this.editedItem.avg_weight,
           diet: this.editedItem.diet
         })
-          .then(response => {
-            console.log(response)
-            // ans = response.status
-          })
-          .catch(error => {
-            console.log(error)
-            console.log('posting new data . . .')
-            // ans = error.status
-            axios.post('http://127.0.0.1:8000/birds/breeds/create/', {
-              breed: this.editedItem.breed,
-              productivity: this.editedItem.productivity,
-              avg_weight: this.editedItem.avg_weight,
-              diet: this.editedItem.diet
-            })
-          })
+      } else {
+        axios.post('http://127.0.0.1:8000/birds/breeds/create/', {
+          breed: this.editedItem.breed,
+          productivity: this.editedItem.productivity,
+          avg_weight: this.editedItem.avg_weight,
+          diet: this.editedItem.diet
+        })
       }
       this.close()
     }

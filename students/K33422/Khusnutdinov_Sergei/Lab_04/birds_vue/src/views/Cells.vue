@@ -21,7 +21,7 @@
         >
           <template v-slot:activator="{ on, attrs }">
             <v-btn
-              color="primary"
+              color="black"
               dark
               class="mb-2"
               v-bind="attrs"
@@ -81,14 +81,14 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn
-                color="blue darken-1"
+                color="black"
                 text
                 @click="close"
               >
                 Cancel
               </v-btn>
               <v-btn
-                color="blue darken-4"
+                color="black"
                 text
                 @click="save"
               >
@@ -241,6 +241,7 @@ export default {
     },
 
     save () {
+      console.log('Entered save')
       if (this.editedIndex > -1) {
         Object.assign(this.cells[this.editedIndex], this.editedItem)
         axios.put('http://127.0.0.1:8000/birds/cells/info/' + JSON.stringify(this.editedItem.id), {
@@ -249,20 +250,12 @@ export default {
           row: this.editedItem.row,
           tsekh: this.editedItem.tsekh
         })
-          .then(response => {
-            console.log(response)
-            // ans = response.status
-          })
-          .catch(error => {
-            console.log(error)
-            console.log('posting new data . . .')
-            // ans = error.status
-            axios.post('http://127.0.0.1:8000/birds/cells/create/', {
-              cell: this.editedItem.cell,
-              row: this.editedItem.row,
-              tsekh: this.editedItem.tsekh
-            })
-          })
+      } else {
+        axios.post('http://127.0.0.1:8000/birds/cells/create/', {
+          cell: this.editedItem.cell,
+          row: this.editedItem.row,
+          tsekh: this.editedItem.tsekh
+        })
       }
       this.close()
     }

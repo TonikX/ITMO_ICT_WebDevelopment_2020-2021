@@ -14,7 +14,7 @@
                         label="Passport"></v-text-field>
                 </v-card-text>
                 <v-card-actions>
-                    <v-btn color="primary" v-if='auth' @click="edit">
+                    <v-btn color="white" v-if='auth' @click="edit">
                         Save Changes
                     </v-btn>
                 </v-card-actions>
