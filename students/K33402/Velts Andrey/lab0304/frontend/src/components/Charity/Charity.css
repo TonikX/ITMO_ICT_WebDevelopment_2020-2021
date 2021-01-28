@@ -1,0 +1,161 @@
+.Charity {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 3.5rem 0;
+}
+
+.Charity h1,
+.Charity h3 {
+  padding: 0 3rem;
+}
+
+.Charity__content {
+  display: flex;
+  margin-top: 1rem;
+  padding: 0 3rem;
+  margin-right: 3rem;
+  flex-direction: column;
+}
+
+.Charity__header {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.Charity__banner {
+  display: flex;
+  flex: 1 0 300px;
+  max-width: 300px;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #333333;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-right: 2.5rem;
+  cursor: pointer;
+}
+
+.Charity__cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  max-width: 1040px;
+}
+
+.Charity__cards--empty {
+  min-height: 46vh;
+}
+
+.Charity__card {
+  display: flex;
+  max-height: 246px;
+  background-color: var(--accent);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 2.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.Charity__card:nth-child(2n + 3) {
+  flex: 0 0 300px;
+  width: 300px;
+  flex-direction: column;
+}
+
+.Charity__card:nth-child(2n + 2) {
+  flex: 0 0 194px;
+  width: 194px;
+}
+
+.Charity__card:nth-child(5n + 1) {
+  flex: 0 0 406px;
+  width: 406px;
+}
+
+.Charity__card:nth-child(2n + 3) .Charity__card-content {
+  padding: 0.5rem 1rem;
+}
+
+.Charity__card:nth-child(2n + 3) .Charity__card-fund {
+  margin-top: 0.25rem;
+}
+
+.Charity__card:nth-child(2n + 3) .Charity__card-image {
+  height: 151px;
+}
+
+.Charity__card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  color: var(--white);
+}
+
+.Charity__card-title {
+  font-size: 1.25rem;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.Charity__card-description {
+  font-weight: 300;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.Charity__card-fund {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.Charity__fund-total {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.Charity__fund-progress {
+  width: 100%;
+  background-color: #5a0877;
+  height: 4px;
+  margin: 0.5rem 0;
+}
+
+.Charity__fund-progress span {
+  display: block;
+  height: 100%;
+  background-color: var(--secondary);
+}
+
+.Charity__fund-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.Charity__fund-amount,
+.Charity__fund-info {
+  font-weight: 300;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+}
+
+.Charity__card-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.Charity__card-button .Button__content {
+  letter-spacing: 1.15px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}

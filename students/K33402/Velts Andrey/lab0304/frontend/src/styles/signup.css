@@ -1,0 +1,236 @@
+.Signup .Background {
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.Polygon {
+  position: absolute;
+  opacity: 0.2;
+}
+
+.Signup .Polygon-1 {
+  top: -140px;
+  left: -90px;
+  -webkit-animation: small-polygon ease-in-out 4s infinite alternate;
+  animation: small-polygon ease-in-out 4s infinite alternate;
+}
+
+.Signup .Polygon-2 {
+  top: -60px;
+  left: -65px;
+  -webkit-animation: small-polygon-down ease-in-out 5s infinite alternate;
+  animation: small-polygon-down ease-in-out 5s infinite alternate;
+}
+
+.Signup .Polygon-3 {
+  right: -180px;
+  top: -480px;
+  -webkit-animation: polygon-down ease-in-out 10s infinite alternate;
+  animation: polygon-down ease-in-out 10s infinite alternate;
+}
+
+.Signup .Polygon-4 {
+  right: -200px;
+  top: -580px;
+  -webkit-animation: polygon ease-in-out 10s infinite alternate;
+  animation: polygon ease-in-out 10s infinite alternate;
+}
+
+.Signup .Polygon-5 {
+  bottom: -140px;
+  left: 40px;
+  -webkit-animation: polygon-down ease-in-out 5s infinite alternate;
+  animation: polygon-down ease-in-out 5s infinite alternate;
+}
+
+.Signup .Polygon-6 {
+  bottom: -120px;
+  left: 80px;
+  -webkit-animation: polygon ease-in-out 5s infinite alternate;
+  animation: polygon ease-in-out 5s infinite alternate;
+}
+
+.Signup .Polygon-7 {
+  bottom: -420px;
+  right: -340px;
+  -webkit-animation: polygon ease-in-out 5s infinite alternate;
+  animation: polygon ease-in-out 5s infinite alternate;
+}
+
+.Signup .Polygon-8 {
+  bottom: -520px;
+  right: -300px;
+  -webkit-animation: polygon ease-in-out 5s infinite alternate;
+  animation: polygon-down ease-in-out 5s infinite alternate;
+}
+
+.Signup {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.Signup .Header {
+  position: initial;
+  display: flex;
+  height: 5.4rem;
+  background: transparent;
+  z-index: 10;
+  width: 100%;
+}
+
+.Signup .Header__wrapper {
+  display: flex;
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Signup .Header__logo {
+  display: inline-flex;
+}
+
+.Signup .Header__logo#logo-icon-container {
+  width: 240px;
+  height: 40px;
+}
+
+.Signup .Header__logo#logo-icon-container #logo-icon-text path {
+  fill: #00213d;
+}
+
+.Signup .Header__login {
+  display: inline-flex;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--selected2);
+  border-radius: 24px;
+  cursor: pointer;
+  color: var(--selected2);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Signup .Section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  flex: 1 0 auto;
+}
+
+.Signup .Section__wrapper {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.Signup__form,
+.Signup__icon {
+  align-self: center;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.Signup__form h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.Signup__form-field {
+  display: flex;
+}
+
+.Signup__form-checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.Signup__form-button {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.Signup__field-content {
+  flex: 1 1 220px;
+  margin-top: 1rem;
+}
+
+.Signup__form-field--multiple .Signup__field-content:first-of-type {
+  margin-right: 2rem;
+}
+
+.Signup__form-checkbox .Signup__field-content {
+  flex: 1 1 auto;
+}
+
+.Signup__field-content-name {
+  display: flex;
+  color: var(--text_primary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.Signup__field-content-input {
+  margin: 0.5rem 0;
+  overflow-wrap: anywhere;
+}
+
+.Signup__email--sent {
+  color: var(--text_secondary);
+  font-size: 18px;
+  margin-top: 1.5rem;
+}
+
+.Signup__icon {
+  text-align: center;
+}
+
+.Signup__icon--email svg {
+  width: 360px;
+}
+
+.Signup__icon--confirmed svg {
+  width: 330px;
+}
+
+.Signup__icon--signup svg {
+  width: 400px;
+}
+
+.Signup__form .Button--link {
+  padding: 0 1rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .Signup .Polygon-3,
+  .Signup .Polygon-4,
+  .Signup .Polygon-7,
+  .Signup .Polygon-8 {
+    display: none;
+  }
+  .Signup .Section__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .Signup__icon {
+    display: none;
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guests</title>
+</head>
+<body>
+<table class="table" style="border: black">
+<tr>
+    <th>Фамилия</th>
+    <th>Время проживания</th>
+</tr>
+{% for reserve in reserves %}
+    {% if reserve.hotel.id == hotel %}
+        {% if reserve.end_date|stringformat:"s" > now|stringformat:"s" %}
+            <tr>
+                <td>{{ reserve.user.last_name }}</td>
+                <td>{{ reserve.start_date }}-{{ reserve.end_date }}</td>
+            </tr>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</table>
+<a href="/mainn/">Вернуться на главную</a>
+</body>
+</html>

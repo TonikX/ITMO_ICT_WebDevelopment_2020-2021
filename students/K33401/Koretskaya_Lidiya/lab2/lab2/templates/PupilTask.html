@@ -1,0 +1,24 @@
+{% extends  'Pupil.html' %}
+{% block main %}
+    <div class="'container">
+    <p>New</p>
+    <ul>
+    {% for task in new_tasks %}
+           <p><a href="/pupil_task/{{ task.id }}/">{{ task }} </a></p>
+
+    {% empty %}
+        <li>No new tasks yet.</li>
+    {% endfor %}
+    </ul>
+    <hr>
+    <p>Done</p>
+    <ul>
+        {% for task in done_tasks %}
+            <p><a href="/pupil_task/{{ task.id }}/">{{ task }}</a></p>
+        {% empty %}
+            <li>No tasks completed yet. </li>
+        {% endfor %}
+    </ul>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Cars:</h1>
+<ul>
+	{% for car in object_list %}
+		<li>
+			{{ car.brand }} {{car.model}} <br>
+			<a href="/cars/{{ car.id }}/update">Update</a> |
+			<a href="/cars/{{ car.id }}">Info</a> |
+			<a href="/cars/{{ car.id }}/delete/">Delete</a>
+		</li>
+	{% empty %}
+	No cars yet
+	{% endfor %}
+</ul>
+<a href="create_car/">Create</a>
+</body>
+</html>

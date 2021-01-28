@@ -1,0 +1,21 @@
+enum ItemStatus {
+  WAITING
+  RESERVED
+}
+
+type Item {
+  title: String!
+  status: ItemStatus!
+  user: User! @relation
+}
+
+type User {
+  name: String!
+  email: String! @unique
+  password: String!
+  items: [Item!] @relation
+}
+
+type Query {
+  loginUser(email: String!, password: String!): User
+}

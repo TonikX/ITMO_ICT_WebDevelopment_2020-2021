@@ -1,0 +1,30 @@
+site_name: Колледж
+nav:
+  - Home: index.md
+  - lab_3:
+    - Teacher:
+      - "Измеение и удаление учителя": teacher/updel.md
+      - "Добавление нового учителя": teacher/create.md
+    - Student:
+      - "Список студентов": student/view.md
+      - "Добавление нового студента": student/create.md
+      - "Измеение и удаление студента": student/updel.md
+    - Schedule:
+      - "Cписок всех расписаний": schedule/view.md
+      - "Добавление новых пар в расписание": schedule/addpairs.md
+  - lab_4:
+    - "Вход": front/login.md
+    - "Создание дисциплины": front/disCreate.md
+    - "Список всех студентов": front/students.md
+    - "Создание студента": front/studentCreate.md
+    - "Изменить информацию о студенте или удалить студента": front/studentUpDel.md
+    - "Список всех преподавателей": front/teachers.md
+    - "Создание преподавателя": front/teacherCreate.md
+    - "Изменить информацию о преподавателе или удалить преподавателя": front/teacherUpDel.md
+    - "Список всех пар": front/pairs.md
+    - "Создание новой пары": front/pairCreate.md
+    - "Список всех расписаний": front/schedules.md
+    - "Создание нового расписания": front/scheduleCreate.md
+
+theme:
+ name: material

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="822059a0-8b26-4bda-8278-e92a656c641e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/assets/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/components/Author.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/components/Authorlist.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/components/Creation.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/components/Creationlist.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/components/Editlc.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/components/LK.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/components/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/components/NewAuthor.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/components/NewCreation.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/components/Review.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/components/Signin.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/components/Start.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/src/plugins/vuetify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_art_hub/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_art_hub/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front_art_hub/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_art_hub/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front_art_hub/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_art_hub/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_art_hub/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_art_hub/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_art_hub/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_art_hub/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_art_hub/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/front_art_hub/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_art_hub/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front_art_hub/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_art_hub/src/views/About.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_art_hub/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_art_hub/src/views/Home.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/front_art_hub" />
+  </component>
+  <component name="ProjectId" id="1lHu1HCauDuSTDyTFeUbDW733CH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PyCharm 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Иван\PycharmProjects\lab3\arthubdocs\docs\review" />
+      <recent name="C:\Users\Иван\PycharmProjects\lab3\arthubdocs\docs\creation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Иван\PycharmProjects\lab3\front_art_hub\src\components" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="lab3" type="Python.DjangoServer" factoryName="Django server">
+      <module name="lab3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="822059a0-8b26-4bda-8278-e92a656c641e" name="Default Changelist" comment="" />
+      <created>1607266120859</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607266120859</updated>
+      <workItem from="1607266150691" duration="185000" />
+      <workItem from="1607292792316" duration="6257000" />
+      <workItem from="1607374572814" duration="8269000" />
+      <workItem from="1607423822416" duration="3649000" />
+      <workItem from="1607431469523" duration="5955000" />
+      <workItem from="1607454306950" duration="11053000" />
+      <workItem from="1607468806517" duration="747000" />
+      <workItem from="1607550807000" duration="206000" />
+      <workItem from="1607587682100" duration="3567000" />
+      <workItem from="1607982456209" duration="2634000" />
+      <workItem from="1608056349086" duration="10000" />
+      <workItem from="1608290512058" duration="1000000" />
+      <workItem from="1609792077448" duration="126000" />
+      <workItem from="1609792265357" duration="378000" />
+      <workItem from="1609795717077" duration="45000" />
+      <workItem from="1609795896680" duration="36000" />
+      <workItem from="1609796170980" duration="105000" />
+      <workItem from="1609796298309" duration="1182000" />
+      <workItem from="1609844569093" duration="2821000" />
+      <workItem from="1609848032020" duration="1387000" />
+      <workItem from="1609849869952" duration="645000" />
+      <workItem from="1609948370162" duration="7172000" />
+      <workItem from="1609965495497" duration="1777000" />
+      <workItem from="1609967299126" duration="8012000" />
+      <workItem from="1610029762818" duration="12985000" />
+      <workItem from="1610111144207" duration="19727000" />
+      <workItem from="1610194956481" duration="4315000" />
+      <workItem from="1610201166944" duration="12628000" />
+      <workItem from="1610283880835" duration="8271000" />
+      <workItem from="1610314812270" duration="1644000" />
+      <workItem from="1610317305767" duration="140000" />
+      <workItem from="1610318296164" duration="266000" />
+      <workItem from="1610318634232" duration="94000" />
+      <workItem from="1610323032804" duration="647000" />
+      <workItem from="1610367221262" duration="9043000" />
+      <workItem from="1610403677452" duration="698000" />
+      <workItem from="1610461285588" duration="3838000" />
+      <workItem from="1610476912929" duration="11637000" />
+      <workItem from="1610539821060" duration="952000" />
+      <workItem from="1610541805319" duration="7373000" />
+      <workItem from="1610555710190" duration="19860000" />
+      <workItem from="1610579065780" duration="1698000" />
+      <workItem from="1610627534810" duration="16305000" />
+      <workItem from="1610655116704" duration="8682000" />
+      <workItem from="1610665623165" duration="351000" />
+      <workItem from="1610710259947" duration="4391000" />
+      <workItem from="1610715564964" duration="15653000" />
+      <workItem from="1610741579152" duration="924000" />
+      <workItem from="1610744587739" duration="1940000" />
+      <workItem from="1610747404347" duration="96000" />
+      <workItem from="1610794505173" duration="321000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

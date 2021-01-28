@@ -1,0 +1,31 @@
+:root {
+  --accent: #793093;
+  --active: #ffeaac;
+  --primary: #ddedff;
+  --secondary: #fcc521;
+  --red: #e91916;
+  --text_primary: #323333;
+  --text_secondary: #9b9999;
+  --text_tertiary: #606770;
+  --text_placeholder: #9e9e9e;
+  --main_bg: #ffffff;
+  --sidebar_bg: #f2f7fd;
+  --sidebar_bottom_bg: #e5e5e5;
+  --input_bg: #f2f7fd;
+  --divider: #d8d8d8;
+  --button_placeholder: #55646a;
+  --button_primary_text: #3f80cf;
+  --button_primary_bg_left: #57cbb2;
+  --button_primary_bg_right: #43bea5;
+  --button_secondary_text: #3f3f40;
+  --button_secondary_bg: #fcc521;
+  --button_tertiary_text: #c4c4c4;
+  --white: #ffffff;
+  --gray: #f5f3f3;
+  --events-physical: #fef3d3;
+  --events-meeting: #d4ecff;
+  --events-physical-icon: #ffd89f;
+  --events-meeting-icon: #269eff;
+  --form_field_color: #323333;
+  --font-common: Rubik, sans-serif;
+}

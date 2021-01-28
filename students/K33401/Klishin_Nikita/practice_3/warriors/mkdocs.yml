@@ -1,0 +1,17 @@
+site_name: Воины
+nav:
+ - Home: index.md
+ - Professions:
+     - "Swordsman": professions/swordman.md
+     - "Bowman": professions/bowman.md
+     - "Peaker": professions/peaker.md
+ - Api:
+     - "api/warriors[GET]": api/warriors.md
+     - "api/warrior/{id}[GET]": api/warrior.md
+     - "api/warriors_profession/[GET]": api/warriors_profession.md
+     - "api/warriors_skill/[GET]": api/warriors_skill.md
+
+theme:
+ name: material
+
+  

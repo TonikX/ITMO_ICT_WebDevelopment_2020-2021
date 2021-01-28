@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owners</title>
+</head>
+<body>
+    <ol style="margin: 25px 20px;">
+    {% for owner in owners %}
+        <li>
+            <a href="../owner/{{ owner.id }}" style="text-decoration: none;">
+                Name: {{ owner.name }} Surname: {{ owner.surname }} Bith date: {{ owner.birth_date }}
+            </a>
+            <hr>
+        </li>
+    {% endfor %}
+    </ol>
+    <div style="margin: auto 50px;">
+        <a href="/owners/create" style="text-decoration: none;">
+            <h3>
+                Добавить владельца
+            </h3>
+        </a>
+    </div>
+</body>
+</html>

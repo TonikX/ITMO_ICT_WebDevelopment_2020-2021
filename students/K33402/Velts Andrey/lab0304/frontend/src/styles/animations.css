@@ -1,0 +1,71 @@
+:root {
+  --duration: 0.7s;
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes small-polygon {
+  0% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+
+  100% {
+    transform: scale(1.25);
+    opacity: 0.2;
+  }
+}
+
+@keyframes small-polygon-down {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(0.8);
+    opacity: 0.35;
+  }
+}
+
+@keyframes polygon {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(1.05);
+    opacity: 0.35;
+  }
+}
+
+@keyframes polygon-down {
+  0% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+
+  100% {
+    transform: scale(0.85);
+    opacity: 0.2;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}

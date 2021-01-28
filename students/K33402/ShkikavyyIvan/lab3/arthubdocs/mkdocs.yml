@@ -1,0 +1,40 @@
+site_name: "ArtHub"
+nav:
+  - Home: index.md
+  - Models: models.md
+  - Author:
+      - authorinfo: author/authorinfo.md
+      - create: author/create.md
+      - delete: author/delete.md
+      - list: author/list.md
+  - Creation:
+      - creationinfo: creation/creationinfo.md
+      - create: creation/create.md
+      - delete: creation/delete.md
+      - creationauthor: creation/creationauthor.md
+      - list: creation/list.md
+  - Review:
+      - reviewinfo: review/reviewinfo.md
+      - create: review/create.md
+      - delete: review/delete.md
+      - update: review/update.md
+      - list: review/list.md
+  - Frontend:
+    - Home:
+       - Author:
+          author: frontend/home/Author/frontend_author_api.md
+       - Authorlist:
+           authorlist: frontend/home/Authorlist/frontend_authorlist_api.md
+       - Creation:
+           creation: frontend/home/Creation/frontend_creation_api.md
+       - LK:
+          edit: frontend/home/LK/frontend_edit_api.md
+          lk: frontend/home/LK/frontend_LK_api.md
+       - Review:
+           review: frontend/home/Review/frontend_review_api.md
+       - creationlist: frontend/home/frontend_creationlist_api.md
+    - Login: frontend/login/frontend_login_api.md
+    - Signin: frontend/signin/frontend_signup_api.md
+
+theme:
+  name: material

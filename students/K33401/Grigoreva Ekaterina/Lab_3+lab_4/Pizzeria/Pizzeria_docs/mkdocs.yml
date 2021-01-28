@@ -1,0 +1,9 @@
+site_name: Pizzeria
+nav:
+    - Home: 'index.md'
+    - Pizzeria: 'pizzeria.md'
+    - Registration: 'registration.md'
+    - Personal page: 'personalPage.md'
+    - Pizza list: 'pizzaList.md'
+theme: material
+

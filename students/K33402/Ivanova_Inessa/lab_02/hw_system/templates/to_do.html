@@ -1,0 +1,24 @@
+{% extends  'student.html' %}
+
+{% block main %}
+<div style="margin: 10px 10px 10px 10px">
+	<p>To do</p>
+	<ul>
+		{% for task in new_tasks %}
+		<p><a href="/to_do/{{ task.id }}/">{{ task }} </a></p>
+		{% empty %}
+        <li>There is no new homeworks</li>
+		{% endfor %}
+	</ul>
+	<hr>
+	<p>Done</p>
+	<ul>
+		{% for task in done_tasks %}
+		<p><a href="/to_do/{{ task.id }}/">{{ task }}</a></p>
+		{% empty %}
+		<li>There is no done homeworks</li>
+		{% endfor %}
+	</ul>
+</div>
+
+{% endblock %}

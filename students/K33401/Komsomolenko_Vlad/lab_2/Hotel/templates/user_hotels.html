@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotels</title>
+</head>
+<body>
+<h1>Отели</h1>
+{% for object in object_list %}
+        <a href="hotel/{{ object.id }}/">Название отеля - {{ object.name }}</a>
+        <br/><hr/>
+{% endfor %}
+<a href="/my_reserves/">Посмотреть мои брони</a>
+<a href="/">О профиле</a>
+</body>
+</html>

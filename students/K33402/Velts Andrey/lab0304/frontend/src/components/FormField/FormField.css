@@ -1,0 +1,54 @@
+.FormField {
+  position: relative;
+}
+
+.FormField__border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--form_field_bg);
+  content: "";
+  border-radius: 6px;
+  box-sizing: border-box;
+  z-index: 1;
+  transform-origin: left top;
+}
+
+.FormField--s-error .Input__el {
+  background: rgba(255, 95, 95, 0.05);
+  border: 1px solid var(--red);
+}
+
+.FormField--s-error .FormField__error {
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.FormField--s-error .FormField__error--bottom {
+  color: var(--red);
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+
+.FormField--s-valid .FormField__border,
+.FormField--s-verified .FormField__border {
+  border-color: var(--field_valid_border);
+}
+
+.FormField.TextArea .TextArea__el:disabled ~ .FormField__border,
+.FormField.Select .Select__el:disabled ~ .FormField__border,
+.FormField.Input .Input__el:disabled ~ .FormField__border {
+  opacity: 0.4;
+}
+
+.FormField.Input .Input__el:focus ~ .FormField__border,
+.FormField.TextArea .TextArea__el:focus ~ .FormField__border,
+.FormField.Select .Select__el:focus ~ .FormField__border,
+.FormField.Select--mimicry:focus .FormField__border {
+  border: 1px solid var(--selected);
+  background: var(--white);
+}

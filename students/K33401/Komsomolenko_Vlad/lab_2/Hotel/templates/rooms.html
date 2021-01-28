@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooms</title>
+</head>
+<body>
+<h1>Комнаты</h1>
+{% for room in rooms %}
+    {% if room.hotel.id == hotel %}
+        <a>Тип комнаты - цена</a>
+        <a href="/room/{{ room.id }}/">{{ room.type }} {{ room.cost }}</a>
+
+        <br/><hr/>
+    {% endif %}
+{% endfor %}
+<a href="feedback/">Feedback</a>
+<a href="/main/hotel/{{ hotel }}/guests/">Постояльцы за последний месяц</a>
+</body>
+</html>
