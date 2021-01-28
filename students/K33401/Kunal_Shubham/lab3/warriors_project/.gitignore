@@ -1,0 +1,5 @@
+env
+warriors_project/__pycache__
+warriors_app/__pycache__
+.vscode
+.env

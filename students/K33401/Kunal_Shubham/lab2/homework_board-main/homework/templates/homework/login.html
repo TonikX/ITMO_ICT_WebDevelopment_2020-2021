@@ -1,0 +1,26 @@
+{% extends "homework/layout.html" %}
+
+{% block title %}
+Homework Board | Login
+{% endblock title %}
+
+{% block body %}
+<div class="vh-100 d-flex flex-column justify-content-center align-items-center">
+  <form class="shadow-lg p-3 mb-5 bg-white rounded" method="POST" action="{% url 'login_view' %}">
+    {% csrf_token %}
+    <div class="row p-2">
+      <label for="username" class="col-form-label">Username</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" id="username" name="username">
+      </div>
+    </div>
+    <div class="row p-2">
+      <label for="password" class="col-form-label">Password</label>
+      <div class="col-sm-12">
+        <input type="password" class="form-control" id="password" name="password">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary ms-2">Login</button>
+  </form>
+</div>
+{% endblock body %}

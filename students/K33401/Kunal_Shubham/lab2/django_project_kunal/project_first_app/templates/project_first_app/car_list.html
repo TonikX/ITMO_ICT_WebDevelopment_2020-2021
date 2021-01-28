@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car List</title>
+</head>
+
+<body>
+  <h1>Car List</h1>
+  <ol>
+    {% for car in car_list %}
+    <li>{{ car.marks }} - {{ car.model }}</li>
+    {% empty %}
+    <p>There are no cars in the database.</p>
+    {% endfor %}
+  </ol>
+</body>
+
+</html>

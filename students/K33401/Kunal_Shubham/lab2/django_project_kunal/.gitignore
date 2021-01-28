@@ -1,0 +1,5 @@
+env
+django_project_kunal/__pycache__
+project_first_app/__pycache__
+.vscode
+.env

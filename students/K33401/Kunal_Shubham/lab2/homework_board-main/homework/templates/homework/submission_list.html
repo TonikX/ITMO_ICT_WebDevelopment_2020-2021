@@ -1,0 +1,44 @@
+{% extends "homework/layout.html" %}
+
+{% block title %}
+Homework Board | Submissions
+{% endblock title %}
+
+{% block body %}
+<div class="container vh-100 d-flex justify-content-between align-items-center">
+  <div class="col">
+    <h1>My Submissions</h1>
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Date of Submission</th>
+          <th scope="col">Grade</th>
+          <th scope="col">Remark</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if submissions %}
+        {% for submission in submissions %}
+        <tr>
+          <td>{{ submission.assignment.title }}</td>
+          <td>{{ submission.date_of_submission }}</td>
+          {% if submission.grade %}
+          <td>{{ submission.grade }}</td>
+          <td>{{ submission.remarks }}</td>
+          {% else %}
+          <td>Not graded yet.</td>
+          <td>Not graded yet.</td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+          <td colspan="3" class="table-active">No Submissions</td>
+        </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

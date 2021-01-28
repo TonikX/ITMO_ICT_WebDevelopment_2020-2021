@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ owner.last_name }} {{ owner.first_name }}</title>
+</head>
+
+<body>
+  <h1>Owner's Info</h1>
+  <ul>
+    <li>Name: {{ owner.last_name }} {{ owner.first_name }}</li>
+    <li>Date of birth: {{ owner.date_of_birth }}</li>
+    <li>Passport: {{ owner.passport }}</li>
+    <li>Address: {{ owner.address }}</li>
+    <li>Nationality: {{ owner.nationality }}</li>
+  </ul>
+  <br>
+  <hr>
+  <h1>{{ owner.last_name }} {{ owner.first_name }}, Possessions</h1>
+  <ol>
+    {% for p in possessions %}
+    <li>{{ p.car.model }}</li>
+    {% empty %}
+    <p>You don't have any cars!</p>
+    {% endfor %}
+  </ol>
+</body>
+
+</html>
