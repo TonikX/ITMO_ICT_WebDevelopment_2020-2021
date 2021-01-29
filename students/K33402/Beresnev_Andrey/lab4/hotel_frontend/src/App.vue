@@ -4,11 +4,20 @@
       <div class="d-flex align-center">
         <h1 class="headline">Hotel Manager</h1>
       </div>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn color="white" plain @click="rooms">
+          Rooms
+        </v-btn>
+        <v-btn color="white" plain @click="guests">
+          Guests
+        </v-btn>
+        <v-btn color="white" plain @click="logout">
+          Logout
+        </v-btn>
+      </v-toolbar-items>
     </v-app-bar>
 
-    <v-main class="d-flex align-center text-center">
-      <router-view />
-    </v-main>
+    <router-view />
   </v-app>
 </template>
 
@@ -19,5 +28,18 @@ export default {
   data: () => ({
     //
   }),
+
+  methods: {
+    logout() {
+      localStorage.removeItem("auth_token");
+      this.$router.push({ name: "Login" });
+    },
+    guests() {
+      this.$router.push({ name: "Guests" });
+    },
+    rooms() {
+      this.$router.push({ name: "Rooms" });
+    },
+  },
 };
 </script>

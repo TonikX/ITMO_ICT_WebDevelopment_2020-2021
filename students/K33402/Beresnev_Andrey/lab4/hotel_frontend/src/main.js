@@ -7,6 +7,7 @@ import VueAxios from "vue-axios";
 
 Vue.config.productionTip = false;
 Vue.use(VueAxios, axios);
+Vue.prototype.$hostname = "http://127.0.0.1:8000/";
 
 new Vue({
   router,

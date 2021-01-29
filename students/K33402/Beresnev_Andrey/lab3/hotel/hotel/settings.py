@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hotel_app',
     'rest_framework',
+    'rest_framework.authtoken',
     'drf_yasg',
     'djoser',
     'corsheaders'
