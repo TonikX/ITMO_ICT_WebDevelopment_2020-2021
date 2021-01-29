@@ -1,0 +1,44 @@
+{% extends "homework/layout.html" %}
+
+{% block title %}
+Homework Board | Login
+{% endblock title %}
+
+{% block body %}
+<div class="container vh-100 d-flex flex-column justify-content-center align-items-center">
+  <form class="row g-3 mt-3 shadow-lg p-3 mb-5 bg-white rounded" method="POST" action="{% url 'register' %}">
+    {% csrf_token %}
+    <div class="col-md-6">
+      <label for="first_name" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="first_name" name="first_name">
+    </div>
+    <div class="col-md-6">
+      <label for="last_name" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="last_name" name="last_name">
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email">
+    </div>
+    <div class="col-md-6">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" name="username">
+    </div>
+    <div class="col-md-6">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password">
+    </div>
+    <div class="col-md-6">
+      <label for="confirm-password" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" id="confirm-password" name="confirm-password">
+    </div>
+    <div class="col-md-6">
+      <label for="group_id" class="form-label">Group ID</label>
+      <input type="text" class="form-control" id="group_id" name="group_id">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </form>
+</div>
+{% endblock body %}

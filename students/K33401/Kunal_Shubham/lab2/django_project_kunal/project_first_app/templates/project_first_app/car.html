@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Details</title>
+</head>
+
+<body>
+  <h1>Car Details</h1>
+  <hr>
+  <ol>
+    <li>Mark: {{ car.marks }}</li>
+    <li>Model: {{ car.model }}</li>
+    <li>Number Guest: {{ car.number_guest }}</li>
+    {% if car.color and car.color.strip %}
+    <li>Color: {{ car.color }}</li>
+    {% else %}
+    <li>Not Available</li>
+    {% endif %}
+  </ol>
+</body>
+
+</html>

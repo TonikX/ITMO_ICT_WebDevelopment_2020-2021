@@ -1,0 +1,59 @@
+{% extends "homework/layout.html" %}
+
+{% block title %}
+Homework Board | {{assignment.title}}
+{% endblock title %}
+
+{% block body %}
+<div class="container vh-100">
+  <div class="d-flex justify-content-between p-3 mb-2 mt-5 bg-secondary text-white">
+    <div>
+      <p>{{ assignment.title }}</p>
+      <p>Assigned by: {{ assignment.teacher }}</p>
+    </div>
+    <div>
+      <p>Issued on: {{ assignment.date_of_issue }}</p>
+      <p>Deadline: {{ assignment.deadline }}</p>
+    </div>
+    <div>
+      <p></p>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">Submit</button>
+    </div>
+  </div>
+  <div class="p-3 md-2 bg-light text-dark">
+    <h2>Problem Statement: </h2>
+    <p>{{ assignment.description }}</p>
+  </div>
+  {% if assignment.penalites %}
+  <div class="p-3 md-2 bg-secondary text-white">
+    <h4>Penalites</h4>
+    <p>{{ assignment.penalites }}</p>
+  </div>
+  {% endif %}
+</div>
+
+<!-- Submission Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ assignment.title }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{% url 'assignment_submit' assignment.id %}" method="POST">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Answer</label>
+            <textarea name="answer" class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

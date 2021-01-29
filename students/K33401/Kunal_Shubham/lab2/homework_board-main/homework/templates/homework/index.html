@@ -1,0 +1,64 @@
+{% extends "homework/layout.html" %}
+
+{% block title %}
+Homework Board | Home
+{% endblock title %}
+
+{% block body %}
+<div class="container vh-100 d-flex justify-content-between align-items-center">
+  <div class="col-md-5">
+    <h1>Active Assignments</h1>
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Subject</th>
+          <th scope="col">Deadline</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if assignments.active_assignments %}
+        {% for assignment in assignments.active_assignments %}
+        <tr>
+          <td><a href="{% url 'assignment-detail' assignment.pk %}">{{ assignment.title }}</a></td>
+          <td>{{ assignment.subject }}</td>
+          <td>{{ assignment.deadline }}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+          <td colspan="3" class="table-active">No active assignments</td>
+        </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-5">
+    <h1>Past Assignments</h1>
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Subject</th>
+          <th scope="col">Deadline</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if assignments.inactive_assignments %}
+        {% for assignment in assignments.inactive_assignments %}
+        <tr>
+          <td>{{ assignment.title }}</td>
+          <td>{{ assignment.subject }}</td>
+          <td>{{ assignment.deadline }}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+          <td colspan="3" class="table-active">No past assignments</td>
+        </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock body %}
