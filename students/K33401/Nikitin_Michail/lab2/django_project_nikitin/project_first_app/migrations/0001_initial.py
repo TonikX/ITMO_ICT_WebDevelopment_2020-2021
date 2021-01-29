@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='Hold',
+            name='Ownership',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('start_date', models.DateField()),
@@ -53,6 +53,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='car',
             name='owner',
-            field=models.ManyToManyField(through='project_first_app.Hold', to='project_first_app.Driver'),
+            field=models.ManyToManyField(through='project_first_app.Ownership', to='project_first_app.Driver'),
         ),
     ]
