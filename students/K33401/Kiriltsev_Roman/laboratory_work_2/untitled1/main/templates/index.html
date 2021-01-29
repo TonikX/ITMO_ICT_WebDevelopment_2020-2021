@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Научные конференции</title>
+  </head>
+  <body>
+    <h1 align="center" > Главная страница - Научные конференции</h1>
+    <ul >
+      <li > <h2> <a href="{% url 'conferences' %}">Конференции</a>  </h2> </li>
+      <li>
+        {% if user.is_active %}
+
+            <h2>
+        <a href="{% url 'account_logout' %}">Выйти</a>
+            </h2>
+        {% else %}
+            <h2>
+        <a href="{% url 'account_login' %}">Войти</a>
+            </h2>
+        {% endif %}
+      </li>
+    </ul>
+  </body>
+</html>
