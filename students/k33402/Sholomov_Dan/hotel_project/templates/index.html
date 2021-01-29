@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+  <title>Home</title>
+</head>
+<body>
+<div align="center">
+    {% if user.is_authenticated %}
+    <h1>Добро пожаловать, {{ user.username }}</h1>
+    {% endif %}
+    {% if user.is_authenticated %}
+        <a class="nav-link" href="/profile/">Профиль</a>
+    {% endif %}
+    <a class="nav-link" href="/hotels/">Отели</a>
+    <a class="nav-link" href="/rooms/">Номера</a>
+    <a class="nav-link" href="/reviews/">Отзывы</a>
+    <a class="nav-link" href="/last_guests/">Гости</a>
+</div>
+</body>
+{% endblock %}

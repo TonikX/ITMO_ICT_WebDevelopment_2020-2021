@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Гости</title>
+</head>
+<body>
+
+ <h1>Гости в послединий месяц</h1>
+
+ <br>
+
+ {% for guest in guests_list %}
+
+
+      Пользователь {{ guest.user }}<br>
+      Отель {{ guest.room.hotel }}<br>
+      Номер {{ guest.room.number }}<br><br>
+
+
+
+    <!--Username: {{ guest.user }} <br/>-->
+    <!--First name: {{guest.user.first_name}} <br/>-->
+    <!--Last name: {{guest.user.last_name}} <br/>-->
+    <!--<br/>-->
+    <!--Hotel: {{ guest.room.hotel }} <br/>-->
+    <!--Room: {{ guest.room.number }} <br/>-->
+
+
+    {% endfor %}
+
+</body>
+</html>
+
+{% endblock %}
