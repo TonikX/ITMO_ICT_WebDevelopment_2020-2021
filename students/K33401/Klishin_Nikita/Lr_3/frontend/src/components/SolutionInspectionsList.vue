@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-btn outlined color="primary" dark @click="showDialog(true)"> SHOW INSPECTIONS </v-btn>
+        <v-btn outlined color="black" dark @click="showDialog(true)"> SHOW INSPECTIONS </v-btn>
         <v-dialog v-model="visible" scrollable max-width="540px">
             <v-card v-if="!isLoading">
                 <v-card-title>Inspections</v-card-title>
@@ -33,7 +33,7 @@
                                 </v-col>
                                 <v-spacer></v-spacer>
                                 <v-col md="4" class="d-flex align-center">
-                                    <v-btn @click="addInspection()" block outlined color="primary" dark>SAVE</v-btn>
+                                    <v-btn @click="addInspection()" block outlined color="black" dark>SAVE</v-btn>
                                 </v-col>
                             </v-row>
                         </v-list-item>
