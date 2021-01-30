@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confs</title>
+</head>
+<body bgcolor="#999999">
+<div class="main">
+     {% for conf in confs %}
+     <p style="padding: 20px; border: 5px solid white;">
+      ID: {{conf.id}} <br><a
+            href="/confs/{{ conf.id }}/reserve">Register now!</a></br>
+     <strong>Name: </strong>{{conf.conf_name}} <br>
+     <strong>Theme: </strong>{{conf.conf_theme}} <br>
+     <strong>Conference location: </strong>{{conf.conf_location}} <br>
+     <strong>Beggining: </strong>{{conf.conf_start_date}} <br>
+     <strong>Ending: </strong>{{conf.conf_end_date}} <br>
+     <strong>Conference description: </strong>{{conf.conf_description}} <br>
+     <strong>Conference location description: </strong>{{conf.conf_location_description}} <br>
+     <strong>conference requirements: </strong>{{conf.conf_req}} <br><br>
+     </p>
+     {% endfor %}
+</div>
+<a href="/">Main page</a>
+</body>
+</html>

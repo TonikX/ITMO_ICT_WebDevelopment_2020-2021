@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserved conferences</title>
+</head>
+<body bgcolor="#999999">
+{% block content %}
+
+<table id="myTable" width="90%">
+  <thead>
+   <tr>
+       <th scope="col"><h1>Confereces</h1></th>
+    <th scope="col"><h1>Participants</h1></th>
+   </tr>
+  </thead>
+
+  <tbody>
+
+  {% for reserve in reserves %}
+
+      <tr>
+          <td>{{ reserve.name.name }} </td>
+          <td>{{ reserve.username.username }} </td>
+      </tr>
+
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+<a href="/">Main page</a>
+</body>
+</html>

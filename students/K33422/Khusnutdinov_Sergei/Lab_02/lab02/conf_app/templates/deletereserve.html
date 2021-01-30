@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body bgcolor="#999999">
+  <form method="post">{% csrf_token %}
+     <p>Do you want to delete your reservation? "{{object}}"?</p>
+     <input type="submit" value="Delete"> <br><br>
+</form>
+<a href="/myreserves/">Back to my reserves</a>
+<a href="/">Main page</a>
+</body>
+</html>

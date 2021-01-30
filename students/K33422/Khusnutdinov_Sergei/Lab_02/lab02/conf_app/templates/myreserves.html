@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My conferences</title>
+</head>
+<body bgcolor="#999999">
+     <h1>{{user.username}}'s conferences</h1>
+
+     {% for reserve in reserves_list %}
+
+     <strong>Tour: </strong>{{ reserve.name.name }} <br>
+     <strong>Start_date: </strong>{{ reserve.start_date }} <br>
+     <strong>End_date: </strong>{{ reserve.end_date }} <br>
+     <strong>Conference allowed?: </strong>{{ reserve.status|yesno:"You are allowed,Wait for the admin's reply"  }}<br/>
+
+
+     <a href="myreserves/deletereserve/{{ reserve.id }}/"><button class="btn btn-secondary">Delete</button></a>
+     <a href="myreserves/updatereserve/{{ reserve.id }}/"><button class="btn btn-secondary">Update</button></a>
+     <br><br><br>
+     {% empty %}
+     <li>No conferences here</li>
+     {% endfor %}
+
+
+     <a href="/profile">Back to profile</a><br>
+     <a href="/">Main page</a>
+</body>
+</html>

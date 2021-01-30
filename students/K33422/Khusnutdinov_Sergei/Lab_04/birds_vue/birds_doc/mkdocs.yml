@@ -1,0 +1,22 @@
+site_name: Documentation for "birds" project
+nav:
+ - Home: index.md
+ - Models: models.md
+ - User:
+   - Working with users: user.md
+ - Chicken:
+   - Working with chickens: chicken.md
+ - Breed:
+   - Working with breed information: breed.md
+ - Cell:
+   - Working with cells: cell.md
+ - Service:
+   - List of services: service.md
+ - Vue:
+   - Chikens: chicken_vue.md
+   - Breeds: breed_vue.md
+   - Cells: cell_vue.md
+   - Log in or register: user_vue.md
+
+theme:
+ name: 'material'
