@@ -1,0 +1,17 @@
+<body>
+
+	{% include "hackathon/navigation.html" %}
+
+	Имя: {{user.first_name}} {{user.last_name}}, команда: {{team.title}}
+
+	{% for task in object_list %}
+		<p>
+			{{task.text}}
+			<a href="{{task.upload}}">{{task.upload}} </a>
+			<a href="tasks/{{task.id}}/solution-create">Добавить решение.</a> <a href="tasks/{{task.id}}/solution-update">Редактировать решение.</a>
+		</p>
+	{% empty %}
+		Нет заданий.
+	{% endfor %}
+
+</body>

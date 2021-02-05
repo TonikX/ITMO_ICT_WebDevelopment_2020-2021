@@ -1,0 +1,10 @@
+<p>
+	{% if user.is_authenticated %}
+		<a href="/profile">Профиль.</a>
+		<a href="/logout">Выход.</a>
+		<a href="/tasks/create">Добавить задачу.</a>
+	{% else %}
+		<a href="/login">Залогиниться.</a>
+	{% endif %}
+	<a href="/">Главная.</a>
+</p>
