@@ -1,0 +1,10 @@
+<body>
+	{% for o in object_list %}
+	<p>
+	{{o.brand}}, {{o.model}}, {{o.color}}, {{o.number}}
+	</p>
+
+	{% empty %}
+	No cars yet.
+	{% endfor %}
+</body>

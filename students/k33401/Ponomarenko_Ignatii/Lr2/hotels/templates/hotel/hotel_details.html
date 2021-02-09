@@ -1,0 +1,49 @@
+<body>
+	<h1>{{hotel.name}}</h1>
+	<p>Владелец: {{hotel.hotel_host}}</p>
+	<p>Адрес: {{hotel.address}}</p>
+	<p>Описание: {{hotel.description}}</p>
+	<h3>Типы комнат:</h3>
+	{% for room_type in hotel.room_types.all %}
+		<p>{{room_type}}</p>
+	{% endfor %}
+	<h3>Количество комнат:</h3>
+	<p>{{hotel.rooms}} комнат.</p>
+	<h3>Комфорт:</h3>
+	<p>{{hotel.comfort}}</p>
+
+	{% if user.is_authenticated %}
+		<form method="POST" action="/booking">
+
+			{% csrf_token %}
+			{% for field in booking_form.visible_fields %}
+					{{ field.label_tag }}{{field}}
+			{% endfor %}
+			<input type="hidden" name="guest" id="id_guest" value="{{user.id}}"/>
+			<input type="hidden" name="hotel" id="id_hotel" value="{{hotel.id}}"/>
+			<input type="submit" value="Зарезервировать."/>
+		</form>
+	{% endif %}
+
+	<h2>Отзывы:</h2>
+
+	<form method="post" action="/hotel/review/{{hotel.id}}">
+  		{% csrf_token %}
+  		<input type="hidden" name="hotel" id="id_hotel" value="{{hotel.id}}"/>
+    	{% for field in review_form.visible_fields %}
+			<p>{{ field.label_tag }}{{field}}</p>
+		{% endfor %}
+    	<input type="submit" value="Confirm">
+  	</form>
+
+	{% for review in reviews %}
+		<p>{{review.text}}</p>
+		<p>Оценка: {{review.rating}}</p>
+		<p>***</p>
+	{% endfor %}
+
+	<a href="/booking">Резервации.</a>
+
+	<a href="/all-hotels">Все отели.</a>
+
+</body>

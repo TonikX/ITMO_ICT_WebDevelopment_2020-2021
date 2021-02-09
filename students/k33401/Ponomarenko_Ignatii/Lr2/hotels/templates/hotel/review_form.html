@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оставьте отзыв о своём резервировании!</title>
+</head>
+
+<body>
+  <h2>Оставьте отзыв о своём резервировании!</h2>
+  <h3>{{booking}}</h3>
+  <form method="post">
+  	{% csrf_token %}
+  	<input type="hidden" name="booking" id="id_booking" value="{{booking_id}}"/>
+    {% for field in form.visible_fields %}
+		<p>{{ field.label_tag }}{{field}}</p>
+	{% endfor %}
+    <input type="submit" value="Confirm">
+  </form>
+  <a href="/booking">Назад</a>!
+</body>
+</html>

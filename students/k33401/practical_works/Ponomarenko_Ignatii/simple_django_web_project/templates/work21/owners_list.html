@@ -1,0 +1,10 @@
+<body>
+	{% for o in owners %}
+	<p>
+	{{o.last_name}}, {{o.first_name}}, {{o.birth}}
+	</p>
+
+	{% empty %}
+	No owners yet.
+	{% endfor %}
+</body>

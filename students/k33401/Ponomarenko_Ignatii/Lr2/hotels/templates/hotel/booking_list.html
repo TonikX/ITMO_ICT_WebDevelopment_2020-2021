@@ -1,0 +1,31 @@
+<body>
+
+	{% if user.is_authenticated %}
+		{% for booking in bookings %}
+		<p>
+		<a href="/all-hotels/{{booking.hotel.id}}"> {{booking.hotel}} </a>, {{booking.room}}, {{booking.start}}, {{booking.end}}
+		<a href="/booking_save/{{booking.id}}">Редактирование.</a>
+		<form method="POST" action="/booking_delete/{{booking.id}}">
+			{% csrf_token %}
+			<input type="submit" value="Удалить."/>
+		</form>
+		</p>
+
+		{% empty %}
+		No bookings yet.
+		{% endfor %}
+
+		<p>
+		<a href="/all-hotels">Список отелей.</a>
+		<a href="/logout">Выйти из аккаунта.</a>
+		</p>
+
+	{% else %}
+
+		<p>
+		Для просмотра резервирований <a href="/login">войдите в аккаунт</a>.
+		</p>
+
+	{% endif %}
+
+</body>

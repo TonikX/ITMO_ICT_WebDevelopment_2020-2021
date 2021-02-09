@@ -1,0 +1,8 @@
+site_name: Warriors.
+nav:
+ - Home: index.md
+ - Page1: ep_warriors_and_proffession.md
+ - Page2: ep_warriors_and_skills.md
+ - Page3: ep_warrior.md
+theme:
+ name: material
