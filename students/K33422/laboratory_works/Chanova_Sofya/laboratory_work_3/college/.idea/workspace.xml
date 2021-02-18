@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4def688-3d38-4be2-a61b-f49813160c4b" name="Default Changelist" comment="" />
+    <list default="true" id="f4def688-3d38-4be2-a61b-f49813160c4b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/components/NavMenuDis.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/components/NavMenuSt.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/components/NavMenuTe.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/plugins/vuetify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/About.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/EditProfile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/EditTeacherStudentProfile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/Grades.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/Groups.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/MyGrades.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/MySchedule.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/Profile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/Rooms.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/Schedule.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/SignIn.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/SignUp.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/Students.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/Subjects.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/TeacherStudentProfile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/Teachers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../laboratory_work_4/src/views/Teachings.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/college/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/college/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/college/site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/college/site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/college/site/sitemap.xml.gz" beforeDir="false" afterPath="$PROJECT_DIR$/college/site/sitemap.xml.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/college_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/college_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/college_app/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/college_app/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/college_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/college_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/college_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/college_app/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,40 +46,61 @@
     <session id="-1532572062">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.136" value="1" />
+          <entry key="project.open.time.137" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.246" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.48" value="1" />
+          <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="md" value="11" />
-          <entry key="py" value="15" />
-          <entry key="yml" value="1" />
+          <entry key="html" value="1" />
+          <entry key="js" value="9" />
+          <entry key="md" value="12" />
+          <entry key="py" value="33" />
+          <entry key="vue" value="59" />
+          <entry key="yml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="11" />
-          <entry key="Python" value="15" />
-          <entry key="YAML" value="1" />
+          <entry key="HTML" value="58" />
+          <entry key="JavaScript" value="9" />
+          <entry key="Markdown" value="12" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Python" value="33" />
+          <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="js" value="371" />
           <entry key="md" value="2301" />
-          <entry key="py" value="5378" />
+          <entry key="py" value="5755" />
+          <entry key="vue" value="6641" />
           <entry key="yml" value="254" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="HTML" value="6617" />
           <entry key="JSON" value="7" />
+          <entry key="JavaScript" value="371" />
           <entry key="Markdown" value="2294" />
-          <entry key="Python" value="5378" />
+          <entry key="PLAIN_TEXT" value="24" />
+          <entry key="Python" value="5755" />
           <entry key="YAML" value="254" />
         </counts>
       </usages-collector>
@@ -54,134 +109,86 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/college_app/models.py">
+        <entry file="file://$PROJECT_DIR$/vue-college/src/views/Home.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="119" column="27" lean-forward="true" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
+            <state relative-caret-position="1485">
+              <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <marker date="1607113677317" expanded="true" signature="108:109" ph="..." />
-                <marker date="1607113677317" expanded="true" signature="108:860" ph="..." />
-                <marker date="1607113677317" expanded="true" signature="893:894" ph="..." />
-                <marker date="1607113677317" expanded="true" signature="893:1108" ph="..." />
-                <marker date="1607113677317" expanded="true" signature="1530:1945" ph="..." />
-                <marker date="1607113677317" expanded="true" signature="3286:3565" ph="..." />
-                <marker date="1607113677317" expanded="true" signature="3999:4000" ph="..." />
+                <element signature="n#style#0;n#span#0;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/college_app/serializers.py">
+        <entry file="file://$PROJECT_DIR$/vue-college/src/views/Profile.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="97" selection-start-line="31" selection-start-column="97" selection-end-line="31" selection-end-column="97" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <marker date="1607205781760" expanded="true" signature="168:169" ph="..." />
-                <marker date="1607205781760" expanded="true" signature="168:240" ph="..." />
-                <marker date="1607205781760" expanded="true" signature="168:244" ph="..." />
-                <marker date="1607205781760" expanded="true" signature="406:407" ph="..." />
-                <marker date="1607205781760" expanded="true" signature="406:540" ph="..." />
-                <marker date="1607205781760" expanded="true" signature="1153:1158" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/college/docs/api/groups.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="255">
-                <caret line="59" column="3" lean-forward="true" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/college/docs/api/schedule.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="270">
-                <caret line="132" column="19" lean-forward="true" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/college/docs/api/subjects.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="135">
-                <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/college/docs/api/teachings.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="165">
-                <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/college/docs/users/student.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/college/docs/users/dispatcher.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-              </first_editor>
-              <second_editor />
+            <state relative-caret-position="234">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/college/docs/users/teacher.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="705">
-                <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/vue-college/src/views/Schedule.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2910">
+              <caret line="254" column="20" selection-start-line="254" selection-start-column="20" selection-end-line="254" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/college/docs/index.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="300">
-                <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/vue-college/src/router/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="618">
+              <caret line="97" column="2" selection-start-line="97" selection-start-column="2" selection-end-line="97" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue-college/src/components/NavMenuTe.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue-college/src/views/Rooms.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="152" column="6" selection-start-line="152" selection-start-column="6" selection-end-line="152" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/college_app/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1607506592933" expanded="true" signature="108:109" ph="..." />
+                <marker date="1607506592933" expanded="true" signature="108:895" ph="..." />
+                <marker date="1607506592933" expanded="true" signature="928:929" ph="..." />
+                <marker date="1607506592933" expanded="true" signature="928:1143" ph="..." />
+                <marker date="1607506592933" expanded="true" signature="1565:1980" ph="..." />
+                <marker date="1607506592933" expanded="true" signature="3321:3600" ph="..." />
+                <marker date="1607506592933" expanded="true" signature="4034:4035" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue-college/src/views/Groups.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="98" column="15" lean-forward="true" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -191,6 +198,23 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>subject_nam</find>
+      <find>chickens</find>
+      <find>cells</find>
+      <find>local</find>
+      <find>btn</find>
+      <find>headers</find>
+      <find>themes</find>
+      <find>v-col</find>
+      <find>index</find>
+      <find>new ite</find>
+      <find>patc</find>
+      <find>room</find>
+      <find>gro</find>
+      <find>form</find>
+      <find>role</find>
+      <find>actions</find>
+      <find>rooms</find>
+      <find>editItem</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,11 +224,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/college_app/admin.py" />
-        <option value="$PROJECT_DIR$/college_app/models.py" />
-        <option value="$PROJECT_DIR$/college_app/urls.py" />
-        <option value="$PROJECT_DIR$/college_app/views.py" />
         <option value="$PROJECT_DIR$/college/urls.py" />
-        <option value="$PROJECT_DIR$/college/settings.py" />
         <option value="$PROJECT_DIR$/college/mkdocs.yml" />
         <option value="$PROJECT_DIR$/college/docs/index.md" />
         <option value="$PROJECT_DIR$/college/docs/api/groups.md" />
@@ -213,25 +233,54 @@
         <option value="$PROJECT_DIR$/college/docs/api/schedule.md" />
         <option value="$PROJECT_DIR$/college/docs/api/subjects.md" />
         <option value="$PROJECT_DIR$/college/docs/api/teachings.md" />
-        <option value="$PROJECT_DIR$/college_app/serializers.py" />
         <option value="$PROJECT_DIR$/college/docs/users/dispatcher.md" />
         <option value="$PROJECT_DIR$/college/docs/users/student.md" />
         <option value="$PROJECT_DIR$/college/docs/users/teacher.md" />
+        <option value="$PROJECT_DIR$/college_app/models.py" />
+        <option value="$PROJECT_DIR$/college/settings.py" />
+        <option value="$PROJECT_DIR$/vue-college/src/components/HelloWorld.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/Login.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/About.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/SignIn.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/EditProfile.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/SignUp.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/components/NavMenu.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/App.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/components/NavMenuTe.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/components/NavMenuSt.vue" />
+        <option value="$PROJECT_DIR$/college_app/serializers.py" />
+        <option value="$PROJECT_DIR$/vue-college/src/components/NavMenuDis.vue" />
+        <option value="$PROJECT_DIR$/college_app/views.py" />
+        <option value="$PROJECT_DIR$/college_app/urls.py" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/Groups.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/main.js" />
+        <option value="$PROJECT_DIR$/vue-college/src/router/index.js" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/Students.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/EditTeacherStudentProfile.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/Profile.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/TeacherStudentProfile.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/Teachers.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/Rooms.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/Home.vue" />
+        <option value="$PROJECT_DIR$/vue-college/src/views/Schedule.vue" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="287" />
-    <option name="y" value="69" />
-    <option name="width" value="1335" />
-    <option name="height" value="984" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="475" />
+    <option name="y" value="29" />
+    <option name="width" value="833" />
+    <option name="height" value="890" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,15 +318,57 @@
               <item name="college" type="462c0819:PsiDirectoryNode" />
               <item name="college_app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college" type="462c0819:PsiDirectoryNode" />
+              <item name="vue-college" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college" type="462c0819:PsiDirectoryNode" />
+              <item name="vue-college" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college" type="462c0819:PsiDirectoryNode" />
+              <item name="vue-college" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college" type="462c0819:PsiDirectoryNode" />
+              <item name="vue-college" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college" type="462c0819:PsiDirectoryNode" />
+              <item name="vue-college" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college" type="462c0819:PsiDirectoryNode" />
+              <item name="vue-college" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/web_2020/prac_3/warriors_project" />
+    <property name="last_opened_file_path" value="$USER_HOME$/algorithms_2020" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -307,9 +398,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-1" width="1926" height="1057" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24986821" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18819188" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -343,43 +433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#631#663#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/college/mkdocs.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/college_app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
-          <folding>
-            <element signature="e#1#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/college/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/college_app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -403,60 +456,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/college/docs/api/schedule.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="270">
-            <caret line="132" column="19" lean-forward="true" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/college/docs/api/groups.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="59" column="3" lean-forward="true" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+          <first_editor relative-caret-position="885">
+            <caret line="59" column="3" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/college/docs/index.md">
+    <entry file="file://$PROJECT_DIR$/college/docs/api/schedule.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="300">
-            <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <first_editor relative-caret-position="1980">
+            <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/college_app/models.py">
+    <entry file="file://$PROJECT_DIR$/college/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="119" column="27" lean-forward="true" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1607113677317" expanded="true" signature="108:109" ph="..." />
-            <marker date="1607113677317" expanded="true" signature="108:860" ph="..." />
-            <marker date="1607113677317" expanded="true" signature="893:894" ph="..." />
-            <marker date="1607113677317" expanded="true" signature="893:1108" ph="..." />
-            <marker date="1607113677317" expanded="true" signature="1530:1945" ph="..." />
-            <marker date="1607113677317" expanded="true" signature="3286:3565" ph="..." />
-            <marker date="1607113677317" expanded="true" signature="3999:4000" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/college/docs/api/teachings.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          </first_editor>
-          <second_editor />
+        <state relative-caret-position="2130">
+          <caret line="142" column="1" selection-start-line="142" selection-start-column="1" selection-end-line="142" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -464,33 +487,17 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="135">
-            <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/college_app/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="97" selection-start-line="31" selection-start-column="97" selection-end-line="31" selection-end-column="97" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1607205781760" expanded="true" signature="168:169" ph="..." />
-            <marker date="1607205781760" expanded="true" signature="168:240" ph="..." />
-            <marker date="1607205781760" expanded="true" signature="168:244" ph="..." />
-            <marker date="1607205781760" expanded="true" signature="406:407" ph="..." />
-            <marker date="1607205781760" expanded="true" signature="406:540" ph="..." />
-            <marker date="1607205781760" expanded="true" signature="1153:1158" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/college/docs/users/dispatcher.md">
+    <entry file="file://$PROJECT_DIR$/college/docs/api/teachings.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <first_editor relative-caret-position="165">
+            <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           </first_editor>
           <second_editor />
         </state>
@@ -506,13 +513,252 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/college/docs/users/dispatcher.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/college/docs/users/teacher.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="705">
-            <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <caret line="47" selection-start-line="47" selection-end-line="47" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/components/Home.vue" />
+    <entry file="file://$PROJECT_DIR$/vue-college/src/plugins/vuetify.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/college/docs/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="360">
+            <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/college/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/college/site/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/SignIn.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/components/HelloWorld.vue" />
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Room.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Teachings.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Teaching.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Group.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Subject.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/About.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/college_app/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/components/NavMenuSt.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/SignUp.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Grades.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/MySchedule.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/MyGrades.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/college_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/college_app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/components/NavMenuDis.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="97" column="2" selection-start-line="97" selection-start-column="2" selection-end-line="97" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/EditTeacherStudentProfile.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2010">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/TeacherStudentProfile.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="823">
+          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Teachers.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/EditProfile.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1770">
+          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/components/NavMenuTe.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Subjects.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Rooms.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="152" column="6" selection-start-line="152" selection-start-column="6" selection-end-line="152" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/college_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1607506592933" expanded="true" signature="108:109" ph="..." />
+            <marker date="1607506592933" expanded="true" signature="108:895" ph="..." />
+            <marker date="1607506592933" expanded="true" signature="928:929" ph="..." />
+            <marker date="1607506592933" expanded="true" signature="928:1143" ph="..." />
+            <marker date="1607506592933" expanded="true" signature="1565:1980" ph="..." />
+            <marker date="1607506592933" expanded="true" signature="3321:3600" ph="..." />
+            <marker date="1607506592933" expanded="true" signature="4034:4035" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Students.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="64" column="15" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Profile.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Groups.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="98" column="15" lean-forward="true" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue-college/src/views/Schedule.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2910">
+          <caret line="254" column="20" selection-start-line="254" selection-start-column="20" selection-end-line="254" selection-end-column="20" />
         </state>
       </provider>
     </entry>

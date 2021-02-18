@@ -3,6 +3,22 @@ from rest_framework import generics
 from .serializers import *
 
 
+# profile
+
+class EditUserAPIView(generics.UpdateAPIView):
+
+    serializer_class = UserProfileSerializer
+    queryset = User.objects.all()
+    lookup_field = 'username'
+
+
+class UserProfileAPIView(generics.RetrieveAPIView):
+
+    serializer_class = UserProfileSerializer
+    queryset = User.objects.all()
+    lookup_field = 'username'
+
+
 # users info
 
 class StudentsListAPIView(generics.ListAPIView):
@@ -53,8 +69,6 @@ class StudentGroupPageAPIView(generics.RetrieveUpdateDestroyAPIView):
 
     serializer_class = StudentGroupSerializer
     queryset = StudentGroup.objects.all()
-    lookup_field = 'group_number'
-
 
 # schedule
 
@@ -130,9 +144,8 @@ class RoomCreateAPIView(generics.CreateAPIView):
 
 class RoomPageAPIView(generics.RetrieveUpdateDestroyAPIView):
 
-    serializer_class = RoomSerializer
+    serializer_class = RoomPageSerializer
     queryset = Room.objects.all()
-    lookup_field = 'room_number'
 
 
 # teachings
