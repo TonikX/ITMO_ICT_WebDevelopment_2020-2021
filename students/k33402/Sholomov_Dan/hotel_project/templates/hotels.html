@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<ul>
+    <h1>Доступные отели</h1>
+
+    {% for hotel in hotels %}
+
+    {{ hotel.name }} <br/>
+    {{ hotel.owner }} <br/>
+    {{ hotel.address }} <br/>
+
+    <a href="/hotels/{{ hotel.id }}/">Номера отеля</a>
+
+    <br/>
+    {% endfor %}
+
+</ul>
+
+<a href="/rooms/"><button class="btn btn-secondary">Все доступные номера</button></a>
+
+
+{% endblock %}

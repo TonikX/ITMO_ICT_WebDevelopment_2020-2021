@@ -1,0 +1,6 @@
+site_name: Документация по третьей лабораторной
+nav:
+  - Home: index.md
+  - Users: users.md
+  - Login: login.md
+  - Signup: singup.md

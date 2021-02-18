@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <title>Профиль</title>
+</head>
+<body>
+    <h1>Профиль {{ user.username }}</h1>
+    Фамилия: {{ user.first_name }} <br>
+    Имя: {{ user.last_name }} <br>
+    Дата рождения: {{ user.birth_date }} <br>
+    Номер паспорта: {{ user.passport }} <br>
+    Номер телефона: {{ user.phone_number }} <br>
+    <a href="/profile/edit">Изменить</a>
+</body>
+  {% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Бронь</title>
+</head>
+<body>
+<ul>
+    <h1>Брони от {{user.username}}</h1>
+    {% for booking in bookings_list %}
+        Отель {{ booking.room.hotel }} <br/>
+        Номер {{ booking.room.number }} <br/>
+        Дата заезда {{booking.date_in}} <br/>
+        Дата выезда: {{ booking.date_out }} <br/>
+        <a href="bookings/delete/{{ booking.id }}/"><button class="btn btn-secondary">Удалить</button></a>
+        {% if booking.checked_in is True %}
+        <a href="bookings/add_review">Оставить отзыв</a>
+        {% endif %}
+        <br>
+    {% endfor %}
+</ul>
+</body>
+</html>
+  {% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Удалить бронь</title>
+</head>
+<body>
+  <form method="post">{% csrf_token %}
+      Удалить бронь?
+        <button class="btn btn-secondary">Да</button> <br>
+          <a href="/profile/"><button class="btn btn-secondary">Нет</button></a>
+  </form>
+</body>
+</html>
+
+{% endblock %}

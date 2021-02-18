@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<ul>
+    <h1>Все доступные номера</h1>
+
+    {% for room in rooms %}
+
+    Отель: {{room.hotel}} <br/>
+    Номер: {{ room.number }} <br/>
+
+
+    <a href="/rooms/{{ room.id }}/">Подробности</a>
+
+
+
+<br>
+    {% endfor %}
+
+</ul>
+
+{% endblock %}

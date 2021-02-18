@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<head>
+    <title>Изменить профиль</title>
+</head>
+
+<body>
+    <h1>Изменить профиль</h1>
+    <form method="post" action="{% url 'profile_edit' %}">
+        {% csrf_token %}
+<p>
+        {% for field in form.visible_fields %}
+
+              {{ field.label_tag }}<br>
+              {{ field }}
+            </p>
+          {% endfor %}
+        <button class="btn btn-secondary">Сохранить</button>
+    <button class="btn btn-secondary"><a href="/profile/">Отмена</a></button>
+    </form>
+</body>
+{% endblock %}
