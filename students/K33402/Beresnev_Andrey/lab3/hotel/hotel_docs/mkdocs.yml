@@ -1,0 +1,6 @@
+site_name: Документация проекта "Отель"
+nav:
+    - Home: index.md
+    - Task: Task.md
+    - Models: models.md
+theme: material
