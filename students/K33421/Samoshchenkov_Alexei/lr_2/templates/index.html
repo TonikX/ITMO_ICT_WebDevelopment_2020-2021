@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW</title>
+    {% load static %}
+</head>
+<body>
+  <h1>Homework Manager</h1>
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/homeworks/">Homeworks<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/answers/">Answers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/grades/">Grades</a>
+      </li>
+    </ul>
+      <h3>Signed in as {{ user }}</h3>
+      <a class="nav-link" href="/logout/">Quit</a>
+  </div>
+  <hr>
+<div class="container">
+        {% block content %}
+        {% endblock %}
+</div>
+</body>
+</html>

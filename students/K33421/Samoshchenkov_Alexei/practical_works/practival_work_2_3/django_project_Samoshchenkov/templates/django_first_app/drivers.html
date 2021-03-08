@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% for driver in drivers %}
+    <pre>
+      Имя: {{driver.first_name}}
+      Фамилия: {{driver.last_name}}
+      Дата рождения: {{driver.date_of_birth}}
+      Номер паспорта: {{ driver.passport }}
+      Домашний адрес: {{ driver.home_address }}
+      Национальность: {{ driver.nationality }}
+    </pre>
+  {% endfor %}
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'index.html' %}
+{% block content %}
+
+  <h1>Update answer:</h1>
+  <form method="post">{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Submit">
+  </form>
+
+<a href="/answers/">Back to the answers</a>
+
+{% endblock %}
+
+</html>

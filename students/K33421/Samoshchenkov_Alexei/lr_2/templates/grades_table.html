@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'index.html' %}
+{% block content %}
+
+<table class="table table-hover" id="myTable" width="100%">
+  <thead>
+   <tr>
+    <th scope="col">Student</th>
+    <th scope="col">Course</th>
+    <th scope="col">Homework</th>
+    <th scope="col">Grade</th>
+   </tr>
+  </thead>
+
+  <tbody>
+
+  {% for object in object_list %}
+
+      <tr>
+          <td>{{ object.student.first_name }} {{ object.student.last_name }}</td>
+          <td>{{ object.homework.course }}</td>
+          <td ><a href="/tasks_list/{{object.homework.id}}">{{ object.homework }}</a></td>
+          <td>{{ object.grade }}</td>
+      </tr>
+
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
+</html>

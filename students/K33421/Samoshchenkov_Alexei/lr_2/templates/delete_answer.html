@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'index.html' %}
+{% block content %}
+  <h1>Delete answer:</h1>
+  <form method="post">{% csrf_token %}
+    <p>Are you sure that you want to delete the solution to the "{{ object.homework }}"?</p>
+    <input type="submit" value="Submit">
+  </form>
+  <br>
+  <br>
+  <a href="/answers/">Back to the answers</a>
+{% endblock %}
+</html>

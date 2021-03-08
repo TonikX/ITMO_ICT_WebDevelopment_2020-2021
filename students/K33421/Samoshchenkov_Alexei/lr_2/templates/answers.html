@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'index.html' %}
+{% block content %}
+    <title>Solutions</title>
+  <span><h1>Solutions:</h1></span>
+    {% if request.user.is_authenticated %}
+	{% for answer in object_list %}
+        {% if answer.student == user %}
+        <p class="h5">{{ answer.homework }}
+            <a class="btn btn-outline-primary btn-sm" href="/answers/{{ answer.id }}/update/" role="button">Change</a>
+            <a class="btn btn-outline-danger btn-sm" href="/answers/{{ answer.id }}/delete/" role="button">Delete</a></p>
+        <p><strong>Solution:</strong> {{ answer.answer}}</p>
+        {% endif %}
+	{% empty %}
+	<li>No solutions for now.</li>
+	{% endfor %}
+  </ul>
+    {% else %}
+    <div>You are not allowed here!</div>
+    {% endif %}
+{% endblock %}
+</html>
