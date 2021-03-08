@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Удалить задание</title>
+    <style>
+        body {
+            background-image: url(https://i.imgur.com/iXP9n4l.jpg);
+            background-color: whitesmoke;
+            opacity: 95%;
+            color: whitesmoke;
+            text-align: center;
+            zoom: 110%;
+        }
+        .button1 {
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+  <h1>Удалить выполнение задания:</h1>
+  <form method="post">{% csrf_token %}
+    <p>Вы уверены, что хотите удалить выполнение задания "{{ object.task }}"?</p>
+    <input type="submit" value="Подтвердить">
+  </form>
+  <br>
+  <a href="/completed_tasks/"><button class="button button1">К списку выполненных заданий</button></a>
+  <p></p>
+<img src="https://sun9-50.userapi.com/PJCbTX4GUJ2Da32jx6miNrIWSA5edx_svNa8Vg/qq3_-Ek6yaU.jpg">
+</body>
+</html>

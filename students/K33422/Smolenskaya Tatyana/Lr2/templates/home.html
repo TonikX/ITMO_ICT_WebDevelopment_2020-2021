@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <style>
+        body {
+            zoom: 100%;
+            background-color: aliceblue;
+            text-align: center;
+            font-size: 20px;
+        }
+        h4 {
+            color: crimson;
+            background-color: aqua;
+        }
+        .button1 {
+            background: aqua;
+            left: 15px;
+            top: 15px;
+            position: absolute;
+        }
+        .button2 {
+            background: coral;
+            right: 15px;
+            top: 15px;
+            position: absolute;
+        }
+        .button3 {
+            background: cornflowerblue;
+            right: 15px;
+            top: 15px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+    <a href="/profile/"><button class="button button3">Мой профиль</button></a>
+
+    {% else %}
+    <a href="/login/"><button class="button button1">Вход ученика</button></a>
+    <a href="/admin/"><button class="button button2">Вход для учителя</button></a>
+
+    {% endif %}
+<h1>Гимназия №1</h1>
+
+<h3>Добро пожаловать на сайт Гимназии №1 - сайт лучшей Гимназии на свете. Через наши двери прошли сотни детей, обученных жить в этом
+    мире. Каждый, кто когда-либо приходил в Гимназию №1 выходил из неё с улыбкой и желанием возвращаться. Из нашей школы выносят радость
+    и знания, а не побитые лица и сломанные коленки. Будьте уверены, вы влюбитесь в это место, побывав здесь хотя бы раз!
+</h3>
+
+<h5>Пожалуйста, при посещении Гимназии надевайте средства индвидуальной защиты: маски и перчатки. В противном случае администрация
+может отказать вам в посещении здании!</h5>
+
+<img src="https://avatars.mds.yandex.net/get-altay/1881714/2a00000169d60344bcab4c75da05876b1032/L">
+</body>
+</html>
