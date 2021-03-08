@@ -1,0 +1,12 @@
+site_name: Warriors Docs
+nav:
+ - Home: index.md
+ - Professions:
+     - "mining engineering": professions/mining_engineering.md
+     - "picking herbs": professions/picking_herbs.md
+ - Api:
+     - "api/warriors[GET]": api/warriors.md
+     - "api/skills[GET]": api/skills.md
+     - "api/warriors/<int:pk>/edit_skill[POST]": api/edit_skill.md
+theme:
+ name: material

@@ -1,0 +1,17 @@
+site_name: Bus depot
+nav:
+  - Home: index.md
+  - "User guide":
+      - "API":
+          - "drivers": user_guide/api/drivers.md
+          - "buses": user_guide/api/buses.md
+          - "routs": user_guide/api/routs.md
+          - "shifts": user_guide/api/shifts.md
+      - "Models":
+          - "Driver": user_guide/database/Driver.md
+          - "Bus": user_guide/database/Bus.md
+          - "Rout": user_guide/database/Rout.md
+          - "Shift": user_guide/database/Shift.md
+
+theme: material
+
