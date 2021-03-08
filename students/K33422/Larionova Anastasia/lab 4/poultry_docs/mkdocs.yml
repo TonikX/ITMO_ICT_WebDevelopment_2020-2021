@@ -1,0 +1,34 @@
+site_name: My Docs
+nav:
+ - Home: index.md
+ - Models: models.md
+ - Chicken:
+   - List of chickens: chicken/list.md
+   - List if chickens (nested): chicken/nestedlist.md
+   - Particular chicken's info: chicken/info.md
+   - Creating a chicken: chicken/create.md
+ - Breed:
+   - List of breeds: breed/list.md
+   - Particular breed's info: breed/info.md
+   - Creating a breed: breed/create.md
+ - Cell:
+   - List of cells: cell/list.md
+   - Particular cell's info: cell/info.md
+   - Creating a cell: cell/create.md
+ - User:
+   - List of users: user/list.md
+   - Particular user's info: user/info.md
+ - Service:
+   - List of services: service/list.md
+   - List of services (nested): service/nestedlist.md
+   - Particular service's info: service/info.md
+   - Creating a service: service/create.md
+ - Vue.js interfaces:
+   - List of chickens: vue/chickens.md
+   - List of breeds: vue/breeds.md
+   - List of cells: vue/cells.md
+   - Authorized user's info: vue/info.md
+   - Sign in: vue/signin.md
+   - Sign up: vue/signup.md
+theme:
+ name: windmill
