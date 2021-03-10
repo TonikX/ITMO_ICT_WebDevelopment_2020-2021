@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание</title>
+    <style>
+        body {
+            background-image: url(https://i.imgur.com/iXP9n4l.jpg);
+            background-color: whitesmoke;
+            opacity: 95%;
+            color: whitesmoke;
+        }
+        .button1 {
+            background: cornflowerblue;
+        }
+        .button2 {
+            background: coral;
+        }
+        .button3 {
+            right: 15px;
+            top: 15px;
+            position: absolute;
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Добавить выполнение задания:</h1>
+
+<form method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button class="btn btn-secondary">Отправить</button>
+
+</form>
+<p>
+</p>
+<a href="/tasks_list/"><button class="button button1">Вернуться к списку заданий</button></a>
+<a href="/completed_tasks/"><button class="button button2">К списку выполненных заданий</button></a>
+<a href="/profile/"><button class="button button3">В профиль</button></a>
+</body>
+</html>

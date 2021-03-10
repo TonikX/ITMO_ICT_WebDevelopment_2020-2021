@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Журнал</title>
+    <style>
+        body {
+            background-image: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700362901.jpg);
+            background-color: whitesmoke;
+        }
+        .button2 {
+            right: 15px;
+            top: 15px;
+            position: absolute;
+            background: aqua;
+        }
+        body {
+            zoom: 100%;
+            background-color: whitesmoke;
+            text-align: left;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<table class="table table-hover" id="myTable" width="70%">
+  <thead>
+   <tr>
+    <th scope="col">Ученик</th>
+    <th scope="col">Предмет</th>
+    <th scope="col">Задание</th>
+    <th scope="col">Оценка</th>
+   </tr>
+  </thead>
+
+  <tbody>
+
+  {% for object in object_list %}
+
+      <tr>
+          <td>{{ object.student.first_name }} {{ object.student.last_name }}</td>
+          <td>{{ object.task.subject }}</td>
+          <td ><a href="/tasks_list/{{object.task.id}}">{{ object.task }}</a></td>
+          <td>{{ object.grade }}</td>
+      </tr>
+
+  {% endfor %}
+
+  </tbody>
+</table>
+<a href="/profile/"><button class="button button2">В профиль</button></a>
+</body>
+</html>

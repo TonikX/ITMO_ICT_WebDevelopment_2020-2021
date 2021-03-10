@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список выполненных заданий</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            background-image: url(https://wallup.net/wp-content/uploads/2016/07/20/34467-blurred-gradient-colorful.jpg);
+            zoom: 110%;
+        }
+        .button1 {
+            background-color: aquamarine;
+        }
+        .button2 {
+            background-color: aquamarine;
+        }
+        .button3 {
+            background-color: cornflowerblue;
+        }
+        .button4 {
+            right: 15px;
+            top: 15px;
+            position: absolute;
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+
+ <span><h1>Список выполненных заданий:</h1></span>
+
+    {% if request.user.is_authenticated %}
+
+	{% for submission in object_list %}
+        {% if submission.student == user %}
+
+        <p class="h4"><em>{{ submission.task }}</em>
+            <a href="/completed_tasks/{{ submission.id }}/update/"><button class="button button1">Изменить</button></a>
+            |
+            <a href="/completed_tasks/{{ submission.id }}/delete/"><button class="button button2">Удалить</button></a></p>
+        <p><strong>Задание:</strong> {{ submission.submission }}</p>
+
+            <p><a href="/tasks_list/{{ submission.task.id }}"><button class="button button3">Перейти к заданию</button></a> </p>
+        {% endif %}
+
+	{% empty %}
+	<li>На данный момент заданий нет.</li>
+
+	{% endfor %}
+
+    {% else %}
+
+    <div>Доступ запрещен. Войдите в систему, чтобы просмотреть выполнения заданий.</div>
+
+    {% endif %}
+
+<a href="/profile/"><button class="button button4">В профиль</button></a>
+
+</body>
+</html>

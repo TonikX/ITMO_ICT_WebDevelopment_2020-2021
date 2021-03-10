@@ -1,0 +1,48 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <style type="text/css">
+        button {
+		    background: aquamarine;
+	    }
+        body {
+            zoom: 100%;
+            background-color: whitesmoke;
+            font-size: 15px;
+            background-image: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700451787.jpg);
+	    }
+        div {
+            top: 15px;
+            right: 15px;
+            position: absolute;
+        }
+        text {
+            top: 55px;
+            right: 15px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Вход</h2>
+    <form class="login" method="POST" action="/login/">
+
+        {% csrf_token %}
+
+        {{form.as_p}}
+
+        <li><input type="submit" class="logBut" value="Войти" /></li>
+    </form>
+    Если вы ещё не зарегистрированы, то можете <a href="/register">зарегистрироваться</a>!
+    <p>
+    <div><form action="/">
+        <button>На главную</button>
+    </form>
+    </div>
+    </p>
+</body>
+
+</html>

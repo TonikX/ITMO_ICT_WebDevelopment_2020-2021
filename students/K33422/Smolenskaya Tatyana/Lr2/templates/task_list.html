@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список заданий</title>
+    <style>
+        body {
+            zoom: 100%;
+            background-color: aliceblue;
+            background-image: url(https://wallpapercave.com/wp/wp6751675.jpg);
+        }
+
+        .button1 {
+            background-color: aquamarine;
+        }
+        img {
+            right: 20px;
+            top: 55px;
+            position: absolute;
+            zoom: 120%;
+        }
+        .button2 {
+            right: 15px;
+            top: 15px;
+            position: absolute;
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+
+<span><h1>Список заданий:</h1></span>
+<p></p>
+
+{% for task in object_list %}
+    <p><strong>Предмет:</strong> {{ task.subject }} </p>
+    <p><strong>Дата сдачи:</strong> {{ task.end_date }}</p>
+    <a href="/tasks_list/{{ task.id }}">
+        <button class="button button1">Перейти к заданию</button>
+    </a>
+    <p></p>
+
+{% empty %}
+    <li>На данный момент заданий нет.</li>
+{% endfor %}
+<a href="/profile/"><button class="button button2">В профиль</button></a>
+<img src="https://cdn.100sp.ru/pictures/123297241">
+
+</body>
+</html>
