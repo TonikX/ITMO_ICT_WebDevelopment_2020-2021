@@ -1,0 +1,51 @@
+site_name: Hotel
+nav:
+  - Info: index.md
+  - Server Part:
+    - Guest:
+       - "guest list": server/guest/list.md
+       - "guest create": server/guest/create.md
+       - "guest delete/update/retrieve": server/guest/edit.md
+
+    - Room:
+       - "room list": server/room/list.md
+       - "room create": server/room/create.md
+       - "room delete/update/retrieve": server/room/edit.md
+
+    - Staff:
+       - "staff list": server/staff/list.md
+       - "staff create": server/staff/create.md
+       - "staff delete/update/retrieve": server/staff/edit.md
+
+    - StaffCleaning:
+       - "staff cleaning list": server/staff_cleaning/list.md
+       - "staff cleaning create": server/staff_cleaning/create.md
+       - "staff cleaning delete/update/retrieve": server/staff_cleaning/edit.md
+
+    - CleaningParams:
+       - "cleaning params list": server/cleaning_params/list.md
+       - "cleaning params create": server/cleaning_params/create.md
+       - "cleaning params delete/update/retrieve": server/cleaning_params/edit.md
+
+  - Frontend part:
+      - Profile:
+          - 'register': front/profile/register.md
+          - 'login': front/profile/login.md
+          - 'profile': front/profile/profile.md
+
+      - Guest:
+          - "guest list": front/guest/list.md
+          - "guest create": front/guest/create.md
+          - "guest detail": front/guest/edit.md
+
+      - Room:
+          - "room list": front/room/list.md
+          - "room create": front/room/create.md
+          - "room detail": front/room/edit.md
+
+      - Staff:
+          - "staff list": front/staff/list.md
+          - "staff create": front/staff/create.md
+          - "staff detail": front/staff/edit.md
+theme:
+ name: material

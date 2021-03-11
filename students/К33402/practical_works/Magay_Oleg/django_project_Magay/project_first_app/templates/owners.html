@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owner</title>
+</head>
+<body>
+<div class="main">
+    <span><h1>Owners</h1><a href="/owner/create/">Add</a></span>
+    <ul>
+        {% for owner in dataset %}
+            </p>
+            <li><strong>Owner:</p></strong> {{ owner.surname }} {{ owner.name }} <a href="/owner/{{ owner.id }}/">Details</a>
+            </li><br>
+        {% empty %}
+            </p>
+            <li>No owners yet.</li>
+            </p>
+
+        {% endfor %}
+    </ul>
+</div>
+
+</body>

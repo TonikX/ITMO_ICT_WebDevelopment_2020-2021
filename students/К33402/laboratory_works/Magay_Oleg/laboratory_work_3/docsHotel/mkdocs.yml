@@ -1,0 +1,30 @@
+site_name: Hotel
+nav:
+  - Info: index.md
+  - Guest:
+     - "guest list": guest/list.md
+     - "guest create": guest/create.md
+     - "guest delete/update/retrieve": guest/edit.md
+
+  - Room:
+     - "room list": room/list.md
+     - "room create": room/create.md
+     - "room delete/update/retrieve": room/edit.md
+
+  - Staff:
+     - "staff list": staff/list.md
+     - "staff create": staff/create.md
+     - "staff delete/update/retrieve": staff/edit.md
+
+  - StaffCleaning:
+     - "staff cleaning list": staff_cleaning/list.md
+     - "staff cleaning create": staff_cleaning/create.md
+     - "staff cleaning delete/update/retrieve": staff_cleaning/edit.md
+
+  - CleaningParams:
+     - "cleaning params list": cleaning_params/list.md
+     - "cleaning params create": cleaning_params/create.md
+     - "cleaning params delete/update/retrieve": cleaning_params/edit.md
+
+theme:
+ name: material
