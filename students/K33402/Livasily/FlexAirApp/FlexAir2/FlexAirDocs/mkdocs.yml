@@ -1,0 +1,41 @@
+site_name: My Docs
+nav:
+ - Home: index.md
+ - Models: models.md
+ - Airline :
+    - List of airlines: Airline/list.md
+    - Creating a airline: Airline/create.md
+ - User :
+    - List of User: User/list.md
+    - Creating a User: User/create.md
+    - Creating a User: User/info.md
+ - City :
+    - List of City: City/list.md
+    - Creating a City: City/create.md
+ - Airport :
+    - List of Airport: Airport/list.md
+    - Creating a Airport: Airport/create.md
+ - Arrival :
+    - List of Arrival: Arrival/list.md
+    - Creating a Arrival: Arrival/create.md
+ - Departure :
+    - List of Departure: Departure/list.md
+    - Creating a Departure: Departure/create.md
+ - Route :
+    - List of Route: Route/list.md
+    - Creating a Route: Route/create.md
+ - Flight :
+    - List of Flight: Flight/list.md
+    - Creating a Flight: Flight/create.md
+ - Plane :
+    - List of Plane: Plane/list.md
+    - Creating a Plane: Plane/create.md
+ - Board :
+    - List of Board: Board/list.md
+    - Creating a Board: Board/create.md
+ - FlightAttendant :
+    - List of FlightAttendant: FlightAttendant/list.md
+    - Creating a FlightAttendant: FlightAttendant/create.md
+ - Pilot :
+    - List of Pilot: Pilot/list.md
+    - Creating a Pilot: Pilot/create.md
