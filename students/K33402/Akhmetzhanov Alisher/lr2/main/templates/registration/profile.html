@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container mt-3">
+        <div class="card see">
+            <div class="row mt-3">
+                <div class="col-md-12 centerd">
+                    <div>
+                        <h3>Профиль пользователя</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-6">
+                    <div class="centerd">
+                        <h4>История проживания</h4>
+                    </div>
+                    <ul style="list-style: none;">
+                        {% for item in history %}
+                        <li
+                            style="height: 45px; line-height: 45px; background-color: #E0E0E0; margin-top: 7px; padding-left: 25px">
+                            <a href="/room/{{ item.room.pk }}" style="text-decoration: none">
+                                <div style="display: flex; justify-content: space-around;">
+                                    <div class="subtitle">{{ item.room.number }}</div>
+                                    <div class="subtitle">{{ item.begin_date }}</div>
+                                    <div class="subtitle">{{ item.end_date }}</div>
+                                </div>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="centerd">
+                        <h4>Бронирование</h4>
+                    </div>
+                    <ul style="list-style: none;">
+                        {% for reservation in reservations %}
+                        <li
+                            style="height: 45px; line-height: 45px; background-color: #E0E0E0; margin-top: 7px; padding-left: 25px">
+                            <a href="/room/{{ reservation.room.pk }}" style="text-decoration: none">
+                                <div style="display: flex; justify-content: space-around;">
+                                    <div class="subtitle">{{ reservation.user }}</div>
+                                    <div class="subtitle">{{ reservation.begin_date }}</div>
+                                    <div class="subtitle">{{ reservation.end_date }}</div>
+                                    <form action="/room/{{ reservation.pk }}/edit" method="get">
+                                        <button type="submit" class="btn">Редактровать</button>
+                                    </form>
+                                </div>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

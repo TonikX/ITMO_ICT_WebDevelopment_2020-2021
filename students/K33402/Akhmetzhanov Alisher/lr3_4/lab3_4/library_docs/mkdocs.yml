@@ -1,0 +1,21 @@
+site_name: Библиотека
+
+nav:
+  - Главная страница: index.md
+  - Авторизация:
+     - "auth/users/[GET][POST]": auth/users.md
+     - "auth/users/me[GET]": auth/usersMe.md
+     - "auth/token/login[POST]": auth/tokenLogin.md
+     - "auth/token/logout[POST]": auth/tokenLogout.md
+  - Эндпойнты:
+     - 'api/library_halls/[GET][POST]': api/library_halls.md
+     - 'api/library_hall/<int:pk>[GET][POST]': api/library_hall.md
+     - 'api/library_hall/<int:pk>/readers/[GET][POST]': api/library_hall_readers.md
+     - 'api/library_hall/<int:pk>/copies/[GET][POST]': api/library_hall_copies.md
+     - 'api/books/[GET][POST]': api/books.md
+     - 'api/book/<int:pk>/[GET]': api/book.md
+     - 'api/readers/[GET][POST]': api/readers.md
+     - 'api/librarians[GET][POST]': api/librarians.md
+
+theme:
+ name: material

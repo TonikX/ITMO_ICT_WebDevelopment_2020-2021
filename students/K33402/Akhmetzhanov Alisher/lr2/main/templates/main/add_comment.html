@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-md-12 centerd">
+                <h2>Добавить комментарий</h2>
+            </div>
+        </div>
+        <div class="row mt-4 justify-content-md-center">
+            <div class="col-md-6">
+                <form action="./" method="POST">
+                    {% csrf_token %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Текст комментария</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="text" id="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Выберите проживание</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <select class="form-select" name="accommodation" aria-label="Default select example">
+                                    {% for accommodation in accommodations %}
+                                    <option value="{{ accommodation.id }}">{{ accommodation }}</option>
+                                    {% endfor %}
+                                    <!-- <option selected>Open this select menu</option>
+                                    <option value=>One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option> -->
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-10">
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-success">Добавить комментарий</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
