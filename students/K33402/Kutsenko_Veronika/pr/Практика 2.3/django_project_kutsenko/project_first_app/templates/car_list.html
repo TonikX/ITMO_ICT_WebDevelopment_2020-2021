@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% block content %}
+    <h2>Cars</h2>
+    <ul>
+        {% for car in all_cars %}
+            <li>{{ car.brand }} {{ car.model }} | official number: {{ car.official_number }}</li>
+        {% endfor %}
+    </ul>
+  {% endblock %}
+</body>
+</html>
