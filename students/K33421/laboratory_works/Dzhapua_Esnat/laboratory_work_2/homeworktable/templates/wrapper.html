@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Журнал</title>
+    {% load static %}
+</head>
+<body>
+    <a href="/login/">Пользователь: {{ user }}</a>
+    <br>
+    <a href="/logout/">Выйти</a>
+    <ul>
+      <li><a href="/tasks_list/">Мои задания</a></li>
+      <li><a href="/completed_tasks/">Сдача работ</a></li>
+      <li><a href="/grades/">Оценки</a></li>
+    </ul>
+
+
+
+  </div>
+</nav>
+<div class="container">
+        {% block content %}
+        {% endblock %}
+</div>
+
+</body>
+</html>
