@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carowner</title>
+</head>
+<body>
+
+<ul>
+    <li><strong>ID:</strong> {{ carowner.id }}</li>
+    <li><strong>Имя:</strong> {{ carowner.firstname }}</li>
+    <li><strong>Фамилия:</strong> {{ carowner.lastname }}</li>
+    <li><strong>Дата рождения:</strong> {{ carowner.birthday }}</li>
+</ul>
+
+<form action="/carowner_list/">
+    <input type="submit" value="Назад">
+</form>
+</body>
+</html>

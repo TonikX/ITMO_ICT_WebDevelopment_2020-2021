@@ -1,0 +1,10 @@
+site_name: Warriors project
+nav:
+  - Home: index.md
+  - Endpoints:
+      - "endpoint 1": endpoints/endpoint1.md
+      - "endpoint 2": endpoints/endpoint2.md
+      - "endpoint 3": endpoints/endpoint3.md
+
+theme:
+  name: material

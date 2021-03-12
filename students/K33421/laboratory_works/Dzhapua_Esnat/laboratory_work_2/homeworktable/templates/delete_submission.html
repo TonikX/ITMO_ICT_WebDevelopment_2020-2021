@@ -1,0 +1,14 @@
+{% extends 'wrapper.html' %}
+
+{% block content %}
+
+  <h1>Удалить выполнение задания:</h1>
+  <form method="post">{% csrf_token %}
+    <p>Вы уверены, что хотите удалить выполнение задания "{{ object.task_subm }}"? :(</p>
+    <input type="submit" value="Подтвердить">
+  </form>
+  <br>
+  <br>
+  <a href="/completed_tasks/">Вернуться к списку выполненных заданий</a>
+
+{% endblock %}

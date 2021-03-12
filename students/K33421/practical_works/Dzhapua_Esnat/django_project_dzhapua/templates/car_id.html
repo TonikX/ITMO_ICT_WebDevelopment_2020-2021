@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car</title>
+</head>
+<body>
+
+<ul>
+    <li><strong>ID:</strong> {{ car.id }}</li>
+    <li><strong>Марка:</strong> {{ car.mark }}</li>
+    <li><strong>Модель</strong> {{ car.carmodel }}</li>
+    <li><strong>Цвет:</strong> {{ car.color }}</li>
+    <li><strong>Номер:</strong> {{ car.number }}</li>
+</ul>
+
+<form action="http://127.0.0.1:8000/car_list/">
+    <input type="submit" value="Назад">
+</form>
+</body>
+</html>

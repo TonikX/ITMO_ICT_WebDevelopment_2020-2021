@@ -1,0 +1,24 @@
+{% extends 'wrapper.html' %}
+
+{% block content %}
+
+    <title>Список заданий...</title>
+
+      <span><h1>Список заданий:</h1></span>
+    <p></p>
+
+	{% for task in object_list %}
+        <h3>{{ task }} </h3>
+        <p><strong>Предмет:</strong> {{ task.subject }} </p>
+      	<p><strong>Дата выдачи:</strong> {{ task.receive_date  }}</p>
+	    <p><strong>Дата сдачи:</strong> {{ task.due_date }}</p>
+        <p><strong>Описание:</strong> {{ task.description }}</p>
+        <a href="/tasks_list/{{ task.id }}" role="button">Перейти к заданию</a>
+
+
+	{% empty %}
+	<li>На данный момент заданий нет.</li>
+	{% endfor %}
+  </ul>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'wrapper.html' %}
+
+{% block content %}
+
+<h1>Добавить выполнение задания:</h1>
+<form method="POST" enctype="multipart/form-data">
+
+    <!-- Security token -->
+    {% csrf_token %}
+
+    <!-- Using the formset -->
+    {{ form.as_p }}
+
+    <input type="submit" value="Загрузить">
+</form>
+<a href="/completed_tasks/">Вернуться к списку выполненных заданий</a>
+
+{% endblock %}

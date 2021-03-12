@@ -1,0 +1,37 @@
+{% extends 'wrapper.html' %}
+
+{% block content %}
+
+    <title>Список выполненных заданий...</title>
+
+  <span><h1>Список выполненных заданий:</h1></span>
+
+    {% if request.user.is_authenticated %}
+
+	{% for submission in object_list %}
+        {% if submission.student_subm == user %}
+
+        <p class="h5"><mark><em>{{ submission.task_subm }}</em></mark>
+            <a class="btn btn-outline-primary btn-sm" href="/completed_tasks/{{ submission.id }}/update/" role="button">Изменить</a>
+            <a class="btn btn-outline-danger btn-sm" href="/completed_tasks/{{ submission.id }}/delete/" role="button">Удалить</a></p>
+        <p><strong>Выполнение:</strong> {{ submission.submission}}</p>
+
+            <p align="right"><a class="btn btn-primary btn-sm" href="/tasks_list/{{ submission.task_subm.id }}" role="button">Перейти к заданию :)</a></p>
+
+
+        {% endif %}
+
+	{% empty %}
+	<li>На данный момент заданий нет.</li>
+
+	{% endfor %}
+  </ul>
+
+    {% else %}
+
+    <div>Доступ запрещен. Войдите в систему, чтобы просмотреть выполнения заданий.</div>
+
+    {% endif %}
+
+
+{% endblock %}

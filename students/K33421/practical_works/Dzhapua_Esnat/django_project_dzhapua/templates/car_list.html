@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car list</title>
+</head>
+<body>
+
+<span>
+    <h1>Автомобили</h1>
+    <strong><a href="/car_add/">Добавить</a></strong>
+</span>
+
+<ul>
+    {% for Car in object_list %}
+        <li>
+            <strong>Марка:</strong> {{ Car.mark }} <br>
+            <strong>Модель:</strong> {{ Car.carmodel }} <br>
+            <strong>
+                <a href="/car_id/{{ Car.id }}">Информация</a>
+                | <a href="/car_edit/{{ Car.id }}">Изменить</a>
+                | <a href="/car_del/{{ Car.id }}">Удалить</a>
+            </strong>
+        </li>
+        <br>
+    {% endfor %}
+</ul>
+
+
+</body>
+</html>
