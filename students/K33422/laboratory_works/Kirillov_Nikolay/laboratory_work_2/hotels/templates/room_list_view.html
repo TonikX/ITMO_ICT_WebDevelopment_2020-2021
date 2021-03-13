@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room list</title>
+    <h1>Room list</h1>
+</head>
+
+<body>
+<ul>
+    {% for Room in object_list %}
+        <li>
+            <a><strong>{{ Room.hotel }}</strong></a>
+            <p>
+                Number: {{ Room.number }}
+                {% if Room.is_reserved %}
+                    <font color="red">Reserved</font>
+                {% else %}
+                    <font color="green">Free</font>
+                {% endif %}
+                <a href="http://127.0.0.1:8000/room/{{ Room.id }}">Details</a>
+            </p>
+        </li>
+    {% empty %}
+        <li>No rooms reserved</li>
+    {% endfor %}
+</ul>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last month guests</title>
+    <h1>Last month guests</h1>
+</head>
+
+<body>
+{% regroup guests by room.hotel as hotel_list %}
+<ul>
+    {% for hotel in hotel_list %}
+        <b>--{{ hotel.grouper }}--</b><br>
+        {% for item in hotel.list %}
+            <li>Name: {{ item.owner }}<br>
+                Room: {{ item.room.number }}<br>
+                ______________Stayed______________<br>
+                From: {{ item.start_date }}<br>
+                To: {{ item.end_date }}<br>
+                __________________________________<br>
+            </li>
+        {% endfor %}
+
+    {% endfor %}
+</ul>
+</body>
+
+</html>
