@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+     {% if car %}
+            {% for el in car %}
+                <div class="alert alert-warning mt-2">
+                    <h3>{{ el.id_number }}</h3>
+                    <p>{{ el.model }}</p>
+                    <p>{{ el.label }}</p>
+                    <p>{{ el.color }}</p>
+                    <a class="p-2 text-dark"   href="/car/{{ el.id_number }}/delete">Удалить</a>
+                    <a class="p-2 text-dark" href="/car/1/update/">Редактировать</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Пусто как в твоем сердечке</p>
+        {% endif %}
+     <a class="p-2 text-dark" href="{% url 'create_car' %}">Добавить машину</a>
+</div>
+</body>
+</html>
