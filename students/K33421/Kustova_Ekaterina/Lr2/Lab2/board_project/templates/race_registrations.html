@@ -1,0 +1,34 @@
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User's registrations</title>
+</head>
+<body>
+<ul>
+    <h1>My registrations</h1>
+
+    {% for registrations in registrations_list %}
+
+    Race: {{ registration.race }} <br/>
+
+
+    <a href="race_registrations/delete/{{ race_registration.id }}/"><button class="btn btn-secondary">Delete</button></a>
+
+    <hr/>
+
+    {% empty %}
+
+    {% endfor %}
+
+</ul>
+
+
+    <a href="/profile">Back to profile</a>
+
+
+</body>
+</html>
+
+  {% endblock %}

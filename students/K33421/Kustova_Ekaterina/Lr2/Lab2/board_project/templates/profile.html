@@ -1,0 +1,27 @@
+
+{% block content %}
+
+<head>
+    <title>Profile</title>
+</head>
+
+<body>
+<h1>My profile</h1>
+
+    <br>
+
+    Username: {{ participant.username }} <br>
+    First name: {{ participant.first_name }} <br>
+    Last name: {{ participant.last_name }} <br>
+    Experience: {{ participant.experience }} <br>
+    Car: {{ participant.car  }} <br>
+
+
+    <a href="/race_registrations/">My registrations </a> <br>
+    <a href="/add_race_registration/">Add race registration </a> <br>
+    <a href="/races/">All races </a> <br>
+
+
+</body>
+
+{% endblock %}

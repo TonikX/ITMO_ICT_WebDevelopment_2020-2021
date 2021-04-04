@@ -1,0 +1,21 @@
+{% block content %}
+
+<head>
+    <title>Races</title>
+</head>
+
+<body>
+    <h1>All races</h1>
+    <br>
+{% for Race in races %}
+    Race: {{ Race.race_name }} <br>
+    Date: {{ Race.race_date }} <br>
+
+    {% endfor %}
+
+    <a href="/results/">Results </a> <br>
+    <a href="/forum/">Forum </a> <br>
+    <a href="/main/">Main </a> <br>
+</body>
+
+{% endblock %}

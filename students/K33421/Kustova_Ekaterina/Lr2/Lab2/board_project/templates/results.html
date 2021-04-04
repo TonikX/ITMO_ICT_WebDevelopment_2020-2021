@@ -1,0 +1,33 @@
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+<ul>
+    <h1>Results</h1>
+
+    {% for result in results %}
+
+    Race: {{ result.race }} <br/>
+    Winner: {{ result.winner }} <br/>
+
+
+    <hr/>
+
+
+
+    {% endfor %}
+
+</ul>
+
+
+    <a href="/races">All races</a>
+
+
+</body>
+</html>
+
+  {% endblock %}
