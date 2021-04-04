@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отзывы</title>
+    <style>
+    body {
+            background-image: url(http://www.fonstola.ru/pic/201202/1600x900/fonstola.ru-74779.jpg);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <h1>Reviews</h1>
+
+    {% for review in reviews %}
+
+    Гость: {{ review.user }} <br/>
+    Отель: {{ review.room.hotel }} <br/>
+    Номер: {{ review.room.room_num }} <br/>
+    Дата заезда: {{review.begin_date}} <br/>
+    Дата выезда:: {{ review.end_date}} <br/>
+    Оценка: {{ review.rating}} <br/>
+    Добавлен: {{ review.created}} <br/>
+    Текст: {{ review.text }} <br/>
+
+    <hr/>
+
+    {% empty %}
+    <li>no reviews yet</li>
+    {% endfor %}
+
+</ul>
+</body>
+</html>

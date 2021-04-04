@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Доступные отели</title>
+    <style>
+    body {
+            background-image: url(http://www.fonstola.ru/pic/201202/1600x900/fonstola.ru-74779.jpg);
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+     {% for hotel in hotels %}
+      ID: {{hotel.id}} <br>
+     <strong>Название отеля: </strong>{{hotel.name}} <br>
+     <strong>Адрес: </strong>{{hotel.address}} <br>
+         <a href="/hotels/{{ hotel.id }}/">Просмотреть номера в этом отеле</a><br>
+     {% endfor %}
+</div>
+</body>
+<a href="/">На главную</a><br>
+</html>
+

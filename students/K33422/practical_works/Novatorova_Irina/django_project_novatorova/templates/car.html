@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car</title>
+</head>
+<body>
+<h1>Car</h1>
+<p>Car ID: {{ car.id }}</p>
+<p> Brand: {{ car.brand }}</p>
+<p> Model: {{ car.model }}</p>
+<p> Color: {{ car.color }}</p>
+<p> Number: {{ car.number }}</p>
+<p>Actions: <a href="/car/{{car.id}}/update/">Update</a> or <a href="/car/{{car.id}}/delete/">Delete</a>
+</body>
+</html>

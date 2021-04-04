@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <style>
+    body {
+            background-image: url(http://www.fonstola.ru/pic/201304/1600x900/fonstola.ru-93180.jpg);
+        }
+    </style>
+    <div class="navbar" style="margin: 10px; height: 70px; background-color: #ffffff; display: flex; justify-content: space-between;">
+        <div style="padding-top: 5px; padding-left: 10px;">
+                <h2 style="margin: 0; color: darkslategray;">Добро пожаловать в наш сервис подбора отелей! </h2>
+        </div>
+</head>
+<body>
+<br>
+Здравствуйте, {{ request.user }}! <br>
+<a href="/registration/">Регистрация</a><br>
+<a href="/accounts/login/">Войти</a><br>
+<a href="/accounts/logout/">Выйти</a><br>
+<a href="/hotel/list">Список доступных отелей</a><br>
+<a href="/guests/list">Наши гости</a><br>
+<a href="/admin">Панель администратора</a><br>
+</body>
+

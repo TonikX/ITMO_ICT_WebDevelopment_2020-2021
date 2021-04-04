@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Оставить отзыв</title>
+    <style>
+    body {
+            background-image: url(http://www.fonstola.ru/pic/201202/1600x900/fonstola.ru-74779.jpg);
+        }
+    </style>
+</head>
+<body>
+
+    {% if user.is_active %}
+        <h4>Добавить отзыв:</h4>
+
+<form method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Отправить</button>
+     {% else %}
+        <h4>Для того, чтобы оставить отзыв, необходимо авторизоваться</h4>
+        <a href="/accounts/signup/">Регистрация</a><br>
+        <a href="/accounts/login/">Войти</a><br>
+    {% endif %}
+
+</form>
+
+<a href="/">На главную</a><br>
+</body>
+</html>

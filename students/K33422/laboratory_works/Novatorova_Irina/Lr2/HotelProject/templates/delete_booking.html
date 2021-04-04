@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Удалить бронь</title>
+</head>
+<body>
+
+      {% if booking.is_reserved is False %}
+
+  <form method="post">{% csrf_token %}
+      <p><strong>Желаете отменить бронь номера {{ booking.room.room_num }}, {{ booking.room.hotel.name }}?</strong></p>
+        <button class="btn btn-secondary">Да</button>
+          <a href="/">Нет</a>
+
+
+      {% else %}
+      Нельзя удалить подтвержденную бронь.
+      {% endif %}
+
+
+  </form>
+</body>
+</html>

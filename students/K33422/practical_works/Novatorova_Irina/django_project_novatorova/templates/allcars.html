@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All cars</title>
+</head>
+<body>
+<h1>List of cars</h1>
+<div class="main">
+    {% for car in object_list %}
+Model: {{ car.model }}, Brand: {{ car.brand }}, Color: {{ car.color }}, Number: {{ car.number }} <br>
+    {% endfor %}
+<p>Actions: <a href="/car/{{car.id}}/update/">Update</a> or <a href="/car/{{car.id}}/delete/">Delete</a>
+</body>
+</html>
+
