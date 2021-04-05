@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+    body {
+        zoom:150%;
+        background-color:BurlyWood
+    }
+    h1 {
+        text-align:center
+    }
+    
+    </style>
+    <title>Последний месяц</title>
+    <h1>Постояльцы отелей за последний месяц</h1>
+</head>
+
+<body>
+{% regroup guests by room.hotel as hotel_list %}
+<ul>
+    {% for hotel in hotel_list %}
+        <b>*{{ hotel.grouper }}*</b><br>
+        {% for item in hotel.list %}
+            <li>Имя: {{ item.owner }}<br>
+                Номер: {{ item.room.number }}<br>
+                _____________Проживал_____________<br>
+                С: {{ item.start_date }}<br>
+                По: {{ item.end_date }}<br>
+                __________________________________<br>
+            </li>
+        {% endfor %}
+
+    {% endfor %}
+</ul>
+</body>
+
+</html>
