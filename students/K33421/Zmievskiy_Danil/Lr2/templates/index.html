@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <style type="text/css">
+	body {
+		zoom:150%;
+		background-color:BurlyWood
+	}
+	h1 {
+		text-align:center
+	}
+	
+	</style>
+    <h1>Главная страница</h1>
+    Username: {{ request.user }}
+    <br>
+    <a href="http://127.0.0.1:8000/admin">Панель администратора</a><br>
+    {% if not user.is_authenticated %}
+	<a href="/accounts/signup/">Зарегестрироваться</a><br>
+	<a href="/accounts/login/">Войти</a><br>
+	{% endif %}
+	{% if user.is_authenticated %}
+	<a href="/accounts/logout/">Выйти</a><br>
+	{% endif %}
+</head>
+<body>
+<br>
+<center>
+	<a href="/room/list">Список номеров</a><br>
+	<a href="/hotel/list">Последний месяц</a><br>
+</center>
+</body>
+</html>

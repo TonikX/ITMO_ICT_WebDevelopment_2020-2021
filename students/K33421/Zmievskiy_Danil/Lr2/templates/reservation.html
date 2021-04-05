@@ -1,0 +1,20 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резервирование</title>
+</head>
+{% if room.is_reserved == False %}
+    {% if user.is_active %}
+        <form method="post" id="reservation">
+            {% csrf_token %}
+            {{ res_form.as_p }}
+            <br>
+            <button type="submit" form="reservation">Зарезервировать</button>
+        </form>
+    {% else %}
+        <h4>Нужно войти или зарегестрироваться, чтоб зарезервировать</h4>
+    {% endif %}
+{% else %}
+    <h4>Номер уже зарезервирован</h4>
+{% endif %}
+<a href="/room/{{ room.id }}">Назад</a>

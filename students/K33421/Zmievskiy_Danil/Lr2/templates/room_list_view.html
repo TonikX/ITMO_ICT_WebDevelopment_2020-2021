@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+    body {
+        zoom:150%;
+        background-color:BurlyWood
+    }
+    h1 {
+        text-align:center
+    }
+    
+    </style>
+    <title>Номера</title>
+    <h1>Список номеров</h1>
+</head>
+
+<body>
+<ul>
+    {% for Room in object_list %}
+        <li>
+            <a><strong>{{ Room.hotel }}</strong></a>
+            <p>
+                Номер: {{ Room.number }}
+                {% if Room.is_reserved %}
+                    <font color="red">Занят</font>
+                {% else %}
+                    <font color="green">Свободен</font>
+                {% endif %}
+                <a href="http://127.0.0.1:8000/room/{{ Room.id }}">Подробнее</a>
+            </p>
+        </li>
+    {% empty %}
+        <li>No rooms reserved</li>
+    {% endfor %}
+</ul>
+</body>
+
+</html>
