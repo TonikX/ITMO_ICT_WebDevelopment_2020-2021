@@ -1,0 +1,15 @@
+site_name: Hospital organization system
+nav:
+ - Home: index.md
+ - Interfaces:
+     - "Информация о кабинетах клиники": interfaces/cabinet.md
+     - "Информация о диагнозах": interfaces/diagnosis.md
+     - "Информация о главной странице сервиса": interfaces/home.md
+     - "Информация о входе в систему": interfaces/login.md
+     - "Информация о выходе из аккаунта": interfaces/logout.md
+     - "Информация о зарегистрированных пациентах": interfaces/patient.md
+     - "Информация о личном кабинете": interfaces/personalpage.md
+     - "Информация о предоставляемых услугах": interfaces/price.md
+     - "Информация о регистрации": interfaces/registration.md
+theme:
+  name: material

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="db" uuid="9c61845a-375e-4414-9ab8-d9b9d7a74d35">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Polina\PycharmProjects\ITMO_ICT_WebDevelopment_2020-2021-master (2)\ITMO_ICT_WebDevelopment_2020-2021-master\students\K33422\Smolenskaya Tatyana\Lr3\db.sqlite3</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="DataBase" uuid="3e338c55-e2b1-47b4-af07-608cf198fe20">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Polina\PycharmProjects\ITMO_ICT_WebDevelopment_2020-2021-master (2)\ITMO_ICT_WebDevelopment_2020-2021-master\students\K33422\Smolenskaya Tatyana\Lr3\DataBase</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+    </data-source>
+  </component>
+</project>
