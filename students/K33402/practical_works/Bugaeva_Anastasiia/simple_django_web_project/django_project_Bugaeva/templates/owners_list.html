@@ -1,0 +1,15 @@
+<div class="main">
+
+    <h2>Owners:</h2>
+
+    {% for owner in dataset %}
+    <hr>
+    <strong>Owner:</strong> {{ owner.surname }} {{ owner.name }}
+    <p><strong>Birthday:</strong> {{ owner.birthday }}</p>
+
+    {% empty %}
+    No owners yet.
+
+    {% endfor %}
+
+</div>
