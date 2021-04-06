@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+from datetime import date
 
 
 class Car(models.Model):
@@ -11,11 +13,15 @@ class Car(models.Model):
         return "{} {}".format(self.brand, self.model)
 
 
-class CarOwner(models.Model):
+class CarOwner(AbstractUser):
     surname = models.CharField(max_length=30)
     name = models.CharField(max_length=30)
-    birthday = models.DateField()
+    birthday = models.DateField(default=date(2003, 6, 6))
     cars = models.ManyToManyField(Car, through='Ownership')
+
+    passport_number = models.CharField(max_length=10)
+    home_address = models.CharField(max_length=100)
+    nationality = models.CharField(max_length=30)
 
     def __str__(self):
         return "{} {}".format(self.name, self.surname)
@@ -43,4 +49,3 @@ class DriverLicense(models.Model):
     id_number = models.IntegerField()
     type = models.CharField(max_length=2, choices=CATEGORIES)
     date = models.DateField()
-

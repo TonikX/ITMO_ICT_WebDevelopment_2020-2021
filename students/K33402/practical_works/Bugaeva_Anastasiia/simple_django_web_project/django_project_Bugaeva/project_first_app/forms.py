@@ -10,4 +10,7 @@ class CarOwnerForm(forms.ModelForm):
             "surname",
             "name",
             "birthday",
+            "passport_number",
+            "home_address",
+            "nationality"
         ]

@@ -70,6 +70,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_project_Bugaeva.wsgi.application'
 
+AUTH_USER_MODEL = 'project_first_app.CarOwner'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
