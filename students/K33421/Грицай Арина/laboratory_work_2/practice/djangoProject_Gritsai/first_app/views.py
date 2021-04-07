@@ -20,7 +20,7 @@ def owner(request, owner_id):
 
 def all_owners(request):
     visual = {"owners": Owner.objects.all()}
-    return render(request, 'owners_list.html', visual)
+    return render(request, 'all_owners.html', visual)
 
 
 class vehicleView(DetailView):
