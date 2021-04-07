@@ -1,0 +1,11 @@
+site_name: Описание сервиса "Войны"
+nav:
+ - Home: index.md
+ - Skills:
+     - "Список скилов": Skills/list_skills.md
+ - Warriors:
+     - "Список воинов и профессий": Warriors/list.md
+     - "Информация о войне": Warriors/info.md
+
+theme:
+ name: material
