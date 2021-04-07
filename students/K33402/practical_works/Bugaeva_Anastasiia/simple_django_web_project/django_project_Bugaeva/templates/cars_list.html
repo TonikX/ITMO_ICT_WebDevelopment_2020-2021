@@ -1,0 +1,15 @@
+<div class="main">
+
+    <h2>Cars:</h2>
+
+    {% for car in object_list %}
+    <hr>
+    <strong>Car:</strong> {{ car.brand }} {{ car.model }}
+    <p><strong>Color:</strong> {{ car.color }}</p>
+
+    {% empty %}
+    No cars yet.
+
+    {% endfor %}
+
+</div>
