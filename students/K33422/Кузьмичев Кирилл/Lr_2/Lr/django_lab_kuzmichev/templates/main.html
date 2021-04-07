@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Турфирма</title>
+</head>
+<body>
+
+    {% if user.is_authenticated %}
+        <p><h1>Вы вошли как <a href="/profile/"> {{ user.username }} </a></h1></p>
+    {% else %}
+        <p>Вход не выполнен</p>
+    {% endif %}
+
+<a href="/accounts/login/" style ="
+background: transparent;
+box-shadow: 10px 12px 5px -5px rgba(0,0,0,.2);
+outline-color: Black;
+outline-style: solid;
+padding: 10px 20px;
+margin: 10px 5px 10px 5px;
+color: Black;"
+>Войти</a>
+
+<a href="/register/" style ="
+background: transparent;
+box-shadow: 10px 12px 5px -5px rgba(0,0,0,.2);
+outline-color: Black;
+outline-style: solid;
+padding: 10px 20px;
+margin: 10px 5px 10px 5px;
+color: Black;"
+>Зарегистрироваться</a><br><br><br>
+
+<a href="/tours/" style ="
+background: transparent;
+box-shadow: 10px 12px 5px -5px rgba(0,0,0,.2);
+outline-color: Black;
+outline-style: solid;
+padding: 10px 20px;
+margin: 10px 5px 10px 5px;
+color: Black;"
+>Туры</a>
+
+<a href="/soldtours/" style ="
+background: transparent;
+box-shadow: 10px 12px 5px -5px rgba(0,0,0,.2);
+outline-color: Black;
+outline-style: solid;
+padding: 10px 20px;
+margin: 10px 5px 10px 5px;
+color: Black;"
+>Проданые туры</a><br><br><br>
+
+<a href="/reviews/" style ="
+background: transparent;
+box-shadow: 10px 12px 5px -5px rgba(0,0,0,.2);
+outline-color: Black;
+outline-style: solid;
+padding: 10px 20px;
+margin: 10px 5px 10px 5px;
+color: Black;"
+>Все отзывы</a>
+
+<a href="/review/" style ="
+background: transparent;
+box-shadow: 10px 12px 5px -5px rgba(0,0,0,.2);
+outline-color: Black;
+outline-style: solid;
+padding: 10px 20px;
+margin: 10px 5px 10px 5px;
+color: Black;"
+>Оставить отзыв</a>
+
+
+</body>
+</html>

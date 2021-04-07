@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отзывы</title>
+    <style type="text/css">
+    .main {
+        width: 500px;
+        background: transparent;
+        outline-color: Black;
+        outline-style: solid;
+        color: Black;
+    </style>
+</head>
+<body>
+
+<div class="main">
+     {% for review in reviews %}
+     <strong>Имя: </strong>{{review.username}} <br>
+     <strong>Дата начала: </strong>{{review.start_date}} <br>
+     <strong>Дата окончания: </strong>{{review.end_date}} <br>
+     <strong>Рейтинг: </strong>{{review.rate}} <br>
+     <strong>Комментарий: </strong>{{review.comment}} <br><br>
+     {% endfor %}
+</div>
+
+</body>
+</html>

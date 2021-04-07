@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Забронированные туры</title>
+</head>
+<body>
+
+<h1>Бронирования {{user.username}}</h1>
+
+     {% for reserve in reserves_list %}
+
+     <strong>Тур: </strong>{{ reserve.name.name }} <br>
+     <strong>Дата начала: </strong>{{ reserve.name.start_date }} <br>
+     <strong>Дата окончания: </strong>{{ reserve.name.end_date }} <br>
+     <strong>Статус бронирования: </strong>{{ reserve.status|yesno:"Успешное бронирование,Ждет проверки администратора"  }}<br/>
+
+
+     <a href="myreserves/deletereserve/{{ reserve.id }}/"><button class="btn btn-secondary">Удалить</button></a>
+     <a href="myreserves/updatereserve/{{ reserve.id }}/"><button class="btn btn-secondary">Изменить</button></a>
+     <br><br><br>
+     {% empty %}
+     <li>Нет бронирований</li>
+     {% endfor %}
+
+
+     <a href="/profile">Вернуться в профиль</a><br>
+     <a href="/">Главная</a>
+
+</body>
+</html>

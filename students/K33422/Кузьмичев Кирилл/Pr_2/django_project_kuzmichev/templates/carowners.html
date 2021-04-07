@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CarOwners</title>
+</head>
+<body>
+
+<span><h1>Car owners</h1></span>
+
+<div class="main">
+
+    {% for carowner in carowners %}
+
+    {{ carowner.surname }}<br/>
+    {{ carowner.name }}<br/>
+    {{ carowner.birth_date }}<br/>
+
+    <hr/>
+
+    {% endfor %}
+
+</div>
+
+<span><a href="create_carowner/">Add new car owner</a></span>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car List</title>
+</head>
+<body>
+<span><h1>Cars</h1><a href="/car/create/">Add new one</a></span>
+  <ul>
+    {% for car in object_list %}
+    <li><strong>Brand:</strong> {{ car.brand }}, actions: <a href="/car/{{ car.car_id }}/update/">Edit</a> | <a href="/car/{{ car.car_id }}/delete/">Delete</a> | <a href="/car/{{ car.car_id }}/">Detail</a>
+        <p><strong>License Plate:</strong> {{ car.l_plate }}</p>
+    </li>
+    {% empty %}
+    <li>No cars yet.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
