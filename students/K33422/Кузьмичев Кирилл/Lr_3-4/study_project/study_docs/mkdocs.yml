@@ -1,0 +1,17 @@
+site_name: Colledge
+nav:
+  - Info: index.md
+  - Server:
+      - "Pair": Server/pair.md
+      - "Student": Server/student.md
+      - "Teacher": Server/teacher.md
+      - "Subject": Server/subject.md
+      - "Subteach": Server/subteach.md
+      - "Mark": Server/mark.md
+  - Client:
+      - "Auth": Client/auth.md
+      - "Pair": Client/pair.md
+      - "Student": Client/student.md
+      - "Teacher": Client/teacher.md
+      - "Subject": Client/subject.md
+      - "Mark": Client/mark.md

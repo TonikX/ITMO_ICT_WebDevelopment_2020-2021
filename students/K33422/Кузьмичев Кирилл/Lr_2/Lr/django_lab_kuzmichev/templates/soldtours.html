@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Проданные туры</title>
+</head>
+<body>
+
+{% block content %}
+
+<table id="myTable" bordercolor="Black" border="5" width="45%">
+  <thead>
+   <tr>
+       <th scope="colgroup"><h1>Проданные туры:</h1></th>
+    <th scope="colgroup"><h1>Пользователь:</h1></th>
+   </tr>
+  </thead>
+
+  <tbody>
+
+  {% for reserve in reserves %}
+
+      <tr>
+          <td align="center"> {{ reserve.name.name }} </td>
+          <td align="center"> {{ reserve.username.username }} </td>
+      </tr>
+
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+
+</body>
+</html>
