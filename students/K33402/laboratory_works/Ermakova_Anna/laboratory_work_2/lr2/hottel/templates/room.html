@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-3">
+    <div class="card see">
+        <div class="row mt-3 justify-content-md-center">
+            <div class="col col-md-4">
+                <div class="mt-3">
+                    <h2>Комната: {{ room.number }}</h2>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h4>Уровень:</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>{{ room.get_type_display }}</h4>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <h4>Вместимость:</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>{{ room.capacity }} чел.</h4>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <h4>Цена</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>{{ room.prise }}</h4>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="offset-md-1 col-md-8">
+                        <form class="d-grid gap-2" action="reserve/">
+                            <button type="submit" class="btn btn-success">Забронировать</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-7">
+                <div class="centerd mt-3">
+                    <h3>Удобства</h3>
+                </div>
+                <ul class="list-group mt-2" style="list-style: none;">
+                    {% for convenience in conveniences %}
+                    <li class="list-group-item listitem mt-1">
+                        <a href="/room/{{ room.pk }}" style="text-decoration: none">
+                            <div style="display: flex; justify-content: space-around;">
+                                <div class="subtitle">{{ convenience.title }}</div>
+                                <div class="subtitle">{{ convenience.description }}</div>
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-4 justify-content-md-center">
+            <div class="col-md-6 centerd">
+                <h3>История проживания</h3>
+            </div>
+        </div>
+        <div class="row mt-3 mb-4">
+            <div class="offset-md-2 col-md-8">
+                <ul class="list-group">
+                    {% for item in history %}
+                    <li class="list-group-item listitem">
+                        <a href="/room/{{ room.pk }}" style="text-decoration: none">
+                            <div style="display: flex; justify-content: space-around;">
+                                <div class="subtitle">{{ item.user }}</div>
+                                <div class="subtitle">{{ item.begin_date }}</div>
+                                <div class="subtitle">{{ item.end_date }}</div>
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-4 justify-content-md-center">
+            <div class="col-md-6 centerd">
+                <h3>Комментарии</h3>
+            </div>
+            <!--            {% if can_add_comment %}-->
+            <div class="col-md-6">
+                <form action="./add_comment" method="get">
+                    <button type="submit" class="btn btn-primary">Добавить комментарий</button>
+                </form>
+            </div>
+            <!--            {% endif %}-->
+        </div>
+        <div class="row mt-3 mb-4">
+            <div class="offset-md-2 col-md-8">
+                <ul class="list-group">
+                    {% for comment in comments %}
+                    <li class="list-group-item listitem mt-1">
+                        <a href="/room/{{ room.pk }}" style="text-decoration: none">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="subtitle">{{ comment.user.username }}</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="subtitle">{{ comment.text }}</div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="subtitle"> Рейтинг: {{ comment.user.comentator_profile.first.rating }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: row-reverse">
+
+                                <div class="subtitle-2">Проживание: {{ comment.accommodation.begin_date }} - {{ comment.accommodation.end_date }} </div>
+
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
