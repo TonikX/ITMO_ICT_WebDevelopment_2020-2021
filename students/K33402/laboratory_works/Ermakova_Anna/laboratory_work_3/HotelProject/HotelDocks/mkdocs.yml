@@ -1,0 +1,16 @@
+site_name: My Docs
+nav:
+  - Home: index.md
+  - Models: models.md
+  - Hotel:
+      - List of Hotel: Hotel/list.md
+      - Creating a Hotel: Hotel/create.md
+  - CityRoom:
+      - List of Room: CityRoom/list.md
+      - Creating a Room: CityRoom/create.md
+  - Booking:
+      - List of Booking: Booking/list.md
+      - Creating a Booking: Booking/create.md
+  - Place:
+      - List of Comments: Comments/list.md
+      - Creating a Comments: Comments/create.md
