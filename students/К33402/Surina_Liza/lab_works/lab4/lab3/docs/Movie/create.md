@@ -21,12 +21,12 @@ Success Responses
 ```
 class MovieSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Hotel
+        model = Movie
         fields = "__all__"
 
 
 class MovieViewSet(viewsets.ModelViewSet):
-    queryset = Hotel.objects.all()
+    queryset = Movie.objects.all()
     permissions_classes = [
         permissions.AllowAny
     ]
