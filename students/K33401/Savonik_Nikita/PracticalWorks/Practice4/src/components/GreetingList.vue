@@ -1,0 +1,31 @@
+<template>
+  <ul class="greeting-list">
+    <li
+      v-for="greeting in greetings"
+      :key="greeting.id"
+    >
+      {{greeting.text}}
+    </li>
+  </ul>
+</template>
+
+<script>
+export default {
+  name: 'GreetingList',
+
+  props: {
+    greetings: Array
+  }
+}
+
+</script>
+
+<style scoped>
+  .greeting-list {
+    margin: auto;
+  }
+ .greeting-list li{
+   text-align: left;
+   color: white;
+ }
+</style>
