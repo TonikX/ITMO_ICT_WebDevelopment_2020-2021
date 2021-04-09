@@ -1,0 +1,13 @@
+{% extends  'Pupil.html' %}
+
+{% block main %}
+    <div class="container">
+        <a href="/pupil_task/">Back</a>
+        <hr>
+        <form method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save">
+        </form>
+    </div>
+
+{% endblock %}

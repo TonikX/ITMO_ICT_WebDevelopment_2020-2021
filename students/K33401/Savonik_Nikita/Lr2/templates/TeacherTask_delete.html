@@ -1,0 +1,15 @@
+{% extends  'Teacher.html' %}
+
+{% block main %}
+     <div class="container">
+        <a href="/task/">Back</a>
+
+        <hr>
+
+         <form method="post">{% csrf_token %}
+            <p>Are you sure you want to delete task "{{ object }}"?</p>
+            <input type="submit" value="Confirm">
+        </form>
+     </div>
+
+{% endblock %}

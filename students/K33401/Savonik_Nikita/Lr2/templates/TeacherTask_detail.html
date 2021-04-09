@@ -1,0 +1,30 @@
+{% extends  'Teacher.html' %}
+
+{% block main %}
+    <div class="container">
+        <a href="/task/">Back</a>
+
+        <hr>
+
+        <h4>{{ task }}</h4>
+        <ul><li>
+            <p><strong>Deadline:</strong> {{ task.date_of_publication }} - {{ task.deadline }}</p>
+            <p><strong>Fines info:</strong> {{ task.fines_info }}</p>
+            <p><strong>Text:</strong> {{ task.task_text }}</p>
+        </li></ul>
+
+        <hr>
+
+        <ul>
+            {% for new in new_tasks %}
+                 <li> <p>{{ new.pupil }}  |  <a href="{{ new.pupil }}/">Check</a></p>
+                    <p><strong>Decision:</strong> {{ new.decision }}</p>
+                </li>
+            {% empty %}
+                <li>No one has uploaded the task yet or all tasks have been checked.</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+{% endblock %}

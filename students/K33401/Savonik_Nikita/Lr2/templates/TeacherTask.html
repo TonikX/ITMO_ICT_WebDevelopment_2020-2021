@@ -1,0 +1,17 @@
+{% extends  'Teacher.html' %}
+{% block main %}
+    <ul>
+    {% for task in object_list %}
+        {% if task.teacher|stringformat:"s" == user|stringformat:"s" %}
+             <p>
+                 <a href="/task/{{ task.id }}/">{{ task }}</a> |
+                 <a href="/task/{{ task.id }}/update/"> Edit</a> |
+                 <a href="/task/{{ task.id }}/delete/">Delete</a>
+             </p>
+        {% endif %}
+    {% empty %}
+        <li>No tasks yet.</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

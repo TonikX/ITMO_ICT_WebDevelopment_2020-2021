@@ -1,0 +1,20 @@
+{% extends  'Pupil.html' %}
+
+{% block main %}
+    <div class="container">
+        <a href="/pupil_task/">Back</a>
+
+        <hr>
+
+        <h4>{{ task }}</h4>
+        <ul><li>
+            <p><strong>From:</strong> {{ task.teacher }}</p>
+            <p><strong>Deadline:</strong> {{ task.date_of_publication }} - {{ task.deadline }}</p>
+            <p><strong>Fines info:</strong> {{ task.fines_info }}</p>
+            <p><strong>Text:</strong> {{ task.task_text }}</p>
+            <a href="create/">Add response</a>
+        </li></ul>
+
+    </div>
+
+{% endblock %}
