@@ -7,6 +7,12 @@ class WarriorBaseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Warrior
+        fields = ["id", "name", "race", "level"]
+
+
+class WarriorCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Warrior
         fields = "__all__"
 
 

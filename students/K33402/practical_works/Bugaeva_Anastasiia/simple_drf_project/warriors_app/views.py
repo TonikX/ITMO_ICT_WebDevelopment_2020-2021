@@ -26,7 +26,7 @@ class WarriorWithSkillsAPIView(APIView):
 
 
 class WarriorCreateAPIView(generics.CreateAPIView):
-    serializer_class = WarriorBaseSerializer
+    serializer_class = WarriorCreateSerializer
     queryset = Warrior.objects.all()
 
 
