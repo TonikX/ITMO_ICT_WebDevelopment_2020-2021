@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Owner {{ owner.id }}</title>
+    </head>
+    <body>
+        <h1>Страница владельца</h1>
+        <strong>Имя:</strong> {{ owner.first_name }}
+        <p><strong>Фамилия:</strong> {{ owner.last_name }}</p>
+        <p><strong>Дата рождения:</strong> {{ owner.birth_date }}</p>
+        <p><strong>Номер паспорта:</strong> {{ owner.passport_number }}</p>
+        <p><strong>Домашний адрес:</strong> {{ owner.home_address }}</p>
+        <p><strong>Национальность:</strong> {{ owner.nationality }}</p>
+    </body>
+</html>

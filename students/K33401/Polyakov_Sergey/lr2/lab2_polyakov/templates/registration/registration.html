@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Регистрация</title>
+    </head>
+    <body>
+        <form method="POST" action="{% url 'registration_page_url' %}">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <input type="submit" value="Sign up"><br>
+                {% if form.errors %}
+                    <div>
+                        <span>{{ form.errors }}</span>
+                    </div>
+                    <br>
+                {% endif %}
+        </form>
+    </body>
+</html>

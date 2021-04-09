@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Туры</title>
+</head>
+<body>
+    <table width="50%">
+        <thead><h2>Список туров</h2></thead>
+
+        <tbody>
+
+        {% for tour in object_list %}
+
+            <tr>
+                <strong>ID: </strong>{{ tour.id }}
+                <p><strong>Город: </strong>{{ tour.name }}</p>
+                <p><strong>Страна: </strong>{{ tour.country }}</p>
+                <p><strong>Описание: </strong>{{ tour.description }}</p>
+                <p><strong>Турагентство: </strong>{{ tour.tour_agency }}</p>
+                <p><strong>Начинается: </strong>{{ tour.begin_date }}</p>
+                <p><strong>Заканчивается: </strong>{{ tour.end_date }}</p>
+                <p><strong>Мест занято: </strong>{{ tour.end_date }}</p>
+                <a href="/tours/{{ tour.id }}/reservation">Забронировать</a></br>
+                <a href="/tours/{{ tour.id }}/comments">Посмотретьть комментарии</a></br>
+                <a href="/tours/{{ tour.id }}/create_comment">Оставить комментарий</a></br>
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="/profile"><button>Профиль</button></a><br>
+    <a href="/"><button>Главная страница</button></a>
+</body>
+</html>

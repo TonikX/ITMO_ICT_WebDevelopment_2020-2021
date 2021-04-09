@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Авторизация</title>
+</head>
+<body>
+<form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+
+    <p>Логин: {{ form.username }}</p>
+    <p>Пароль: {{ form.password }}</p>
+
+    <p><input type="submit" value='Войти'></p>
+    <input type="hidden" name="next" value="{{ next }}">
+</form>
+</body>
+</html>

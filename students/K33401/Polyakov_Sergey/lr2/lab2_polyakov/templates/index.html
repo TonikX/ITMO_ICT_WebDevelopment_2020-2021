@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Главная</title>
+</head>
+<body>
+<br>
+    <div>
+        {% if is_authenticated %}
+            <a href="/profile/"><button>Профиль</button></a>
+        {% else %}
+            <a href="/registration/"><button>Регистрация</button></a>
+            <a href="/accounts/login/"><button>Вход</button></a>
+        {% endif %}
+
+        <a href="/tours/"><button>Доступные туры</button></a>
+        <a href="/reservations/"><button>Зарезервированные туры</button></a>
+    </div>
+</body>
