@@ -1,0 +1,25 @@
+{% extends  'teacher.html' %}
+
+{% block main %}
+ <div style="margin: 10px 10px 10px 10px">
+	 <hr>
+	 <h4>{{ homework }}</h4>
+        <ul><li>
+	        <p>Deadline: {{ homework.deadline }}</p>
+        </li></ul><hr>
+		<ul>
+			{% for new in new_tasks %}
+			<li> <p>{{ new.student }}</p>
+				<p>Solution: {{ new.solution }}</p>
+				<a href="{{ new.student.id }}/">Check</a>
+			</li>
+            {% empty %}
+                <li>Нет заданий или все проверено</li>
+            {% endfor %}
+        </ul>
+</div>
+<hr>
+<a href="/homeworks/">Назад</a>
+
+
+{% endblock %}
