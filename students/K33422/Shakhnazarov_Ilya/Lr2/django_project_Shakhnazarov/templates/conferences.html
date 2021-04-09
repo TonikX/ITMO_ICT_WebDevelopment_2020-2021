@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Конференции</title>
+</head>
+<body>
+    <h1>Список конференций</h1>
+    <ul>
+        <li>
+            <a href="{% url 'index' %}">На главную</a>
+        </li>
+        <li>
+            {% if user.is_active %}
+            <a href="{% url 'account_logout' %}">Log out</a>
+            {% else %}
+            <a href="{% url 'account_login' %}">Log in</a>
+            {% endif %}
+        </li>
+    </ul>
+    {% if conferences %}
+    <ul>
+        <li>
+            {% for conference in conferences %}
+            <p>
+                {{ conference }}
+                <br><br>
+                <a href="/conferences/{{ conference.id }}">Details</a>
+            </p>
+            {% endfor %}
+        </li>
+    </ul>
+    {% else %}
+    <p>Конференций нет</p>
+    {% endif %}
+</body>
+</html>

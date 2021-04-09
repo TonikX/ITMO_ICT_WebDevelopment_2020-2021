@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Driver List</title>
+</head>
+<body>
+    <div class="main">
+        {% for driver in drivers %}
+            Name: {{driver.first_name}} <br>
+            Surname: {{driver.last_name}} <br>
+            Passport: {{driver.passport}} <br>
+            Address: {{driver.address}} <br>
+            Nationality: {{driver.nationality}} <br>
+            <a href="/driver/{{driver.id}}/">Details</a> <br><br>
+        {% endfor %}
+    </div>
+    <a href="/createdriver/">Create</a> a new driver.
+</body>
+</html>

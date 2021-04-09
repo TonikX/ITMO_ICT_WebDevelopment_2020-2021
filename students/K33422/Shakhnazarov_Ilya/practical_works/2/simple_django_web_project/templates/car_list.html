@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Car List</title>
+</head>
+<body>
+    <div class="main">
+        {% for car in cars %}
+            ID: {{car.id}} <a href="/car/{{car.id}}/">More Details</a> <br>
+            Label: {{car.label}} <br>
+            Model: {{car.model}} <br>
+            Color: {{car.color}} <br><br>
+
+        {% endfor %}
+
+    </div>
+    <a href="/createcar">Create a new car.</a>
+</body>
+</html>
