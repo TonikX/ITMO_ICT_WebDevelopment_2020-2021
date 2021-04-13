@@ -166,7 +166,7 @@ https://drive.google.com/file/d/1QxQo5jln6soFUj6EmOVEo1yauCo375PP/view?usp=shari
     - [Создание модели данных в Django ORM](https://www.youtube.com/watch?v=LZyk9p0tKXc) (Видео)<br><br>
 4.	Реализовать логику работу API средствами Django REST Framework (используя методы сериализации).<br>
 Полезные материалы:<br>
-    - Пункты 4, 5, 6 в [Практической работе 3.1](https://github.com/TonikX/ITMO_ICT_WebDevelopment_2020-2021)<br>
+    - Пункты 4, 5, 6 в [Практической работе 3.1](https://docs.google.com/document/d/1PkpwxCUYQ2_Pi8Fpcgno6te3oCQHZfkh03Zxt6DhHSw/edit)<br>
     - [DJANGO API VIEWS, GENERICS, FILTER](https://youtu.be/AHnBL9x6-rs) (Видео)<br>
     - [JSON. Сериализация данных. Пишем свой сериализатор. Разбираем Django REST Framework Serializers](https://youtu.be/sxdPf3z6Uw8) (Видео)<br>
     - [Работа с Django ORM](https://youtu.be/HhrPbmHbDPU) (Видео)<br><br>
