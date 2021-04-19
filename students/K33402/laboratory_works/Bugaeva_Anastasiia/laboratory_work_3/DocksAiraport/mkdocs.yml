@@ -1,0 +1,20 @@
+site_name: My Docs
+nav:
+  - Home: index.md
+  - Models: models.md
+  - Airline:
+      - List of airlines: Airline/list.md
+      - Creating a airline: Airline/create.md
+  - CityAirport:
+      - List of City: CityAirport/list.md
+      - Creating a City: CityAirport/create.md
+  - Flight:
+      - List of Flight: Flight/list.md
+      - Creating a Flight: Flight/create.md
+  - Place:
+      - List of Place: Place/list.md
+      - Creating a Place: Place/create.md
+  - Comments:
+      - List of Comments: Comments/list.md
+      - Creating a Comments: Comments/create.md
+

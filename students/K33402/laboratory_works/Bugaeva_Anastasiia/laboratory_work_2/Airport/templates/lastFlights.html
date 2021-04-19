@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Прошедшие рейсы
+{% endblock %}}
+
+{% block content %}
+
+<h1>Прошедшие рейсы</h1>
+<div class="row row-cols-md-2 mb-4">
+    {% for i in flights %}
+        {% now "Y-m-d H-i-s" as today_date %}
+        {% if i.Arrival_date|date:"Y-m-d H-i-s" < today_date %}
+            <div class="col card-group" style="min-width: 300px">
+                <div class="card mt-4 text-center">
+                    <div class="card-header">
+                        <h5 class="card-title">Авиакомпания: {{ i.company }}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><strong>{{ i.departure }}</strong></p>
+                        <small class="card-text">{{ i.departure_date }}</small>
+                        <h2 class="card-text">↓</h2>
+                        <p class="card-text"><strong>{{ i.Arrival }}</strong></p>
+                        <small class="card-text">{{ i.Arrival_date }}</small>
+                        <br>
+                        <a href="/detailPast/{{ i.id }}" class="btn btn-primary mt-3">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% endblock %}
+
+
+
