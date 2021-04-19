@@ -1,0 +1,35 @@
+{% extends 'board/base.html' %} {% block title %} {{reservation.flight.number}}
+- Making a reservation {% endblock title %}
+<!---->
+{% block body %}
+<h1 class="display-6 mt-5 text-center">
+  {{reservation.flight.number}} - Edit a reservation
+</h1>
+<div class="border rounded-3 mt-5 p-5">
+  <form method="post" action="{{reservation.get_edit_reservation_url}}">
+    {% csrf_token %}
+    <input type="hidden" name="passenger" value="{{request.user.id}}" />
+    <input type="hidden" name="flight" value="{{reservation.flight.id}}" />
+    <!---->
+
+    <!---->
+    {% for field in form %}
+    <div class="row justify-content-center">
+      <div class="col-6">{{field}}</div>
+    </div>
+    {% endfor %}
+
+    <!---->
+    <div class="d-grid gap-2 mt-5 col-2 mx-auto">
+      <button class="btn btn-outline-secondary" type="submit">
+        Save a reservation
+      </button>
+    </div>
+  </form>
+  {% for field in form %} {% if field.errors %}
+  <div class="alert alert-warning" role="alert">
+    {{field.label}}{{field.errors}}
+  </div>
+  {% endif %} {% endfor %}
+</div>
+{% endblock body %}

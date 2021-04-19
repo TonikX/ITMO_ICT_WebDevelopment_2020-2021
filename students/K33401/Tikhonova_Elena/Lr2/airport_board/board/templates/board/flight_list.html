@@ -1,0 +1,69 @@
+{% extends 'board/base.html' %}
+<!---->{% block title %} {{ block.super }} {% endblock title %}
+<!---->{% block body %}
+<p class="display-6 text-center mt-5">Arrivals</p>
+<table class="table table-hover mt-5 text-center">
+  <thead class="table-secondary">
+    <tr>
+      <th scope="col">Number</th>
+      <th scope="col">Airline</th>
+      <th scope="col">Departure</th>
+      <th scope="col">Arrival</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for flight in arrs %}
+    <tr>
+      <th scope="row">{{flight.number}}</th>
+      <td>{{flight.airline}}</td>
+      <td>{{flight.dep_time|time:"H:i"}}</td>
+      <td>{{flight.arr_time|time:"H:i" }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<p class="display-6 text-center mt-5">Departures</p>
+<table class="table table-hover mt-5 text-center">
+  <thead class="table-secondary">
+    <tr>
+      <th scope="col">Number</th>
+      <th scope="col">Airline</th>
+      <th scope="col">Departure</th>
+      <th scope="col">Arrival</th>
+      <th scope="col">Gate</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for flight in deps %}
+    <form method="get" action="{{flight.get_absolute_url}}">
+      <tr>
+        <th scope="row" class="p-0 lh-my">
+          <button class="mybtn fw-bold">
+            {% comment %}
+            <a
+              class="btn btn-outline-secondary"
+              href=" {{flight.get_absolute_url}} "
+            >
+              {{flight.number}}
+            </a>
+            {% endcomment %} {{flight.number}}
+          </button>
+        </th>
+        <td class="p-0 lh-my">
+          <button class="mybtn">{{flight.airline}}</button>
+        </td>
+        <td class="p-0 lh-my">
+          <button class="mybtn">{{flight.dep_time|time:"H:i"}}</button>
+        </td>
+        <td class="p-0 lh-my">
+          <button class="mybtn">{{flight.arr_time|time:"H:i" }}</button>
+        </td>
+        <td class="p-0 lh-my">
+          <button class="mybtn">{{flight.gate}}</button>
+        </td>
+      </tr>
+    </form>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock body %}
