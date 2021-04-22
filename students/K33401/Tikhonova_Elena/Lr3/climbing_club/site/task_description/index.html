@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>task description - Описание сервиса "Альпинистский клуб"</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u0430:", url: "#_top", children: [
+          ]},
+          {title: "\u0410\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440 \u0434\u043e\u043b\u0436\u0435\u043d \u0438\u043c\u0435\u0442\u044c \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c:", url: "#_2", children: [
+          ]},
+          {title: "\u041f\u0435\u0440\u0435\u0447\u0435\u043d\u044c \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u044b\u0445 \u0437\u0430\u043f\u0440\u043e\u0441\u043e\u0432:", url: "#_3", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../api/emergencies_create/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../api/emergencies_create/" class="btn btn-xs btn-link">
+        emergencies/create/  [POST]
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="_1">Описание варианта:</h2>
+<blockquote>
+<p>Создать программную систему, предназначенную для администратора альпинистского клуба.
+Альпинистский клуб организует восхождения в разных точках мира. Система должна обеспечить сохранение информации о хронике восхождений. Для каждого восхождения формируется группа. В состав группы могут входить альпинисты из других клубов. Поэтому нужно иметь информацию о каждом клубе (название, страна, город, контактное лицо, e-mail, телефон). Необходимо иметь описание маршрута и продолжительность восхождения. Необходимо обеспечить сохранение даты/времени начала и завершения каждого восхождения (планируемого и фактического), имен и адресов участвовавших в нем альпинистов, названия и высоты горы, страны и района, где эта гора расположена. После завершения восхождения фиксируется информация об успешности восхождения для каждого участника и группы в целом. При возникновении нештатных ситуаций необходимо указать для каждого участника, что случилось (травма, пропал без вести, летальный исход и т.д.) и в пояснении о группе дать подробности.</p>
+</blockquote>
+<h2 id="_2">Администратор должен иметь возможность:</h2>
+<ul>
+<li>добавления сведений о новом альпинисте, новой вершине;</li>
+<li><code>climbers/create</code></li>
+<li><code>peaks/create</code></li>
+<li>изменении сведений об альпинистах и вершинах;</li>
+<li><code>climbers/&lt;int:pk&gt;</code></li>
+<li><code>peaks/&lt;int:pk&gt;</code></li>
+<li>формирования новых групп и внесения всей информации после завершениявосхождения группой.</li>
+<li><code>participations/create</code></li>
+</ul>
+<h2 id="_3">Перечень возможных запросов:</h2>
+<ol>
+<li>Показать список альпинистов, осуществлявших восхождение в указанный интервал дат.</li>
+<li><code>climbers/</code> даты начала и конца периода передаются в качестве GET-параметров</li>
+<li>Показать список восхождений (групп), которые осуществлялись в указанный пользователем период времени.</li>
+<li><code>climbings/</code> даты - GET-параметры</li>
+<li>Предоставить информацию о том, сколько альпинистов побывали на каждой горе.</li>
+<li><code>peaks/&lt;int:pk&gt;/unique_climbers</code></li>
+<li>Предоставить данные о вершинах, если на них не было восхождений.</li>
+<li><code>peaks/no_climbings</code></li>
+<li>Показать информацию о количестве восхождений каждого альпиниста на каждую гору.</li>
+<li><code>peaks/&lt;int:pk&gt;/climbing_count</code></li>
+</ol>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../api/emergencies_create/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../api/emergencies_create/" class="btn btn-xs btn-link">
+        emergencies/create/  [POST]
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+</footer>
+
+</body>
+</html>

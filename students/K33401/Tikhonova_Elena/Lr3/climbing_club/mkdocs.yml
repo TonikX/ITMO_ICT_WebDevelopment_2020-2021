@@ -1,0 +1,13 @@
+site_name: Описание сервиса "Альпинистский клуб"
+nav:
+  - Home:
+      - "task description": task_description.md
+  - Api:
+      - "emergencies/create/  [POST]": api/emergencies_create.md
+      - "climbers/  [GET]": api/climbers.md
+      - "peaks/ (int:pk)  /climber_count/  [GET]": api/climber_count.md
+  - Auth:
+      - "auth/users": auth/create_user.md
+      - "auth/token/login": auth/token.md
+theme:
+  name: windmill-dark
