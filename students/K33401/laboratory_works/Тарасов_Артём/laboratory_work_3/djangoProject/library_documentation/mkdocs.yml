@@ -1,0 +1,5 @@
+site_name: LibraryManage
+nav:
+  - Home: index.md
+  - Models: models.md
+theme: readthedocs
