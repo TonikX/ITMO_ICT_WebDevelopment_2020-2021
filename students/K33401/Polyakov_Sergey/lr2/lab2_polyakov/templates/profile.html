@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Личный кабинет</title>
+    </head>
+    <body>
+        <strong>Ник: </strong>{{ user.username }}
+        <p><strong>Электронная почта: </strong>{{ user.email }}</p>
+        <p><strong>Имя: </strong>{{ user.first_name }}</p>
+        <p><strong>Фамилия: </strong>{{ user.last_name }}</p>
+        <p><strong>Паспорт: </strong>{{ user.passport }}</p>
+        <br>
+        <p>
+            <a href="/"><button>На главную</button></a>
+            <a href="/reserved"><button>Мои резервирования</button></a>
+            <a href="/accounts/logout"><button>Выйти</button></a>
+        </p>
+    </body>
+</html>

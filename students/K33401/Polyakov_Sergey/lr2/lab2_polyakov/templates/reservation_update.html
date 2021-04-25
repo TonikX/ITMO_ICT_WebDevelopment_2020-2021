@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Изменить резервирование</title>
+</head>
+<body>
+<form method="POST">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Сохранить изменения">
+
+</form>
+<p><a href="/reserved"><button>Мои резервирования</button></a></p>
+</body>
+</html>

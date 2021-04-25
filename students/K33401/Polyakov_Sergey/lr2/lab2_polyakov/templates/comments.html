@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Комментарии</title>
+    </head>
+    <body>
+        <table width="50%">
+            <thead><h2>Комментарии</h2></thead>
+
+            <tbody>
+
+            {% for comment in object_list %}
+
+                <tr>
+                    <strong>Автор: </strong>{{comment.user}}
+                    <p><strong>Тур: </strong>{{comment.tour}}</p>
+                    <p><strong>Время: </strong>{{comment.time}}</p>
+                    <p><strong>Оценка: </strong>{{comment.rating}}</p>
+                    <p><strong>Комментарий: </strong>{{comment.text}}</p>
+                </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <a href="/profile"><button>Профиль</button></a><br>
+        <a href="/"><button>Главная страница</button></a>
+    </body>
+</html>

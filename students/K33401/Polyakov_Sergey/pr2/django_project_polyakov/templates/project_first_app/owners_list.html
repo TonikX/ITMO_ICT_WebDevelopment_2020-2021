@@ -1,0 +1,29 @@
+<!-- book_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Owners list</title>
+    </head>
+
+    <body>
+        <span><h1>Владельцы</h1></span>
+        <ul>
+            {% for owner in owners_list %}
+                <li>
+                    <strong>Имя:</strong> {{ owner.first_name }}
+                    <p><strong>Фамилия:</strong> {{ owner.last_name }}</p>
+                    <p><strong>Дата рождения:</strong> {{ owner.birth_date }}</p>
+                    <p><strong>Номер паспорта:</strong> {{ owner.passport_number }}</p>
+                    <p><strong>Домашний адрес:</strong> {{ owner.home_address }}</p>
+                    <p><strong>Национальность:</strong> {{ owner.nationality }}</p>
+                </li>
+                {% empty %}
+                    <li>Ни одного владельца не было добавлено</li>
+            {% endfor %}
+        </ul>
+    </body>
+
+</html>
