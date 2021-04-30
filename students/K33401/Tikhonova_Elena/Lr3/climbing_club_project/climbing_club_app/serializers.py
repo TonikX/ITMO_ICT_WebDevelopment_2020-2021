@@ -6,20 +6,20 @@ from django.contrib.auth.models import User
 class ClimberSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
-        fields = ['first_name', 'last_name', 'address', 'club']
+        fields = ['id', 'first_name', 'last_name', 'address', 'club']
 
 
 class PeakSerializer(serializers.ModelSerializer):
     class Meta:
         model = Peak
-        fields = ['name', 'country', 'height',
+        fields = ['id', 'name', 'country', 'height',
                   'climbing_duration', 'route_description']
 
 
 class ClimbingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Climbing
-        fields = ['start_time', 'finish_time',
+        fields = ['id', 'start_time', 'finish_time',
                   'peak', 'participants', 'information']
 
 
@@ -42,3 +42,11 @@ class CountClimbersSerializer(serializers.ModelSerializer):
         model = Person
         fields = ['first_name', 'last_name',
                   'address', 'club', 'climbings_on_peak']
+
+#
+
+
+class ClubSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Club
+        fields = "__all__"

@@ -25,5 +25,9 @@ urlpatterns = [
          name='peaks_no_climbings_url'),
     path('peaks/<int:pk>/climber_count', CountClimbersOnPeakListAPIView.as_view(),
          name='count_climbers_on_peak_url'),
+    # for 4 lab
+    path('peaks/', PeakListAPIView.as_view()),
+    path('clubs/', ClubListAPIView.as_view()),
+    path('participations/', ParticipationListAPIView.as_view()),
     path('', redirect_home)
 ]

@@ -58,8 +58,8 @@ class EmergencySituationCreateAPIView(generics.CreateAPIView):
     serializer_class = EmergencySituationSerializer
 
     def perform_create(self, serializer):
-        climbing = int(self.request.data['climbing'][0])
-        participant = int(self.request.data['person'][0])
+        climbing = int(self.request.data['climbing'])
+        participant = int(self.request.data['person'])
         if not Participation.objects.filter(climbing_id=climbing, participant_id=participant).count():
             raise APIException(
                 'Альпинист не участвовал в указанном восхождении, нештатные ситуации невозможны')
@@ -70,6 +70,8 @@ class ClimberClimbingListAPIView(generics.ListAPIView):
     serializer_class = ClimberSerializer
 
     def get_queryset(self):
+        if not self.request.query_params:
+            return Person.objects.all()
         # lte for less than or equal
         from_date = [int(i)
                      for i in self.request.query_params.get('from').split('-')]
@@ -87,8 +89,9 @@ class FromToClimbingListAPIView(generics.ListAPIView):
     serializer_class = ClimbingSerializer
 
     def get_queryset(self):
+        if not self.request.query_params:
+            return Climbing.objects.all()
         # lte for less than or equal
-
         from_date = [int(i)
                      for i in self.request.query_params.get('from').split('-')]
         from_date = datetime(*from_date)
@@ -129,3 +132,20 @@ class CountClimbersOnPeakListAPIView(generics.ListAPIView):
         queryset = Person.objects.filter(climbings__peak_id=pk).annotate(
             climbings_on_peak=Count('climbings'))
         return queryset
+
+#
+
+
+class PeakListAPIView(generics.ListAPIView):
+    serializer_class = PeakSerializer
+    queryset = Peak.objects.all()
+
+
+class ClubListAPIView(generics.ListAPIView):
+    serializer_class = ClubSerializer
+    queryset = Club.objects.all()
+
+
+class ParticipationListAPIView(generics.ListAPIView):
+    serializer_class = ParticipationSerializer
+    queryset = Participation.objects.all()
