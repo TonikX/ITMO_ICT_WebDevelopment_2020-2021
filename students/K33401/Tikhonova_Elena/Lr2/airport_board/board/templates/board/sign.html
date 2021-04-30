@@ -1,0 +1,31 @@
+{% extends 'board/base.html' %}
+<!---->{% block title %}{{page_type}}{% endblock title %}
+<!---->{% block body %}
+<!---->
+<h1 class="display-6 text-center mt-5">{{page_type}}</h1>
+<div class="border rounded-3 mt-5 p-5">
+  <form
+    method="post"
+    action="{% if page_type == 'Sign in' %}{% url 'login_url' %}{% endif %}{% if page_type == 'Sign up' %}{% url 'register_url' %}{% endif %}"
+  >
+    {% csrf_token %} {% for field in form %}
+    <div class="mb-3 row justify-content-center">
+      <label class="col-2 col-form-label">{{field.label}}</label>
+      <div class="col-6">{{field}}</div>
+    </div>
+    {% endfor %}
+
+    <!---->
+    <div class="d-grid gap-2 mt-5 col-2 mx-auto">
+      <button class="btn btn-outline-secondary" type="submit">
+        {{page_type}}!
+      </button>
+    </div>
+  </form>
+  {% for field in form %} {% if field.errors %}
+  <div class="alert alert-warning" role="alert">
+    {{field.label}}{{field.errors}}
+  </div>
+  {% endif %} {% endfor %}
+</div>
+<!---->{% endblock body %}

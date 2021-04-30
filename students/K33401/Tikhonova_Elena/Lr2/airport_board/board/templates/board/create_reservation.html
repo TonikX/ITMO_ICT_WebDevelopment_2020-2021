@@ -1,0 +1,77 @@
+{% extends 'board/base.html' %} {% block title %} {{flight.number}} - Making a
+reservation {% endblock title %}
+<!---->
+{% block body %}
+<h1 class="display-6 mt-5 text-center">
+  {{flight.number}} - Making a reservation
+</h1>
+<table class="table table-hover text-center mt-5">
+  <thead class="table-secondary">
+    <tr>
+      <th scope="col">Number</th>
+      <th scope="col">Airline</th>
+      <th scope="col">Departure</th>
+      <th scope="col">Arrival</th>
+      <th scope="col">Gate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{flight.number}}</th>
+      <td>{{flight.airline}}</td>
+      <td>{{flight.dep_time|time:"H:i"}}</td>
+      <td>{{flight.arr_time|time:"H:i" }}</td>
+      <td>{{flight.gate}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="border rounded-3 mt-5 p-5">
+  <form method="post" action="{{flight.get_reservation_url}}">
+    {% csrf_token %}
+    <input type="hidden" name="passenger" value="{{request.user.id}}" />
+    <input type="hidden" name="flight" value="{{flight.id}}" />
+    <!---->
+    <table class="mx-auto mb-5">
+      {% for row in seats %}
+      <tr>
+        {% for seat in row %}
+        <td>
+          <input
+            type="radio"
+            class="btn-check"
+            name="seat"
+            value="{{seat.seat_number}}"
+            id="{{seat.seat_number}}"
+          />
+          <label class="btn btn-secondary" for="{{seat.seat_number}}"
+            >{{seat.seat_number}}</label
+          >
+          {% if True %}{% endif %}
+        </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+
+    <!---->
+    {% for field in form %} {% if field.label == 'Date' %}
+    <div class="row justify-content-center">
+      <div class="col-6">{{field}}</div>
+    </div>
+    {% endif %} {% endfor %}
+
+    <!---->
+    <div class="d-grid gap-2 mt-5 col-2 mx-auto">
+      <button class="btn btn-outline-secondary" type="submit">
+        Make a reservation
+      </button>
+    </div>
+  </form>
+  {% for field in form %} {% if field.errors %}
+  <div class="alert alert-warning" role="alert">
+    {{field.label}}{{field.errors}}
+  </div>
+  {% endif %} {% endfor %}
+</div>
+{% endblock body %}

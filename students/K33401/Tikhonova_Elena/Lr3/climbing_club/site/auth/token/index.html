@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>auth/token/login - Описание сервиса "Альпинистский клуб"</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "\u0410\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u044f \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f \u043f\u043e \u0442\u043e\u043a\u0435\u043d\u0443", url: "#_top", children: [
+              {title: "Error", url: "#error" },
+              {title: "Success", url: "#success" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script>
+      <script src="../../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../create_user/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../create_user/" class="btn btn-xs btn-link">
+        auth/users
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="_1">Авторизация пользователя по токену</h1>
+<p>Для авторизации по токену сперва необходимо получить токен. Для этого потребуется по адресу <code>/auth/token/login</code> указать корректные:</p>
+<ul>
+<li>username</li>
+<li>password</li>
+</ul>
+<h2 id="error">Error</h2>
+<p>Если пользователя с указанным username не существует, или пароль был введен неверно, пользователь увидит это:</p>
+<pre><code>{
+    &quot;non_field_errors&quot;: [
+        &quot;Unable to log in with provided credentials.&quot;
+    ]
+}
+</code></pre>
+<h2 id="success">Success</h2>
+<p>В случае успеха, будет возвращен токен. Например, такой:</p>
+<pre><code>{
+    &quot;auth_token&quot;: &quot;841fafc90742d5b233360abb1f17d1903598c5a4&quot;
+}
+</code></pre>
+<p>Далее с его помощью можно, например, получить информацию о текущем пользователе (или такую же ошибку, как та, что выше), перейдя по адресу <code>/auth/users/me</code>. Однако для успеха этой операции для ключа <strong>Authorization</strong> из загаловка следует указать токен в виде <strong>Token</strong> ~token_value~</p>
+<pre><code>{
+    &quot;email&quot;: &quot;poko@mail.ru&quot;,
+    &quot;id&quot;: 5,
+    &quot;username&quot;: &quot;pokopoko&quot;
+}
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav">
+      <a href="../create_user/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../create_user/" class="btn btn-xs btn-link">
+        auth/users
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="">Windmill Dark</a> theme by None (noraj).</p>
+</footer>
+
+</body>
+</html>

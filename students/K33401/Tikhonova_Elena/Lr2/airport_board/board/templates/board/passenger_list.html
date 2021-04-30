@@ -1,0 +1,11 @@
+{% extends 'board/base.html' %}
+<!---->{% block title %}{{flight.number}} - Passenger list{% endblock title %}
+<!---->{% block body %}
+<!---->
+<h1 class="display-6 text-center mt-5">{{flight.number}} - Passenger list</h1>
+{% for passenger in passengers %}
+<div class="card mt-5">
+  <div class="card-body display-6 text-center">{{passenger}}</div>
+</div>
+{% endfor %}
+<!---->{% endblock body %}

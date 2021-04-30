@@ -1,0 +1,38 @@
+{% extends 'board/base.html' %} {% block title %} {{flight.number}} - Make a
+comment {% endblock title %}
+<!---->
+{% block body %}
+<h1 class="display-6 mt-5 text-center">{{flight.number}} - Make a comment</h1>
+
+<div class="border rounded-3 mt-5 p-5">
+  <form method="post" action="{{flight.get_comment_url}}">
+    {% csrf_token %}
+    <input type="hidden" name="user" value="{{request.user.id}}" />
+    <input type="hidden" name="flight" value="{{flight.id}}" />
+    {% for f in flight_date %}<input type="hidden" name="fligh_date"
+    value="{{f.date|date:"Y-m-d"}}" />{% endfor %}
+
+    <!---->
+
+    <!---->
+    {% for field in form %}
+    <!---->{% if field.label == 'Rating' or field.label == 'Text' %}
+    <div class="row justify-content-center">
+      <label class="col-2 col-form-label">{{field.label}}</label>
+      <div class="col-6">{{field}}</div>
+    </div>
+    <!---->
+    {% endif %} {% endfor %}
+
+    <!---->
+    <div class="d-grid gap-2 mt-5 mb-5 col-2 mx-auto">
+      <button class="btn btn-outline-secondary" type="submit">Comment!</button>
+    </div>
+  </form>
+  {% for field in form %} {% if field.errors %}
+  <div class="alert alert-warning" role="alert">
+    {{field.label}}{{field.errors}}
+  </div>
+  {% endif %} {% endfor %}
+</div>
+{% endblock body %}

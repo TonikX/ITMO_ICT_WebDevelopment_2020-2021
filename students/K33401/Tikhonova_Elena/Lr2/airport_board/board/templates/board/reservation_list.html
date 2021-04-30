@@ -1,0 +1,67 @@
+{% extends 'board/base.html' %}<!---->
+{% block title %}My reservations{% endblock title %}
+<!---->
+{% block body %}
+<!---->
+
+<h1 class="display-6 mt-5 text-center">My reservations</h1>
+<table class="table table-hover text-center mt-5">
+  <thead class="table-secondary">
+    <tr>
+      <th scope="col">Number</th>
+      <th scope="col">Airline</th>
+      <th scope="col">Departure</th>
+      <th scope="col">Arrival</th>
+      <th scope="col">Gate</th>
+      <th scope="col">Date</th>
+      <th scope="col">Seat</th>
+      <th scope="col">Ticket</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for reservation in reservations %}
+    <tr>
+      <th scope="row">{{reservation.flight.number}}</th>
+      <td scope="row">{{reservation.flight.airline}}</td>
+      <td scope="row">{{reservation.flight.dep_time|time:"H:i"}}</td>
+      <td scope="row">{{reservation.flight.arr_time|time:"H:i" }}</td>
+      <td scope="row">{{reservation.flight.gate}}</td>
+      <td scope="row">{{reservation.date|date:"d.m.Y"}}</td>
+      <td scope="row">{{reservation.seat}}</td>
+      {% if reservation.ticket_number %}
+      <td scope="row">{{reservation.ticket_number}}</td>
+      <td scope="row">
+        <button type="button" class="btn btn-outline-secondary" disabled>
+          Edit
+        </button>
+      </td>
+      <td scope="row">
+        <button type="button" class="btn btn-outline-warning" disabled>
+          Delete
+        </button>
+      </td>
+      <!---->{% endif %} {% if not reservation.ticket_number %}
+      <td scope="row">-</td>
+      <td scope="row">
+        <a
+          href="{{ reservation.get_edit_reservation_url }}"
+          class="btn btn-outline-secondary"
+          >Edit</a
+        >
+      </td>
+      <td scope="row" action="{% url 'reservation_list_url' %}">
+        <form method="post">
+          {% csrf_token %}
+          <input type="hidden" name="reservation" value="{{reservation.id}}" />
+          <button type="submit" class="btn btn-outline-warning">Delete</button>
+        </form>
+      </td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<!---->
+{% endblock body %}
