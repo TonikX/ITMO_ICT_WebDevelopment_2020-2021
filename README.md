@@ -5,6 +5,8 @@
 
 60 баллов - лабы. 20 баллов - тесты. 20 - экзамен. При выполнении всех лаб по дисциплине в срок - экзамен-автомат.
 
+Входной опрос [тут](https://docs.google.com/forms/d/e/1FAIpQLScek_tboAIm24_DTSJ4KEUcDYeXgksyGKAq1MggjUYriMrBaQ/viewform?usp=sf_link)
+
 ## Инструкции
 Дополнительные материалы делятся на 3 категории:
 
