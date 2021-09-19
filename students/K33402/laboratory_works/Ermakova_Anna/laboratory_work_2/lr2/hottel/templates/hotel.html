@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-3">
+    <div class="card see">
+        <div class="row mt-3 justify-content-md-center">
+            <div class="col col-md-4">
+                <div class="conaitner">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>{{ hotel.title }}</h2>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <h4>Описание:</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>{{ hotel.description }}</h4>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <h4>Адрес:</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>{{ hotel.address }}</h4>
+                        </div>
+                    </div>
+                    <div class="row mt-3 mb-3">
+                        <div class="col-md-6">
+                            <h4>Владелец:</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>{{ hotel.owner }}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-7">
+                <div class="centerd">
+                    <h3>Hotel rooms</h3>
+                </div>
+                <ul class="list-group pb-3" style="list-style: none;">
+                    {% for room in rooms %}
+                    <li class="list-group-item listitem mt-1">
+                        <a href="/room/{{ room.pk }}" style="text-decoration: none">
+                            <div style="display: flex; justify-content: space-around;">
+                                <div class="subtitle">{{ room.number }}</div>
+                                <div class="subtitle">{{ room.get_type_display }}</div>
+                                <div class="subtitle">
+                                    {% if room.free %}
+                                        <button type="button" class="btn btn-success">Свободно</button>
+                                    {% else %}
+                                        <button type="button" class="btn btn-danger">Занято</button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

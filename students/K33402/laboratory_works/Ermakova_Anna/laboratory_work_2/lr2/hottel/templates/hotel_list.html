@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+<div class="container">
+     <div class="row">
+    {% for hotel in object_list %}
+        <div class="col-sm-4 mt-2">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">{{ hotel.title }}</h5>
+                    <p class="card-text">{{ hotel.address }}.</p>
+                    <a class="btn btn-primary" href="/hotel/{{ hotel.pk }}">Просмотреть</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+     </div>
+</div>
+
+{% endblock %}
