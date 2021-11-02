@@ -1,0 +1,9 @@
+<body>
+	<h1>Список отелей</h1>
+	<p>
+	{% for hotel in object_list %}
+		<p><a href="/all-hotels/{{hotel.id}}">{{hotel}}</a> - {{hotel.description}}</p>
+	{% endfor %}
+	</p>
+
+</body>
