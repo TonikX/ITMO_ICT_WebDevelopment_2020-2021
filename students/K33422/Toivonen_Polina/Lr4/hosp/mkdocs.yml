@@ -1,0 +1,17 @@
+site_name: Hospital
+nav:
+ - Home: index.md
+ - Users:
+     - "List of doctors": users/doctor.md
+ - Model:
+     - "Model description": models/models.md
+ - Api:
+     - "api/cabinet": api/cabinet.md
+     - "api/diagnosis": api/diagnosis.md
+     - "api/medcard": api/medcard.md
+     - "api/meeting": api/meeting.md
+     - "api/patient": api/patient.md
+     - "api/price": api/price.md
+     - "api/schedule": api/schedule.md
+theme:
+  name: material
