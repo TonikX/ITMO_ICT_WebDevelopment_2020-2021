@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+{% block content %}
+    <h3 class="title-comments">Авиарейс</h3>
+    <div class="card mb-md-5" style="background-color: #edefff;">
+        <div class="card-body" >
+            <h6 class="display-5 ">{{ flight.date_of_departure }} - {{ flight.arrival_date }}</h6>
+            <blockquote class="blockquote">
+                <p>{{ flight.airline_company }}</p>
+            </blockquote>
+            <p><small>{{ flight.flight_number }}</small></p>
+        </div>
+    </div>
+
+    <h3 class="title-comments">Комментарии</h3>
+    <hr>
+        {% for comment in comments %}
+    <div class="p-2 bg-light border mb-4">
+        <p class="text-muted">
+            <strong>{{ comment.user }}</strong>
+            <small>{{ comment.created }}</small>
+        </p>
+        <blockquote class="blockquote">
+            <p class="display-5" class="card-text">{{ comment.text }}</p>
+        </blockquote>
+    </div>
+        {% endfor %}
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" class="form-control form-control-lg" placeholder="Ваш комментарий" name="text"/>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-secondary me-md-2 mb-5">Отправить</button>
+            </div>
+        </form>
+
+{% endblock %}

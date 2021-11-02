@@ -1,0 +1,8 @@
+site_name: My Docs
+nav:
+  - Home: index.md
+  - Models: models.md
+  - Movie:
+      - List of Movie: Movie/list.md
+      - Creating a Movie: Movie/create.md
+

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="mb-5">Авиарейсы</h1>
+    {% for name in info %}
+        <div class="card mb-4">
+          <div class="card-header">
+            {{ name.date_of_departure }} - {{ name.arrival_date }}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ name.airline_company }}</h5>
+            <p class="card-text">{{ name.flight_number }}</p>
+            <a href="reserve/{{name.id}}" class="btn btn-light">Регистрация</a>
+            <a href="comments/{{name.id}}" class="btn btn-light">Комментарии</a>
+          </div>
+        </div>
+    {% endfor %}
+{% endblock %}

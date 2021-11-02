@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+{% block content %}
+    <form action="" method="post">
+    <h3>Пассажир</h3>
+     <div class="form-row md-3">
+        {% csrf_token %}
+         <div class="col">
+             <label>Имя</label>
+             <input type="text" class="form-control" placeholder="Имя" name="name">
+         </div>
+         <div class="col">
+             <label>Фамилия</label>
+             <input type="text" class="form-control" placeholder="Фамилия" name="surname">
+         </div>
+     </div>
+        <div class="form-group md-3">
+            <label>Место</label>
+            <br><select class="form-select form-select-lg mb-1" name="place">
+            {% for el in value %}
+                <option>{{ el }}</option>
+            {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mb-4">Отправить</button>
+
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+              <th scope="col">Имя</th>
+              <th scope="col">Фамилия</th>
+              <th scope="col">Место</th>
+            </tr>
+                <tbody>
+            {% for booking in bookings %}
+                <tr>
+                    <td scope="row">{{ booking.name }}</td>
+                    <td>{{ booking.surname }}</td>
+                    <td>{{ booking.place }}</td>
+                    {% if booking.user|upper == request.user.username|upper %}
+                        <td><a href="edit/{{booking.id}}">Изменить</a> | <a href="delete/{{booking.id}}">Удалить</a></td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </thead>
+    </table>
+{% endblock %}

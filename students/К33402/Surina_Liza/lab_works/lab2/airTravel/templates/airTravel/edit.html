@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+{% block content %}
+    <form action="" method="post">
+    <h3>Пассажир</h3>
+     <div class="form-row md-3">
+        {% csrf_token %}
+         <div class="col">
+             <label>Имя</label>
+             <input type="text" class="form-control" placeholder="Имя" name="name">
+         </div>
+         <div class="col">
+             <label>Фамилия</label>
+             <input type="text" class="form-control" placeholder="Фамилия" name="surname">
+         </div>
+     </div>
+        <div class="form-group md-3">
+            <label>Место</label>
+            <br><select class="form-select form-select-lg mb-1" name="place">
+                <option selected>Выберите место</option>
+                <option>A01</option>
+                <option>A02</option>
+                <option>A04</option>
+                <option>A05</option>
+                <option>B06</option>
+                <option>B07</option>
+                <option>B08</option>
+                <option>B09</option>
+                <option>C10</option>
+                <option>C11</option>
+                <option>C12</option>
+                <option>C13</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mb-4">Изменить</button>
+
+    </form>
+
+{% endblock %}
