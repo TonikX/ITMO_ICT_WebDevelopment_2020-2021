@@ -1,0 +1,27 @@
+<!-- book_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cars list</title>
+    </head>
+
+    <body>
+        <span><h1>Автомобили</h1></span>
+        <ul>
+            {% for car in object_list %}
+                <li>
+                    <strong>Номер:</strong> {{ car.licence_number }}
+                    <p><strong>Марка:</strong> {{ car.make }}<p>
+                    <p><strong>Модель:</strong> {{ car.model }}</p>
+                    <p><strong>Цвет:</strong> {{ car.color }}</p>
+                </li>
+                {% empty %}
+                    <li>Ни одного автомобиля не было добавлено</li>
+            {% endfor %}
+        </ul>
+    </body>
+
+</html>

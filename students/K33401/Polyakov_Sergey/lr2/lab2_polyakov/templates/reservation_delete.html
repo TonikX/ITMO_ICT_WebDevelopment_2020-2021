@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Удалить резервирование</title>
+</head>
+<body>
+  <form method="POST">
+      {% csrf_token %}
+     <p>Хотите удалить резервирование? "{{object}}"?</p>
+     <input type="submit" value="Удалить">
+</form>
+<p><a href="/reserved"><button>Мои резервирования</button></a></p>
+</body>
+</html>

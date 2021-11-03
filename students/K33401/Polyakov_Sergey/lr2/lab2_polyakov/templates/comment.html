@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Комментарий</title>
+    </head>
+    <body>
+        <form method="POST">
+
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <p><input type="submit" value='Опубликовать'></p>
+        </form>
+    </body>
+    <p><a href="/tours"><button>Туры</button></a></p>
+</html>
