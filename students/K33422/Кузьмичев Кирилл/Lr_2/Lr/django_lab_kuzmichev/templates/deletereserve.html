@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Удаление бронирования</title>
+</head>
+<body>
+
+    <form method="post">{% csrf_token %}
+        <p>Хотите удалить бронирование "{{object}}"?</p>
+        <input type="submit" value="Удалить"> <br><br>
+    </form>
+<a href="/myreserves/">Вернуться к забронированным турам</a>
+
+</body>
+</html>

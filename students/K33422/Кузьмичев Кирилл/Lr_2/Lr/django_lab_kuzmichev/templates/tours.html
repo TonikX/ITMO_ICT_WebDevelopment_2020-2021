@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Туры</title>
+    <style type="text/css">
+    .main {
+        width: 500px;
+        background: transparent;
+        outline-color: Black;
+        outline-style: solid;
+        color: Black;
+    </style>
+</head>
+<body>
+
+<div class="main">
+     {% for tour in tours %}
+     <strong>Название: </strong>{{tour.name}} <br>
+     <strong>Описание: </strong>{{tour.description}} <br>
+     <strong>Агентство: </strong>{{tour.tour_agency}} <br>
+     <strong>Дата начала:</strong>{{tour.start_date}} <br>
+     <strong>Дата окончания:</strong>{{tour.end_date}} <br>
+     <strong>Страна: </strong>{{tour.country}} <br>
+     <strong>Способ оплаты: </strong>{{tour.payment}} <br>
+    <a href="/tours/{{ tour.id }}/reserve">Забронировать</a><br><br>
+     {% endfor %}
+</div>
+
+</body>
+</html>
