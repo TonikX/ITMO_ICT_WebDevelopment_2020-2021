@@ -1,0 +1,17 @@
+site_name: Documentation for "birds" project
+nav:
+ - Home: index.md
+ - Models: models.md
+ - User:
+   - Working with users: user.md
+ - Chicken:
+   - Working with chickens: chicken.md
+ - Breed:
+   - Working with breed information: breed.md
+ - Cell:
+   - Working with cells: cell.md
+ - Service:
+   - List of services: service.md
+
+theme:
+ name: 'material'
