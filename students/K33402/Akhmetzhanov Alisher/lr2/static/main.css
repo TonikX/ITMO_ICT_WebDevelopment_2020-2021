@@ -1,0 +1,53 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url("/static/img/fon.jpg") no-repeat fixed;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.footer {
+	height: 80px;
+	margin-top: -80px;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 81px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.darken {
+    color: #eee;
+}
+
+.see {
+    opacity: 90%;
+}
+
+.listitem {
+    background-color: #eee;
+}
+
+/* location */
+.centerd {
+    display: flex;
+    justify-content: center;
+}
+
+/* tipografy */
+.subtitle {
+    font-size: 21px;
+    color: #111;
+}
+
+.subtitle-2 {
+    font-size: 16px;
+}
