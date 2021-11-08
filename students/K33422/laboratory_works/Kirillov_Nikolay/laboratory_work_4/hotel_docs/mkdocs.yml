@@ -1,0 +1,4 @@
+site_name: Hotel Documentation
+nav:
+  - Home: index.md
+theme: material
