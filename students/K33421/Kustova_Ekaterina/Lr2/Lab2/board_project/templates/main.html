@@ -1,0 +1,31 @@
+<div class="main">
+{% block content %}
+<head>
+  <title>Main</title>
+    <h1>Main page</h1>
+</head>
+
+<body>
+
+
+    {% if participant.is_authenticated %}
+    <h2>Welcome, {{ participant.username }}</h2>
+    <a href="/profile/">My profile</a> <br>
+    {% else %}
+    <h2>Log in or create a new account</h2>
+{% block register %}
+      <h2>Log in</h2>
+    <form action="." method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Log in</button>
+    </form>
+  {% endblock %}
+    <a href="/registration/">Registration</a> <br>
+    {% endif %}
+
+
+</body>
+
+{% endblock %}
+    </div>

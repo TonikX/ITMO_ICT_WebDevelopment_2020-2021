@@ -1,0 +1,36 @@
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comments</title>
+</head>
+<body>
+<ul>
+    <h1>Comments</h1>
+    <form method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button class="btn btn-secondary">Submit</button>
+
+    {% for comment in comments %}
+
+    User: {{ comment.user }} <br>
+    Comment type: {{ comment.comment_type }} <br>
+    Rating list: {{ comment.rating_list }}
+    Comment: {{ comment.comment }} <br>
+
+    <hr/>
+
+
+    {% empty %}
+    <li>no reviews yet</li>
+    {% endfor %}
+
+</ul>
+    <a href="/races">Races</a>
+</body>
+</html>
+{% endblock %} 
