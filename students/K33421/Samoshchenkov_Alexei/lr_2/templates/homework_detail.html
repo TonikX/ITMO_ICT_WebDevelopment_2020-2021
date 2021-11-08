@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'index.html' %}
+{% block content %}
+  <h1>{{ object }}</h1>
+  <p><strong>Course:</strong> {{ homework.course }}</p>
+  <p><strong>Teacher:</strong> {{ homework.teacher }}</p>
+  <p><strong>Date:</strong> {{ homework.date }}</p>
+  <p><strong>Deadline:</strong> {{ homework.deadline }}</p>
+  <p><strong>Description:</strong> {{ homework.description }}</p>
+  <a class="btn btn-primary" href="/homeworks/" role="button">Back to the list</a><p></p>
+    {% if request.user.is_authenticated %}
+  <a class="btn btn-success" href="/answers/{{homework.id}}/add/" role="button">Upload</a>
+    {% else %}
+  <a class="btn btn-warning" href="/login/" role="button">Log in to get the homework done</a>
+    {% endif %}
+{% endblock %}
+</html>

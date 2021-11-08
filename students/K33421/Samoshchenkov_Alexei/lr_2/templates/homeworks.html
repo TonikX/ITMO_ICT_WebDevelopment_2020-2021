@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'index.html' %}
+{% block content %}
+    <title>Homeworks</title>
+      <span><h1>Homeworks:</h1></span>
+    <p></p>
+	{% for task in object_list %}
+        <p class="h5"> {{ task }} </p>
+        <p><strong>Course:</strong> {{ task.course }} </p>
+      	<p><strong>Date:</strong> {{ task.date  }}</p>
+	    <p><strong>Deadline:</strong> {{ task.deadline }}</p>
+        <p><strong>Description:</strong> {{ task.description }}</p>
+        <p align="right"><a class="btn btn-primary btn-sm" href="/answers/{{ task.id }}/add" role="button">Add homework</a></p>
+	{% empty %}
+	<li>No homeworks for now.</li>
+	{% endfor %}
+  </ul>
+{% endblock %}
+</html>
