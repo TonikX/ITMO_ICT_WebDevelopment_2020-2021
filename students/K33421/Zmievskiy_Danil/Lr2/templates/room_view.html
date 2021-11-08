@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+    body {
+        zoom:150%;
+        background-color:BurlyWood
+    }
+    h1 {
+        text-align:center
+    }
+    
+    </style>
+    <title>Комната</title>
+</head>
+<h1>Информация о номере {{ room.number }}</h1>
+{#reserved by {{ room.owner.get }}<br>#}
+{#user {{ request.user }}<br>#}
+{% if room.is_reserved %}
+    {% ifequal room.owner.get request.user %}
+        <a href="http://127.0.0.1:8000/room/{{ room.id }}/delete">[Удалить резервирование]</a>
+        <font color="red">Занят</font>
+    {% else %}
+        <font color="red">Занят</font>
+    {% endifequal %}
+    {#    <p><strong>владелец</strong>: {{ room.owner.get }}</p>#}
+{% else %}
+    <p>
+        <font color="green">Свободен</font>
+        <a href="http://127.0.0.1:8000/room/{{ room.id }}/reservation">[Зарезервировать]</a>
+    </p>
+{% endif %}
+<h3>{{ room.hotel }}</h3>
+<body>
+
+<p><strong>Тип:</strong> {{ room.room_type }}</p>
+<p><strong>Вместимость:</strong> {{ room.capacity }}</p>
+<p><strong>Стоимость</strong>: {{ room.price }}</p>
+
+<div>
+    <strong>Отзывы:</strong><br><br>
+    {% for review in reviews %}
+        Пользователь - {{ review.user }}<br>
+        Период проживания: {{ review.start_date }} - {{ review.end_date }}<br>
+        {{ review.text }}<br>
+        Рейтинг - {{ review.rating_list }}<br>
+        Создан - {{ review.created }}<br><br>
+    {% endfor %}
+</div>
+{% if user.is_active %}
+    <form action="" method="post" id="review">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" form="review">отправить</button>
+    </form>
+{% else %}
+    <h4>Нужно войти или зарегестрироваться, чтоб оставить отзыв</h4>
+{% endif %}
+
+<a href="/room/list">К списку номеров</a>
+</body>
+
+</html>
