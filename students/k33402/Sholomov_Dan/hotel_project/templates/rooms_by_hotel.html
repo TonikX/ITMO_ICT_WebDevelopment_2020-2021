@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<ul>
+    <h1>{{hotel.first.hotel}}</h1>
+
+    {% for room in hotel %}
+
+    Номер: {{ room.number }} <br/>
+    Тип: {{ room.get_room_type_display }} <br/>
+    <a href="/rooms/{{ room.id }}/">Подробности</a><br>
+    {% endfor %}
+
+<br>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Номер {{room.number}}, {{room.hotel}}</h1>
+    Номер: {{ room.number }} <br/>
+    Тип: {{ room.get_room_type_display }} <br/>
+    Стоимость за ночь: {{ room.price }} руб<br/>
+    Количество гостей: {{ room.num_persons }} <br/>
+    <a href="/rooms/{{ room.id }}/book"><button class="btn btn-secondary">Зарезервировать</button></a> <br><br>
+    <a href="/rooms/{{ room.id }}/add_review"><button class="btn btn-secondary">Оставить отзыв</button></a>
+{% endblock %}
