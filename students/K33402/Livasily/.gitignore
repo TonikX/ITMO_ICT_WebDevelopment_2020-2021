@@ -1,0 +1,11 @@
+#node
+node_modules/
+
+
+test
+
+venv
+
+warriors_project
+
+.idea
