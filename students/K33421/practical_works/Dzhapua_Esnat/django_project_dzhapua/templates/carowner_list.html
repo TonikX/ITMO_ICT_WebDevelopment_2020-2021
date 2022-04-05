@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carowner list</title>
+</head>
+<body>
+
+<h1>Автовладельцы</h1>
+<a href="/carowner_add/">Добавить</a>
+
+<ul>
+    {% for data in dataset %}
+        <li>
+            <strong>Имя:</strong> {{ data.firstname }} <br>
+            <strong>Фамилия:</strong> {{ data.lastname }} <br>
+            <strong><a href="/carowner_id/{{ data.id }}">Информация</a></strong>
+        </li>
+        <br>
+    {% endfor %}
+</ul>
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+
+<h1>Изменить</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <strong>{{ form.as_p }}</strong>
+        <input type="submit" value="Сохранить">
+    </form>
+<br>
+<form action="http://127.0.0.1:8000/car_list/">
+    <input type="submit" value="Назад">
+</form>
+</body>
+</html>

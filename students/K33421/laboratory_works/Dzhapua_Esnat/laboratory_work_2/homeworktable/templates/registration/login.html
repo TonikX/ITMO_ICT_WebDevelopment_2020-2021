@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    {% load static %}
+</head>
+<body>
+    <h1>Журнал</h1>
+    <form method="POST" action="">{% csrf_token %}
+        <input type="text" name="username" placeholder="Логин">
+        <input type="password" name="password" placeholder="Пароль">
+        <button type="submit">Войти</button>
+    </form>
+				{% for message in messages %}
+					<p id="messages">{{message}}</p>
+				{% endfor %}
+    <br>
+    <a href="{% url 'register' %}">Зарегистрироваться</a>
+
+
+</body>
+
+</html>
