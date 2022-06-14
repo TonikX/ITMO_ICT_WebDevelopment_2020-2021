@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <link rel="icon" href="{% static "/board/airplane-flying.png"%}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static '/board/style.css' %}" />
+    <title>{% block title %} Airport Board {% endblock %}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'flight_list_url' %}">FLIGHTS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <!--Если пользователь авторизован, ему доступно sign out и my reservations-->
+            {% if request.user.is_authenticated %}
+            <a class="nav-link disabled" tabindex="-1" aria-disabled="true"
+              >Sign in</a
+            >
+            <a class="nav-link" href="{% url 'logout_url' %}">Sign out</a>
+            <a class="nav-link disabled" tabindex="-1" aria-disabled="true"
+              >Sign up</a
+            >
+            <a class="nav-link" href="{% url 'reservation_list_url' %}"
+              >My reservations</a
+            >
+            {% endif %}
+            <!--Если пользователь не авторизован, ему доступно sign in и sign up-->
+            {% if not request.user.is_authenticated %}
+            <a class="nav-link" href="{% url 'login_url' %}">Sign in</a>
+            <a class="nav-link disabled" tabindex="-1" aria-disabled="true"
+              >Sign off</a
+            >
+            <a class="nav-link" href="{% url 'register_url' %}">Sign up</a
+            ><a class="nav-link disabled" tabindex="-1" aria-disabled="true"
+              >My reservations</a
+            >
+            {% endif %}
+          </div>
+        </div>
+        {% if request.user.is_authenticated %}<span class="navbar-text">
+          Welcome, {{request.user.username}} </span
+        >{% endif %}
+      </div>
+    </nav>
+  </body>
+  <div class="container">{% block body %}{% endblock body %}</div>
+</html>

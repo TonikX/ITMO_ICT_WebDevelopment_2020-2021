@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h3>
+            {{owner.first_name}}
+            {{owner.last_name}}
+        </h3>
+
+        <h3>
+            Водительские удостоверения:
+        </h3>
+        <table>
+            <tr>
+                <th>Номер</th>
+                <th>Тип</th>
+                <th>Дата выдачи</th>
+            </tr>
+            {% for license in licenses %}
+            <tr>
+                <td>{{license.number}}</td>
+                <td>{{license.type}}</td>
+                <td>{{license.date}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h3>
+            Машины:
+        </h3>
+        <table>
+            <tr>
+                <th>Номер</th>
+                <th>Начало владения</th>
+                <th>Конец владения</th>
+                <th>Бренд</th>
+                <th>Модель</th>
+            </tr>
+            {% for car in cars %}
+            <tr>
+                <td>{{car.car.number}}</td>
+                <td>{{car.start_date}}</td>
+                <td>
+                    {% if car.end_date is None %}
+                    -
+                    {% else %}
+                    {{car.end_date}}
+                    {% endif %}
+                </td>
+                <td>{{car.car.brand}}</td>
+                <td>{{car.car.model}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
