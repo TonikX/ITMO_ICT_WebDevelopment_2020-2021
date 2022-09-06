@@ -1,0 +1,14 @@
+{% extends  'Teacher.html' %}
+
+{% block main %}
+    <div class="container">
+        <a href="/task/">Back</a>
+        <hr>
+        <p>!Enter date in YYYY-MM-DD form!</p>
+        <form method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save">
+        </form>
+    </div>
+
+{% endblock %}
