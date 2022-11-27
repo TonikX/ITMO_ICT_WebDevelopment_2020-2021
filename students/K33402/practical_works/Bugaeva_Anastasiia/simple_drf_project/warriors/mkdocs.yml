@@ -1,0 +1,16 @@
+site_name: Описание сервиса "Войны"
+nav:
+  - Home: index.md
+  - Warrior:
+      - "Get a list of warriors": warrior/get_warriorslist.md
+      - "Create a warrior": warrior/create_warrior.md
+      - "Actions with a warrior": warrior/actions_warrior.md
+  - Skill:
+      - "Create skill": skills/create_skills.md
+
+theme:
+  name: material
+
+plugins:
+  - search
+  - mkdocstrings

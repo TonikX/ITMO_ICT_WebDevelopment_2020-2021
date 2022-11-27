@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load mathfilters %}
+{% block content %}
+
+<div class="row">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Авиакомпания: {{flight.company}}</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text"><strong>Дата вылета:</strong> {{ flight.departure_date }}</p>
+            <p class="card-text"><strong>Дата прилета:</strong> {{ flight.Arrival_date }}</p>
+            <p class="card-text">{{ flight.departure }} <strong>→</strong> {{ flight.Arrival }}</p>
+            <p><strong>Мест на борту:</strong> {{ flight.NumberOfPackages|sub:flight.numberFlight.all.count }} из {{ flight.NumberOfPackages }} </p>
+            {% if request.user.is_authenticated %}
+                <div class="row">
+                    <div class="col">
+                        <form action="" id="add_form" method="post">
+                            {% csrf_token %}
+                        </form>
+                        {% now "Y-m-d H-i-s" as today_date %}
+                        {% if flight.departure_date|date:"Y-m-d H-i-s" > today_date %}
+                            {% if flight.numberFlight.all.count < flight.NumberOfPackages %}
+                                <button form="add_form" type="submit" class="btn btn-primary">Регистрация</button>
+                            {% else %}
+                                <h6 class="text-danger">Свободных мест не осталось</h6>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="col ml-5">
+        <hr class="mt-0"><h5>Зарегистрированных пасажиров: {{ flight.numberFlight.all.count }}</h5><hr>
+        {% if messages %}
+            <div class="alert alert-success">
+                {% for m in messages %}
+                    {{ m }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class="col ml-0 pl-0" style="overflow: auto; width: 100%; height: 243px;">
+            {% for item in flight.numberFlight.all %}
+                <div class="card mt-2 ml-3">
+                    <div class="row card-body p-2">
+                        <h6 class="col-sm card-title mt-2">{{ item.passenger }}</h6>
+                        <form action="" id="del_form" method="post">
+                            {% csrf_token %}
+                        </form>
+                        {% if request.user.is_authenticated %}
+                            {% if request.user == item.passenger %}
+                                <a class='col-sm btn btn-primary btn-sm mr-3'
+                                   style="height: 30px; align-self: center"
+                                   href="{% url 'delete_place' item.id %}">Отменить</a>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

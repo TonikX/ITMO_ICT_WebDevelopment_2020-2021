@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row ml-0">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Авиакомпания: {{flight.company}}</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text"><strong>Дата вылета:</strong> {{ flight.departure_date }}</p>
+            <p class="card-text"><strong>Дата прилета:</strong> {{ flight.Arrival_date }}</p>
+            <p class="card-text">{{ flight.departure }} <strong>→</strong> {{ flight.Arrival }}</p>
+        </div>
+    </div>
+
+    <div class="col ml-5">
+        {% if request.user.is_authenticated %}
+            <div>
+                <form action="" id="add_form" method="post">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                </form>
+                <button form="add_form" type="submit" class="btn btn-primary">Добавить комментарий</button>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<hr><h5>Комментариев: {{ flight.Flight.all.count }}</h5><hr>
+
+{% if messages %}
+    <div class="alert alert-success">
+        {% for m in messages %}
+            {{ m }}
+        {% endfor %}
+    </div>
+{% endif %}
+
+<div class="row mb-5">
+    <div class="col ml-3 pl-0" style="overflow: auto; width:100%">
+        <div class="row row-cols-md-3">
+            {% for item in flight.Flight.all %}
+                <div class="col card-group">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h6>{{ item.author }}</h6>
+                            <small class="card-text" style="word-break: break-all">Рейтинг: {{item.Rating}}</small>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{ item.text }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">{{ item.create_date }}</small>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
