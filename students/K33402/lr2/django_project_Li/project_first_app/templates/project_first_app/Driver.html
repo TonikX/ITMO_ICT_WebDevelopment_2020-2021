@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drivers</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div>
+        {% if driver %}
+            {% for el in driver %}
+                <div class="alert alert-warning mt-2">
+                    <h3>{{ el.optional_information }}</h3>
+                    <h3>{{ el.first_name }} {{ el.last_name }}</h3>
+                    <p>{{ el.date_of_birthday }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Пусто как в твоем сердечке</p>
+        {% endif %}
+    </div>
+</body>
+</html>

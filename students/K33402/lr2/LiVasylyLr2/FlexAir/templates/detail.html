@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="card mt-4">
+    <div class="card-header">
+        <h5 class="card-title"> Авиакомпания: {{flight.company}} </h5>
+    </div>
+    <div class="card-body">
+        <p class="card-text">Дата вылета: {{ flight.departure_date }} </p>
+        <p class="card-text">Дата прилета: {{ flight.Arrival_date }} </p>
+        <p class="card-text">{{flight.departure}} -> {{flight.Arrival}}</p>
+        <!--        {% for i in flight.count %}-->
+        <!--        <a class="btn btn-primary mb-2 pl" href="#" role="button">{{ i }}</a>-->
+        <!--        {% endfor %}-->
+        <p>мест на борту {{flight.NumberOfPackages}} </p>
+        <!--        <p>свободно {{flight.num_flight }} &lt;!&ndash; - колличество резераций(комментариев)&ndash;&gt; </p>-->
+    </div>
+</div>
+
+<hr>
+<p>пасажиров {{ flight.numberFlight.all.count }}</p>
+
+
+<hr>
+<div class="row mb-5">
+    {% if request.user.is_authenticated %}
+    <div class="col-5">
+        <form action="" id="add_form" method="post">
+            {% csrf_token %}
+            <!--{{form.as_p}}-->
+        </form>
+        {% if flight.numberFlight.all.count < flight.NumberOfPackages %}
+        <button form="add_form" type="submit" class="btn btn-primary">Зарезервировать</button>
+        {% else %}
+        <h1>Мест нет</h1>
+        {% endif %}
+        <form action="" id="del_form" method="post">
+            {% csrf_token %}
+        </form>
+    </div>
+    {% endif %}
+    <div class="col">
+        <div style="overflow: auto; width:100%; height:400px;">
+            <ul>
+                {% for item in flight.numberFlight.all %}
+
+                <div class="media mt-2">
+                    <div class="media-body">
+                        <div class="card" style="width: 18rem;">
+                            <div class="row card-body">
+                                <h5 class="col-sm card-title mt-2">{{item.passenger}}</h5>
+                                {% if request.user.is_authenticated %}
+                                {% if request.user == item.passenger %}
+                                <a class='col-sm btn btn-primary' href="{% url 'delete_comment' item.id  %}">удалить</a>
+                                {% endif %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
