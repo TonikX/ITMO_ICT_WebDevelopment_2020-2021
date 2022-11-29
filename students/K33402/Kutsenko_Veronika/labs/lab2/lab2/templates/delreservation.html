@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Удалить</title>
+</head>
+<body>
+  <form method="post">{% csrf_token %}
+     <p>Хотите удалить резервирование?"{{object}}"?</p>
+     <input type="submit" value="Delete"> <br><br>
+</form>
+<a href="/lcreservations/">К моим броням</a>
+</body>
+</html>
