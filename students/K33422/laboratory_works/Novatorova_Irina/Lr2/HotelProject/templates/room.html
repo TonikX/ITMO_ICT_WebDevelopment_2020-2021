@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Номер</title>
+    <style>
+    body {
+            background-image: url(http://www.fonstola.ru/pic/201202/1600x900/fonstola.ru-74779.jpg);
+        }
+    </style>
+</head>
+    Отель - {{ room.hotel }}<br>
+    Номер: {{ room.room_num }}  <hr>
+
+        <a href="/rooms/{{ room.id }}/book">Забронировать этот номер</a><br>
+        <a href="/rooms/{{ room.id }}/add_review">Написать отзыв</a>
+        <a href="/">На главную</a><br>
+
+
