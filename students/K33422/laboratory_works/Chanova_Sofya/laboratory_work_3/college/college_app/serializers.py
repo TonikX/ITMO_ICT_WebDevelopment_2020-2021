@@ -4,6 +4,26 @@ from rest_framework.validators import UniqueValidator
 from .models import *
 
 
+class UserProfileSerializer(serializers.ModelSerializer):
+
+    role = serializers.StringRelatedField(source="get_role_display")
+    student_group = serializers.CharField(read_only=True)
+
+    class Meta:
+        model = User
+        fields = ['username', 'role', 'first_name', 'last_name', 'email', 'student_group', 'teacher_qualification']
+
+
+class EditUserProfileSerializer(serializers.ModelSerializer):
+
+    role = serializers.StringRelatedField(source="get_role_display")
+    student_group = serializers.CharField(read_only=True)
+
+    class Meta:
+        model = User
+        fields = ['role', 'first_name', 'last_name', 'email', 'student_group', 'teacher_qualification']
+
+
 class UserSerializer(serializers.ModelSerializer):
 
     role = serializers.StringRelatedField(source="get_role_display")
@@ -86,10 +106,20 @@ class ScheduleCreateSerializer(serializers.Serializer):
         return ScheduleEntry(**validated_data)
 
 
+class RoomPageSerializer(serializers.ModelSerializer):
+
+    room_number = serializers.IntegerField(validators=[UniqueValidator(queryset=Room.objects.all())])
+
+    class Meta:
+        model = Room
+        fields = '__all__'
+
+
 class RoomSerializer(serializers.ModelSerializer):
 
     subject_theme = serializers.StringRelatedField(source='get_subject_theme_display')
     room_number = serializers.IntegerField(validators=[UniqueValidator(queryset=Room.objects.all())])
+
 
     class Meta:
         model = Room

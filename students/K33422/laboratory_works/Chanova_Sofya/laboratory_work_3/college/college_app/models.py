@@ -13,7 +13,7 @@ class User(AbstractUser):
 
     role = models.CharField(choices=roles, max_length=1)
 
-    student_group = models.ForeignKey('StudentGroup', on_delete=models.CASCADE, blank=True, null=True)
+    student_group = models.ForeignKey('StudentGroup', on_delete=models.CASCADE, blank=True, null=True, related_name = "student_in_group")
     student_sem_grade = models.ManyToManyField('Teaching', through='SemesterGrade', related_name='semester_grade')
 
     teacher_qualification = models.CharField(max_length=40, blank=True, null=True)
